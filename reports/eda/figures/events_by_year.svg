@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620">
+<rect width="100%" height="100%" fill="white"/>
+<text x="550.0" y="34" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700">Количество событий по годам</text>
+<text x="22" y="275.0" transform="rotate(-90 22 275.0)" text-anchor="middle" font-family="Arial" font-size="15">млн строк</text>
+<line x1="90" y1="480" x2="1070" y2="480" stroke="#333"/>
+<line x1="90" y1="70" x2="90" y2="480" stroke="#333"/>
+<line x1="90" y1="480.0" x2="1070" y2="480.0" stroke="#e5e7eb"/>
+<text x="82" y="485.0" text-anchor="end" font-family="Arial" font-size="12">0</text>
+<line x1="90" y1="398.0" x2="1070" y2="398.0" stroke="#e5e7eb"/>
+<text x="82" y="403.0" text-anchor="end" font-family="Arial" font-size="12">11</text>
+<line x1="90" y1="316.0" x2="1070" y2="316.0" stroke="#e5e7eb"/>
+<text x="82" y="321.0" text-anchor="end" font-family="Arial" font-size="12">22</text>
+<line x1="90" y1="234.0" x2="1070" y2="234.0" stroke="#e5e7eb"/>
+<text x="82" y="239.0" text-anchor="end" font-family="Arial" font-size="12">33</text>
+<line x1="90" y1="152.0" x2="1070" y2="152.0" stroke="#e5e7eb"/>
+<text x="82" y="157.0" text-anchor="end" font-family="Arial" font-size="12">44</text>
+<line x1="90" y1="70.0" x2="1070" y2="70.0" stroke="#e5e7eb"/>
+<text x="82" y="75.0" text-anchor="end" font-family="Arial" font-size="12">56</text>
+<rect x="90.0" y="325.0" width="115.5" height="155.0" fill="#2563eb"/>
+<text x="147.8" y="320.0" text-anchor="middle" font-family="Arial" font-size="11">21</text>
+<text x="147.8" y="498" text-anchor="end" transform="rotate(-45 147.8 498)" font-family="Arial" font-size="12">2019</text>
+<rect x="213.5" y="272.0" width="115.5" height="208.0" fill="#2563eb"/>
+<text x="271.2" y="267.0" text-anchor="middle" font-family="Arial" font-size="11">28.2</text>
+<text x="271.2" y="498" text-anchor="end" transform="rotate(-45 271.2 498)" font-family="Arial" font-size="12">2020</text>
+<rect x="337.0" y="83.6" width="115.5" height="396.4" fill="#2563eb"/>
+<text x="394.8" y="78.6" text-anchor="middle" font-family="Arial" font-size="11">53.7</text>
+<text x="394.8" y="498" text-anchor="end" transform="rotate(-45 394.8 498)" font-family="Arial" font-size="12">2021</text>
+<rect x="460.5" y="159.0" width="115.5" height="321.0" fill="#2563eb"/>
+<text x="518.2" y="154.0" text-anchor="middle" font-family="Arial" font-size="11">43.5</text>
+<text x="518.2" y="498" text-anchor="end" transform="rotate(-45 518.2 498)" font-family="Arial" font-size="12">2022</text>
+<rect x="584.0" y="244.2" width="115.5" height="235.8" fill="#2563eb"/>
+<text x="641.8" y="239.2" text-anchor="middle" font-family="Arial" font-size="11">31.9</text>
+<text x="641.8" y="498" text-anchor="end" transform="rotate(-45 641.8 498)" font-family="Arial" font-size="12">2023</text>
+<rect x="707.5" y="118.1" width="115.5" height="361.9" fill="#2563eb"/>
+<text x="765.2" y="113.1" text-anchor="middle" font-family="Arial" font-size="11">49</text>
+<text x="765.2" y="498" text-anchor="end" transform="rotate(-45 765.2 498)" font-family="Arial" font-size="12">2024</text>
+<rect x="831.0" y="70.0" width="115.5" height="410.0" fill="#2563eb"/>
+<text x="888.8" y="65.0" text-anchor="middle" font-family="Arial" font-size="11">55.5</text>
+<text x="888.8" y="498" text-anchor="end" transform="rotate(-45 888.8 498)" font-family="Arial" font-size="12">2025</text>
+<rect x="954.5" y="253.4" width="115.5" height="226.6" fill="#2563eb"/>
+<text x="1012.2" y="248.4" text-anchor="middle" font-family="Arial" font-size="11">30.7</text>
+<text x="1012.2" y="498" text-anchor="end" transform="rotate(-45 1012.2 498)" font-family="Arial" font-size="12">2026</text>
+</svg>

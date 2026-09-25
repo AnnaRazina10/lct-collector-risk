@@ -1,0 +1,9 @@
+год,строк,примерная_уникальность_event_id,примерная_оценка_дублей_event_id,точные_дубли_event_id_в_первых_1млн,метод
+2019,20993328,21095767,0,0,HyperLogLog по всем строкам + exact sample first 1M
+2020,28172398,28149758,22640,0,HyperLogLog по всем строкам + exact sample first 1M
+2021,53698948,52703611,995337,0,HyperLogLog по всем строкам + exact sample first 1M
+2022,43483149,42467680,1015469,0,HyperLogLog по всем строкам + exact sample first 1M
+2023,31937125,31258296,678829,0,HyperLogLog по всем строкам + exact sample first 1M
+2024,49023883,49318221,0,0,HyperLogLog по всем строкам + exact sample first 1M
+2025,55541797,56558059,0,0,HyperLogLog по всем строкам + exact sample first 1M
+2026,30695389,30685052,10337,0,HyperLogLog по всем строкам + exact sample first 1M
