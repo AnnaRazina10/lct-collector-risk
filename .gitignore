@@ -1,6 +1,6 @@
-data/raw/
-models/
-artifacts/audio/
+/data/raw/
+/models/
+/artifacts/audio/
 .DS_Store
 .env
 __pycache__/
