@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-09-29T15:06:55.036914+00:00",
+  "artifact_commit": "277e3caff8d7b3dc8236674f7c1add6161af9361",
+  "remote_main_at_check": "277e3caff8d7b3dc8236674f7c1add6161af9361",
+  "repository": {
+    "url": "https://github.com/AnnaRazina10/lct-collector-risk",
+    "private": true
+  },
+  "method": "Authenticated GitHub recursive Git tree: compare each remote blob SHA-1 and byte size to the Git object hash and size calculated from the reviewed local file. SHA-256 below is local, not a remote download digest.",
+  "artifacts": [
+    {
+      "path": "artifacts/presentation/output/collector-risk-draft-v4.pptx",
+      "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/277e3caff8d7b3dc8236674f7c1add6161af9361/artifacts/presentation/output/collector-risk-draft-v4.pptx",
+      "bytes": 12110801,
+      "remote_git_blob_sha1": "931bbc5aeaf2b58aa16af025a7da2d186a2ba289",
+      "local_git_blob_sha1": "931bbc5aeaf2b58aa16af025a7da2d186a2ba289",
+      "local_sha256": "b66cf74d4107a5a458fd0d94a20eaa662e0d2be363cad9d9ce12f70fc28c294a",
+      "remote_blob_matches_local": true
+    },
+    {
+      "path": "artifacts/presentation/output/collector-risk-draft-v4-preview.pdf",
+      "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/277e3caff8d7b3dc8236674f7c1add6161af9361/artifacts/presentation/output/collector-risk-draft-v4-preview.pdf",
+      "bytes": 1124359,
+      "remote_git_blob_sha1": "e2622352de0066ecbfbdaab6acc81f6ca80d2a74",
+      "local_git_blob_sha1": "e2622352de0066ecbfbdaab6acc81f6ca80d2a74",
+      "local_sha256": "ca40773ae8faa8dd121855d4e1583ae3134d80230488c1bf18d787795addd401",
+      "remote_blob_matches_local": true
+    },
+    {
+      "path": "output/pdf/collector-risk-technical-guide-v2.pdf",
+      "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/277e3caff8d7b3dc8236674f7c1add6161af9361/output/pdf/collector-risk-technical-guide-v2.pdf",
+      "bytes": 109995,
+      "remote_git_blob_sha1": "93ddb49ed7a13e370bba2a35e9230c7cb385d1ba",
+      "local_git_blob_sha1": "93ddb49ed7a13e370bba2a35e9230c7cb385d1ba",
+      "local_sha256": "61cf1d525373676ba05a5268307851848305a012418c51467ccbee1226f6d81b",
+      "remote_blob_matches_local": true
+    }
+  ],
+  "permissions_changed": false,
+  "anonymous_access_retested": false,
+  "jury_access_confirmed": false,
+  "public_prototype_confirmed": false,
+  "platform_submission_confirmed": false,
+  "local_bundle_published": false
+}
