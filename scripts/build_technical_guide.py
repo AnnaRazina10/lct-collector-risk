@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the seven-page Markdown guide with embedded Cyrillic fonts.
+"""Render the explicitly paginated Markdown guide with embedded Cyrillic fonts.
 
 Requires reportlab. Fonts: --font-dir, CODEX runtime, or system DejaVu.
 The source supports headings, paragraphs, links, tables, lists and code blocks.
@@ -145,7 +145,8 @@ def build(source,output,font_dir):
     if any(c in text for c in '\u2010\u2011\u2012\u2013\u2014'):
         raise ValueError('Use ASCII hyphens in the source')
     sections=text.split('<!-- page -->')
-    if len(sections)!=7:raise ValueError('Expected seven explicitly paginated sections')
+    expected_pages=len(sections)
+    if expected_pages<1:raise ValueError('No sections')
     width,height=A4;margin=17*mm;usable=width-2*margin
     class GuideDoc(BaseDocTemplate):
         def afterFlowable(self,flowable):
@@ -159,8 +160,8 @@ def build(source,output,font_dir):
         canvas.setFont('Guide',7.5);canvas.setFillColor(GRAY)
         canvas.drawString(margin,height-11*mm,'ЛЦТ 2026  /  КЕЙС 08  /  СОПРОВОДИТЕЛЬНОЕ РУКОВОДСТВО')
         canvas.line(margin,15*mm,width-margin,15*mm)
-        canvas.drawString(margin,10.7*mm,'Коллектор: очередь риска  |  29.09.2026  |  bd0fa01')
-        canvas.drawRightString(width-margin,10.7*mm,f'{doc.page} / 7')
+        canvas.drawString(margin,10.7*mm,'Коллектор: очередь риска  |  29.09.2026  |  v2 / c36408e')
+        canvas.drawRightString(width-margin,10.7*mm,f'{doc.page} / {expected_pages}')
         canvas.restoreState()
     output.parent.mkdir(parents=True,exist_ok=True)
     doc=GuideDoc(str(output),pagesize=A4,leftMargin=margin,rightMargin=margin,topMargin=20*mm,bottomMargin=20*mm,title='Коллектор: очередь риска. Техническое руководство',author='lct-collector-risk',pageCompression=1)
@@ -171,13 +172,13 @@ def build(source,output,font_dir):
         if i:story.append(PageBreak())
         story.extend(convert_page(section,style,usable))
     doc.build(story)
-    if doc.page!=7:raise ValueError(f'Layout overflow: expected 7 pages, got {doc.page}')
+    if doc.page!=expected_pages:raise ValueError(f'Layout overflow: expected {expected_pages} pages, got {doc.page}')
     print(json.dumps({'pdf':str(output),'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'pdf_sha256':hashlib.sha256(output.read_bytes()).hexdigest(),'bytes':output.stat().st_size,'font_dir':str(font_dir)},ensure_ascii=False,indent=2))
 
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--source',type=Path,default=ROOT/'docs/technical_guide.md')
-    parser.add_argument('--output',type=Path,default=ROOT/'output/pdf/collector-risk-technical-guide.pdf')
+    parser.add_argument('--output',type=Path,default=ROOT/'output/pdf/collector-risk-technical-guide-v2.pdf')
     parser.add_argument('--font-dir',default=os.environ.get('COLLECTOR_GUIDE_FONT_DIR'))
     args=parser.parse_args();build(args.source,args.output,font_directory(args.font_dir))
