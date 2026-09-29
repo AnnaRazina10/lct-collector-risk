@@ -181,3 +181,5 @@
 Подготовлен [черновик презентации PPTX](artifacts/presentation/output/collector-risk-draft-v3.pptx) и [PDF для просмотра](artifacts/presentation/output/collector-risk-draft-v3-preview.pdf). Обязательные слайды 7–11 сохранены на исходных местах. Перед сдачей команда заполняет [отмеченные поля](artifacts/presentation/HANDOFF.md); факт конкурсной сдачи не подтверждён.
 
 Сопроводительное [техническое руководство PDF](output/pdf/collector-risk-technical-guide.pdf) закрывает формат документации из §19 ТЗ. [Сценарий показа](docs/demo_script.md) и [четыре поля платформы](docs/submission_links.md) подготовлены отдельно. Публичный прототип и факт сдачи пока не подтверждены.
+
+Репозиторий имеет видимость PRIVATE. Отправленные PPTX/PDF проверены через авторизованную загрузку; анонимные ссылки дают 404. Доступ жюри необходимо обеспечить отдельно; права репозитория не менялись. [Проверка публикации](reports/submission_readiness/publication.json).

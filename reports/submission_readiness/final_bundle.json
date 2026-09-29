@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-09-29T13:45:41.137167+00:00",
+  "path": "artifacts/submission/bundles/collector-risk-review-v1.zip",
+  "sha256": "78f40e81921c41b5016391ff02c30e16ddb28170a26217090dfb440ccef9cc72",
+  "bytes": 4441603,
+  "source_commit": "283c53456c355345b51cd5bd92f45969c67ba45b",
+  "working_tree_changes": false,
+  "files": 67,
+  "verified_inputs": 66,
+  "releases": 6,
+  "changed_archive_entries_vs_clean_tested_candidate": [
+    "START_HERE.md",
+    "bundle_manifest.json",
+    "data/app/forecast_seed.sqlite3"
+  ],
+  "code_models_data_launchers_byte_identical": true,
+  "six_seed_payloads_identical": true,
+  "all_passed": true,
+  "initial_tested_bundle_sha256": "5790cd08e3c24e3d8dda8520d56b59756e99077b7df120b1f24190e3a61e24c4",
+  "scope": "Verification and byte comparison only; clean inference/restart evidence applies to identical executable/model/data inputs. ZIP remains local."
+}

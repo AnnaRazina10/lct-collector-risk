@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-09-29T13:47:50.296958+00:00",
+  "commit": "283c53456c355345b51cd5bd92f45969c67ba45b",
+  "remote_main_sha": "283c53456c355345b51cd5bd92f45969c67ba45b",
+  "repository": {
+    "url": "https://github.com/AnnaRazina10/lct-collector-risk",
+    "viewerPermission": "WRITE",
+    "visibility": "PRIVATE"
+  },
+  "artifacts": [
+    {
+      "path": "artifacts/presentation/output/collector-risk-draft-v3.pptx",
+      "url": "https://raw.githubusercontent.com/AnnaRazina10/lct-collector-risk/283c53456c355345b51cd5bd92f45969c67ba45b/artifacts/presentation/output/collector-risk-draft-v3.pptx",
+      "anonymous_http_status": 404,
+      "authenticated_read_bytes": 12100587,
+      "sha256": "c29fef94b3e0a4ac98dd729c8d08f8d1b61d5d1c0d079bd2482f6e3c23e8812a",
+      "equals_reviewed_local_file": true
+    },
+    {
+      "path": "artifacts/presentation/output/collector-risk-draft-v3-preview.pdf",
+      "url": "https://raw.githubusercontent.com/AnnaRazina10/lct-collector-risk/283c53456c355345b51cd5bd92f45969c67ba45b/artifacts/presentation/output/collector-risk-draft-v3-preview.pdf",
+      "anonymous_http_status": 404,
+      "authenticated_read_bytes": 1123408,
+      "sha256": "9fdaf843e43cdbd5e8e5aa48cbbc5ff8d36b2d4e6a6a114146ea2fda95feb17c",
+      "equals_reviewed_local_file": true
+    },
+    {
+      "path": "output/pdf/collector-risk-technical-guide.pdf",
+      "url": "https://raw.githubusercontent.com/AnnaRazina10/lct-collector-risk/283c53456c355345b51cd5bd92f45969c67ba45b/output/pdf/collector-risk-technical-guide.pdf",
+      "anonymous_http_status": 404,
+      "authenticated_read_bytes": 105091,
+      "sha256": "bc4550818447801126547643343e42a7ec79fbe5cf80f5fb09e989102c580e25",
+      "equals_reviewed_local_file": true
+    }
+  ],
+  "authenticated_artifact_checks_passed": true,
+  "anonymous_artifacts_accessible": false,
+  "permissions_changed": false,
+  "scope": "Authorized publication and byte equality confirmed; repository is private. No public prototype or competition submission.",
+  "method": "Git blobs API with base64 after raw binary output of gh failed in this environment."
+}
