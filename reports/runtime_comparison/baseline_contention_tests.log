@@ -1,0 +1,26 @@
+test_concurrent_first_use_retains_every_committed_write (test_api_storage_contention.JournalStorageContentionTests.test_concurrent_first_use_retains_every_committed_write) ... ok
+test_failed_write_rolls_back_and_leaves_schema_usable (test_api_storage_contention.JournalStorageContentionTests.test_failed_write_rolls_back_and_leaves_schema_usable) ... ok
+test_legacy_migration_preserves_channel_draft (test_api_storage_contention.JournalStorageContentionTests.test_legacy_migration_preserves_channel_draft) ... ok
+test_ready_read_works_while_another_writer_holds_reserved_lock (test_api_storage_contention.JournalStorageContentionTests.test_ready_read_works_while_another_writer_holds_reserved_lock) ... ERROR
+
+======================================================================
+ERROR: test_ready_read_works_while_another_writer_holds_reserved_lock (test_api_storage_contention.JournalStorageContentionTests.test_ready_read_works_while_another_writer_holds_reserved_lock)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/antany/Desktop/LCT-Ann/lct-collector-risk/tests/test_api_storage_contention.py", line 32, in test_ready_read_works_while_another_writer_holds_reserved_lock
+    result=main.tickets(mode='object')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/antany/Desktop/LCT-Ann/lct-collector-risk/api/main.py", line 211, in tickets
+    with connection() as conn:
+         ^^^^^^^^^^^^
+  File "/Users/antany/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/Users/antany/Desktop/LCT-Ann/lct-collector-risk/api/main.py", line 109, in connection
+    conn.execute("BEGIN IMMEDIATE")
+sqlite3.OperationalError: database is locked
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.161s
+
+FAILED (errors=1)

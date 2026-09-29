@@ -1,0 +1,82 @@
+{
+  "aggregation": "Arithmetic mean of each repetition metric; not pooled quantiles or confidence intervals",
+  "rows": [
+    {
+      "scenario": "read_only",
+      "users": 1,
+      "baseline": {
+        "requests_per_second": 237.3204398037834,
+        "p50_ms": 2.1432084613479674,
+        "p95_ms": 11.705312528647482,
+        "p99_ms": 12.746500025968999
+      },
+      "optimized": {
+        "requests_per_second": 266.72387256295667,
+        "p50_ms": 1.5083124744705856,
+        "p95_ms": 10.700770537368953,
+        "p99_ms": 11.813520512077957
+      },
+      "throughput_change_percent": 12.38975993112268,
+      "p95_change_percent": -8.581932253581625
+    },
+    {
+      "scenario": "read_only",
+      "users": 20,
+      "baseline": {
+        "requests_per_second": 236.36055423020804,
+        "p50_ms": 31.972353986930102,
+        "p95_ms": 311.0507919918746,
+        "p99_ms": 1155.0483545288444
+      },
+      "optimized": {
+        "requests_per_second": 265.11614630695396,
+        "p50_ms": 73.80245852982625,
+        "p95_ms": 116.60183354979381,
+        "p99_ms": 130.64835401019081
+      },
+      "throughput_change_percent": 12.165986059052326,
+      "p95_change_percent": -62.51357123924643
+    },
+    {
+      "scenario": "mixed",
+      "users": 1,
+      "baseline": {
+        "requests_per_second": 108.18461829815334,
+        "p50_ms": 8.581125061027706,
+        "p95_ms": 21.578583517111838,
+        "p99_ms": 33.178583544213325
+      },
+      "optimized": {
+        "requests_per_second": 123.27421478678595,
+        "p50_ms": 7.982833485584706,
+        "p95_ms": 20.691624493338168,
+        "p99_ms": 32.7430214965716
+      },
+      "throughput_change_percent": 13.948005479897496,
+      "p95_change_percent": -4.1103672216033615
+    },
+    {
+      "scenario": "mixed",
+      "users": 20,
+      "baseline": {
+        "requests_per_second": 111.54254096748733,
+        "p50_ms": 56.81133351754397,
+        "p95_ms": 756.5561045194045,
+        "p99_ms": 2317.8596459911205
+      },
+      "optimized": {
+        "requests_per_second": 125.87699771465677,
+        "p50_ms": 104.3491669697687,
+        "p95_ms": 376.1164789320901,
+        "p99_ms": 1122.127458511386
+      },
+      "throughput_change_percent": 12.851111892231026,
+      "p95_change_percent": -50.2857122313467
+    }
+  ],
+  "requests_per_version": 9600,
+  "requests_total": 19200,
+  "errors_total": 0,
+  "recommendation_scope": "status checked, plus POST card/run identity; full recommendation equality not claimed",
+  "official_no_degradation_requirement_proven": false
+}

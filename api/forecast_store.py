@@ -310,6 +310,11 @@ def load_run(database: Path, run_id: str, entity_mode=None) -> dict:
     return _read_one(database, run_id, entity_mode)[0]
 
 
+def load_run_with_metadata(database: Path, run_id: str, entity_mode=None) -> tuple[dict, dict]:
+    """Return payload and metadata from one checked row and read snapshot."""
+    return _read_one(database, run_id, entity_mode)
+
+
 def get_run_metadata(database: Path, run_id: str, entity_mode=None) -> dict:
     return _read_one(database, run_id, entity_mode)[1]
 

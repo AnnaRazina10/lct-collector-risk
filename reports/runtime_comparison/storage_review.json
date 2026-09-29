@@ -1,0 +1,117 @@
+{
+  "reviewed_at_utc": "2026-09-29T14:23:35.200311+00:00",
+  "review_kind": "independent source review and read-only provenance verification; no tests or loads executed by reviewer",
+  "reviewed_source_sha256": {
+    "api/main.py": "380721d6722adb702e1a0e36022766c0486ce8dbe2cf5dec0642ef5f96f63ae7",
+    "api/forecast_store.py": "bfcad380129505ac66496482bdced5be705f785d6ccadf5da6d6ead906392569",
+    "tests/test_api_storage_contention.py": "022c6abad11c483d3547d95ada3c574576274ecd77dd413932aed46cf2ff2dd8",
+    "scripts/compare_runtime.py": "f6867961667d19e109fdbe9eaf67a1468107fd27eb7660162cc7fa36ff719af3",
+    "tests/test_forecast_store.py": "21b5686126512202ebb66ef3cda76c1170baecc2a53ebfdbed0c81ef6b4f580c",
+    "tests/test_api_forecasts.py": "6376ef73d6d70941029c8b28ffa75ee465c65ca474c33f254c40c791d28ab76d",
+    "reports/runtime_comparison/baseline_contention_tests.log": "639bea749b7b85294e9b66f897cc73620731fd6b4c0d681fe3dbdf65f70680f9",
+    "reports/runtime_comparison/optimized_contention_tests.log": "9cb25df8dfb3cda621de17c18879737ffd4790c2137b8b86cafbf8961aebec74",
+    "reports/runtime_comparison/full_tests.log": "6b8c8fb96e3d0b9a273a0ecf6052b220614c8ec343c35b4e4c4b66a5e72e3786",
+    "reports/runtime_comparison/claim_correction.json": "5ea9ccac98924fdcb14c917695434b14ef1e9a81eea9431e559cdc3a04c52fd5"
+  },
+  "blocking_or_substantial_regressions_found": [],
+  "source_findings": [
+    "Ready journal schema has PRAGMA-only fast path without writer reservation.",
+    "Migration retains BEGIN IMMEDIATE and rechecks ticket columns after acquiring the lock.",
+    "Successful/failed writes retain context-manager commit/rollback and finally-close semantics.",
+    "No process-level schema cache; every newly opened database is inspected.",
+    "Single checked row supplies both archive payload and metadata; prior validation and HTTP error mappings remain.",
+    "Legacy JSON branch and recommendation logic unchanged."
+  ],
+  "ast_checks": {
+    "files_parse": true,
+    "dataset_forecast_store_calls": [
+      "load_run_with_metadata"
+    ],
+    "dataset_single_paired_archive_call": true,
+    "paired_loader_read_one_call_count": 1
+  },
+  "test_evidence_origin": "Existing root-produced logs inspected; not independently rerun during timed benchmark.",
+  "existing_log_checks": {
+    "baseline_expected_reserved_lock_failure": true,
+    "optimized_four_tests_pass": true,
+    "existing_full_suite_170_pass": true
+  },
+  "claim_correction": {
+    "status": "closed for misleading field name only",
+    "files_verified": [
+      {
+        "file": "reports/runtime_comparison/baseline/mixed_r1_u1/summary.json",
+        "after_sha256_matches": true,
+        "before_sha256_reproduced_by_only_field_rename": true,
+        "old_field_absent": true,
+        "new_field_present": true
+      },
+      {
+        "file": "reports/runtime_comparison/baseline/mixed_r1_u20/summary.json",
+        "after_sha256_matches": true,
+        "before_sha256_reproduced_by_only_field_rename": true,
+        "old_field_absent": true,
+        "new_field_present": true
+      },
+      {
+        "file": "reports/runtime_comparison/baseline/mixed_r2_u1/summary.json",
+        "after_sha256_matches": true,
+        "before_sha256_reproduced_by_only_field_rename": true,
+        "old_field_absent": true,
+        "new_field_present": true
+      },
+      {
+        "file": "reports/runtime_comparison/baseline/mixed_r2_u20/summary.json",
+        "after_sha256_matches": true,
+        "before_sha256_reproduced_by_only_field_rename": true,
+        "old_field_absent": true,
+        "new_field_present": true
+      },
+      {
+        "file": "reports/runtime_comparison/baseline/read_only_r1_u1/summary.json",
+        "after_sha256_matches": true,
+        "before_sha256_reproduced_by_only_field_rename": true,
+        "old_field_absent": true,
+        "new_field_present": true
+      },
+      {
+        "file": "reports/runtime_comparison/baseline/read_only_r1_u20/summary.json",
+        "after_sha256_matches": true,
+        "before_sha256_reproduced_by_only_field_rename": true,
+        "old_field_absent": true,
+        "new_field_present": true
+      },
+      {
+        "file": "reports/runtime_comparison/baseline/read_only_r2_u1/summary.json",
+        "after_sha256_matches": true,
+        "before_sha256_reproduced_by_only_field_rename": true,
+        "old_field_absent": true,
+        "new_field_present": true
+      },
+      {
+        "file": "reports/runtime_comparison/baseline/read_only_r2_u20/summary.json",
+        "after_sha256_matches": true,
+        "before_sha256_reproduced_by_only_field_rename": true,
+        "old_field_absent": true,
+        "new_field_present": true
+      },
+      {
+        "file": "reports/runtime_comparison/baseline/summary.json",
+        "after_sha256_matches": true,
+        "before_sha256_reproduced_by_only_field_rename": true,
+        "old_field_absent": true,
+        "new_field_present": true
+      }
+    ],
+    "current_harness_equals_baseline_after_only_label_rename": true,
+    "full_recommendation_exactness_proven": false
+  },
+  "limitations": [
+    "RESERVED-lock test does not guarantee reads under EXCLUSIVE lock or concurrent write throughput.",
+    "Schema readiness checks column names, not arbitrary corruption/unknown migration/constraint repair.",
+    "Replacing an active SQLite file or manipulating WAL is outside the validated mode.",
+    "No new performance measurement was run; actual optimized results must be reported separately.",
+    "Full recommendation/forecast-context equality and retained final database snapshots remain outside the harness validation scope."
+  ],
+  "read_only_verification_passed": true
+}

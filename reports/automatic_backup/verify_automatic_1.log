@@ -1,0 +1,369 @@
+{
+  "passed": true,
+  "operation": "verify",
+  "database_sha256": "b13b53a09a68d1d7f7a64fcd4d9578d70c888591e812dae192cb125eb49dbe90",
+  "manifest_sha256": "c108a7ef40f093fa6cb4c462c3a031a476b8c8129f096f69888deefef34e8617",
+  "inventory": {
+    "integrity_check": "ok",
+    "schema": [
+      [
+        "index",
+        "forecast_runs_issue",
+        "forecast_runs",
+        "CREATE INDEX forecast_runs_issue ON forecast_runs (issue_epoch DESC, run_id)"
+      ],
+      [
+        "index",
+        "sqlite_autoindex_feedback_1",
+        "feedback",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_forecast_card_ids_1",
+        "forecast_card_ids",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_forecast_runs_1",
+        "forecast_runs",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_tickets_1",
+        "tickets",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_tickets_2",
+        "tickets",
+        null
+      ],
+      [
+        "table",
+        "feedback",
+        "feedback",
+        "CREATE TABLE feedback (\n            id TEXT PRIMARY KEY, risk_id TEXT NOT NULL, entity_mode TEXT NOT NULL,\n            decision TEXT NOT NULL, reason TEXT NOT NULL, operator TEXT NOT NULL,\n            note TEXT NOT NULL, created_at TEXT NOT NULL, risk_snapshot TEXT NOT NULL)"
+      ],
+      [
+        "table",
+        "forecast_card_ids",
+        "forecast_card_ids",
+        "CREATE TABLE forecast_card_ids (card_id TEXT PRIMARY KEY, run_id TEXT NOT NULL REFERENCES forecast_runs(run_id))"
+      ],
+      [
+        "table",
+        "forecast_runs",
+        "forecast_runs",
+        "CREATE TABLE forecast_runs (\n        run_id TEXT PRIMARY KEY, entity_mode TEXT NOT NULL, mode TEXT NOT NULL,\n        issue_epoch REAL NOT NULL, metadata_json TEXT NOT NULL,\n        payload_json TEXT NOT NULL, content_sha256 TEXT NOT NULL, created_at TEXT NOT NULL)"
+      ],
+      [
+        "table",
+        "tickets",
+        "tickets",
+        "CREATE TABLE tickets (id TEXT PRIMARY KEY, risk_id TEXT UNIQUE, note TEXT, created_at TEXT, status TEXT, entity_mode TEXT NOT NULL DEFAULT 'channel', risk_snapshot TEXT NOT NULL DEFAULT '{}')"
+      ],
+      [
+        "trigger",
+        "forecast_card_ids_immutable_delete",
+        "forecast_card_ids",
+        "CREATE TRIGGER forecast_card_ids_immutable_delete BEFORE DELETE ON forecast_card_ids BEGIN SELECT RAISE(ABORT, 'Forecast releases are immutable'); END"
+      ],
+      [
+        "trigger",
+        "forecast_card_ids_immutable_update",
+        "forecast_card_ids",
+        "CREATE TRIGGER forecast_card_ids_immutable_update BEFORE UPDATE ON forecast_card_ids BEGIN SELECT RAISE(ABORT, 'Forecast releases are immutable'); END"
+      ],
+      [
+        "trigger",
+        "forecast_runs_immutable_delete",
+        "forecast_runs",
+        "CREATE TRIGGER forecast_runs_immutable_delete BEFORE DELETE ON forecast_runs BEGIN SELECT RAISE(ABORT, 'Forecast releases are immutable'); END"
+      ],
+      [
+        "trigger",
+        "forecast_runs_immutable_update",
+        "forecast_runs",
+        "CREATE TRIGGER forecast_runs_immutable_update BEFORE UPDATE ON forecast_runs BEGIN SELECT RAISE(ABORT, 'Forecast releases are immutable'); END"
+      ]
+    ],
+    "schema_sha256": "24bb250afae64d906a95e31605ee176d1896f565fce0366bf701d3bad13bc5a0",
+    "tables": {
+      "feedback": {
+        "row_count": 1,
+        "columns": [
+          [
+            0,
+            "id",
+            "TEXT",
+            0,
+            null,
+            1,
+            0
+          ],
+          [
+            1,
+            "risk_id",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ],
+          [
+            2,
+            "entity_mode",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ],
+          [
+            3,
+            "decision",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ],
+          [
+            4,
+            "reason",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ],
+          [
+            5,
+            "operator",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ],
+          [
+            6,
+            "note",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ],
+          [
+            7,
+            "created_at",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ],
+          [
+            8,
+            "risk_snapshot",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ]
+        ],
+        "payload_sha256": "bddd4974016332028736152eac1f2115de5bf1bdf54913cdb1acd7ca5fcaf26d",
+        "internal": false
+      },
+      "forecast_card_ids": {
+        "row_count": 468,
+        "columns": [
+          [
+            0,
+            "card_id",
+            "TEXT",
+            0,
+            null,
+            1,
+            0
+          ],
+          [
+            1,
+            "run_id",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ]
+        ],
+        "payload_sha256": "5d2b7440eaa3162df281ae63aa0fef1596550876436ec08106e5313c14b59a87",
+        "internal": false
+      },
+      "forecast_runs": {
+        "row_count": 6,
+        "columns": [
+          [
+            0,
+            "run_id",
+            "TEXT",
+            0,
+            null,
+            1,
+            0
+          ],
+          [
+            1,
+            "entity_mode",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ],
+          [
+            2,
+            "mode",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ],
+          [
+            3,
+            "issue_epoch",
+            "REAL",
+            1,
+            null,
+            0,
+            0
+          ],
+          [
+            4,
+            "metadata_json",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ],
+          [
+            5,
+            "payload_json",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ],
+          [
+            6,
+            "content_sha256",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ],
+          [
+            7,
+            "created_at",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ]
+        ],
+        "payload_sha256": "adc5e6a96d300d89f8abc9ac06698e626873c01f37e5c72b0a8be5abb97da909",
+        "internal": false
+      },
+      "tickets": {
+        "row_count": 0,
+        "columns": [
+          [
+            0,
+            "id",
+            "TEXT",
+            0,
+            null,
+            1,
+            0
+          ],
+          [
+            1,
+            "risk_id",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            2,
+            "note",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            3,
+            "created_at",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            4,
+            "status",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            5,
+            "entity_mode",
+            "TEXT",
+            1,
+            "'channel'",
+            0,
+            0
+          ],
+          [
+            6,
+            "risk_snapshot",
+            "TEXT",
+            1,
+            "'{}'",
+            0,
+            0
+          ]
+        ],
+        "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "internal": false
+      }
+    },
+    "user_tables": [
+      "feedback",
+      "forecast_card_ids",
+      "forecast_runs",
+      "tickets"
+    ],
+    "user_version": 0,
+    "application_id": 0,
+    "encoding": "UTF-8"
+  }
+}

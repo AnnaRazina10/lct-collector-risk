@@ -29,8 +29,8 @@ app = FastAPI(title="Коллектор — объектные и канальн
 def dataset(mode: EntityMode = "channel", run_id: str | None = None):
     if run_id is not None:
         try:
-            data = forecast_store.load_run(DB, run_id, entity_mode=mode)
-            data["archive_metadata"] = forecast_store.get_run_metadata(DB, run_id, entity_mode=mode)
+            data, metadata = forecast_store.load_run_with_metadata(DB, run_id, entity_mode=mode)
+            data["archive_metadata"] = metadata
             return data
         except forecast_store.ForecastNotFoundError as error:
             raise HTTPException(404, "Выпуск не найден в выбранном режиме") from error
@@ -105,23 +105,36 @@ def connection():
     conn = sqlite3.connect(DB, timeout=30)
     conn.row_factory = sqlite3.Row
     try:
-        # Serialize first-use migration; retain existing channel drafts without deletion.
-        conn.execute("BEGIN IMMEDIATE")
-        conn.execute("CREATE TABLE IF NOT EXISTS tickets (id TEXT PRIMARY KEY, risk_id TEXT UNIQUE, note TEXT, created_at TEXT, status TEXT)")
-        columns = {row[1] for row in conn.execute("PRAGMA table_info(tickets)")}
-        if "entity_mode" not in columns:
-            conn.execute("ALTER TABLE tickets ADD COLUMN entity_mode TEXT NOT NULL DEFAULT 'channel'")
-        if "risk_snapshot" not in columns:
-            conn.execute("ALTER TABLE tickets ADD COLUMN risk_snapshot TEXT NOT NULL DEFAULT '{}'")
-        conn.execute("""CREATE TABLE IF NOT EXISTS feedback (
-            id TEXT PRIMARY KEY, risk_id TEXT NOT NULL, entity_mode TEXT NOT NULL,
-            decision TEXT NOT NULL, reason TEXT NOT NULL, operator TEXT NOT NULL,
-            note TEXT NOT NULL, created_at TEXT NOT NULL, risk_snapshot TEXT NOT NULL)""")
-        conn.commit()
+        ensure_journal_schema(conn)
         with conn:
             yield conn
     finally:
         conn.close()
+
+
+def ensure_journal_schema(conn):
+    # Inspect every opened database, so replacement/restoration cannot leave a
+    # stale process-level cache. Ready readers do not reserve the single writer.
+    tickets = {row[1] for row in conn.execute("PRAGMA table_info(tickets)")}
+    feedback = {row[1] for row in conn.execute("PRAGMA table_info(feedback)")}
+    if {"id", "risk_id", "note", "created_at", "status", "entity_mode", "risk_snapshot"} <= tickets and {
+        "id", "risk_id", "entity_mode", "decision", "reason", "operator", "note", "created_at", "risk_snapshot"
+    } <= feedback:
+        return
+    # Serialize migrations only; re-read columns under this lock because another
+    # first request may have completed the same migration after our initial read.
+    conn.execute("BEGIN IMMEDIATE")
+    conn.execute("CREATE TABLE IF NOT EXISTS tickets (id TEXT PRIMARY KEY, risk_id TEXT UNIQUE, note TEXT, created_at TEXT, status TEXT)")
+    columns = {row[1] for row in conn.execute("PRAGMA table_info(tickets)")}
+    if "entity_mode" not in columns:
+        conn.execute("ALTER TABLE tickets ADD COLUMN entity_mode TEXT NOT NULL DEFAULT 'channel'")
+    if "risk_snapshot" not in columns:
+        conn.execute("ALTER TABLE tickets ADD COLUMN risk_snapshot TEXT NOT NULL DEFAULT '{}'")
+    conn.execute("""CREATE TABLE IF NOT EXISTS feedback (
+        id TEXT PRIMARY KEY, risk_id TEXT NOT NULL, entity_mode TEXT NOT NULL,
+        decision TEXT NOT NULL, reason TEXT NOT NULL, operator TEXT NOT NULL,
+        note TEXT NOT NULL, created_at TEXT NOT NULL, risk_snapshot TEXT NOT NULL)""")
+    conn.commit()
 
 
 class TicketDraft(BaseModel):

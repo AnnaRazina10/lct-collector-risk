@@ -30,6 +30,9 @@ ASSETS = [
     'requirements-runtime.txt', 'requirements-inference.txt',
     'docs/onset_demo.md', 'docs/object_demo.md', 'docs/local_demo.md',
     'docs/recommendations.md',
+    'scripts/database_backup.py', 'scripts/backup_scheduler.py', 'docs/automatic_backup.md',
+    'docs/backup_restore.md',
+    'tests/test_backup_scheduler.py', 'tests/test_database_backup.py',
 ]
 
 VERIFY = '''"""Verify immutable bundle inputs; new runtime files are not inputs."""
@@ -124,6 +127,19 @@ forecast_seed.sqlite3 копируется в отдельную dispatch.sqlite
 сервер добавляет отдельный снимок рекомендации; прежний журнал не пересчитывается.
 Правила применяются сейчас к архиву и не устанавливают физическую причину.
 Подробности: docs/recommendations.md.
+
+## Периодические резервные копии (отдельный локальный процесс)
+
+После первого запуска сервера рабочая база существует. В другом терминале:
+
+    .venv/bin/python scripts/backup_scheduler.py --source data/app/dispatch.sqlite3 --output-dir backups --interval 3600 --timeout 60
+
+Первый backup создаётся сразу, дальнейшие — по расписанию до остановки процесса.
+Последний результат — backups/status.json. Для ограниченной проверки добавьте
+--max-runs 3. Прежние копии не удаляются автоматически. Системная служба,
+автозапуск после перезагрузки и внешнее хранилище не устанавливаются.
+Восстановление выполняется только в новый файл; примеры и точные ограничения:
+docs/automatic_backup.md. Ни один scheduler не запущен самой сборкой комплекта.
 
 Исходный код: https://github.com/AnnaRazina10/lct-collector-risk
 

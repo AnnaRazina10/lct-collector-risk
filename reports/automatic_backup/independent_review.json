@@ -1,0 +1,728 @@
+{
+  "status": "passed",
+  "scope": "Local periodic backup, process exclusion, failure/recovery, orderly stop/restart and exact restore only; not complete section11, HA, retention, off-host storage or deployment validation.",
+  "source_zip": "artifacts/submission/bundles/collector-risk-review-v2.zip",
+  "source_zip_sha256": "b3dd7dfff8349039d3131e2fe3c00a66705355d605f04b12eb64bfa1809b0d0a",
+  "source_seed_sha256": "eb7d47c7b85552f238d10912fdbfc9d5e83331b5099c32d62e199c85167cf15b",
+  "source_sha256": {
+    "scripts/backup_scheduler.py": "213c98852e73beed155bb8b5c365880107300033494285cd4abd686f38506dc3",
+    "scripts/database_backup.py": "7645ed12a06405c1a6e40178c1ac2373dc224098fb36eb7753b72744077f21df",
+    "api/main.py": "28876096bebdc50eb0d3a387d9161b39b6b3ebc2510115795b0b8cf0095aa370",
+    "src/serving/local_recommendations.py": "8032e49ac30213284b64e3b26257c2e4774af5ed1556bb1e604e2ba680c593d9",
+    "reports/automatic_backup/run_independent_acceptance.py": "95a0078ea283097370bcc018777c5713888282522bdb2eada2633744c4e0f544"
+  },
+  "checks": [
+    {
+      "name": "zip_seed_sha_matches_manifest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "six_releases_468_cards",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "server_test_feedback_created",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "server_recommendation_present",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "concurrent_scheduler_refused_exit3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "automatic_three_exit0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "three_successful_attempts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "three_distinct_published_bundles",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "real_long_backup_skips_missed_slots",
+      "passed": true,
+      "detail": 3
+    },
+    {
+      "name": "bounded_session_stopped",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "verify_automatic_1_exit0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verify_automatic_1_passed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "verify_automatic_2_exit0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verify_automatic_2_passed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "verify_automatic_3_exit0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verify_automatic_3_passed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "failure_preserves_last_success",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "failure_keeps_successful_bundle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recovery_updates_last_success",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "recovery_retains_historical_error",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "failure_recovery_orderly_sigterm_exit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stopped_state_after_signal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "bounded_missing_source_exit1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restart_failure_retains_success",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restart_failure_count_incremented",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "inflight_signal_exit143",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "inflight_backup_finished_before_stop",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "inflight_signal_did_not_start_more_backups",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restart_recovered_exit0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restart_success_count_incremented",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restart_preserves_cumulative_attempts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_db_bytes_unchanged_by_scheduler",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restore_latest_exit0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "restore_latest_passed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restore_exact_six_forecast_payloads",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restore_exact_server_recommendation_snapshot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restore_exact_dispatcher_test_fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restored_snapshot_not_regenerated",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "input_zip_unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "scheduler_sources_unchanged_during_acceptance",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "checks_count": 40,
+  "status_reads_without_partial_json": 125,
+  "events": [
+    {
+      "event": "process_started",
+      "elapsed_seconds": 0.03863779199309647,
+      "label": "automatic_three",
+      "pid": 51411,
+      "interval": 0.2,
+      "max_runs": 3
+    },
+    {
+      "event": "process_started",
+      "elapsed_seconds": 0.0657468750141561,
+      "label": "competitor",
+      "pid": 51412,
+      "interval": 0.2,
+      "max_runs": 1
+    },
+    {
+      "event": "process_completed",
+      "elapsed_seconds": 0.09109454206191003,
+      "label": "competitor",
+      "pid": 51412,
+      "returncode": 3
+    },
+    {
+      "event": "sqlite_exclusive_lock_released",
+      "elapsed_seconds": 0.7456920000258833
+    },
+    {
+      "event": "process_completed",
+      "elapsed_seconds": 1.0996600000653416,
+      "label": "automatic_three",
+      "pid": 51411,
+      "returncode": 0
+    },
+    {
+      "event": "verify_automatic_1",
+      "elapsed_seconds": 1.1381040000123903,
+      "seconds": 0.03760020900517702
+    },
+    {
+      "event": "verify_automatic_2",
+      "elapsed_seconds": 1.1686792919645086,
+      "seconds": 0.03054233395960182
+    },
+    {
+      "event": "verify_automatic_3",
+      "elapsed_seconds": 1.196840833988972,
+      "seconds": 0.028105124947614968
+    },
+    {
+      "event": "process_started",
+      "elapsed_seconds": 1.1984194590477273,
+      "label": "failure_recovery",
+      "pid": 51417,
+      "interval": 0.4,
+      "max_runs": null
+    },
+    {
+      "event": "source_hidden_for_failure",
+      "elapsed_seconds": 1.2361262090271339
+    },
+    {
+      "event": "source_restored_after_failure",
+      "elapsed_seconds": 1.634961083997041
+    },
+    {
+      "event": "process_stopped",
+      "elapsed_seconds": 2.0649321250384673,
+      "label": "failure_recovery",
+      "pid": 51417,
+      "returncode": 143,
+      "seconds": 0.008879499975591898
+    },
+    {
+      "event": "process_started",
+      "elapsed_seconds": 2.0679229999659583,
+      "label": "restart_missing_source",
+      "pid": 51418,
+      "interval": 0.2,
+      "max_runs": 1
+    },
+    {
+      "event": "process_completed",
+      "elapsed_seconds": 2.1151242919731885,
+      "label": "restart_missing_source",
+      "pid": 51418,
+      "returncode": 1
+    },
+    {
+      "event": "process_started",
+      "elapsed_seconds": 2.117552625015378,
+      "label": "inflight_sigterm",
+      "pid": 51419,
+      "interval": 0.2,
+      "max_runs": 3
+    },
+    {
+      "event": "process_completed",
+      "elapsed_seconds": 2.274856375064701,
+      "label": "inflight_sigterm",
+      "pid": 51419,
+      "returncode": 143
+    },
+    {
+      "event": "process_started",
+      "elapsed_seconds": 2.2769181670155376,
+      "label": "restart_recovered",
+      "pid": 51420,
+      "interval": 0.2,
+      "max_runs": 1
+    },
+    {
+      "event": "process_completed",
+      "elapsed_seconds": 2.3275898339925334,
+      "label": "restart_recovered",
+      "pid": 51420,
+      "returncode": 0
+    },
+    {
+      "event": "restore_latest",
+      "elapsed_seconds": 2.3644161670235917,
+      "seconds": 0.03595954203046858
+    }
+  ],
+  "status_snapshots": {
+    "after_three": {
+      "counters": {
+        "attempts": 3,
+        "failures": 0,
+        "interrupted": 0,
+        "successes": 3
+      },
+      "format_version": 1,
+      "interval_seconds": 0.2,
+      "last_attempt": {
+        "attempt_id": "f394eb82ddef4c428869f2430a8ce3db:3",
+        "destination": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/backups/backup-20260929T142028.843634Z-7a488dac342b4f0abd50f5ded35ee666",
+        "finished_at_utc": "2026-09-29T14:20:28.868322+00:00",
+        "started_at_utc": "2026-09-29T14:20:28.843613+00:00",
+        "status": "succeeded"
+      },
+      "last_error": null,
+      "last_success": {
+        "attempt_id": "f394eb82ddef4c428869f2430a8ce3db:3",
+        "completed_at_utc": "2026-09-29T14:20:28.868322+00:00",
+        "database_sha256": "b13b53a09a68d1d7f7a64fcd4d9578d70c888591e812dae192cb125eb49dbe90",
+        "destination": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/backups/backup-20260929T142028.843634Z-7a488dac342b4f0abd50f5ded35ee666",
+        "elapsed_seconds": 0.022471167030744255,
+        "manifest_sha256": "fd79134ff97b5099575d5c9523dba18d1ba00dbd8db2765b140186280fe118db",
+        "source_journal_mode": "delete"
+      },
+      "max_runs": 3,
+      "next_attempt_at_utc": null,
+      "output_dir": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/backups",
+      "pid": 51411,
+      "session_attempts": 3,
+      "session_failures": 0,
+      "session_id": "f394eb82ddef4c428869f2430a8ce3db",
+      "session_successes": 3,
+      "skipped_slots": 3,
+      "source": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/source.sqlite3",
+      "started_at_utc": "2026-09-29T14:20:27.842119+00:00",
+      "state": "stopped",
+      "stop_reason": "max_runs",
+      "stopped_at_utc": "2026-09-29T14:20:28.868334+00:00",
+      "timeout_seconds": 8.0,
+      "updated_at_utc": "2026-09-29T14:20:28.868337+00:00"
+    },
+    "source_failure": {
+      "counters": {
+        "attempts": 5,
+        "failures": 1,
+        "interrupted": 0,
+        "successes": 4
+      },
+      "format_version": 1,
+      "interval_seconds": 0.4,
+      "last_attempt": {
+        "attempt_id": "2f8ce107cf3f45a1a2e95da626abc0c1:2",
+        "destination": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/backups/backup-20260929T142029.404033Z-eea23997a2c04c8cbff57e1c8762242a",
+        "error": {
+          "at_utc": "2026-09-29T14:20:29.408285+00:00",
+          "attempt_id": "2f8ce107cf3f45a1a2e95da626abc0c1:2",
+          "message": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/source.sqlite3",
+          "type": "FileNotFoundError"
+        },
+        "finished_at_utc": "2026-09-29T14:20:29.408285+00:00",
+        "started_at_utc": "2026-09-29T14:20:29.403988+00:00",
+        "status": "failed"
+      },
+      "last_error": {
+        "at_utc": "2026-09-29T14:20:29.408285+00:00",
+        "attempt_id": "2f8ce107cf3f45a1a2e95da626abc0c1:2",
+        "message": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/source.sqlite3",
+        "type": "FileNotFoundError"
+      },
+      "last_success": {
+        "attempt_id": "2f8ce107cf3f45a1a2e95da626abc0c1:1",
+        "completed_at_utc": "2026-09-29T14:20:29.007450+00:00",
+        "database_sha256": "b13b53a09a68d1d7f7a64fcd4d9578d70c888591e812dae192cb125eb49dbe90",
+        "destination": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/backups/backup-20260929T142028.998742Z-d3ce54bdda6047bc892feb30e8fb7ba0",
+        "elapsed_seconds": 0.008298750035464764,
+        "manifest_sha256": "cb4d3b132c5f57b2550249244e4d3d54c198a59f9dfca5333eb66828f47d9b78",
+        "source_journal_mode": "delete"
+      },
+      "max_runs": null,
+      "next_attempt_at_utc": "2026-09-29T14:20:29.798736+00:00",
+      "output_dir": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/backups",
+      "pid": 51417,
+      "session_attempts": 2,
+      "session_failures": 1,
+      "session_id": "2f8ce107cf3f45a1a2e95da626abc0c1",
+      "session_successes": 1,
+      "skipped_slots": 0,
+      "source": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/source.sqlite3",
+      "started_at_utc": "2026-09-29T14:20:28.998259+00:00",
+      "state": "waiting",
+      "stop_reason": null,
+      "stopped_at_utc": null,
+      "timeout_seconds": 8.0,
+      "updated_at_utc": "2026-09-29T14:20:29.408353+00:00"
+    },
+    "recovered": {
+      "counters": {
+        "attempts": 6,
+        "failures": 1,
+        "interrupted": 0,
+        "successes": 5
+      },
+      "format_version": 1,
+      "interval_seconds": 0.4,
+      "last_attempt": {
+        "attempt_id": "2f8ce107cf3f45a1a2e95da626abc0c1:3",
+        "destination": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/backups/backup-20260929T142029.803482Z-cb15a11720f64bcc922744f30ce1f25b",
+        "finished_at_utc": "2026-09-29T14:20:29.825385+00:00",
+        "started_at_utc": "2026-09-29T14:20:29.803464+00:00",
+        "status": "succeeded"
+      },
+      "last_error": {
+        "at_utc": "2026-09-29T14:20:29.408285+00:00",
+        "attempt_id": "2f8ce107cf3f45a1a2e95da626abc0c1:2",
+        "message": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/source.sqlite3",
+        "type": "FileNotFoundError"
+      },
+      "last_success": {
+        "attempt_id": "2f8ce107cf3f45a1a2e95da626abc0c1:3",
+        "completed_at_utc": "2026-09-29T14:20:29.825385+00:00",
+        "database_sha256": "b13b53a09a68d1d7f7a64fcd4d9578d70c888591e812dae192cb125eb49dbe90",
+        "destination": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/backups/backup-20260929T142029.803482Z-cb15a11720f64bcc922744f30ce1f25b",
+        "elapsed_seconds": 0.02007233293261379,
+        "manifest_sha256": "27c08cb34b1d89801bd18d75b9afc82133b34d8e9ffdc5c8e825366d949554b4",
+        "source_journal_mode": "delete"
+      },
+      "max_runs": null,
+      "next_attempt_at_utc": "2026-09-29T14:20:30.198739+00:00",
+      "output_dir": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/backups",
+      "pid": 51417,
+      "session_attempts": 3,
+      "session_failures": 1,
+      "session_id": "2f8ce107cf3f45a1a2e95da626abc0c1",
+      "session_successes": 2,
+      "skipped_slots": 0,
+      "source": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/source.sqlite3",
+      "started_at_utc": "2026-09-29T14:20:28.998259+00:00",
+      "state": "waiting",
+      "stop_reason": null,
+      "stopped_at_utc": null,
+      "timeout_seconds": 8.0,
+      "updated_at_utc": "2026-09-29T14:20:29.825404+00:00"
+    },
+    "after_sigterm": {
+      "counters": {
+        "attempts": 6,
+        "failures": 1,
+        "interrupted": 0,
+        "successes": 5
+      },
+      "format_version": 1,
+      "interval_seconds": 0.4,
+      "last_attempt": {
+        "attempt_id": "2f8ce107cf3f45a1a2e95da626abc0c1:3",
+        "destination": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/backups/backup-20260929T142029.803482Z-cb15a11720f64bcc922744f30ce1f25b",
+        "finished_at_utc": "2026-09-29T14:20:29.825385+00:00",
+        "started_at_utc": "2026-09-29T14:20:29.803464+00:00",
+        "status": "succeeded"
+      },
+      "last_error": {
+        "at_utc": "2026-09-29T14:20:29.408285+00:00",
+        "attempt_id": "2f8ce107cf3f45a1a2e95da626abc0c1:2",
+        "message": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/source.sqlite3",
+        "type": "FileNotFoundError"
+      },
+      "last_success": {
+        "attempt_id": "2f8ce107cf3f45a1a2e95da626abc0c1:3",
+        "completed_at_utc": "2026-09-29T14:20:29.825385+00:00",
+        "database_sha256": "b13b53a09a68d1d7f7a64fcd4d9578d70c888591e812dae192cb125eb49dbe90",
+        "destination": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/backups/backup-20260929T142029.803482Z-cb15a11720f64bcc922744f30ce1f25b",
+        "elapsed_seconds": 0.02007233293261379,
+        "manifest_sha256": "27c08cb34b1d89801bd18d75b9afc82133b34d8e9ffdc5c8e825366d949554b4",
+        "source_journal_mode": "delete"
+      },
+      "max_runs": null,
+      "next_attempt_at_utc": null,
+      "output_dir": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/backups",
+      "pid": 51417,
+      "session_attempts": 3,
+      "session_failures": 1,
+      "session_id": "2f8ce107cf3f45a1a2e95da626abc0c1",
+      "session_successes": 2,
+      "skipped_slots": 0,
+      "source": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/source.sqlite3",
+      "started_at_utc": "2026-09-29T14:20:28.998259+00:00",
+      "state": "stopped",
+      "stop_reason": "signal:SIGTERM",
+      "stopped_at_utc": "2026-09-29T14:20:29.836916+00:00",
+      "timeout_seconds": 8.0,
+      "updated_at_utc": "2026-09-29T14:20:29.836922+00:00"
+    },
+    "restart_missing_source": {
+      "counters": {
+        "attempts": 7,
+        "failures": 2,
+        "interrupted": 0,
+        "successes": 5
+      },
+      "format_version": 1,
+      "interval_seconds": 0.2,
+      "last_attempt": {
+        "attempt_id": "edb4a3ee65b04349b03ee294845ce888:1",
+        "destination": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/backups/backup-20260929T142029.879823Z-f08173cd29bc4fd1a54f1a4511901419",
+        "error": {
+          "at_utc": "2026-09-29T14:20:29.880202+00:00",
+          "attempt_id": "edb4a3ee65b04349b03ee294845ce888:1",
+          "message": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/source.sqlite3",
+          "type": "FileNotFoundError"
+        },
+        "finished_at_utc": "2026-09-29T14:20:29.880202+00:00",
+        "started_at_utc": "2026-09-29T14:20:29.879820+00:00",
+        "status": "failed"
+      },
+      "last_error": {
+        "at_utc": "2026-09-29T14:20:29.880202+00:00",
+        "attempt_id": "edb4a3ee65b04349b03ee294845ce888:1",
+        "message": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/source.sqlite3",
+        "type": "FileNotFoundError"
+      },
+      "last_success": {
+        "attempt_id": "2f8ce107cf3f45a1a2e95da626abc0c1:3",
+        "completed_at_utc": "2026-09-29T14:20:29.825385+00:00",
+        "database_sha256": "b13b53a09a68d1d7f7a64fcd4d9578d70c888591e812dae192cb125eb49dbe90",
+        "destination": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/backups/backup-20260929T142029.803482Z-cb15a11720f64bcc922744f30ce1f25b",
+        "elapsed_seconds": 0.02007233293261379,
+        "manifest_sha256": "27c08cb34b1d89801bd18d75b9afc82133b34d8e9ffdc5c8e825366d949554b4",
+        "source_journal_mode": "delete"
+      },
+      "max_runs": 1,
+      "next_attempt_at_utc": null,
+      "output_dir": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/backups",
+      "pid": 51418,
+      "session_attempts": 1,
+      "session_failures": 1,
+      "session_id": "edb4a3ee65b04349b03ee294845ce888",
+      "session_successes": 0,
+      "skipped_slots": 0,
+      "source": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/source.sqlite3",
+      "started_at_utc": "2026-09-29T14:20:29.879149+00:00",
+      "state": "stopped",
+      "stop_reason": "max_runs",
+      "stopped_at_utc": "2026-09-29T14:20:29.880209+00:00",
+      "timeout_seconds": 8.0,
+      "updated_at_utc": "2026-09-29T14:20:29.880210+00:00"
+    },
+    "inflight_sigterm": {
+      "counters": {
+        "attempts": 8,
+        "failures": 2,
+        "interrupted": 0,
+        "successes": 6
+      },
+      "format_version": 1,
+      "interval_seconds": 0.2,
+      "last_attempt": {
+        "attempt_id": "d44f6f56c21648b6b9d9d63ee9297eeb:1",
+        "destination": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/backups/backup-20260929T142029.922210Z-508c08eef99745588963ed812f823f98",
+        "finished_at_utc": "2026-09-29T14:20:30.048292+00:00",
+        "started_at_utc": "2026-09-29T14:20:29.922207+00:00",
+        "status": "succeeded"
+      },
+      "last_error": {
+        "at_utc": "2026-09-29T14:20:29.880202+00:00",
+        "attempt_id": "edb4a3ee65b04349b03ee294845ce888:1",
+        "message": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/source.sqlite3",
+        "type": "FileNotFoundError"
+      },
+      "last_success": {
+        "attempt_id": "d44f6f56c21648b6b9d9d63ee9297eeb:1",
+        "completed_at_utc": "2026-09-29T14:20:30.048292+00:00",
+        "database_sha256": "b13b53a09a68d1d7f7a64fcd4d9578d70c888591e812dae192cb125eb49dbe90",
+        "destination": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/backups/backup-20260929T142029.922210Z-508c08eef99745588963ed812f823f98",
+        "elapsed_seconds": 0.12562000006437302,
+        "manifest_sha256": "35e4e0cf0bfd8b402d95105a5e55e8da4d44a918ce1f076c921390b2cd4663da",
+        "source_journal_mode": "delete"
+      },
+      "max_runs": 3,
+      "next_attempt_at_utc": null,
+      "output_dir": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/backups",
+      "pid": 51419,
+      "session_attempts": 1,
+      "session_failures": 0,
+      "session_id": "d44f6f56c21648b6b9d9d63ee9297eeb",
+      "session_successes": 1,
+      "skipped_slots": 0,
+      "source": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/source.sqlite3",
+      "started_at_utc": "2026-09-29T14:20:29.921699+00:00",
+      "state": "stopped",
+      "stop_reason": "signal:SIGTERM",
+      "stopped_at_utc": "2026-09-29T14:20:30.048315+00:00",
+      "timeout_seconds": 8.0,
+      "updated_at_utc": "2026-09-29T14:20:30.048318+00:00"
+    },
+    "restart_recovered": {
+      "counters": {
+        "attempts": 9,
+        "failures": 2,
+        "interrupted": 0,
+        "successes": 7
+      },
+      "format_version": 1,
+      "interval_seconds": 0.2,
+      "last_attempt": {
+        "attempt_id": "1ad3c7175b9e4528aa379262945544b3:1",
+        "destination": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/backups/backup-20260929T142030.082715Z-ce319d9a8e2b4d1c8a8628dc0b6e63ed",
+        "finished_at_utc": "2026-09-29T14:20:30.092828+00:00",
+        "started_at_utc": "2026-09-29T14:20:30.082713+00:00",
+        "status": "succeeded"
+      },
+      "last_error": {
+        "at_utc": "2026-09-29T14:20:29.880202+00:00",
+        "attempt_id": "edb4a3ee65b04349b03ee294845ce888:1",
+        "message": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/source.sqlite3",
+        "type": "FileNotFoundError"
+      },
+      "last_success": {
+        "attempt_id": "1ad3c7175b9e4528aa379262945544b3:1",
+        "completed_at_utc": "2026-09-29T14:20:30.092828+00:00",
+        "database_sha256": "b13b53a09a68d1d7f7a64fcd4d9578d70c888591e812dae192cb125eb49dbe90",
+        "destination": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/backups/backup-20260929T142030.082715Z-ce319d9a8e2b4d1c8a8628dc0b6e63ed",
+        "elapsed_seconds": 0.009712334023788571,
+        "manifest_sha256": "9d4274058a4d39e47ce5a92237e42ea289db955655c6bf3c45e6afab102e7677",
+        "source_journal_mode": "delete"
+      },
+      "max_runs": 1,
+      "next_attempt_at_utc": null,
+      "output_dir": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/backups",
+      "pid": 51420,
+      "session_attempts": 1,
+      "session_failures": 0,
+      "session_id": "1ad3c7175b9e4528aa379262945544b3",
+      "session_successes": 1,
+      "skipped_slots": 0,
+      "source": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-scheduler-independent-9pi706rf/source.sqlite3",
+      "started_at_utc": "2026-09-29T14:20:30.082251+00:00",
+      "state": "stopped",
+      "stop_reason": "max_runs",
+      "stopped_at_utc": "2026-09-29T14:20:30.092835+00:00",
+      "timeout_seconds": 8.0,
+      "updated_at_utc": "2026-09-29T14:20:30.092837+00:00"
+    }
+  },
+  "sigterm_exit_seconds": 0.008879499975591898,
+  "inflight_sigterm_exit_seconds": 0.12285637494642287,
+  "restart_missing_source_exit_code": 1,
+  "restore_elapsed_seconds": 0.00982529204338789,
+  "restored_releases": 6,
+  "restored_cards": 468,
+  "restored_test_recommendation_snapshot_sha256": "a63a55607f35b05a2f97d84b112df6889ae63d34915cd4eb479260e1e7a37368",
+  "restored_payload_sha256": {
+    "onset_2026-06-28_0f97f74f589ee7b9": "212c44ea37724a35eadb76e4a952bd4b42f19e18edc7b1974cddb8f3a1bb5df0",
+    "object_2026-06-28_6fcffa044c314e16": "d890ff3c0d5d9a56bbed4408469cbabcddcf58154745f000845bc3ac299dd039",
+    "onset_2026-06-27_89af23daa1273ad1": "7565825ef13a035508482601b74bdd684806f6d1208335ca6e90a799a2af07ca",
+    "object_2026-06-27_661a446f9ca20cc2": "7ebac7dbbee1ed52940e66c7f925ebd290fc9720fc3df023ede54977a6bb943d",
+    "onset_2026-06-26_844dac1ea731bf67": "9327cff26c17f6444089c732c09cda5662cf1821d64184ec19793e0998ee8a62",
+    "object_2026-06-26_960db067b50f766e": "2a6a680a83ee2bae75cce4d9921c34fad4ca8246a8dfdc2bc92798a7c9c9a72e"
+  },
+  "total_elapsed_seconds": 2.396462459000759,
+  "working_databases_opened": false,
+  "temporary_databases_removed_after_check": true,
+  "restored_table_row_counts": {
+    "feedback": 1,
+    "forecast_card_ids": 468,
+    "forecast_runs": 6,
+    "tickets": 0
+  },
+  "findings": [],
+  "limitations": [
+    "Independent process acceptance ran on local macOS and a small disposable archive (6 releases/468 cards/one synthetic recommendation snapshot). It is not a production-scale performance or reliability guarantee.",
+    "This independent run used SQLite journal_mode=delete. Live WAL and SIGKILL recovery are covered by the author suite, not claimed as independently exercised here.",
+    "Scheduling is explicit in the running foreground process; service installation, launch-on-login, machine restart recovery, retention, encryption, off-host copies and monitoring alerts were not exercised or configured.",
+    "SIGTERM requests stop after the active cooperative backup finishes. --timeout is the underlying cooperative backup limit, not an OS-enforced process deadline.",
+    "125 successful concurrent status reads found no partial JSON in this run; no power-loss/filesystem-failure campaign was performed.",
+    "The default local status and verified restore cover only the SQLite main database. Models, external data and other files need separate backup arrangements.",
+    "These checks cover a limited local backup/restore component and do not establish complete compliance with section11 of the task specification."
+  ],
+  "documentation_review": {
+    "path": "docs/automatic_backup.md",
+    "sha256_reviewed": "e9a5daf7f31455e40afe9d7249a3f45cefb99481db4306a901e02bb77fa1baa9",
+    "metrics_and_limitations_match_receipt": true,
+    "minor_wording_sent_to_author": "Recommendations are embedded in feedback/ticket risk_snapshot, not a separate recommendations table."
+  }
+}

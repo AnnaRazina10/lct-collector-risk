@@ -1,0 +1,52 @@
+{
+  "reason": "Independent review found that full recommendation values were not compared. Corrected only the metadata field label; timings, workload, validations and results unchanged. Recommendation status and POST card/run identity were checked. No claim of exact full recommendation equivalence.",
+  "old_field": "final_snapshot_cards_recommendations_and_six_payloads_exact",
+  "new_field": "final_snapshot_cards_and_six_payloads_exact",
+  "files": [
+    {
+      "file": "reports/runtime_comparison/baseline/mixed_r1_u1/summary.json",
+      "before_sha256": "d0485c577311666980d3409f80471d7ac777a54046acb62985c730a31b172a59",
+      "after_sha256": "f87e29d7677218989c0c34507359587fa907ae9a6dbf5e70451489c7356f2782"
+    },
+    {
+      "file": "reports/runtime_comparison/baseline/mixed_r1_u20/summary.json",
+      "before_sha256": "82fddba8a693b1d61eab1fe5626cdae1d2af74f642b93277b8b770314e70336f",
+      "after_sha256": "82ca7abc0f4de637676a6111f56892794c4e3eb848c951b780112b4896b2bacb"
+    },
+    {
+      "file": "reports/runtime_comparison/baseline/mixed_r2_u1/summary.json",
+      "before_sha256": "d92942d63f6f5157c9b84b4450f27fdd9e47367acc1594b5b835575e94e37a88",
+      "after_sha256": "be3351318b72b54d8f991ac41aaf1beeb9e8abad97c565288de32de849d023dc"
+    },
+    {
+      "file": "reports/runtime_comparison/baseline/mixed_r2_u20/summary.json",
+      "before_sha256": "cef327e899b495f79ffe8b95af1e0433481cea16c814683e8530db9708336c25",
+      "after_sha256": "0f1e62a0a242b0c8031cd55dc4899a0f5f0e8843d6628dc838bcb3643c45ec48"
+    },
+    {
+      "file": "reports/runtime_comparison/baseline/read_only_r1_u1/summary.json",
+      "before_sha256": "e663f00d50e2c870efcbfbfe8eaa036de6bb739b6151c01fbc5b9c68bd415eae",
+      "after_sha256": "5576e498324b5cfc0e754e8b192d85bdee38ab16a1c1b4ed3e010a983f3c6278"
+    },
+    {
+      "file": "reports/runtime_comparison/baseline/read_only_r1_u20/summary.json",
+      "before_sha256": "b11a4cad22b6dfc9a8384b5bc2154a1c8606997f17ebc954d76d9d1d9c62447d",
+      "after_sha256": "8660d5307e1f9b50ad645b4a954a8026a35dae49353cb090bb3be485bce5e0e3"
+    },
+    {
+      "file": "reports/runtime_comparison/baseline/read_only_r2_u1/summary.json",
+      "before_sha256": "51d4955aeb9a3586f48eb70545a25cceb334ff81265af411edebad592a2ab5c0",
+      "after_sha256": "24a3f14042d132b4c89c20b46fc592cf4466aa75afd2c708b45b54537df13a52"
+    },
+    {
+      "file": "reports/runtime_comparison/baseline/read_only_r2_u20/summary.json",
+      "before_sha256": "ecbbfbe5f7c56c73e61c5ed26946e683f529c0623597585ee8db814921344d61",
+      "after_sha256": "b896553b6990ba03f9b03df6d2e05eaaf5493764bd3cf12415a509b3704b16f9"
+    },
+    {
+      "file": "reports/runtime_comparison/baseline/summary.json",
+      "before_sha256": "25687fa8efe78dc556ef11e48119bfeb4851560369001528f396066b8aa08ebb",
+      "after_sha256": "fce701c8229965770947de3ececf2390890e7420cd6ed8506ead02c0a5459acb"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 # Preserve CSV values while storing platform-independent line endings in Git.
 reports/runtime_validation/**/*.csv text eol=lf
+reports/runtime_comparison/**/*.csv text eol=lf
 # Office/PDF files are binary artifacts; never normalize their internal bytes.
 *.pdf binary
 *.pptx binary
