@@ -1,0 +1,2267 @@
+{
+  "status": "passed",
+  "completed_at": "2026-09-29T14:31:32.506979+00:00",
+  "checks": [
+    {
+      "name": "existing_runtime_python",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "zip_expected_sha256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "runtime_before_exit0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime_is_requested_existing_venv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "zip_names_unique",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/START_HERE.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/api/.gitkeep",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/api/forecast_store.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/api/main.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/bundle_manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/data/app/forecast_seed.sqlite3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/data/app/object_risk_demo.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/data/app/risk_demo.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/data/interim/daily_2025.parquet",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/data/interim/daily_2026.parquet",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/data/raw/справочник_каналов_датчиков.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/data/raw/справочник_объектов_диспетчер.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/docs/automatic_backup.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/docs/backup_restore.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/docs/local_demo.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/docs/object_demo.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/docs/onset_demo.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/docs/recommendations.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/models/object_onset_experiment/refit/hurdle_15.joblib",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/models/object_risk_probe.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/reports/object_onset_experiment/protocol.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/reports/object_onset_experiment/refit.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/reports/object_onset_experiment/selection.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/reports/object_risk_probe/configuration.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/requirements-inference.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/requirements-runtime.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/scripts/backup_scheduler.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/scripts/database_backup.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/.gitkeep",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/eda/run_eda.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/advanced_features.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/cache_older_history.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/daily_data.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/experiment_v2.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/experiment_v3.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/export_object_demo.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/export_risk_demo.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/feature_rows.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/fetch_weather_context.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/horizon24_probe.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/improve_baseline.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/intraday_features.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/lightgbm_baseline.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/object_combined.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/object_episode_audit.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/object_forward_check.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/object_history.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/object_onset_backtest.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/object_onset_experiment.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/object_onset_statistics.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/object_risk_probe.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/object_sequence_candidate.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/object_statistical_candidate.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/object_weather_probe.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/onset_evaluation.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/predict_risk.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/predict_risk_v2.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/predict_risk_v3.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/refit_components.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/rolling_update.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/sequence_features.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/summarize_improvement.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/summarize_object_candidates.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/summarize_research_round.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/summarize_v2.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/tabm_candidate.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/uncertainty_research_round.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/modeling/verify_v3_inference.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/serving/local_recommendations.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/serving/object_forecast.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/src/serving/object_onset_forecast.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/start_demo.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/tests/test_backup_scheduler.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/tests/test_database_backup.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/verify_bundle.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/web/.gitkeep",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe_zip_member_collector-risk-review/web/index.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "clean_commit_matches",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "bundle_excludes_dispatcher_records",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "scheduler_and_backup_are_in_bundle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "verify_before_exit0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "all_manifest_inputs_verified",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "http_web_from_extracted_bundle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "port58057_forecast_list200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "port58057_six_releases",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9_port58057_200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9_port58057_stored_contenthash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9_port58057_78cards",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9_port58057_advice_coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9_port58057_fixed_top10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-28_6fcffa044c314e16_port58057_200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-28_6fcffa044c314e16_port58057_stored_contenthash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-28_6fcffa044c314e16_port58057_78cards",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-28_6fcffa044c314e16_port58057_advice_coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1_port58057_200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1_port58057_stored_contenthash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1_port58057_78cards",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1_port58057_advice_coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1_port58057_fixed_top10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-27_661a446f9ca20cc2_port58057_200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-27_661a446f9ca20cc2_port58057_stored_contenthash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-27_661a446f9ca20cc2_port58057_78cards",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-27_661a446f9ca20cc2_port58057_advice_coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67_port58057_200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67_port58057_stored_contenthash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67_port58057_78cards",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67_port58057_advice_coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67_port58057_fixed_top10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-26_960db067b50f766e_port58057_200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-26_960db067b50f766e_port58057_stored_contenthash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-26_960db067b50f766e_port58057_78cards",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-26_960db067b50f766e_port58057_advice_coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "seed_journal_empty",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "test_feedback_created",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "test_ticket_created",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "two_test_journal_entries",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "separate_runtime_db_created",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "bounded_scheduler_exit0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "three_periodic_copies",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "three_unique_backup_bundles",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "verify_copy_1_exit0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verify_copy_2_exit0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verify_copy_3_exit0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "restore_destination_was_new",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restore_latest_exit0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "restored_inventory_includes_two_test_records",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_http_still_healthy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "port58081_forecast_list200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "port58081_six_releases",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9_port58081_200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9_port58081_stored_contenthash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9_port58081_78cards",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9_port58081_advice_coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9_port58081_fixed_top10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-28_6fcffa044c314e16_port58081_200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-28_6fcffa044c314e16_port58081_stored_contenthash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-28_6fcffa044c314e16_port58081_78cards",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-28_6fcffa044c314e16_port58081_advice_coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1_port58081_200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1_port58081_stored_contenthash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1_port58081_78cards",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1_port58081_advice_coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1_port58081_fixed_top10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-27_661a446f9ca20cc2_port58081_200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-27_661a446f9ca20cc2_port58081_stored_contenthash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-27_661a446f9ca20cc2_port58081_78cards",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-27_661a446f9ca20cc2_port58081_advice_coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67_port58081_200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67_port58081_stored_contenthash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67_port58081_78cards",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67_port58081_advice_coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67_port58081_fixed_top10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-26_960db067b50f766e_port58081_200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-26_960db067b50f766e_port58081_stored_contenthash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-26_960db067b50f766e_port58081_78cards",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "object_2026-06-26_960db067b50f766e_port58081_advice_coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restored_get_journal_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_six_metadata_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_six_payloads_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_468_live_advice_same_except_generated_at",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "verify_after_exit0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "immutable_bundle_unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "runtime_after_exit0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime_packages_and_configuration_unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "zip_file_unchanged",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "checks_count": 170,
+  "zip_path": "artifacts/submission/bundles/collector-risk-review-v3.zip",
+  "zip_sha256": "bc7eb05299a0c2c6f261ad901a84c2698907f9f10172a8bc7c8cbeb12a33b1d6",
+  "source_commit": "764d31ac034f8632cf51cf9f151c51ddca58f46b",
+  "working_tree_changes_at_build": false,
+  "verifier_sha256": "f6411a1825613ad4ac19b9b0fbf8e41a180c7da68c582642cc5107b82cff4958",
+  "runtime": {
+    "executable": "/private/tmp/collector-review-runtime-20260929/bin/python",
+    "prefix": "/private/tmp/collector-review-runtime-20260929",
+    "version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "packages": [
+      [
+        "annotated-doc",
+        "0.0.5"
+      ],
+      [
+        "annotated-types",
+        "0.8.0"
+      ],
+      [
+        "anyio",
+        "4.15.1"
+      ],
+      [
+        "click",
+        "8.5.0"
+      ],
+      [
+        "cloudpickle",
+        "3.1.2"
+      ],
+      [
+        "fastapi",
+        "0.141.1"
+      ],
+      [
+        "h11",
+        "0.16.0"
+      ],
+      [
+        "idna",
+        "3.20"
+      ],
+      [
+        "joblib",
+        "1.6.0"
+      ],
+      [
+        "lightgbm",
+        "4.7.0"
+      ],
+      [
+        "narwhals",
+        "2.26.0"
+      ],
+      [
+        "numpy",
+        "2.5.3"
+      ],
+      [
+        "pandas",
+        "3.0.6"
+      ],
+      [
+        "pyarrow",
+        "25.0.1"
+      ],
+      [
+        "pydantic",
+        "2.13.5"
+      ],
+      [
+        "pydantic_core",
+        "2.46.5"
+      ],
+      [
+        "python-dateutil",
+        "2.9.0.post0"
+      ],
+      [
+        "scikit-learn",
+        "1.9.1"
+      ],
+      [
+        "scipy",
+        "1.18.1"
+      ],
+      [
+        "six",
+        "1.17.0"
+      ],
+      [
+        "starlette",
+        "1.7.0"
+      ],
+      [
+        "threadpoolctl",
+        "3.7.0"
+      ],
+      [
+        "typing-inspection",
+        "0.4.4"
+      ],
+      [
+        "typing_extensions",
+        "4.16.0"
+      ],
+      [
+        "uvicorn",
+        "0.54.0"
+      ]
+    ]
+  },
+  "runtime_reinstalled": false,
+  "runtime_configuration_sha256": "310e08e8b4d8132696d3b9387f0122a4256a1d5d83f380f619fb2f7fd3842c49",
+  "verified_bundle_inputs": 76,
+  "bundle_scheduler_sha256": "213c98852e73beed155bb8b5c365880107300033494285cd4abd686f38506dc3",
+  "bundle_api_sha256": "380721d6722adb702e1a0e36022766c0486ce8dbe2cf5dec0642ef5f96f63ae7",
+  "events": [
+    {
+      "event": "runtime_before",
+      "elapsed_seconds": 0.06129174993839115,
+      "seconds": 0.05684316600672901
+    },
+    {
+      "event": "verify_before",
+      "elapsed_seconds": 0.11709512502420694,
+      "seconds": 0.02299516706261784
+    },
+    {
+      "event": "process_started",
+      "elapsed_seconds": 0.11883466702420264,
+      "label": "source_http",
+      "pid": 52779
+    },
+    {
+      "event": "process_started",
+      "elapsed_seconds": 0.44325966702308506,
+      "label": "scheduler",
+      "pid": 52782
+    },
+    {
+      "event": "verify_copy_1",
+      "elapsed_seconds": 0.992893207934685,
+      "seconds": 0.0398881669389084
+    },
+    {
+      "event": "verify_copy_2",
+      "elapsed_seconds": 1.0239727919688448,
+      "seconds": 0.031036917003802955
+    },
+    {
+      "event": "verify_copy_3",
+      "elapsed_seconds": 1.0526636249851435,
+      "seconds": 0.02850458398461342
+    },
+    {
+      "event": "restore_latest",
+      "elapsed_seconds": 1.0856545419665053,
+      "seconds": 0.03290883300360292
+    },
+    {
+      "event": "process_stopped",
+      "elapsed_seconds": 1.2646128749474883,
+      "label": "source_http",
+      "pid": 52779,
+      "returncode": -15,
+      "stop_seconds": 0.17768904089462012
+    },
+    {
+      "event": "process_started",
+      "elapsed_seconds": 1.2673219999996945,
+      "label": "restored_http",
+      "pid": 52788
+    },
+    {
+      "event": "process_stopped",
+      "elapsed_seconds": 1.7673102079425007,
+      "label": "restored_http",
+      "pid": 52788,
+      "returncode": -15,
+      "stop_seconds": 0.23322629102040082
+    },
+    {
+      "event": "verify_after",
+      "elapsed_seconds": 1.805971666937694,
+      "seconds": 0.03858945891261101
+    },
+    {
+      "event": "runtime_after",
+      "elapsed_seconds": 1.8536395829869434,
+      "seconds": 0.047093458008021116
+    }
+  ],
+  "source_port": 58057,
+  "restored_port": 58081,
+  "backup_scheduler_status": {
+    "counters": {
+      "attempts": 3,
+      "failures": 0,
+      "interrupted": 0,
+      "successes": 3
+    },
+    "format_version": 1,
+    "interval_seconds": 0.2,
+    "last_attempt": {
+      "attempt_id": "90fb7aa5a9814dbb805a6ad5a5456f26:3",
+      "destination": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-bundle-v3-independent-1wonepzl/automatic_copies/backup-20260929T143131.522893Z-2fdad4f987a0486d81153d9ce6ef76ba",
+      "finished_at_utc": "2026-09-29T14:31:31.547513+00:00",
+      "started_at_utc": "2026-09-29T14:31:31.522859+00:00",
+      "status": "succeeded"
+    },
+    "last_error": null,
+    "last_success": {
+      "attempt_id": "90fb7aa5a9814dbb805a6ad5a5456f26:3",
+      "completed_at_utc": "2026-09-29T14:31:31.547513+00:00",
+      "database_sha256": "e28d4bb19f83be47fe27cacd9f7b29667359357c1b15de7c02f72bb8c8a18886",
+      "destination": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-bundle-v3-independent-1wonepzl/automatic_copies/backup-20260929T143131.522893Z-2fdad4f987a0486d81153d9ce6ef76ba",
+      "elapsed_seconds": 0.02262383291963488,
+      "manifest_sha256": "41bb323c2aa9be6d2485624c4ddaf6c8994fea519cc8da266b48ba65094cb13b",
+      "source_journal_mode": "delete"
+    },
+    "max_runs": 3,
+    "next_attempt_at_utc": null,
+    "output_dir": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-bundle-v3-independent-1wonepzl/automatic_copies",
+    "pid": 52782,
+    "session_attempts": 3,
+    "session_failures": 0,
+    "session_id": "90fb7aa5a9814dbb805a6ad5a5456f26",
+    "session_successes": 3,
+    "skipped_slots": 0,
+    "source": "/private/var/folders/96/dskbglln4lqb4dfb7xc_hrsm0000gn/T/collector-bundle-v3-independent-1wonepzl/collector-risk-review/data/app/dispatch.sqlite3",
+    "started_at_utc": "2026-09-29T14:31:31.117281+00:00",
+    "state": "stopped",
+    "stop_reason": "max_runs",
+    "stopped_at_utc": "2026-09-29T14:31:31.547522+00:00",
+    "timeout_seconds": 8.0,
+    "updated_at_utc": "2026-09-29T14:31:31.547524+00:00"
+  },
+  "restore_elapsed_seconds": 0.009003374958410859,
+  "restored_table_rows": {
+    "feedback": 1,
+    "forecast_card_ids": 468,
+    "forecast_runs": 6,
+    "tickets": 1
+  },
+  "forecast_metadata_before": {
+    "runs": [
+      {
+        "run_id": "onset_2026-06-28_0f97f74f589ee7b9",
+        "entity_mode": "object",
+        "mode": "historical_replay",
+        "feature_date": "2026-06-28",
+        "feature_cutoff": "2026-06-28T23:59:59+03:00",
+        "issue_time": "2026-06-29T00:00:00+03:00",
+        "forecast_start": "2026-06-30T00:00:00+03:00",
+        "forecast_end": "2026-07-01T00:00:00+03:00",
+        "minimum_lead_hours": 24,
+        "model_sha256": "0ebb8fd57533f9e7fc1d6716505d9bb8166dfc0af6899e0a83d6e0b6d7a6e40f",
+        "input_sha256": "e83d6285faf4c733fd84858ef00d2d448035359a4322e0a01419e165ec3143db",
+        "threshold": 0.2848029277217868,
+        "cards_count": 78,
+        "content_sha256": "107e6f47d809e8cf8dafbba1bb352a46382ff49f45804647e3a77bba9b8393cf",
+        "created_at": "2026-09-29T14:30:31.206270+00:00",
+        "target_kind": "registered_episode_start_g1",
+        "target_definition": "Начало зарегистрированной серии: в день D+1 нет тревожной записи, в день D+2 есть тревожная запись. Данные известны только по D включительно; отсутствие записей не подтверждает исправность.",
+        "warning_policy": {
+          "k": 10,
+          "kind": "daily_top_k",
+          "tie_break": "score_desc_object_id_asc"
+        },
+        "score_kind": "uncalibrated_model_score"
+      },
+      {
+        "run_id": "object_2026-06-28_6fcffa044c314e16",
+        "entity_mode": "object",
+        "mode": "historical_replay",
+        "feature_date": "2026-06-28",
+        "feature_cutoff": "2026-06-28T23:59:59+03:00",
+        "issue_time": "2026-06-29T00:00:00+03:00",
+        "forecast_start": "2026-06-30T00:00:00+03:00",
+        "forecast_end": "2026-07-01T00:00:00+03:00",
+        "minimum_lead_hours": 24,
+        "model_sha256": "e0924c042197f5e393efb014319259929cf0a7c82890bbe4e47e3ae790f1c493",
+        "input_sha256": "e83d6285faf4c733fd84858ef00d2d448035359a4322e0a01419e165ec3143db",
+        "threshold": 0.3345231006565093,
+        "cards_count": 78,
+        "content_sha256": "bba38ad72ed34024d27b8bf609ea20853ce4d9b493d6b7312d88ccfdac455011",
+        "created_at": "2026-09-29T14:30:31.209829+00:00"
+      },
+      {
+        "run_id": "onset_2026-06-27_89af23daa1273ad1",
+        "entity_mode": "object",
+        "mode": "historical_replay",
+        "feature_date": "2026-06-27",
+        "feature_cutoff": "2026-06-27T23:59:59+03:00",
+        "issue_time": "2026-06-28T00:00:00+03:00",
+        "forecast_start": "2026-06-29T00:00:00+03:00",
+        "forecast_end": "2026-06-30T00:00:00+03:00",
+        "minimum_lead_hours": 24,
+        "model_sha256": "0ebb8fd57533f9e7fc1d6716505d9bb8166dfc0af6899e0a83d6e0b6d7a6e40f",
+        "input_sha256": "9b54e18ad3256abff7d3018bacb549b418209a48ad20e278ac6969cd2fedc472",
+        "threshold": 0.4815773778216097,
+        "cards_count": 78,
+        "content_sha256": "afb6f474b2212e1fd2888bab5df0c07622689be8de3e50744ec99d8e08021f93",
+        "created_at": "2026-09-29T14:30:31.212862+00:00",
+        "target_kind": "registered_episode_start_g1",
+        "target_definition": "Начало зарегистрированной серии: в день D+1 нет тревожной записи, в день D+2 есть тревожная запись. Данные известны только по D включительно; отсутствие записей не подтверждает исправность.",
+        "warning_policy": {
+          "k": 10,
+          "kind": "daily_top_k",
+          "tie_break": "score_desc_object_id_asc"
+        },
+        "score_kind": "uncalibrated_model_score"
+      },
+      {
+        "run_id": "object_2026-06-27_661a446f9ca20cc2",
+        "entity_mode": "object",
+        "mode": "historical_replay",
+        "feature_date": "2026-06-27",
+        "feature_cutoff": "2026-06-27T23:59:59+03:00",
+        "issue_time": "2026-06-28T00:00:00+03:00",
+        "forecast_start": "2026-06-29T00:00:00+03:00",
+        "forecast_end": "2026-06-30T00:00:00+03:00",
+        "minimum_lead_hours": 24,
+        "model_sha256": "e0924c042197f5e393efb014319259929cf0a7c82890bbe4e47e3ae790f1c493",
+        "input_sha256": "9b54e18ad3256abff7d3018bacb549b418209a48ad20e278ac6969cd2fedc472",
+        "threshold": 0.3345231006565093,
+        "cards_count": 78,
+        "content_sha256": "7eb623e9495543907e5b8634c5b34467601df1713d220b37ac1b77eea0308106",
+        "created_at": "2026-09-29T14:30:31.216015+00:00"
+      },
+      {
+        "run_id": "onset_2026-06-26_844dac1ea731bf67",
+        "entity_mode": "object",
+        "mode": "historical_replay",
+        "feature_date": "2026-06-26",
+        "feature_cutoff": "2026-06-26T23:59:59+03:00",
+        "issue_time": "2026-06-27T00:00:00+03:00",
+        "forecast_start": "2026-06-28T00:00:00+03:00",
+        "forecast_end": "2026-06-29T00:00:00+03:00",
+        "minimum_lead_hours": 24,
+        "model_sha256": "0ebb8fd57533f9e7fc1d6716505d9bb8166dfc0af6899e0a83d6e0b6d7a6e40f",
+        "input_sha256": "79738f7ad1bd2beed48d70db0d2134777b2ba68fd0df9eb7e9741e275832209d",
+        "threshold": 0.1813176843709214,
+        "cards_count": 78,
+        "content_sha256": "e5ae8c3cc29983dd2ed7c7f50ebbb8d28e942690be96f9e8c8d2464ad74058f9",
+        "created_at": "2026-09-29T14:30:31.221500+00:00",
+        "target_kind": "registered_episode_start_g1",
+        "target_definition": "Начало зарегистрированной серии: в день D+1 нет тревожной записи, в день D+2 есть тревожная запись. Данные известны только по D включительно; отсутствие записей не подтверждает исправность.",
+        "warning_policy": {
+          "k": 10,
+          "kind": "daily_top_k",
+          "tie_break": "score_desc_object_id_asc"
+        },
+        "score_kind": "uncalibrated_model_score"
+      },
+      {
+        "run_id": "object_2026-06-26_960db067b50f766e",
+        "entity_mode": "object",
+        "mode": "historical_replay",
+        "feature_date": "2026-06-26",
+        "feature_cutoff": "2026-06-26T23:59:59+03:00",
+        "issue_time": "2026-06-27T00:00:00+03:00",
+        "forecast_start": "2026-06-28T00:00:00+03:00",
+        "forecast_end": "2026-06-29T00:00:00+03:00",
+        "minimum_lead_hours": 24,
+        "model_sha256": "e0924c042197f5e393efb014319259929cf0a7c82890bbe4e47e3ae790f1c493",
+        "input_sha256": "79738f7ad1bd2beed48d70db0d2134777b2ba68fd0df9eb7e9741e275832209d",
+        "threshold": 0.3345231006565093,
+        "cards_count": 78,
+        "content_sha256": "f381f2551f1d11e7cc75ab2846f71b217d04905a3821eece0aa73f336b2ac896",
+        "created_at": "2026-09-29T14:30:31.225557+00:00"
+      }
+    ],
+    "limit": 500,
+    "mode": "historical_replay",
+    "note": "Сохранённые расчёты на исторических данных; текущий поток не подключён. created_at — время сохранения, issue_time — историческое время выпуска."
+  },
+  "forecast_metadata_after": {
+    "runs": [
+      {
+        "run_id": "onset_2026-06-28_0f97f74f589ee7b9",
+        "entity_mode": "object",
+        "mode": "historical_replay",
+        "feature_date": "2026-06-28",
+        "feature_cutoff": "2026-06-28T23:59:59+03:00",
+        "issue_time": "2026-06-29T00:00:00+03:00",
+        "forecast_start": "2026-06-30T00:00:00+03:00",
+        "forecast_end": "2026-07-01T00:00:00+03:00",
+        "minimum_lead_hours": 24,
+        "model_sha256": "0ebb8fd57533f9e7fc1d6716505d9bb8166dfc0af6899e0a83d6e0b6d7a6e40f",
+        "input_sha256": "e83d6285faf4c733fd84858ef00d2d448035359a4322e0a01419e165ec3143db",
+        "threshold": 0.2848029277217868,
+        "cards_count": 78,
+        "content_sha256": "107e6f47d809e8cf8dafbba1bb352a46382ff49f45804647e3a77bba9b8393cf",
+        "created_at": "2026-09-29T14:30:31.206270+00:00",
+        "target_kind": "registered_episode_start_g1",
+        "target_definition": "Начало зарегистрированной серии: в день D+1 нет тревожной записи, в день D+2 есть тревожная запись. Данные известны только по D включительно; отсутствие записей не подтверждает исправность.",
+        "warning_policy": {
+          "k": 10,
+          "kind": "daily_top_k",
+          "tie_break": "score_desc_object_id_asc"
+        },
+        "score_kind": "uncalibrated_model_score"
+      },
+      {
+        "run_id": "object_2026-06-28_6fcffa044c314e16",
+        "entity_mode": "object",
+        "mode": "historical_replay",
+        "feature_date": "2026-06-28",
+        "feature_cutoff": "2026-06-28T23:59:59+03:00",
+        "issue_time": "2026-06-29T00:00:00+03:00",
+        "forecast_start": "2026-06-30T00:00:00+03:00",
+        "forecast_end": "2026-07-01T00:00:00+03:00",
+        "minimum_lead_hours": 24,
+        "model_sha256": "e0924c042197f5e393efb014319259929cf0a7c82890bbe4e47e3ae790f1c493",
+        "input_sha256": "e83d6285faf4c733fd84858ef00d2d448035359a4322e0a01419e165ec3143db",
+        "threshold": 0.3345231006565093,
+        "cards_count": 78,
+        "content_sha256": "bba38ad72ed34024d27b8bf609ea20853ce4d9b493d6b7312d88ccfdac455011",
+        "created_at": "2026-09-29T14:30:31.209829+00:00"
+      },
+      {
+        "run_id": "onset_2026-06-27_89af23daa1273ad1",
+        "entity_mode": "object",
+        "mode": "historical_replay",
+        "feature_date": "2026-06-27",
+        "feature_cutoff": "2026-06-27T23:59:59+03:00",
+        "issue_time": "2026-06-28T00:00:00+03:00",
+        "forecast_start": "2026-06-29T00:00:00+03:00",
+        "forecast_end": "2026-06-30T00:00:00+03:00",
+        "minimum_lead_hours": 24,
+        "model_sha256": "0ebb8fd57533f9e7fc1d6716505d9bb8166dfc0af6899e0a83d6e0b6d7a6e40f",
+        "input_sha256": "9b54e18ad3256abff7d3018bacb549b418209a48ad20e278ac6969cd2fedc472",
+        "threshold": 0.4815773778216097,
+        "cards_count": 78,
+        "content_sha256": "afb6f474b2212e1fd2888bab5df0c07622689be8de3e50744ec99d8e08021f93",
+        "created_at": "2026-09-29T14:30:31.212862+00:00",
+        "target_kind": "registered_episode_start_g1",
+        "target_definition": "Начало зарегистрированной серии: в день D+1 нет тревожной записи, в день D+2 есть тревожная запись. Данные известны только по D включительно; отсутствие записей не подтверждает исправность.",
+        "warning_policy": {
+          "k": 10,
+          "kind": "daily_top_k",
+          "tie_break": "score_desc_object_id_asc"
+        },
+        "score_kind": "uncalibrated_model_score"
+      },
+      {
+        "run_id": "object_2026-06-27_661a446f9ca20cc2",
+        "entity_mode": "object",
+        "mode": "historical_replay",
+        "feature_date": "2026-06-27",
+        "feature_cutoff": "2026-06-27T23:59:59+03:00",
+        "issue_time": "2026-06-28T00:00:00+03:00",
+        "forecast_start": "2026-06-29T00:00:00+03:00",
+        "forecast_end": "2026-06-30T00:00:00+03:00",
+        "minimum_lead_hours": 24,
+        "model_sha256": "e0924c042197f5e393efb014319259929cf0a7c82890bbe4e47e3ae790f1c493",
+        "input_sha256": "9b54e18ad3256abff7d3018bacb549b418209a48ad20e278ac6969cd2fedc472",
+        "threshold": 0.3345231006565093,
+        "cards_count": 78,
+        "content_sha256": "7eb623e9495543907e5b8634c5b34467601df1713d220b37ac1b77eea0308106",
+        "created_at": "2026-09-29T14:30:31.216015+00:00"
+      },
+      {
+        "run_id": "onset_2026-06-26_844dac1ea731bf67",
+        "entity_mode": "object",
+        "mode": "historical_replay",
+        "feature_date": "2026-06-26",
+        "feature_cutoff": "2026-06-26T23:59:59+03:00",
+        "issue_time": "2026-06-27T00:00:00+03:00",
+        "forecast_start": "2026-06-28T00:00:00+03:00",
+        "forecast_end": "2026-06-29T00:00:00+03:00",
+        "minimum_lead_hours": 24,
+        "model_sha256": "0ebb8fd57533f9e7fc1d6716505d9bb8166dfc0af6899e0a83d6e0b6d7a6e40f",
+        "input_sha256": "79738f7ad1bd2beed48d70db0d2134777b2ba68fd0df9eb7e9741e275832209d",
+        "threshold": 0.1813176843709214,
+        "cards_count": 78,
+        "content_sha256": "e5ae8c3cc29983dd2ed7c7f50ebbb8d28e942690be96f9e8c8d2464ad74058f9",
+        "created_at": "2026-09-29T14:30:31.221500+00:00",
+        "target_kind": "registered_episode_start_g1",
+        "target_definition": "Начало зарегистрированной серии: в день D+1 нет тревожной записи, в день D+2 есть тревожная запись. Данные известны только по D включительно; отсутствие записей не подтверждает исправность.",
+        "warning_policy": {
+          "k": 10,
+          "kind": "daily_top_k",
+          "tie_break": "score_desc_object_id_asc"
+        },
+        "score_kind": "uncalibrated_model_score"
+      },
+      {
+        "run_id": "object_2026-06-26_960db067b50f766e",
+        "entity_mode": "object",
+        "mode": "historical_replay",
+        "feature_date": "2026-06-26",
+        "feature_cutoff": "2026-06-26T23:59:59+03:00",
+        "issue_time": "2026-06-27T00:00:00+03:00",
+        "forecast_start": "2026-06-28T00:00:00+03:00",
+        "forecast_end": "2026-06-29T00:00:00+03:00",
+        "minimum_lead_hours": 24,
+        "model_sha256": "e0924c042197f5e393efb014319259929cf0a7c82890bbe4e47e3ae790f1c493",
+        "input_sha256": "79738f7ad1bd2beed48d70db0d2134777b2ba68fd0df9eb7e9741e275832209d",
+        "threshold": 0.3345231006565093,
+        "cards_count": 78,
+        "content_sha256": "f381f2551f1d11e7cc75ab2846f71b217d04905a3821eece0aa73f336b2ac896",
+        "created_at": "2026-09-29T14:30:31.225557+00:00"
+      }
+    ],
+    "limit": 500,
+    "mode": "historical_replay",
+    "note": "Сохранённые расчёты на исторических данных; текущий поток не подключён. created_at — время сохранения, issue_time — историческое время выпуска."
+  },
+  "forecast_payload_sha256": {
+    "onset_2026-06-28_0f97f74f589ee7b9": "107e6f47d809e8cf8dafbba1bb352a46382ff49f45804647e3a77bba9b8393cf",
+    "object_2026-06-28_6fcffa044c314e16": "bba38ad72ed34024d27b8bf609ea20853ce4d9b493d6b7312d88ccfdac455011",
+    "onset_2026-06-27_89af23daa1273ad1": "afb6f474b2212e1fd2888bab5df0c07622689be8de3e50744ec99d8e08021f93",
+    "object_2026-06-27_661a446f9ca20cc2": "7eb623e9495543907e5b8634c5b34467601df1713d220b37ac1b77eea0308106",
+    "onset_2026-06-26_844dac1ea731bf67": "e5ae8c3cc29983dd2ed7c7f50ebbb8d28e942690be96f9e8c8d2464ad74058f9",
+    "object_2026-06-26_960db067b50f766e": "f381f2551f1d11e7cc75ab2846f71b217d04905a3821eece0aa73f336b2ac896"
+  },
+  "journal_before": {
+    "entries": [
+      {
+        "id": "b2f3b005-846e-4a56-bb5f-fce3514355a3",
+        "risk_id": "onset_2026-06-28_0f97f74f589ee7b9_4767",
+        "note": "TEST: отдельный черновик для проверки резервной копии v3.",
+        "created_at": "2026-09-29T14:31:31.090455+00:00",
+        "status": "draft",
+        "entity_mode": "object",
+        "risk_snapshot": {
+          "forecast": {
+            "run_id": "onset_2026-06-28_0f97f74f589ee7b9",
+            "mode": "historical_replay",
+            "entity_mode": "object",
+            "feature_date": "2026-06-28",
+            "feature_cutoff": "2026-06-28T23:59:59+03:00",
+            "issue_time": "2026-06-29T00:00:00+03:00",
+            "forecast_start": "2026-06-30T00:00:00+03:00",
+            "forecast_end": "2026-07-01T00:00:00+03:00",
+            "minimum_lead_hours": 24,
+            "model": "Двухэтапная модель начала серии · исследовательский кандидат",
+            "model_sha256": "0ebb8fd57533f9e7fc1d6716505d9bb8166dfc0af6899e0a83d6e0b6d7a6e40f",
+            "input_sha256": "e83d6285faf4c733fd84858ef00d2d448035359a4322e0a01419e165ec3143db",
+            "threshold": 0.2848029277217868,
+            "archive_metadata": {
+              "run_id": "onset_2026-06-28_0f97f74f589ee7b9",
+              "entity_mode": "object",
+              "mode": "historical_replay",
+              "feature_date": "2026-06-28",
+              "feature_cutoff": "2026-06-28T23:59:59+03:00",
+              "issue_time": "2026-06-29T00:00:00+03:00",
+              "forecast_start": "2026-06-30T00:00:00+03:00",
+              "forecast_end": "2026-07-01T00:00:00+03:00",
+              "minimum_lead_hours": 24,
+              "model_sha256": "0ebb8fd57533f9e7fc1d6716505d9bb8166dfc0af6899e0a83d6e0b6d7a6e40f",
+              "input_sha256": "e83d6285faf4c733fd84858ef00d2d448035359a4322e0a01419e165ec3143db",
+              "threshold": 0.2848029277217868,
+              "cards_count": 78,
+              "content_sha256": "107e6f47d809e8cf8dafbba1bb352a46382ff49f45804647e3a77bba9b8393cf",
+              "created_at": "2026-09-29T14:30:31.206270+00:00",
+              "target_kind": "registered_episode_start_g1",
+              "target_definition": "Начало зарегистрированной серии: в день D+1 нет тревожной записи, в день D+2 есть тревожная запись. Данные известны только по D включительно; отсутствие записей не подтверждает исправность.",
+              "warning_policy": {
+                "k": 10,
+                "kind": "daily_top_k",
+                "tie_break": "score_desc_object_id_asc"
+              },
+              "score_kind": "uncalibrated_model_score"
+            },
+            "target_kind": "registered_episode_start_g1",
+            "target_definition": "Начало зарегистрированной серии: в день D+1 нет тревожной записи, в день D+2 есть тревожная запись. Данные известны только по D включительно; отсутствие записей не подтверждает исправность.",
+            "warning_policy": {
+              "k": 10,
+              "kind": "daily_top_k",
+              "tie_break": "score_desc_object_id_asc"
+            },
+            "score_kind": "uncalibrated_model_score"
+          },
+          "card": {
+            "alarm_channels": 3,
+            "alarm_days_7d": 4,
+            "catalog_channels": 13,
+            "current_alarm": true,
+            "entity_mode": "object",
+            "events_today": 18,
+            "explanation": [
+              {
+                "feature": "onset_mean28",
+                "label": "Доля дней с началом зарегистрированной серии за 28 дней",
+                "value": "0.214"
+              },
+              {
+                "feature": "days_since_onset",
+                "label": "Дней с последнего начала серии (−1: не было в истории)",
+                "value": "0"
+              },
+              {
+                "feature": "observed_channels",
+                "label": "Каналы с записями в день признаков",
+                "value": "3"
+              }
+            ],
+            "explanation_kind": "observations",
+            "id": "onset_2026-06-28_0f97f74f589ee7b9_4767",
+            "object_id": "4767",
+            "object_kind": "controlHouse",
+            "object_name": "Шкаф ОПС объект Вита",
+            "observation_note": "Наличие записей не гарантирует полное покрытие наблюдения.",
+            "observed_channels": 3,
+            "observed_days_7d": 4,
+            "parent_id": "9",
+            "parent_name": "объект Вита",
+            "rank": 1,
+            "risk_type": "Начало зарегистрированной серии тревог",
+            "score": 0.33497315016454793,
+            "suggested_action": "Проверить доступность наблюдений и контекст журнала; диспетчер решает, нужен ли осмотр.",
+            "warning": true
+          },
+          "recommendation": {
+            "schema_version": "1.0",
+            "ruleset_version": "1.0.0",
+            "ruleset_sha256": "893f93b4c025d11ad605e18faaa1f3e37bd31e1c7cbcfeaeea08f6d40a72c4c7",
+            "status": "ok",
+            "run_id": "onset_2026-06-28_0f97f74f589ee7b9",
+            "feature_date": "2026-06-28",
+            "feature_cutoff": "2026-06-28T23:59:59+03:00",
+            "issue_time": "2026-06-29T00:00:00+03:00",
+            "forecast_start": "2026-06-30T00:00:00+03:00",
+            "forecast_end": "2026-07-01T00:00:00+03:00",
+            "card_id": "onset_2026-06-28_0f97f74f589ee7b9_4767",
+            "object_id": "4767",
+            "mode": "historical_replay",
+            "goal": "registered_episode_start_g1",
+            "fact_cutoff": "2026-06-28T23:59:59+03:00",
+            "recommendation_id": "591e63ce0ef551ddb4b19de76d664be682fac6fed9d137f9e3cab139201ed8ec",
+            "rule_ids": [
+              "PARTIAL_CATALOG_RECORDS",
+              "ALARM_RECORDED_TODAY",
+              "MULTIPLE_ALARM_DAYS"
+            ],
+            "evidence": [
+              {
+                "field": "alarm_channels",
+                "value": 3,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "alarm_days_7d",
+                "value": 4,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "catalog_channels",
+                "value": 13,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "current_alarm",
+                "value": true,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "events_today",
+                "value": 18,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "observed_channels",
+                "value": 3,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "observed_days_7d",
+                "value": 4,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "rank",
+                "value": 1,
+                "source": "forecast_policy",
+                "available_at": "2026-06-29T00:00:00+03:00"
+              },
+              {
+                "field": "warning",
+                "value": true,
+                "source": "forecast_policy",
+                "available_at": "2026-06-29T00:00:00+03:00"
+              }
+            ],
+            "steps": [
+              {
+                "rule_id": "PARTIAL_CATALOG_RECORDS",
+                "text": "Записи есть по 3 из 13 справочных каналов. Уточните ожидаемый режим регистрации и полноту поступления; отсутствие записей по каналу не доказывает неисправность.",
+                "evidence_fields": [
+                  "observed_channels",
+                  "catalog_channels"
+                ]
+              },
+              {
+                "rule_id": "ALARM_RECORDED_TODAY",
+                "text": "В день признаков уже были тревожные записи. Сопоставьте их с журналом диспетчера и ранее принятыми решениями; необходимость осмотра определяет диспетчер.",
+                "evidence_fields": [
+                  "current_alarm",
+                  "alarm_channels"
+                ]
+              },
+              {
+                "rule_id": "MULTIPLE_ALARM_DAYS",
+                "text": "За последние семь календарных дней тревожные записи отмечены в 4 днях. Проверьте их повторяемость и предыдущую отработку по журналу.",
+                "evidence_fields": [
+                  "alarm_days_7d",
+                  "observed_days_7d"
+                ]
+              }
+            ],
+            "validation_errors": [],
+            "requires_dispatcher_decision": true,
+            "external_send": false,
+            "limitations": [
+              "Предложены только шаги проверки доступной информации; физическая причина не установлена.",
+              "Историческое воспроизведение, не действующий поток. Правила применены к архивным фактам.",
+              "Отсутствие записей или предупреждения не подтверждает исправность оборудования.",
+              "Окончательное решение принимает диспетчер; отправка заявок и управление оборудованием отсутствуют."
+            ],
+            "generated_at": "2026-09-29T14:31:31.090501+00:00",
+            "application_note": "Правила применены сейчас к архивным наблюдениям; историческое использование этих правил не подтверждается."
+          }
+        },
+        "kind": "ticket_draft"
+      },
+      {
+        "id": "dd005793-d0a7-4a3d-a851-fde859eaa294",
+        "risk_id": "onset_2026-06-28_0f97f74f589ee7b9_4767",
+        "entity_mode": "object",
+        "decision": "inspect",
+        "reason": "journal_verified",
+        "operator": "TEST BUNDLE V3",
+        "note": "TEST: временная отдельная база проверки ZIP. Не рабочее решение.",
+        "created_at": "2026-09-29T14:31:31.086975+00:00",
+        "risk_snapshot": {
+          "forecast": {
+            "run_id": "onset_2026-06-28_0f97f74f589ee7b9",
+            "mode": "historical_replay",
+            "entity_mode": "object",
+            "feature_date": "2026-06-28",
+            "feature_cutoff": "2026-06-28T23:59:59+03:00",
+            "issue_time": "2026-06-29T00:00:00+03:00",
+            "forecast_start": "2026-06-30T00:00:00+03:00",
+            "forecast_end": "2026-07-01T00:00:00+03:00",
+            "minimum_lead_hours": 24,
+            "model": "Двухэтапная модель начала серии · исследовательский кандидат",
+            "model_sha256": "0ebb8fd57533f9e7fc1d6716505d9bb8166dfc0af6899e0a83d6e0b6d7a6e40f",
+            "input_sha256": "e83d6285faf4c733fd84858ef00d2d448035359a4322e0a01419e165ec3143db",
+            "threshold": 0.2848029277217868,
+            "archive_metadata": {
+              "run_id": "onset_2026-06-28_0f97f74f589ee7b9",
+              "entity_mode": "object",
+              "mode": "historical_replay",
+              "feature_date": "2026-06-28",
+              "feature_cutoff": "2026-06-28T23:59:59+03:00",
+              "issue_time": "2026-06-29T00:00:00+03:00",
+              "forecast_start": "2026-06-30T00:00:00+03:00",
+              "forecast_end": "2026-07-01T00:00:00+03:00",
+              "minimum_lead_hours": 24,
+              "model_sha256": "0ebb8fd57533f9e7fc1d6716505d9bb8166dfc0af6899e0a83d6e0b6d7a6e40f",
+              "input_sha256": "e83d6285faf4c733fd84858ef00d2d448035359a4322e0a01419e165ec3143db",
+              "threshold": 0.2848029277217868,
+              "cards_count": 78,
+              "content_sha256": "107e6f47d809e8cf8dafbba1bb352a46382ff49f45804647e3a77bba9b8393cf",
+              "created_at": "2026-09-29T14:30:31.206270+00:00",
+              "target_kind": "registered_episode_start_g1",
+              "target_definition": "Начало зарегистрированной серии: в день D+1 нет тревожной записи, в день D+2 есть тревожная запись. Данные известны только по D включительно; отсутствие записей не подтверждает исправность.",
+              "warning_policy": {
+                "k": 10,
+                "kind": "daily_top_k",
+                "tie_break": "score_desc_object_id_asc"
+              },
+              "score_kind": "uncalibrated_model_score"
+            },
+            "target_kind": "registered_episode_start_g1",
+            "target_definition": "Начало зарегистрированной серии: в день D+1 нет тревожной записи, в день D+2 есть тревожная запись. Данные известны только по D включительно; отсутствие записей не подтверждает исправность.",
+            "warning_policy": {
+              "k": 10,
+              "kind": "daily_top_k",
+              "tie_break": "score_desc_object_id_asc"
+            },
+            "score_kind": "uncalibrated_model_score"
+          },
+          "card": {
+            "alarm_channels": 3,
+            "alarm_days_7d": 4,
+            "catalog_channels": 13,
+            "current_alarm": true,
+            "entity_mode": "object",
+            "events_today": 18,
+            "explanation": [
+              {
+                "feature": "onset_mean28",
+                "label": "Доля дней с началом зарегистрированной серии за 28 дней",
+                "value": "0.214"
+              },
+              {
+                "feature": "days_since_onset",
+                "label": "Дней с последнего начала серии (−1: не было в истории)",
+                "value": "0"
+              },
+              {
+                "feature": "observed_channels",
+                "label": "Каналы с записями в день признаков",
+                "value": "3"
+              }
+            ],
+            "explanation_kind": "observations",
+            "id": "onset_2026-06-28_0f97f74f589ee7b9_4767",
+            "object_id": "4767",
+            "object_kind": "controlHouse",
+            "object_name": "Шкаф ОПС объект Вита",
+            "observation_note": "Наличие записей не гарантирует полное покрытие наблюдения.",
+            "observed_channels": 3,
+            "observed_days_7d": 4,
+            "parent_id": "9",
+            "parent_name": "объект Вита",
+            "rank": 1,
+            "risk_type": "Начало зарегистрированной серии тревог",
+            "score": 0.33497315016454793,
+            "suggested_action": "Проверить доступность наблюдений и контекст журнала; диспетчер решает, нужен ли осмотр.",
+            "warning": true
+          },
+          "recommendation": {
+            "schema_version": "1.0",
+            "ruleset_version": "1.0.0",
+            "ruleset_sha256": "893f93b4c025d11ad605e18faaa1f3e37bd31e1c7cbcfeaeea08f6d40a72c4c7",
+            "status": "ok",
+            "run_id": "onset_2026-06-28_0f97f74f589ee7b9",
+            "feature_date": "2026-06-28",
+            "feature_cutoff": "2026-06-28T23:59:59+03:00",
+            "issue_time": "2026-06-29T00:00:00+03:00",
+            "forecast_start": "2026-06-30T00:00:00+03:00",
+            "forecast_end": "2026-07-01T00:00:00+03:00",
+            "card_id": "onset_2026-06-28_0f97f74f589ee7b9_4767",
+            "object_id": "4767",
+            "mode": "historical_replay",
+            "goal": "registered_episode_start_g1",
+            "fact_cutoff": "2026-06-28T23:59:59+03:00",
+            "recommendation_id": "591e63ce0ef551ddb4b19de76d664be682fac6fed9d137f9e3cab139201ed8ec",
+            "rule_ids": [
+              "PARTIAL_CATALOG_RECORDS",
+              "ALARM_RECORDED_TODAY",
+              "MULTIPLE_ALARM_DAYS"
+            ],
+            "evidence": [
+              {
+                "field": "alarm_channels",
+                "value": 3,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "alarm_days_7d",
+                "value": 4,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "catalog_channels",
+                "value": 13,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "current_alarm",
+                "value": true,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "events_today",
+                "value": 18,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "observed_channels",
+                "value": 3,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "observed_days_7d",
+                "value": 4,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "rank",
+                "value": 1,
+                "source": "forecast_policy",
+                "available_at": "2026-06-29T00:00:00+03:00"
+              },
+              {
+                "field": "warning",
+                "value": true,
+                "source": "forecast_policy",
+                "available_at": "2026-06-29T00:00:00+03:00"
+              }
+            ],
+            "steps": [
+              {
+                "rule_id": "PARTIAL_CATALOG_RECORDS",
+                "text": "Записи есть по 3 из 13 справочных каналов. Уточните ожидаемый режим регистрации и полноту поступления; отсутствие записей по каналу не доказывает неисправность.",
+                "evidence_fields": [
+                  "observed_channels",
+                  "catalog_channels"
+                ]
+              },
+              {
+                "rule_id": "ALARM_RECORDED_TODAY",
+                "text": "В день признаков уже были тревожные записи. Сопоставьте их с журналом диспетчера и ранее принятыми решениями; необходимость осмотра определяет диспетчер.",
+                "evidence_fields": [
+                  "current_alarm",
+                  "alarm_channels"
+                ]
+              },
+              {
+                "rule_id": "MULTIPLE_ALARM_DAYS",
+                "text": "За последние семь календарных дней тревожные записи отмечены в 4 днях. Проверьте их повторяемость и предыдущую отработку по журналу.",
+                "evidence_fields": [
+                  "alarm_days_7d",
+                  "observed_days_7d"
+                ]
+              }
+            ],
+            "validation_errors": [],
+            "requires_dispatcher_decision": true,
+            "external_send": false,
+            "limitations": [
+              "Предложены только шаги проверки доступной информации; физическая причина не установлена.",
+              "Историческое воспроизведение, не действующий поток. Правила применены к архивным фактам.",
+              "Отсутствие записей или предупреждения не подтверждает исправность оборудования.",
+              "Окончательное решение принимает диспетчер; отправка заявок и управление оборудованием отсутствуют."
+            ],
+            "generated_at": "2026-09-29T14:31:31.087018+00:00",
+            "application_note": "Правила применены сейчас к архивным наблюдениям; историческое использование этих правил не подтверждается."
+          }
+        },
+        "kind": "dispatcher_decision"
+      }
+    ],
+    "limit": 200,
+    "external_submission": false,
+    "scope": "Локальные черновики и решения диспетчера; имя оператора не подтверждено корпоративным входом."
+  },
+  "journal_after": {
+    "entries": [
+      {
+        "id": "b2f3b005-846e-4a56-bb5f-fce3514355a3",
+        "risk_id": "onset_2026-06-28_0f97f74f589ee7b9_4767",
+        "note": "TEST: отдельный черновик для проверки резервной копии v3.",
+        "created_at": "2026-09-29T14:31:31.090455+00:00",
+        "status": "draft",
+        "entity_mode": "object",
+        "risk_snapshot": {
+          "forecast": {
+            "run_id": "onset_2026-06-28_0f97f74f589ee7b9",
+            "mode": "historical_replay",
+            "entity_mode": "object",
+            "feature_date": "2026-06-28",
+            "feature_cutoff": "2026-06-28T23:59:59+03:00",
+            "issue_time": "2026-06-29T00:00:00+03:00",
+            "forecast_start": "2026-06-30T00:00:00+03:00",
+            "forecast_end": "2026-07-01T00:00:00+03:00",
+            "minimum_lead_hours": 24,
+            "model": "Двухэтапная модель начала серии · исследовательский кандидат",
+            "model_sha256": "0ebb8fd57533f9e7fc1d6716505d9bb8166dfc0af6899e0a83d6e0b6d7a6e40f",
+            "input_sha256": "e83d6285faf4c733fd84858ef00d2d448035359a4322e0a01419e165ec3143db",
+            "threshold": 0.2848029277217868,
+            "archive_metadata": {
+              "run_id": "onset_2026-06-28_0f97f74f589ee7b9",
+              "entity_mode": "object",
+              "mode": "historical_replay",
+              "feature_date": "2026-06-28",
+              "feature_cutoff": "2026-06-28T23:59:59+03:00",
+              "issue_time": "2026-06-29T00:00:00+03:00",
+              "forecast_start": "2026-06-30T00:00:00+03:00",
+              "forecast_end": "2026-07-01T00:00:00+03:00",
+              "minimum_lead_hours": 24,
+              "model_sha256": "0ebb8fd57533f9e7fc1d6716505d9bb8166dfc0af6899e0a83d6e0b6d7a6e40f",
+              "input_sha256": "e83d6285faf4c733fd84858ef00d2d448035359a4322e0a01419e165ec3143db",
+              "threshold": 0.2848029277217868,
+              "cards_count": 78,
+              "content_sha256": "107e6f47d809e8cf8dafbba1bb352a46382ff49f45804647e3a77bba9b8393cf",
+              "created_at": "2026-09-29T14:30:31.206270+00:00",
+              "target_kind": "registered_episode_start_g1",
+              "target_definition": "Начало зарегистрированной серии: в день D+1 нет тревожной записи, в день D+2 есть тревожная запись. Данные известны только по D включительно; отсутствие записей не подтверждает исправность.",
+              "warning_policy": {
+                "k": 10,
+                "kind": "daily_top_k",
+                "tie_break": "score_desc_object_id_asc"
+              },
+              "score_kind": "uncalibrated_model_score"
+            },
+            "target_kind": "registered_episode_start_g1",
+            "target_definition": "Начало зарегистрированной серии: в день D+1 нет тревожной записи, в день D+2 есть тревожная запись. Данные известны только по D включительно; отсутствие записей не подтверждает исправность.",
+            "warning_policy": {
+              "k": 10,
+              "kind": "daily_top_k",
+              "tie_break": "score_desc_object_id_asc"
+            },
+            "score_kind": "uncalibrated_model_score"
+          },
+          "card": {
+            "alarm_channels": 3,
+            "alarm_days_7d": 4,
+            "catalog_channels": 13,
+            "current_alarm": true,
+            "entity_mode": "object",
+            "events_today": 18,
+            "explanation": [
+              {
+                "feature": "onset_mean28",
+                "label": "Доля дней с началом зарегистрированной серии за 28 дней",
+                "value": "0.214"
+              },
+              {
+                "feature": "days_since_onset",
+                "label": "Дней с последнего начала серии (−1: не было в истории)",
+                "value": "0"
+              },
+              {
+                "feature": "observed_channels",
+                "label": "Каналы с записями в день признаков",
+                "value": "3"
+              }
+            ],
+            "explanation_kind": "observations",
+            "id": "onset_2026-06-28_0f97f74f589ee7b9_4767",
+            "object_id": "4767",
+            "object_kind": "controlHouse",
+            "object_name": "Шкаф ОПС объект Вита",
+            "observation_note": "Наличие записей не гарантирует полное покрытие наблюдения.",
+            "observed_channels": 3,
+            "observed_days_7d": 4,
+            "parent_id": "9",
+            "parent_name": "объект Вита",
+            "rank": 1,
+            "risk_type": "Начало зарегистрированной серии тревог",
+            "score": 0.33497315016454793,
+            "suggested_action": "Проверить доступность наблюдений и контекст журнала; диспетчер решает, нужен ли осмотр.",
+            "warning": true
+          },
+          "recommendation": {
+            "schema_version": "1.0",
+            "ruleset_version": "1.0.0",
+            "ruleset_sha256": "893f93b4c025d11ad605e18faaa1f3e37bd31e1c7cbcfeaeea08f6d40a72c4c7",
+            "status": "ok",
+            "run_id": "onset_2026-06-28_0f97f74f589ee7b9",
+            "feature_date": "2026-06-28",
+            "feature_cutoff": "2026-06-28T23:59:59+03:00",
+            "issue_time": "2026-06-29T00:00:00+03:00",
+            "forecast_start": "2026-06-30T00:00:00+03:00",
+            "forecast_end": "2026-07-01T00:00:00+03:00",
+            "card_id": "onset_2026-06-28_0f97f74f589ee7b9_4767",
+            "object_id": "4767",
+            "mode": "historical_replay",
+            "goal": "registered_episode_start_g1",
+            "fact_cutoff": "2026-06-28T23:59:59+03:00",
+            "recommendation_id": "591e63ce0ef551ddb4b19de76d664be682fac6fed9d137f9e3cab139201ed8ec",
+            "rule_ids": [
+              "PARTIAL_CATALOG_RECORDS",
+              "ALARM_RECORDED_TODAY",
+              "MULTIPLE_ALARM_DAYS"
+            ],
+            "evidence": [
+              {
+                "field": "alarm_channels",
+                "value": 3,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "alarm_days_7d",
+                "value": 4,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "catalog_channels",
+                "value": 13,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "current_alarm",
+                "value": true,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "events_today",
+                "value": 18,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "observed_channels",
+                "value": 3,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "observed_days_7d",
+                "value": 4,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "rank",
+                "value": 1,
+                "source": "forecast_policy",
+                "available_at": "2026-06-29T00:00:00+03:00"
+              },
+              {
+                "field": "warning",
+                "value": true,
+                "source": "forecast_policy",
+                "available_at": "2026-06-29T00:00:00+03:00"
+              }
+            ],
+            "steps": [
+              {
+                "rule_id": "PARTIAL_CATALOG_RECORDS",
+                "text": "Записи есть по 3 из 13 справочных каналов. Уточните ожидаемый режим регистрации и полноту поступления; отсутствие записей по каналу не доказывает неисправность.",
+                "evidence_fields": [
+                  "observed_channels",
+                  "catalog_channels"
+                ]
+              },
+              {
+                "rule_id": "ALARM_RECORDED_TODAY",
+                "text": "В день признаков уже были тревожные записи. Сопоставьте их с журналом диспетчера и ранее принятыми решениями; необходимость осмотра определяет диспетчер.",
+                "evidence_fields": [
+                  "current_alarm",
+                  "alarm_channels"
+                ]
+              },
+              {
+                "rule_id": "MULTIPLE_ALARM_DAYS",
+                "text": "За последние семь календарных дней тревожные записи отмечены в 4 днях. Проверьте их повторяемость и предыдущую отработку по журналу.",
+                "evidence_fields": [
+                  "alarm_days_7d",
+                  "observed_days_7d"
+                ]
+              }
+            ],
+            "validation_errors": [],
+            "requires_dispatcher_decision": true,
+            "external_send": false,
+            "limitations": [
+              "Предложены только шаги проверки доступной информации; физическая причина не установлена.",
+              "Историческое воспроизведение, не действующий поток. Правила применены к архивным фактам.",
+              "Отсутствие записей или предупреждения не подтверждает исправность оборудования.",
+              "Окончательное решение принимает диспетчер; отправка заявок и управление оборудованием отсутствуют."
+            ],
+            "generated_at": "2026-09-29T14:31:31.090501+00:00",
+            "application_note": "Правила применены сейчас к архивным наблюдениям; историческое использование этих правил не подтверждается."
+          }
+        },
+        "kind": "ticket_draft"
+      },
+      {
+        "id": "dd005793-d0a7-4a3d-a851-fde859eaa294",
+        "risk_id": "onset_2026-06-28_0f97f74f589ee7b9_4767",
+        "entity_mode": "object",
+        "decision": "inspect",
+        "reason": "journal_verified",
+        "operator": "TEST BUNDLE V3",
+        "note": "TEST: временная отдельная база проверки ZIP. Не рабочее решение.",
+        "created_at": "2026-09-29T14:31:31.086975+00:00",
+        "risk_snapshot": {
+          "forecast": {
+            "run_id": "onset_2026-06-28_0f97f74f589ee7b9",
+            "mode": "historical_replay",
+            "entity_mode": "object",
+            "feature_date": "2026-06-28",
+            "feature_cutoff": "2026-06-28T23:59:59+03:00",
+            "issue_time": "2026-06-29T00:00:00+03:00",
+            "forecast_start": "2026-06-30T00:00:00+03:00",
+            "forecast_end": "2026-07-01T00:00:00+03:00",
+            "minimum_lead_hours": 24,
+            "model": "Двухэтапная модель начала серии · исследовательский кандидат",
+            "model_sha256": "0ebb8fd57533f9e7fc1d6716505d9bb8166dfc0af6899e0a83d6e0b6d7a6e40f",
+            "input_sha256": "e83d6285faf4c733fd84858ef00d2d448035359a4322e0a01419e165ec3143db",
+            "threshold": 0.2848029277217868,
+            "archive_metadata": {
+              "run_id": "onset_2026-06-28_0f97f74f589ee7b9",
+              "entity_mode": "object",
+              "mode": "historical_replay",
+              "feature_date": "2026-06-28",
+              "feature_cutoff": "2026-06-28T23:59:59+03:00",
+              "issue_time": "2026-06-29T00:00:00+03:00",
+              "forecast_start": "2026-06-30T00:00:00+03:00",
+              "forecast_end": "2026-07-01T00:00:00+03:00",
+              "minimum_lead_hours": 24,
+              "model_sha256": "0ebb8fd57533f9e7fc1d6716505d9bb8166dfc0af6899e0a83d6e0b6d7a6e40f",
+              "input_sha256": "e83d6285faf4c733fd84858ef00d2d448035359a4322e0a01419e165ec3143db",
+              "threshold": 0.2848029277217868,
+              "cards_count": 78,
+              "content_sha256": "107e6f47d809e8cf8dafbba1bb352a46382ff49f45804647e3a77bba9b8393cf",
+              "created_at": "2026-09-29T14:30:31.206270+00:00",
+              "target_kind": "registered_episode_start_g1",
+              "target_definition": "Начало зарегистрированной серии: в день D+1 нет тревожной записи, в день D+2 есть тревожная запись. Данные известны только по D включительно; отсутствие записей не подтверждает исправность.",
+              "warning_policy": {
+                "k": 10,
+                "kind": "daily_top_k",
+                "tie_break": "score_desc_object_id_asc"
+              },
+              "score_kind": "uncalibrated_model_score"
+            },
+            "target_kind": "registered_episode_start_g1",
+            "target_definition": "Начало зарегистрированной серии: в день D+1 нет тревожной записи, в день D+2 есть тревожная запись. Данные известны только по D включительно; отсутствие записей не подтверждает исправность.",
+            "warning_policy": {
+              "k": 10,
+              "kind": "daily_top_k",
+              "tie_break": "score_desc_object_id_asc"
+            },
+            "score_kind": "uncalibrated_model_score"
+          },
+          "card": {
+            "alarm_channels": 3,
+            "alarm_days_7d": 4,
+            "catalog_channels": 13,
+            "current_alarm": true,
+            "entity_mode": "object",
+            "events_today": 18,
+            "explanation": [
+              {
+                "feature": "onset_mean28",
+                "label": "Доля дней с началом зарегистрированной серии за 28 дней",
+                "value": "0.214"
+              },
+              {
+                "feature": "days_since_onset",
+                "label": "Дней с последнего начала серии (−1: не было в истории)",
+                "value": "0"
+              },
+              {
+                "feature": "observed_channels",
+                "label": "Каналы с записями в день признаков",
+                "value": "3"
+              }
+            ],
+            "explanation_kind": "observations",
+            "id": "onset_2026-06-28_0f97f74f589ee7b9_4767",
+            "object_id": "4767",
+            "object_kind": "controlHouse",
+            "object_name": "Шкаф ОПС объект Вита",
+            "observation_note": "Наличие записей не гарантирует полное покрытие наблюдения.",
+            "observed_channels": 3,
+            "observed_days_7d": 4,
+            "parent_id": "9",
+            "parent_name": "объект Вита",
+            "rank": 1,
+            "risk_type": "Начало зарегистрированной серии тревог",
+            "score": 0.33497315016454793,
+            "suggested_action": "Проверить доступность наблюдений и контекст журнала; диспетчер решает, нужен ли осмотр.",
+            "warning": true
+          },
+          "recommendation": {
+            "schema_version": "1.0",
+            "ruleset_version": "1.0.0",
+            "ruleset_sha256": "893f93b4c025d11ad605e18faaa1f3e37bd31e1c7cbcfeaeea08f6d40a72c4c7",
+            "status": "ok",
+            "run_id": "onset_2026-06-28_0f97f74f589ee7b9",
+            "feature_date": "2026-06-28",
+            "feature_cutoff": "2026-06-28T23:59:59+03:00",
+            "issue_time": "2026-06-29T00:00:00+03:00",
+            "forecast_start": "2026-06-30T00:00:00+03:00",
+            "forecast_end": "2026-07-01T00:00:00+03:00",
+            "card_id": "onset_2026-06-28_0f97f74f589ee7b9_4767",
+            "object_id": "4767",
+            "mode": "historical_replay",
+            "goal": "registered_episode_start_g1",
+            "fact_cutoff": "2026-06-28T23:59:59+03:00",
+            "recommendation_id": "591e63ce0ef551ddb4b19de76d664be682fac6fed9d137f9e3cab139201ed8ec",
+            "rule_ids": [
+              "PARTIAL_CATALOG_RECORDS",
+              "ALARM_RECORDED_TODAY",
+              "MULTIPLE_ALARM_DAYS"
+            ],
+            "evidence": [
+              {
+                "field": "alarm_channels",
+                "value": 3,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "alarm_days_7d",
+                "value": 4,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "catalog_channels",
+                "value": 13,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "current_alarm",
+                "value": true,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "events_today",
+                "value": 18,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "observed_channels",
+                "value": 3,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "observed_days_7d",
+                "value": 4,
+                "source": "observation",
+                "window_end": "2026-06-28T23:59:59+03:00"
+              },
+              {
+                "field": "rank",
+                "value": 1,
+                "source": "forecast_policy",
+                "available_at": "2026-06-29T00:00:00+03:00"
+              },
+              {
+                "field": "warning",
+                "value": true,
+                "source": "forecast_policy",
+                "available_at": "2026-06-29T00:00:00+03:00"
+              }
+            ],
+            "steps": [
+              {
+                "rule_id": "PARTIAL_CATALOG_RECORDS",
+                "text": "Записи есть по 3 из 13 справочных каналов. Уточните ожидаемый режим регистрации и полноту поступления; отсутствие записей по каналу не доказывает неисправность.",
+                "evidence_fields": [
+                  "observed_channels",
+                  "catalog_channels"
+                ]
+              },
+              {
+                "rule_id": "ALARM_RECORDED_TODAY",
+                "text": "В день признаков уже были тревожные записи. Сопоставьте их с журналом диспетчера и ранее принятыми решениями; необходимость осмотра определяет диспетчер.",
+                "evidence_fields": [
+                  "current_alarm",
+                  "alarm_channels"
+                ]
+              },
+              {
+                "rule_id": "MULTIPLE_ALARM_DAYS",
+                "text": "За последние семь календарных дней тревожные записи отмечены в 4 днях. Проверьте их повторяемость и предыдущую отработку по журналу.",
+                "evidence_fields": [
+                  "alarm_days_7d",
+                  "observed_days_7d"
+                ]
+              }
+            ],
+            "validation_errors": [],
+            "requires_dispatcher_decision": true,
+            "external_send": false,
+            "limitations": [
+              "Предложены только шаги проверки доступной информации; физическая причина не установлена.",
+              "Историческое воспроизведение, не действующий поток. Правила применены к архивным фактам.",
+              "Отсутствие записей или предупреждения не подтверждает исправность оборудования.",
+              "Окончательное решение принимает диспетчер; отправка заявок и управление оборудованием отсутствуют."
+            ],
+            "generated_at": "2026-09-29T14:31:31.087018+00:00",
+            "application_note": "Правила применены сейчас к архивным наблюдениям; историческое использование этих правил не подтверждается."
+          }
+        },
+        "kind": "dispatcher_decision"
+      }
+    ],
+    "limit": 200,
+    "external_submission": false,
+    "scope": "Локальные черновики и решения диспетчера; имя оператора не подтверждено корпоративным входом."
+  },
+  "journal_exact_match": true,
+  "metadata_exact_match": true,
+  "payloads_exact_match": true,
+  "working_user_database_opened": false,
+  "new_package_installs": false,
+  "temporary_databases_removed": true,
+  "all_own_processes_stopped": true,
+  "total_elapsed_seconds": 1.858982332982123,
+  "limitations": [
+    "Local macOS acceptance in an existing Python3.12 runtime, not Linux/Windows validation.",
+    "No production database, public deployment, service/autostart installation, retention or off-host storage.",
+    "Confirms this local SQLite backup/restore path, not full section11, HA, PostgreSQL or operational SLA."
+  ]
+}

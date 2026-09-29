@@ -1,0 +1,17 @@
+INFO:     Started server process [52788]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:58081 (Press CTRL+C to quit)
+INFO:     127.0.0.1:58090 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58091 - "GET /api/forecast-runs?mode=object&limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58092 - "GET /api/risks?mode=object&run_id=onset_2026-06-28_0f97f74f589ee7b9 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58093 - "GET /api/risks?mode=object&run_id=object_2026-06-28_6fcffa044c314e16 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58094 - "GET /api/risks?mode=object&run_id=onset_2026-06-27_89af23daa1273ad1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58095 - "GET /api/risks?mode=object&run_id=object_2026-06-27_661a446f9ca20cc2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58097 - "GET /api/risks?mode=object&run_id=onset_2026-06-26_844dac1ea731bf67 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58098 - "GET /api/risks?mode=object&run_id=object_2026-06-26_960db067b50f766e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58099 - "GET /api/journal?mode=object HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [52788]
