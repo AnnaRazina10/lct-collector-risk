@@ -1,0 +1,40 @@
+{
+  "models": {
+    "hurdle_15": {
+      "path": "models/object_onset_experiment/refit/hurdle_15.joblib",
+      "sha256": "0ebb8fd57533f9e7fc1d6716505d9bb8166dfc0af6899e0a83d6e0b6d7a6e40f",
+      "iterations": [
+        188,
+        187
+      ],
+      "kind": "hurdle"
+    },
+    "logistic": {
+      "path": "models/object_onset_experiment/refit/logistic.joblib",
+      "sha256": "1d18bb641c159c519359dc17c7377980b11844fcaecc8c7de4a5b3dfab718fd0",
+      "iterations": null,
+      "kind": "statistical"
+    }
+  },
+  "parts": {
+    "hurdle_15": 1.0
+  },
+  "selection_sha256": "94d3c9118f2e296feb6cd33660ae8e057ebbe10b2fdff5048df1dd4d02e1b986",
+  "sources": {
+    "reports/object_onset_experiment/protocol.md": "66de6470f84db61c59281b401dcc6aeb37b006b1901660dc924b2211f51b5223",
+    "src/modeling/object_onset_experiment.py": "e327c8eee7de4812653ac5de6d767769b8ee7d14b488f52e564289de5372f41f",
+    "src/modeling/object_risk_probe.py": "2b4d32265d5b86c84e32065a79b78dbbbe211e86b4956168fd4a82798b1b5509",
+    "src/modeling/object_onset_statistics.py": "cd57d2f3b4b1fc6d3c335997165934de5e0c2e588782ae1a78beda69bcc75eaf",
+    "src/modeling/onset_evaluation.py": "1f44d70fdf40e3c68bd25ba0d7abdc55a5a6f012082930456432a30a4e1edfb2",
+    "reports/object_risk_probe/configuration.json": "b6ffe68da7a387044ee91f59ade04de0cc3c13460038405c7a3a7b931ce3e397",
+    "data/interim/daily_2025.parquet": "c22cc25cd3dd503e56d964b6bcab6db2ad7f5eb39041406bb3dec8123e5d76b5",
+    "data/raw/справочник_каналов_датчиков.csv": "87b3230e93ae00e3f03d915336acde6b3990c8b58d7378175cf02c000f67a45f",
+    "data/raw/справочник_объектов_диспетчер.csv": "219b4dbe34a78581640d839837649d3ef481c62c089fef18db1b364cff007084"
+  },
+  "feature_end": "2025-11-28",
+  "label_end": "2025-11-30",
+  "any_alarm_refit_configuration_sha256": "6ea3119600e0628c518e0fa6aac06640bfd40496013572dd099f5975c5bc620c",
+  "2026_read": false,
+  "december_gate_passed": true,
+  "gate": "December Precision@10 >= comparable any-alarm control; no tuning on December"
+}

@@ -1,0 +1,193 @@
+{
+  "passed": true,
+  "mode": "standalone_historical_daily_snapshot_inference",
+  "feature_date": "2026-06-28",
+  "latest_allowed_daily_event_day": "2026-06-28",
+  "historical_issue_time": "2026-06-29T00:00:00+03:00",
+  "target_start": "2026-06-30T00:00:00+03:00",
+  "target_end": "2026-07-01T00:00:00+03:00",
+  "minimum_lead_hours": 24,
+  "objects": 78,
+  "history_rows_each_run": [
+    42432,
+    42432,
+    42432,
+    42432,
+    42432,
+    42432
+  ],
+  "selected_parts": {
+    "hurdle_15": 1.0
+  },
+  "selected_model_artifacts": {
+    "hurdle_15": {
+      "path": "models/object_onset_experiment/refit/hurdle_15.joblib",
+      "sha256": "0ebb8fd57533f9e7fc1d6716505d9bb8166dfc0af6899e0a83d6e0b6d7a6e40f",
+      "iterations": [
+        188,
+        187
+      ],
+      "kind": "hurdle"
+    }
+  },
+  "refit_configuration_sha256": "1cc105c2c2cca9cd216e42a5e4385d8b06515e1992bdf0ada0e97ff2ede3e3ee",
+  "frozen_sources_verified_before_and_after": true,
+  "target_and_future_observation_columns_removed": [
+    "target_any_object_alarm_d_plus_2",
+    "quiet_intermediate",
+    "alarm_target",
+    "onset_target",
+    "joint_target",
+    "records_intermediate",
+    "records_target"
+  ],
+  "latest_targets_unknown_before_removal": true,
+  "future_labels_used_for_inference": false,
+  "all_daily_reads_have_cutoff_filter": true,
+  "all_returned_daily_rows_lte_cutoff": true,
+  "parquet_reads_during_six_inferences": 12,
+  "daily_reads_first_call": [
+    {
+      "file": "data/interim/daily_2025.parquet",
+      "columns": [
+        "channel_id",
+        "date",
+        "events_count",
+        "alarm_count",
+        "fault_count",
+        "no_power_count",
+        "undefined_count",
+        "numeric_count",
+        "text_count",
+        "off_count",
+        "on_count",
+        "movement_detected_count",
+        "open_count"
+      ],
+      "filters": [
+        [
+          "date",
+          ">=",
+          "2025-01-01 00:00:00"
+        ],
+        [
+          "date",
+          "<=",
+          "2026-06-28 00:00:00"
+        ]
+      ],
+      "rows": 574627,
+      "latest_returned_date": "2025-12-31"
+    },
+    {
+      "file": "data/interim/daily_2026.parquet",
+      "columns": [
+        "channel_id",
+        "date",
+        "events_count",
+        "alarm_count",
+        "fault_count",
+        "no_power_count",
+        "undefined_count",
+        "numeric_count",
+        "text_count",
+        "off_count",
+        "on_count",
+        "movement_detected_count",
+        "open_count"
+      ],
+      "filters": [
+        [
+          "date",
+          ">=",
+          "2025-01-01 00:00:00"
+        ],
+        [
+          "date",
+          "<=",
+          "2026-06-28 00:00:00"
+        ]
+      ],
+      "rows": 319596,
+      "latest_returned_date": "2026-06-28"
+    }
+  ],
+  "reference_read_after_inference_only": true,
+  "reference_columns": [
+    "object_id",
+    "date",
+    "selected"
+  ],
+  "reference_date_filter": "2026-06-28",
+  "saved_score_max_differences": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "max_saved_score_difference": 0.0,
+  "cpu_threads_limit": 2,
+  "package_import_seconds": 1.3283502080012113,
+  "first_process_total_including_import_seconds": 1.8255427080439404,
+  "timings": [
+    {
+      "repeat": 0,
+      "phase": "first_process_call",
+      "configuration_and_model_load_seconds": 0.010879666078835726,
+      "read_daily_and_build_all_causal_features_seconds": 0.47958133392967284,
+      "prediction_seconds": 0.006731500034220517,
+      "total_seconds": 0.4971925000427291
+    },
+    {
+      "repeat": 1,
+      "phase": "warm_repeat",
+      "configuration_and_model_load_seconds": 0.0030704160453751683,
+      "read_daily_and_build_all_causal_features_seconds": 0.34336887497920543,
+      "prediction_seconds": 0.004614416975528002,
+      "total_seconds": 0.3510537080001086
+    },
+    {
+      "repeat": 2,
+      "phase": "warm_repeat",
+      "configuration_and_model_load_seconds": 0.003384833922609687,
+      "read_daily_and_build_all_causal_features_seconds": 0.35915937507525086,
+      "prediction_seconds": 0.004304499947465956,
+      "total_seconds": 0.3668487089453265
+    },
+    {
+      "repeat": 3,
+      "phase": "warm_repeat",
+      "configuration_and_model_load_seconds": 0.005529999965801835,
+      "read_daily_and_build_all_causal_features_seconds": 0.3639032499631867,
+      "prediction_seconds": 0.005176500068046153,
+      "total_seconds": 0.37460974999703467
+    },
+    {
+      "repeat": 4,
+      "phase": "warm_repeat",
+      "configuration_and_model_load_seconds": 0.0031334999948740005,
+      "read_daily_and_build_all_causal_features_seconds": 0.34646320901811123,
+      "prediction_seconds": 0.004371957969851792,
+      "total_seconds": 0.353968666982837
+    },
+    {
+      "repeat": 5,
+      "phase": "warm_repeat",
+      "configuration_and_model_load_seconds": 0.004019125015474856,
+      "read_daily_and_build_all_causal_features_seconds": 0.34643016709014773,
+      "prediction_seconds": 0.004933082964271307,
+      "total_seconds": 0.3553823750698939
+    }
+  ],
+  "warm_total_seconds_median": 0.3553823750698939,
+  "warm_total_seconds_min": 0.3510537080001086,
+  "warm_total_seconds_max": 0.37460974999703467,
+  "timing_includes": "Each repeat reloads configuration and selected saved model, reads filtered daily parquet and dictionaries, rebuilds full object causal history including onset transitions, and predicts 78 rows.",
+  "timing_excludes": "Frozen source hashing, saved-score reference reading, report writing, publication, API and raw event aggregation. Initial package imports are reported separately.",
+  "cache_limitations": "First call in a fresh Python process; operating-system page cache was not flushed. Five later calls reuse process/library/OS caches but reload the artifact and rebuild features.",
+  "no_raw_stream_or_live_sla_claim": true,
+  "production_or_ui_changed": false,
+  "forecast_published": false
+}

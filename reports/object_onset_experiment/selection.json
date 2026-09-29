@@ -1,0 +1,182 @@
+{
+  "selected": "hurdle_15",
+  "parts": {
+    "hurdle_15": 1.0
+  },
+  "best_tree": "hurdle_15",
+  "best_stat": "logistic",
+  "candidates": {
+    "direct_7": {
+      "path": "models/object_onset_experiment/tune/direct_7.joblib",
+      "sha256": "132c93dba50abcc45f55e8597e8c415f48055ba89b9bef2e6a29ecc0b36905dd",
+      "iterations": [
+        90
+      ],
+      "kind": "direct"
+    },
+    "direct_15": {
+      "path": "models/object_onset_experiment/tune/direct_15.joblib",
+      "sha256": "0837d7fed29ff9f474252170e6f09083a0d8e9839cd0811c391fbfd394223218",
+      "iterations": [
+        31
+      ],
+      "kind": "direct"
+    },
+    "hurdle_7": {
+      "path": "models/object_onset_experiment/tune/hurdle_7.joblib",
+      "sha256": "5e7acee1e9e23fa6b2178ed9bf4a4434926b3f6df7f0487f4ae9f14bc3a75cff",
+      "iterations": [
+        254,
+        89
+      ],
+      "kind": "hurdle"
+    },
+    "hurdle_15": {
+      "path": "models/object_onset_experiment/tune/hurdle_15.joblib",
+      "sha256": "abb0d31e5087ba04c9bff61eac183b68733692096035846bc339a7e35ca3c6d6",
+      "iterations": [
+        188,
+        187
+      ],
+      "kind": "hurdle"
+    },
+    "joint_7": {
+      "path": "models/object_onset_experiment/tune/joint_7.joblib",
+      "sha256": "d72bcec023d4a47d0f3b17e20ac198ae3bbe895a2d48892cff0f5e00fdd36565",
+      "iterations": [
+        195
+      ],
+      "kind": "joint"
+    },
+    "joint_15": {
+      "path": "models/object_onset_experiment/tune/joint_15.joblib",
+      "sha256": "e940eb762a9f7b1a5b1602d8f0db24d5dede0a671d22bd805d32e3afe5addb10",
+      "iterations": [
+        139
+      ],
+      "kind": "joint"
+    },
+    "logistic": {
+      "path": "models/object_onset_experiment/tune/logistic.joblib",
+      "sha256": "04f34a9b6639573f0fc8fe699d6e4e813884e46acf6233cdcb3eae7a749d9f56",
+      "iterations": null,
+      "kind": "statistical"
+    },
+    "frequency": {
+      "path": "models/object_onset_experiment/tune/frequency.joblib",
+      "sha256": "369d942418eb1edfbe6e9285913164107bceb025b487600c86cb09d6842ea0c4",
+      "iterations": null,
+      "kind": "statistical"
+    }
+  },
+  "features": [
+    "object_id",
+    "events_count",
+    "alarm_count",
+    "fault_count",
+    "no_power_count",
+    "undefined_count",
+    "numeric_count",
+    "text_count",
+    "off_count",
+    "on_count",
+    "movement_detected_count",
+    "open_count",
+    "observed_channels",
+    "alarm_channels",
+    "fault_channels",
+    "no_power_channels",
+    "catalog_channels",
+    "object_kind",
+    "parent_id",
+    "alarm_today",
+    "observed_today",
+    "observed_fraction",
+    "alarm_channel_fraction",
+    "alarm_today_lag1",
+    "alarm_today_lag2",
+    "alarm_today_lag7",
+    "alarm_today_lag14",
+    "alarm_today_mean3",
+    "alarm_today_mean7",
+    "alarm_today_mean28",
+    "alarm_channels_lag1",
+    "alarm_channels_lag2",
+    "alarm_channels_lag7",
+    "alarm_channels_lag14",
+    "alarm_channels_mean3",
+    "alarm_channels_mean7",
+    "alarm_channels_mean28",
+    "observed_channels_lag1",
+    "observed_channels_lag2",
+    "observed_channels_lag7",
+    "observed_channels_lag14",
+    "observed_channels_mean3",
+    "observed_channels_mean7",
+    "observed_channels_mean28",
+    "fault_channels_lag1",
+    "fault_channels_lag2",
+    "fault_channels_lag7",
+    "fault_channels_lag14",
+    "fault_channels_mean3",
+    "fault_channels_mean7",
+    "fault_channels_mean28",
+    "no_power_channels_lag1",
+    "no_power_channels_lag2",
+    "no_power_channels_lag7",
+    "no_power_channels_lag14",
+    "no_power_channels_mean3",
+    "no_power_channels_mean7",
+    "no_power_channels_mean28",
+    "events_count_lag1",
+    "events_count_lag2",
+    "events_count_lag7",
+    "events_count_lag14",
+    "events_count_mean3",
+    "events_count_mean7",
+    "events_count_mean28",
+    "historical_alarm_frequency",
+    "alarm_streak",
+    "days_since_alarm",
+    "target_dayofweek",
+    "annual_sin",
+    "annual_cos",
+    "onset_today",
+    "clear_today",
+    "onset_mean7",
+    "onset_mean28",
+    "clear_mean7",
+    "clear_mean28",
+    "past_onset_frequency",
+    "days_since_onset",
+    "alarm_pattern3"
+  ],
+  "primary_k": 10,
+  "criterion": "Oct-Nov Precision@10, then AP, then name",
+  "train_feature_end": "2025-09-28",
+  "train_label_end": "2025-09-30",
+  "tune_feature_start": "2025-10-01",
+  "tune_feature_end": "2025-11-28",
+  "tune_label_end": "2025-11-30",
+  "december_read": false,
+  "2026_read": false,
+  "sources": {
+    "reports/object_onset_experiment/protocol.md": "66de6470f84db61c59281b401dcc6aeb37b006b1901660dc924b2211f51b5223",
+    "src/modeling/object_onset_experiment.py": "e327c8eee7de4812653ac5de6d767769b8ee7d14b488f52e564289de5372f41f",
+    "src/modeling/object_risk_probe.py": "2b4d32265d5b86c84e32065a79b78dbbbe211e86b4956168fd4a82798b1b5509",
+    "src/modeling/object_onset_statistics.py": "cd57d2f3b4b1fc6d3c335997165934de5e0c2e588782ae1a78beda69bcc75eaf",
+    "src/modeling/onset_evaluation.py": "1f44d70fdf40e3c68bd25ba0d7abdc55a5a6f012082930456432a30a4e1edfb2",
+    "reports/object_risk_probe/configuration.json": "b6ffe68da7a387044ee91f59ade04de0cc3c13460038405c7a3a7b931ce3e397",
+    "data/interim/daily_2025.parquet": "c22cc25cd3dd503e56d964b6bcab6db2ad7f5eb39041406bb3dec8123e5d76b5",
+    "data/raw/справочник_каналов_датчиков.csv": "87b3230e93ae00e3f03d915336acde6b3990c8b58d7378175cf02c000f67a45f",
+    "data/raw/справочник_объектов_диспетчер.csv": "219b4dbe34a78581640d839837649d3ef481c62c089fef18db1b364cff007084"
+  },
+  "coverage": {
+    "catalog_objects_with_channels": 78,
+    "excluded_unknown_channel_days": 141,
+    "excluded_alarm_channel_days": 66,
+    "included_channel_days": 495887,
+    "objects_with_observations_by_nov30": 78
+  },
+  "elapsed_seconds": 5.174009375041351
+}

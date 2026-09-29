@@ -1,0 +1,252 @@
+{
+  "reviewed_at_utc": "2026-09-29T13:07:39.152010+00:00",
+  "method": "Independent exact-date label joins, pandas daily sort/head(10), count ratios and score-group AP; no calls to onset_evaluation. Frozen-model primitive inference on independently rebuilt onset features.",
+  "checks": {
+    "prediction_file_hash": true,
+    "refit_configuration_hash": true,
+    "selection_configuration_hash": true,
+    "control_configuration_hash": true,
+    "all_frozen_source_hashes": true,
+    "refit_sources_match_selection": true,
+    "daily_2026_hash": true,
+    "all_model_hashes": true,
+    "complete_14040_population": true,
+    "unique_object_days": true,
+    "exact_feature_date_range": true,
+    "known_binary_targets": true,
+    "unique_channel_dictionary": true,
+    "unique_raw_daily_keys": true,
+    "exact_alarm_offset1_known_14040": true,
+    "exact_alarm_offset2_known_14040": true,
+    "exact_observed_offset1_known_14040": true,
+    "exact_observed_offset2_known_14040": true,
+    "onset_target_exact_D_plus_1_quiet_D_plus_2_alarm": true,
+    "alarm_target_exact_D_plus_2": true,
+    "positive_totals": true,
+    "independent_metrics_match_selected": true,
+    "independent_metrics_match_any_alarm_refit": true,
+    "independent_metrics_match_any_alarm_previous": true,
+    "independent_metrics_match_logistic": true,
+    "headline_435_vs_316_at_1800": true,
+    "independent_paired_week_precision_interval": true,
+    "independent_paired_week_recall_interval": true,
+    "declared_feature_schema_has_no_future_targets": true,
+    "model_feature_allowlist_matches_frozen_selection": true,
+    "frozen_iteration_counts": true,
+    "booster_feature_names_0": true,
+    "booster_feature_names_1": true,
+    "reconstructed_feature_row_order": true,
+    "primitive_selected_scores_reproduce": true,
+    "primitive_control_scores_reproduce": true,
+    "strict_truncated_history_2026-03-15": true,
+    "strict_truncated_history_2026-06-28": true,
+    "exact_alarm_offset1_known_21138": true,
+    "training_root_counts_tune": true,
+    "exact_alarm_offset1_known_25896": true,
+    "training_root_counts_refit": true,
+    "configuration_temporal_boundaries": true,
+    "declared_selection_does_not_read_confirmation_or_test": true,
+    "frozen_selected_hurdle_no_mixture_changed": true,
+    "selected_wins_only_saved_tuning_population": true,
+    "tune_exact_calendar_coverage": true,
+    "exact_alarm_offset1_known_2262": true,
+    "exact_alarm_offset2_known_2262": true,
+    "december_gate_independent": true
+  },
+  "limitations": [
+    "The 2026 period has been inspected repeatedly; these diagnostics and bootstrap intervals are not a new blind test.",
+    "Source/config/model hashes and root-node counts corroborate the declared protocol, but do not cryptographically prove historical file-access chronology.",
+    "The registry is not point-in-time. Zero journal records are not proof of healthy operation; 726/2000 onsets follow a day without records.",
+    "Selected model improves onset prioritization while reducing any-alarm coverage and increasing warnings with no alarm in the target day. It must not silently replace the any-alarm product.",
+    "Weekly paired intervals describe variation within this already-known period and do not account for selection across previous research iterations."
+  ],
+  "frozen_source_checks": {
+    "reports/object_onset_experiment/protocol.md": true,
+    "src/modeling/object_onset_experiment.py": true,
+    "src/modeling/object_risk_probe.py": true,
+    "src/modeling/object_onset_statistics.py": true,
+    "src/modeling/onset_evaluation.py": true,
+    "reports/object_risk_probe/configuration.json": true,
+    "data/interim/daily_2025.parquet": true,
+    "data/raw/справочник_каналов_датчиков.csv": true,
+    "data/raw/справочник_объектов_диспетчер.csv": true
+  },
+  "frozen_model_checks": {
+    "tune/direct_7": true,
+    "tune/direct_15": true,
+    "tune/hurdle_7": true,
+    "tune/hurdle_15": true,
+    "tune/joint_7": true,
+    "tune/joint_15": true,
+    "tune/logistic": true,
+    "tune/frequency": true,
+    "refit/hurdle_15": true,
+    "refit/logistic": true,
+    "control_refit": true
+  },
+  "population": {
+    "rows": 14040,
+    "objects": 78,
+    "feature_days": 180,
+    "onsets": 2000,
+    "any_alarm_days": 4203,
+    "onsets_after_no_intermediate_records": 726,
+    "no_intermediate_records_rows": 4566,
+    "excluded_unknown_channel_days": 163,
+    "excluded_unknown_alarm_channel_days": 74
+  },
+  "independent_metrics": {
+    "selected": {
+      "tp": 435,
+      "warnings": 1800,
+      "onsets": 2000,
+      "precision_at_10": 0.24166666666666667,
+      "onset_recall": 0.2175,
+      "ap": 0.24055837386678097,
+      "repeat_alarm_warnings": 333,
+      "no_alarm_warnings": 1032,
+      "any_alarm_precision": 0.4266666666666667,
+      "any_alarm_recall": 0.1827266238401142,
+      "warning_partition_sum": 1800
+    },
+    "any_alarm_refit": {
+      "tp": 316,
+      "warnings": 1800,
+      "onsets": 2000,
+      "precision_at_10": 0.17555555555555555,
+      "onset_recall": 0.158,
+      "ap": 0.1956682282411791,
+      "repeat_alarm_warnings": 976,
+      "no_alarm_warnings": 508,
+      "any_alarm_precision": 0.7177777777777777,
+      "any_alarm_recall": 0.3073994765643588,
+      "warning_partition_sum": 1800
+    },
+    "any_alarm_previous": {
+      "tp": 314,
+      "warnings": 1800,
+      "onsets": 2000,
+      "precision_at_10": 0.17444444444444446,
+      "onset_recall": 0.157,
+      "ap": 0.19450065674102807,
+      "repeat_alarm_warnings": 967,
+      "no_alarm_warnings": 519,
+      "any_alarm_precision": 0.7116666666666667,
+      "any_alarm_recall": 0.3047822983583155,
+      "warning_partition_sum": 1800
+    },
+    "logistic": {
+      "tp": 417,
+      "warnings": 1800,
+      "onsets": 2000,
+      "precision_at_10": 0.23166666666666666,
+      "onset_recall": 0.2085,
+      "ap": 0.2249685919475988,
+      "repeat_alarm_warnings": 389,
+      "no_alarm_warnings": 994,
+      "any_alarm_precision": 0.4477777777777778,
+      "any_alarm_recall": 0.19176778491553653,
+      "warning_partition_sum": 1800
+    }
+  },
+  "warning_tradeoff": {
+    "net_extra_onsets": 119,
+    "new_only_onset_hits": 345,
+    "baseline_only_onset_hits": 226,
+    "common_warning_rows": 339,
+    "onset_precision_absolute_gain": 0.06611111111111112,
+    "relative_onset_hit_gain": 0.37658227848101267,
+    "extra_no_alarm_warnings": 524,
+    "repeat_warning_reduction": 643,
+    "new_onset_hits_after_no_intermediate_records": 110,
+    "baseline_onset_hits_after_no_intermediate_records": 35
+  },
+  "independent_uncertainty": {
+    "week_blocks": 27,
+    "resamples": 1000,
+    "seed": 84,
+    "delta_precision_ci95": [
+      0.05222043010752688,
+      0.08136072437449555
+    ],
+    "delta_recall_ci95": [
+      0.04747766987381231,
+      0.0720991975734393
+    ],
+    "all_180_days_included": true
+  },
+  "inference_replay": {
+    "selected_max_abs_error": 0.0,
+    "control_max_abs_error": 0.0,
+    "features": 80,
+    "observed_future_columns_used": [],
+    "known_target_calendar_feature_allowed": "target_dayofweek",
+    "strict_prefix_errors": {
+      "2026-03-15": 0.0,
+      "2026-06-28": 0.0
+    }
+  },
+  "training_trace": {
+    "tune": {
+      "feature_end": "2025-09-28",
+      "label_end": "2025-09-30",
+      "expected_component_rows": [
+        21138,
+        15608
+      ],
+      "first_tree_root_counts": [
+        21138,
+        15608
+      ]
+    },
+    "refit": {
+      "feature_end": "2025-11-28",
+      "label_end": "2025-11-30",
+      "expected_component_rows": [
+        25896,
+        19136
+      ],
+      "first_tree_root_counts": [
+        25896,
+        19136
+      ]
+    }
+  },
+  "selection_review": {
+    "independent_tuning_winner": "hurdle_15",
+    "tuning_rows": 4602,
+    "tuning_tp": 157,
+    "tuning_warnings": 590,
+    "december": {
+      "selected": {
+        "tp": 67,
+        "warnings": 290,
+        "onsets": 285,
+        "precision_at_10": 0.23103448275862068,
+        "onset_recall": 0.23508771929824562,
+        "ap": 0.2856939930479374,
+        "repeat_alarm_warnings": 60,
+        "no_alarm_warnings": 163,
+        "any_alarm_precision": 0.4379310344827586,
+        "any_alarm_recall": 0.19538461538461538,
+        "warning_partition_sum": 290
+      },
+      "any_alarm_refit": {
+        "tp": 49,
+        "warnings": 290,
+        "onsets": 285,
+        "precision_at_10": 0.16896551724137931,
+        "onset_recall": 0.17192982456140352,
+        "ap": 0.1847504009629995,
+        "repeat_alarm_warnings": 168,
+        "no_alarm_warnings": 73,
+        "any_alarm_precision": 0.7482758620689656,
+        "any_alarm_recall": 0.33384615384615385,
+        "warning_partition_sum": 290
+      }
+    },
+    "primary_k": 10
+  },
+  "passed": true,
+  "audit_script_sha256": "00aa5e021947cbd8be3421b9611f938ca2d9037580c84f4a5d99863c1203c178"
+}

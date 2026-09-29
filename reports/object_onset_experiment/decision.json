@@ -1,0 +1,15 @@
+{
+  "predeclared_research_gate_passed": true,
+  "december_gate_passed": true,
+  "absolute_precision_at_10_gain": 0.06611111111111112,
+  "relative_onset_hit_gain": 0.37658227848101267,
+  "extra_onsets_at_same_1800_warnings": 119,
+  "weekly_ci95": [
+    0.05222043010752688,
+    0.08136072437449555
+  ],
+  "production_promoted": false,
+  "new_blind_test_claimed": false,
+  "physical_failure_prediction_claimed": false,
+  "next_action": "Validate a separately labelled onset queue and the actual notification policy; preserve ongoing-alarm mode."
+}

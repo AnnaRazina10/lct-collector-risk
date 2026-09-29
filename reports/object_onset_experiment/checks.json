@@ -1,0 +1,34 @@
+{
+  "rows": 14040,
+  "objects": 78,
+  "onsets": 2000,
+  "any_alarm_days": 4203,
+  "primary_k": 10,
+  "test_is_blind": false,
+  "prefix_max_difference": {
+    "hurdle_15": 0.0,
+    "logistic": 1.6653345369377348e-16,
+    "selected": 0.0,
+    "any_alarm_refit": 0.0,
+    "any_alarm_previous": 0.0
+  },
+  "latest_78_without_future_or_targets_difference": {
+    "hurdle_15": 0.0,
+    "logistic": 0.0,
+    "selected": 0.0,
+    "any_alarm_refit": 0.0,
+    "any_alarm_previous": 0.0
+  },
+  "refit_configuration_sha256": "1cc105c2c2cca9cd216e42a5e4385d8b06515e1992bdf0ada0e97ff2ede3e3ee",
+  "predictions_sha256": "0099a2cf1dc3138cb7157d81c96c1e50b98e7daf0f85fb4520880b4029a52daa",
+  "daily_2026_sha256": "224a4a3e2afa143214b14956cc4db3890b0b37fbf1418975ec419fbdc21ca7f5",
+  "coverage": {
+    "catalog_objects_with_channels": 78,
+    "excluded_unknown_channel_days": 163,
+    "excluded_alarm_channel_days": 74,
+    "included_channel_days": 899442,
+    "objects_with_observations_by_nov30": 78
+  },
+  "december_gate_passed": true,
+  "production_model_replaced": false
+}
