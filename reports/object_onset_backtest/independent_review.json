@@ -1,0 +1,1197 @@
+{
+  "status": "pass",
+  "independent_check_count": 119,
+  "checks": [
+    {
+      "check": "configuration digest",
+      "passed": true
+    },
+    {
+      "check": "prediction digest",
+      "passed": true
+    },
+    {
+      "check": "frozen source src/modeling/object_onset_backtest.py",
+      "passed": true
+    },
+    {
+      "check": "frozen source reports/object_onset_backtest/protocol.md",
+      "passed": true
+    },
+    {
+      "check": "frozen source src/modeling/object_history.py",
+      "passed": true
+    },
+    {
+      "check": "frozen source src/modeling/object_risk_probe.py",
+      "passed": true
+    },
+    {
+      "check": "frozen source src/modeling/object_onset_experiment.py",
+      "passed": true
+    },
+    {
+      "check": "frozen source src/modeling/object_onset_statistics.py",
+      "passed": true
+    },
+    {
+      "check": "frozen source src/modeling/onset_evaluation.py",
+      "passed": true
+    },
+    {
+      "check": "frozen source reports/object_risk_probe/configuration.json",
+      "passed": true
+    },
+    {
+      "check": "frozen source data/interim/daily_2023.parquet",
+      "passed": true
+    },
+    {
+      "check": "frozen source data/interim/daily_2023.history_manifest.json",
+      "passed": true
+    },
+    {
+      "check": "frozen source data/raw/справочник_каналов_датчиков.csv",
+      "passed": true
+    },
+    {
+      "check": "frozen source data/raw/справочник_объектов_диспетчер.csv",
+      "passed": true
+    },
+    {
+      "check": "daily2024 digest",
+      "passed": true
+    },
+    {
+      "check": "fixed family budget and population cut",
+      "passed": true
+    },
+    {
+      "check": "complete unique population/calendar",
+      "passed": true
+    },
+    {
+      "check": "exact feature days",
+      "passed": true
+    },
+    {
+      "check": "score and label validity",
+      "passed": true
+    },
+    {
+      "check": "Independent metrics hurdle_15 top5",
+      "passed": true
+    },
+    {
+      "check": "Exact daily budget hurdle_15 top5",
+      "passed": true
+    },
+    {
+      "check": "Independent metrics any_alarm_control top5",
+      "passed": true
+    },
+    {
+      "check": "Exact daily budget any_alarm_control top5",
+      "passed": true
+    },
+    {
+      "check": "Independent metrics frequency top5",
+      "passed": true
+    },
+    {
+      "check": "Exact daily budget frequency top5",
+      "passed": true
+    },
+    {
+      "check": "Independent metrics hurdle_15 top10",
+      "passed": true
+    },
+    {
+      "check": "Exact daily budget hurdle_15 top10",
+      "passed": true
+    },
+    {
+      "check": "Independent metrics any_alarm_control top10",
+      "passed": true
+    },
+    {
+      "check": "Exact daily budget any_alarm_control top10",
+      "passed": true
+    },
+    {
+      "check": "Independent metrics frequency top10",
+      "passed": true
+    },
+    {
+      "check": "Exact daily budget frequency top10",
+      "passed": true
+    },
+    {
+      "check": "Independent metrics hurdle_15 top20",
+      "passed": true
+    },
+    {
+      "check": "Exact daily budget hurdle_15 top20",
+      "passed": true
+    },
+    {
+      "check": "Independent metrics any_alarm_control top20",
+      "passed": true
+    },
+    {
+      "check": "Exact daily budget any_alarm_control top20",
+      "passed": true
+    },
+    {
+      "check": "Independent metrics frequency top20",
+      "passed": true
+    },
+    {
+      "check": "Exact daily budget frequency top20",
+      "passed": true
+    },
+    {
+      "check": "Monthly 2024-01 hurdle_15",
+      "passed": true
+    },
+    {
+      "check": "Monthly 2024-01 any_alarm_control",
+      "passed": true
+    },
+    {
+      "check": "Monthly 2024-01 frequency",
+      "passed": true
+    },
+    {
+      "check": "Monthly 2024-02 hurdle_15",
+      "passed": true
+    },
+    {
+      "check": "Monthly 2024-02 any_alarm_control",
+      "passed": true
+    },
+    {
+      "check": "Monthly 2024-02 frequency",
+      "passed": true
+    },
+    {
+      "check": "Monthly 2024-03 hurdle_15",
+      "passed": true
+    },
+    {
+      "check": "Monthly 2024-03 any_alarm_control",
+      "passed": true
+    },
+    {
+      "check": "Monthly 2024-03 frequency",
+      "passed": true
+    },
+    {
+      "check": "Monthly 2024-04 hurdle_15",
+      "passed": true
+    },
+    {
+      "check": "Monthly 2024-04 any_alarm_control",
+      "passed": true
+    },
+    {
+      "check": "Monthly 2024-04 frequency",
+      "passed": true
+    },
+    {
+      "check": "Monthly 2024-05 hurdle_15",
+      "passed": true
+    },
+    {
+      "check": "Monthly 2024-05 any_alarm_control",
+      "passed": true
+    },
+    {
+      "check": "Monthly 2024-05 frequency",
+      "passed": true
+    },
+    {
+      "check": "Monthly 2024-06 hurdle_15",
+      "passed": true
+    },
+    {
+      "check": "Monthly 2024-06 any_alarm_control",
+      "passed": true
+    },
+    {
+      "check": "Monthly 2024-06 frequency",
+      "passed": true
+    },
+    {
+      "check": "Observability hurdle_15 records=0",
+      "passed": true
+    },
+    {
+      "check": "Observability hurdle_15 records=1",
+      "passed": true
+    },
+    {
+      "check": "Observability any_alarm_control records=0",
+      "passed": true
+    },
+    {
+      "check": "Observability any_alarm_control records=1",
+      "passed": true
+    },
+    {
+      "check": "Observability frequency records=0",
+      "passed": true
+    },
+    {
+      "check": "Observability frequency records=1",
+      "passed": true
+    },
+    {
+      "check": "Independent paired-week precision CI",
+      "passed": true
+    },
+    {
+      "check": "Independent paired-week recall CI",
+      "passed": true
+    },
+    {
+      "check": "Independent bootstrap block count and estimate",
+      "passed": true
+    },
+    {
+      "check": "Eligibility only from train-cutoff positive records",
+      "passed": true
+    },
+    {
+      "check": "Independent daily-derived label onset_target",
+      "passed": true
+    },
+    {
+      "check": "Independent daily-derived label alarm_target",
+      "passed": true
+    },
+    {
+      "check": "Independent daily-derived label records_intermediate",
+      "passed": true
+    },
+    {
+      "check": "Split row counts",
+      "passed": true
+    },
+    {
+      "check": "Split label endpoints and known labels",
+      "passed": true
+    },
+    {
+      "check": "Fit flags exclude December and evaluation",
+      "passed": true
+    },
+    {
+      "check": "Statically separated reader",
+      "passed": true
+    },
+    {
+      "check": "Frozen saved weight hurdle_15",
+      "passed": true
+    },
+    {
+      "check": "Outcome columns absent from features hurdle_15",
+      "passed": true
+    },
+    {
+      "check": "Expected feature count hurdle_15",
+      "passed": true
+    },
+    {
+      "check": "Frozen saved weight any_alarm_control",
+      "passed": true
+    },
+    {
+      "check": "Outcome columns absent from features any_alarm_control",
+      "passed": true
+    },
+    {
+      "check": "Expected feature count any_alarm_control",
+      "passed": true
+    },
+    {
+      "check": "Frozen saved weight frequency",
+      "passed": true
+    },
+    {
+      "check": "Outcome columns absent from features frequency",
+      "passed": true
+    },
+    {
+      "check": "Expected feature count frequency",
+      "passed": true
+    },
+    {
+      "check": "Refit hurdle component 0 fixed trees and rows",
+      "passed": true,
+      "details": {
+        "training_rows": 24568,
+        "trees": 126
+      }
+    },
+    {
+      "check": "Refit hurdle component 1 fixed trees and rows",
+      "passed": true,
+      "details": {
+        "training_rows": 18005,
+        "trees": 62
+      }
+    },
+    {
+      "check": "Refit control fixed trees and rows",
+      "passed": true
+    },
+    {
+      "check": "Frequency exactly refit-only smoothed prior30",
+      "passed": true
+    },
+    {
+      "check": "Inference row alignment",
+      "passed": true
+    },
+    {
+      "check": "Standalone saved-model no-outcome inference hurdle_15",
+      "passed": true
+    },
+    {
+      "check": "Standalone saved-model no-outcome inference any_alarm_control",
+      "passed": true
+    },
+    {
+      "check": "Standalone saved-model no-outcome inference frequency",
+      "passed": true
+    },
+    {
+      "check": "Independent prefix feature equality",
+      "passed": true
+    },
+    {
+      "check": "Independent prefix score equality hurdle_15",
+      "passed": true
+    },
+    {
+      "check": "Independent prefix score equality any_alarm_control",
+      "passed": true
+    },
+    {
+      "check": "Independent prefix score equality frequency",
+      "passed": true
+    },
+    {
+      "check": "December saved-model metrics hurdle_15",
+      "passed": true
+    },
+    {
+      "check": "December saved-model metrics any_alarm_control",
+      "passed": true
+    },
+    {
+      "check": "December saved-model metrics frequency",
+      "passed": true
+    },
+    {
+      "check": "December and robustness gates",
+      "passed": true
+    },
+    {
+      "check": "Previous product/research weight unchanged models/object_risk_probe.txt",
+      "passed": true
+    },
+    {
+      "check": "Previous product/research weight unchanged models/object_onset_experiment/refit/hurdle_15.joblib",
+      "passed": true
+    },
+    {
+      "check": "Previous product/research weight unchanged models/object_onset_experiment/refit/logistic.joblib",
+      "passed": true
+    },
+    {
+      "check": "Serving source unchanged from HEAD scripts/verify_forecast_replay.py",
+      "passed": true
+    },
+    {
+      "check": "Serving source unchanged from HEAD src/serving/object_forecast.py",
+      "passed": true
+    },
+    {
+      "check": "Serving source unchanged from HEAD src/serving/object_onset_forecast.py",
+      "passed": true
+    },
+    {
+      "check": "Serving source unchanged from HEAD web/index.html",
+      "passed": true
+    },
+    {
+      "check": "Source unchanged after audit src/modeling/object_onset_backtest.py",
+      "passed": true
+    },
+    {
+      "check": "Source unchanged after audit reports/object_onset_backtest/protocol.md",
+      "passed": true
+    },
+    {
+      "check": "Source unchanged after audit src/modeling/object_history.py",
+      "passed": true
+    },
+    {
+      "check": "Source unchanged after audit src/modeling/object_risk_probe.py",
+      "passed": true
+    },
+    {
+      "check": "Source unchanged after audit src/modeling/object_onset_experiment.py",
+      "passed": true
+    },
+    {
+      "check": "Source unchanged after audit src/modeling/object_onset_statistics.py",
+      "passed": true
+    },
+    {
+      "check": "Source unchanged after audit src/modeling/onset_evaluation.py",
+      "passed": true
+    },
+    {
+      "check": "Source unchanged after audit reports/object_risk_probe/configuration.json",
+      "passed": true
+    },
+    {
+      "check": "Source unchanged after audit data/interim/daily_2023.parquet",
+      "passed": true
+    },
+    {
+      "check": "Source unchanged after audit data/interim/daily_2023.history_manifest.json",
+      "passed": true
+    },
+    {
+      "check": "Source unchanged after audit data/raw/справочник_каналов_датчиков.csv",
+      "passed": true
+    },
+    {
+      "check": "Source unchanged after audit data/raw/справочник_объектов_диспетчер.csv",
+      "passed": true
+    },
+    {
+      "check": "Weight unchanged after audit models/object_onset_backtest/hurdle_15.joblib",
+      "passed": true
+    },
+    {
+      "check": "Weight unchanged after audit models/object_onset_backtest/any_alarm_control.joblib",
+      "passed": true
+    },
+    {
+      "check": "Weight unchanged after audit models/object_onset_backtest/frequency.joblib",
+      "passed": true
+    }
+  ],
+  "metric_method": "Independent pandas daily sort (score descending, string object_id ascending), grouped-score noninterpolated AP, direct warning partitions; runner and onset_evaluation metric functions were not called. Saved weights only, no fitting.",
+  "primary_metrics": {
+    "hurdle_15": {
+      "model": "hurdle_15",
+      "k": 10,
+      "rows": 13394,
+      "objects": 74,
+      "days": 181,
+      "onsets": 1725,
+      "warnings": 1810,
+      "tp": 414,
+      "precision_at_k": 0.2287292817679558,
+      "recall": 0.24,
+      "average_precision": 0.2740313626726807,
+      "warning_onset": 414,
+      "warning_repeat_alarm": 329,
+      "warning_no_alarm": 1067,
+      "any_alarm_precision": 0.41049723756906076
+    },
+    "any_alarm_control": {
+      "model": "any_alarm_control",
+      "k": 10,
+      "rows": 13394,
+      "objects": 74,
+      "days": 181,
+      "onsets": 1725,
+      "warnings": 1810,
+      "tp": 293,
+      "precision_at_k": 0.16187845303867404,
+      "recall": 0.1698550724637681,
+      "average_precision": 0.17626788011465655,
+      "warning_onset": 293,
+      "warning_repeat_alarm": 970,
+      "warning_no_alarm": 547,
+      "any_alarm_precision": 0.6977900552486188
+    },
+    "frequency": {
+      "model": "frequency",
+      "k": 10,
+      "rows": 13394,
+      "objects": 74,
+      "days": 181,
+      "onsets": 1725,
+      "warnings": 1810,
+      "tp": 358,
+      "precision_at_k": 0.19779005524861878,
+      "recall": 0.20753623188405798,
+      "average_precision": 0.18651782534936834,
+      "warning_onset": 358,
+      "warning_repeat_alarm": 425,
+      "warning_no_alarm": 1027,
+      "any_alarm_precision": 0.4325966850828729
+    }
+  },
+  "budget_sensitivity": [
+    {
+      "model": "hurdle_15",
+      "k": 5,
+      "rows": 13394,
+      "objects": 74,
+      "days": 181,
+      "onsets": 1725,
+      "warnings": 905,
+      "tp": 209,
+      "precision_at_k": 0.23093922651933702,
+      "recall": 0.12115942028985507,
+      "average_precision": 0.2740313626726807,
+      "warning_onset": 209,
+      "warning_repeat_alarm": 145,
+      "warning_no_alarm": 551,
+      "any_alarm_precision": 0.3911602209944751
+    },
+    {
+      "model": "any_alarm_control",
+      "k": 5,
+      "rows": 13394,
+      "objects": 74,
+      "days": 181,
+      "onsets": 1725,
+      "warnings": 905,
+      "tp": 118,
+      "precision_at_k": 0.13038674033149172,
+      "recall": 0.06840579710144927,
+      "average_precision": 0.17626788011465655,
+      "warning_onset": 118,
+      "warning_repeat_alarm": 593,
+      "warning_no_alarm": 194,
+      "any_alarm_precision": 0.7856353591160221
+    },
+    {
+      "model": "frequency",
+      "k": 5,
+      "rows": 13394,
+      "objects": 74,
+      "days": 181,
+      "onsets": 1725,
+      "warnings": 905,
+      "tp": 184,
+      "precision_at_k": 0.20331491712707184,
+      "recall": 0.10666666666666667,
+      "average_precision": 0.18651782534936834,
+      "warning_onset": 184,
+      "warning_repeat_alarm": 206,
+      "warning_no_alarm": 515,
+      "any_alarm_precision": 0.430939226519337
+    },
+    {
+      "model": "hurdle_15",
+      "k": 10,
+      "rows": 13394,
+      "objects": 74,
+      "days": 181,
+      "onsets": 1725,
+      "warnings": 1810,
+      "tp": 414,
+      "precision_at_k": 0.2287292817679558,
+      "recall": 0.24,
+      "average_precision": 0.2740313626726807,
+      "warning_onset": 414,
+      "warning_repeat_alarm": 329,
+      "warning_no_alarm": 1067,
+      "any_alarm_precision": 0.41049723756906076
+    },
+    {
+      "model": "any_alarm_control",
+      "k": 10,
+      "rows": 13394,
+      "objects": 74,
+      "days": 181,
+      "onsets": 1725,
+      "warnings": 1810,
+      "tp": 293,
+      "precision_at_k": 0.16187845303867404,
+      "recall": 0.1698550724637681,
+      "average_precision": 0.17626788011465655,
+      "warning_onset": 293,
+      "warning_repeat_alarm": 970,
+      "warning_no_alarm": 547,
+      "any_alarm_precision": 0.6977900552486188
+    },
+    {
+      "model": "frequency",
+      "k": 10,
+      "rows": 13394,
+      "objects": 74,
+      "days": 181,
+      "onsets": 1725,
+      "warnings": 1810,
+      "tp": 358,
+      "precision_at_k": 0.19779005524861878,
+      "recall": 0.20753623188405798,
+      "average_precision": 0.18651782534936834,
+      "warning_onset": 358,
+      "warning_repeat_alarm": 425,
+      "warning_no_alarm": 1027,
+      "any_alarm_precision": 0.4325966850828729
+    },
+    {
+      "model": "hurdle_15",
+      "k": 20,
+      "rows": 13394,
+      "objects": 74,
+      "days": 181,
+      "onsets": 1725,
+      "warnings": 3620,
+      "tp": 776,
+      "precision_at_k": 0.2143646408839779,
+      "recall": 0.4498550724637681,
+      "average_precision": 0.2740313626726807,
+      "warning_onset": 776,
+      "warning_repeat_alarm": 647,
+      "warning_no_alarm": 2197,
+      "any_alarm_precision": 0.3930939226519337
+    },
+    {
+      "model": "any_alarm_control",
+      "k": 20,
+      "rows": 13394,
+      "objects": 74,
+      "days": 181,
+      "onsets": 1725,
+      "warnings": 3620,
+      "tp": 666,
+      "precision_at_k": 0.1839779005524862,
+      "recall": 0.38608695652173913,
+      "average_precision": 0.17626788011465655,
+      "warning_onset": 666,
+      "warning_repeat_alarm": 1479,
+      "warning_no_alarm": 1475,
+      "any_alarm_precision": 0.5925414364640884
+    },
+    {
+      "model": "frequency",
+      "k": 20,
+      "rows": 13394,
+      "objects": 74,
+      "days": 181,
+      "onsets": 1725,
+      "warnings": 3620,
+      "tp": 700,
+      "precision_at_k": 0.19337016574585636,
+      "recall": 0.4057971014492754,
+      "average_precision": 0.18651782534936834,
+      "warning_onset": 700,
+      "warning_repeat_alarm": 932,
+      "warning_no_alarm": 1988,
+      "any_alarm_precision": 0.450828729281768
+    }
+  ],
+  "monthly": [
+    {
+      "target_month": "2024-01",
+      "model": "hurdle_15",
+      "k": 10,
+      "rows": 2220,
+      "objects": 74,
+      "days": 30,
+      "onsets": 305,
+      "warnings": 300,
+      "tp": 69,
+      "precision_at_k": 0.23,
+      "recall": 0.2262295081967213,
+      "average_precision": 0.24705579536952757,
+      "warning_onset": 69,
+      "warning_repeat_alarm": 59,
+      "warning_no_alarm": 172,
+      "any_alarm_precision": 0.4266666666666667
+    },
+    {
+      "target_month": "2024-01",
+      "model": "any_alarm_control",
+      "k": 10,
+      "rows": 2220,
+      "objects": 74,
+      "days": 30,
+      "onsets": 305,
+      "warnings": 300,
+      "tp": 58,
+      "precision_at_k": 0.19333333333333333,
+      "recall": 0.1901639344262295,
+      "average_precision": 0.19356849805704063,
+      "warning_onset": 58,
+      "warning_repeat_alarm": 152,
+      "warning_no_alarm": 90,
+      "any_alarm_precision": 0.7
+    },
+    {
+      "target_month": "2024-01",
+      "model": "frequency",
+      "k": 10,
+      "rows": 2220,
+      "objects": 74,
+      "days": 30,
+      "onsets": 305,
+      "warnings": 300,
+      "tp": 64,
+      "precision_at_k": 0.21333333333333335,
+      "recall": 0.2098360655737705,
+      "average_precision": 0.19810676572805558,
+      "warning_onset": 64,
+      "warning_repeat_alarm": 66,
+      "warning_no_alarm": 170,
+      "any_alarm_precision": 0.43333333333333335
+    },
+    {
+      "target_month": "2024-02",
+      "model": "hurdle_15",
+      "k": 10,
+      "rows": 2146,
+      "objects": 74,
+      "days": 29,
+      "onsets": 253,
+      "warnings": 290,
+      "tp": 67,
+      "precision_at_k": 0.23103448275862068,
+      "recall": 0.2648221343873518,
+      "average_precision": 0.3289533763782374,
+      "warning_onset": 67,
+      "warning_repeat_alarm": 45,
+      "warning_no_alarm": 178,
+      "any_alarm_precision": 0.38620689655172413
+    },
+    {
+      "target_month": "2024-02",
+      "model": "any_alarm_control",
+      "k": 10,
+      "rows": 2146,
+      "objects": 74,
+      "days": 29,
+      "onsets": 253,
+      "warnings": 290,
+      "tp": 39,
+      "precision_at_k": 0.13448275862068965,
+      "recall": 0.1541501976284585,
+      "average_precision": 0.1657449600319454,
+      "warning_onset": 39,
+      "warning_repeat_alarm": 175,
+      "warning_no_alarm": 76,
+      "any_alarm_precision": 0.7379310344827587
+    },
+    {
+      "target_month": "2024-02",
+      "model": "frequency",
+      "k": 10,
+      "rows": 2146,
+      "objects": 74,
+      "days": 29,
+      "onsets": 253,
+      "warnings": 290,
+      "tp": 55,
+      "precision_at_k": 0.1896551724137931,
+      "recall": 0.21739130434782608,
+      "average_precision": 0.1772024243629214,
+      "warning_onset": 55,
+      "warning_repeat_alarm": 57,
+      "warning_no_alarm": 178,
+      "any_alarm_precision": 0.38620689655172413
+    },
+    {
+      "target_month": "2024-03",
+      "model": "hurdle_15",
+      "k": 10,
+      "rows": 2294,
+      "objects": 74,
+      "days": 31,
+      "onsets": 289,
+      "warnings": 310,
+      "tp": 70,
+      "precision_at_k": 0.22580645161290322,
+      "recall": 0.2422145328719723,
+      "average_precision": 0.2513417335208726,
+      "warning_onset": 70,
+      "warning_repeat_alarm": 50,
+      "warning_no_alarm": 190,
+      "any_alarm_precision": 0.3870967741935484
+    },
+    {
+      "target_month": "2024-03",
+      "model": "any_alarm_control",
+      "k": 10,
+      "rows": 2294,
+      "objects": 74,
+      "days": 31,
+      "onsets": 289,
+      "warnings": 310,
+      "tp": 49,
+      "precision_at_k": 0.15806451612903225,
+      "recall": 0.1695501730103806,
+      "average_precision": 0.1644737043948104,
+      "warning_onset": 49,
+      "warning_repeat_alarm": 176,
+      "warning_no_alarm": 85,
+      "any_alarm_precision": 0.7258064516129032
+    },
+    {
+      "target_month": "2024-03",
+      "model": "frequency",
+      "k": 10,
+      "rows": 2294,
+      "objects": 74,
+      "days": 31,
+      "onsets": 289,
+      "warnings": 310,
+      "tp": 63,
+      "precision_at_k": 0.2032258064516129,
+      "recall": 0.2179930795847751,
+      "average_precision": 0.18812440054850377,
+      "warning_onset": 63,
+      "warning_repeat_alarm": 70,
+      "warning_no_alarm": 177,
+      "any_alarm_precision": 0.4290322580645161
+    },
+    {
+      "target_month": "2024-04",
+      "model": "hurdle_15",
+      "k": 10,
+      "rows": 2220,
+      "objects": 74,
+      "days": 30,
+      "onsets": 293,
+      "warnings": 300,
+      "tp": 69,
+      "precision_at_k": 0.23,
+      "recall": 0.2354948805460751,
+      "average_precision": 0.24895435441660377,
+      "warning_onset": 69,
+      "warning_repeat_alarm": 52,
+      "warning_no_alarm": 179,
+      "any_alarm_precision": 0.4033333333333333
+    },
+    {
+      "target_month": "2024-04",
+      "model": "any_alarm_control",
+      "k": 10,
+      "rows": 2220,
+      "objects": 74,
+      "days": 30,
+      "onsets": 293,
+      "warnings": 300,
+      "tp": 47,
+      "precision_at_k": 0.15666666666666668,
+      "recall": 0.16040955631399317,
+      "average_precision": 0.18053467801152656,
+      "warning_onset": 47,
+      "warning_repeat_alarm": 140,
+      "warning_no_alarm": 113,
+      "any_alarm_precision": 0.6233333333333333
+    },
+    {
+      "target_month": "2024-04",
+      "model": "frequency",
+      "k": 10,
+      "rows": 2220,
+      "objects": 74,
+      "days": 30,
+      "onsets": 293,
+      "warnings": 300,
+      "tp": 62,
+      "precision_at_k": 0.20666666666666667,
+      "recall": 0.21160409556313994,
+      "average_precision": 0.1900816537169892,
+      "warning_onset": 62,
+      "warning_repeat_alarm": 70,
+      "warning_no_alarm": 168,
+      "any_alarm_precision": 0.44
+    },
+    {
+      "target_month": "2024-05",
+      "model": "hurdle_15",
+      "k": 10,
+      "rows": 2294,
+      "objects": 74,
+      "days": 31,
+      "onsets": 307,
+      "warnings": 310,
+      "tp": 66,
+      "precision_at_k": 0.2129032258064516,
+      "recall": 0.21498371335504887,
+      "average_precision": 0.28171552805693856,
+      "warning_onset": 66,
+      "warning_repeat_alarm": 62,
+      "warning_no_alarm": 182,
+      "any_alarm_precision": 0.4129032258064516
+    },
+    {
+      "target_month": "2024-05",
+      "model": "any_alarm_control",
+      "k": 10,
+      "rows": 2294,
+      "objects": 74,
+      "days": 31,
+      "onsets": 307,
+      "warnings": 310,
+      "tp": 59,
+      "precision_at_k": 0.19032258064516128,
+      "recall": 0.19218241042345277,
+      "average_precision": 0.18947907846831566,
+      "warning_onset": 59,
+      "warning_repeat_alarm": 143,
+      "warning_no_alarm": 108,
+      "any_alarm_precision": 0.6516129032258065
+    },
+    {
+      "target_month": "2024-05",
+      "model": "frequency",
+      "k": 10,
+      "rows": 2294,
+      "objects": 74,
+      "days": 31,
+      "onsets": 307,
+      "warnings": 310,
+      "tp": 58,
+      "precision_at_k": 0.1870967741935484,
+      "recall": 0.18892508143322476,
+      "average_precision": 0.18300243224039955,
+      "warning_onset": 58,
+      "warning_repeat_alarm": 77,
+      "warning_no_alarm": 175,
+      "any_alarm_precision": 0.43548387096774194
+    },
+    {
+      "target_month": "2024-06",
+      "model": "hurdle_15",
+      "k": 10,
+      "rows": 2220,
+      "objects": 74,
+      "days": 30,
+      "onsets": 278,
+      "warnings": 300,
+      "tp": 73,
+      "precision_at_k": 0.24333333333333335,
+      "recall": 0.26258992805755393,
+      "average_precision": 0.32907061997383835,
+      "warning_onset": 73,
+      "warning_repeat_alarm": 61,
+      "warning_no_alarm": 166,
+      "any_alarm_precision": 0.44666666666666666
+    },
+    {
+      "target_month": "2024-06",
+      "model": "any_alarm_control",
+      "k": 10,
+      "rows": 2220,
+      "objects": 74,
+      "days": 30,
+      "onsets": 278,
+      "warnings": 300,
+      "tp": 41,
+      "precision_at_k": 0.13666666666666666,
+      "recall": 0.1474820143884892,
+      "average_precision": 0.17360165891630752,
+      "warning_onset": 41,
+      "warning_repeat_alarm": 184,
+      "warning_no_alarm": 75,
+      "any_alarm_precision": 0.75
+    },
+    {
+      "target_month": "2024-06",
+      "model": "frequency",
+      "k": 10,
+      "rows": 2220,
+      "objects": 74,
+      "days": 30,
+      "onsets": 278,
+      "warnings": 300,
+      "tp": 56,
+      "precision_at_k": 0.18666666666666668,
+      "recall": 0.2014388489208633,
+      "average_precision": 0.18640698014306867,
+      "warning_onset": 56,
+      "warning_repeat_alarm": 85,
+      "warning_no_alarm": 159,
+      "any_alarm_precision": 0.47
+    }
+  ],
+  "observability": [
+    {
+      "model": "hurdle_15",
+      "records_intermediate": 0,
+      "rows": 4688,
+      "onsets": 642,
+      "warnings": 428,
+      "tp": 135
+    },
+    {
+      "model": "hurdle_15",
+      "records_intermediate": 1,
+      "rows": 8706,
+      "onsets": 1083,
+      "warnings": 1382,
+      "tp": 279
+    },
+    {
+      "model": "any_alarm_control",
+      "records_intermediate": 0,
+      "rows": 4688,
+      "onsets": 642,
+      "warnings": 127,
+      "tp": 42
+    },
+    {
+      "model": "any_alarm_control",
+      "records_intermediate": 1,
+      "rows": 8706,
+      "onsets": 1083,
+      "warnings": 1683,
+      "tp": 251
+    },
+    {
+      "model": "frequency",
+      "records_intermediate": 0,
+      "rows": 4688,
+      "onsets": 642,
+      "warnings": 515,
+      "tp": 160
+    },
+    {
+      "model": "frequency",
+      "records_intermediate": 1,
+      "rows": 8706,
+      "onsets": 1083,
+      "warnings": 1295,
+      "tp": 198
+    }
+  ],
+  "findings": {
+    "candidate_vs_any_alarm_net_starts": 121,
+    "candidate_vs_frequency_net_starts": 56,
+    "candidate_vs_any_alarm_relative_gain": 0.4129692832764505,
+    "candidate_vs_frequency_relative_gain": 0.1564245810055866,
+    "no_records_net_vs_any_alarm": 93,
+    "with_records_net_vs_any_alarm": 28,
+    "fraction_of_net_gain_after_no_records": 0.768595041322314,
+    "no_records_net_vs_frequency": -25,
+    "with_records_net_vs_frequency": 81,
+    "candidate_beats_both_baselines_in_all_six_target_months": true
+  },
+  "bootstrap_vs_any_alarm": {
+    "baseline": "any_alarm_control",
+    "weeks": 26,
+    "delta_precision_at_10": 0.06685082872928177,
+    "precision_ci95": [
+      0.0478021978021978,
+      0.0860354593420236
+    ],
+    "recall_ci95": [
+      0.04971601462735083,
+      0.0895643471087741
+    ],
+    "seed": 84,
+    "repeats": 1000
+  },
+  "supplemental_bootstrap_vs_frequency": {
+    "baseline": "frequency",
+    "weeks": 26,
+    "delta_precision_at_10": 0.030939226519337018,
+    "precision_ci95": [
+      0.017219843462246778,
+      0.04451164167324388
+    ],
+    "recall_ci95": [
+      0.018461500029329152,
+      0.046330573242060996
+    ],
+    "seed": 84,
+    "repeats": 1000
+  },
+  "december": [
+    {
+      "model": "hurdle_15",
+      "k": 10,
+      "rows": 2146,
+      "objects": 74,
+      "days": 29,
+      "onsets": 254,
+      "warnings": 290,
+      "tp": 68,
+      "precision_at_k": 0.23448275862068965,
+      "recall": 0.2677165354330709,
+      "average_precision": 0.2879652663604611,
+      "warning_onset": 68,
+      "warning_repeat_alarm": 46,
+      "warning_no_alarm": 176,
+      "any_alarm_precision": 0.3931034482758621
+    },
+    {
+      "model": "any_alarm_control",
+      "k": 10,
+      "rows": 2146,
+      "objects": 74,
+      "days": 29,
+      "onsets": 254,
+      "warnings": 290,
+      "tp": 49,
+      "precision_at_k": 0.16896551724137931,
+      "recall": 0.19291338582677164,
+      "average_precision": 0.1765403576197557,
+      "warning_onset": 49,
+      "warning_repeat_alarm": 166,
+      "warning_no_alarm": 75,
+      "any_alarm_precision": 0.7413793103448276
+    },
+    {
+      "model": "frequency",
+      "k": 10,
+      "rows": 2146,
+      "objects": 74,
+      "days": 29,
+      "onsets": 254,
+      "warnings": 290,
+      "tp": 57,
+      "precision_at_k": 0.19655172413793104,
+      "recall": 0.22440944881889763,
+      "average_precision": 0.1838700404530317,
+      "warning_onset": 57,
+      "warning_repeat_alarm": 60,
+      "warning_no_alarm": 173,
+      "any_alarm_precision": 0.40344827586206894
+    }
+  ],
+  "standalone_max_score_delta": {
+    "hurdle_15": 0.0,
+    "any_alarm_control": 0.0,
+    "frequency": 0.0
+  },
+  "production_weight_hashes_verified": {
+    "models/object_risk_probe.txt": "e0924c042197f5e393efb014319259929cf0a7c82890bbe4e47e3ae790f1c493",
+    "models/object_onset_experiment/refit/hurdle_15.joblib": "0ebb8fd57533f9e7fc1d6716505d9bb8166dfc0af6899e0a83d6e0b6d7a6e40f",
+    "models/object_onset_experiment/refit/logistic.joblib": "1d18bb641c159c519359dc17c7377980b11844fcaecc8c7de4a5b3dfab718fd0"
+  },
+  "serving_sources_verified_against_head": [
+    "scripts/verify_forecast_replay.py",
+    "src/serving/object_forecast.py",
+    "src/serving/object_onset_forecast.py",
+    "web/index.html"
+  ],
+  "predictions_sha256": "d04b7d39b1490e6b97579d18399b963d5ed5439f873119c2aa3fa24b8dedb761",
+  "configuration_sha256": "1c765c31f593de926368d8f3f05201603a333752dda36bdb41412f598f791f19",
+  "audit_script_sha256": "889af24b3ad0ba068f73d78c36dbf910d0e3aa02054fd97dc7250cb1e024c885",
+  "limitations": [
+    "This review starts from daily aggregates; raw-archive to daily lineage is a separate target_audit review and is not certified here.",
+    "Current metadata is not historically versioned; family was chosen after later-year research. This is a retrospective transfer comparison, not a fresh blind test.",
+    "Intermediate-day observability is retrospective diagnostic information, unavailable at issue time.",
+    "Initial early-stopping model artifacts are not retained: tuning P/AP and best-iteration choice were not independently replayed by retraining. Split/code/fixed refit counts and saved weights were checked.",
+    "Week-bootstrap intervals assume exchangeable weeks; cross-week dependence and shift remain. The frequency CI is supplemental and does not change the predeclared gate.",
+    "Targets describe registered records, not independently confirmed physical failures; daily repeated warnings are allowed."
+  ]
+}

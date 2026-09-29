@@ -27,3 +27,4 @@ venv/
 /reports/backup_restore/**/*.sqlite3*
 /artifacts/submission/bundles/
 /tmp/pdfs/
+reports/recommendations/server*.log

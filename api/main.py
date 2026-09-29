@@ -14,6 +14,7 @@ from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field, field_validator
 
 from api import forecast_store
+from src.serving import local_recommendations
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data/app/risk_demo.json"
@@ -60,12 +61,42 @@ def find_card(risk_id: str, mode: EntityMode, run_id: str | None = None):
     return data, card
 
 
+def recommendation(data, card):
+    """Apply current review rules to server-resolved immutable object releases.
+
+    Keep this separate from forecast cards and their original content hashes.
+    Legacy JSON/channel modes do not have the required checked release context.
+    """
+    if data.get("entity_mode") != "object" or not data.get("run_id"):
+        return None
+    fields = local_recommendations.FACT_FIELDS | local_recommendations.OPTIONAL_FACT_FIELDS
+    facts = {name: card[name] for name in fields if name in card}
+    context = {name: data.get(name) for name in (
+        "run_id", "feature_date", "feature_cutoff", "issue_time", "forecast_start", "forecast_end")}
+    goal = {None: "any_alarm", "any_alarm": "any_alarm",
+            forecast_store.ONSET_TARGET_KIND: "registered_episode_start_g1"}.get(data.get("target_kind"), "unsupported")
+    context.update(card_id=card.get("id"), object_id=card.get("object_id"), mode="historical_replay", goal=goal)
+    try:
+        result = local_recommendations.recommend(facts, context)
+    except local_recommendations.RecommendationValidationError:
+        # Preserve readable old archives; do not infer advice from incomplete context.
+        result = {"status": "unavailable", "steps": [], "requires_dispatcher_decision": True,
+                  "external_send": False,
+                  "message": "Для подробных рекомендаций недостаточно проверенного контекста выпуска."}
+    return {**result, "generated_at": datetime.now(timezone.utc).isoformat(),
+            "application_note": "Правила применены сейчас к архивным наблюдениям; историческое использование этих правил не подтверждается."}
+
+
 def snapshot(data, card):
     fields = ["run_id", "mode", "entity_mode", "feature_date", "feature_cutoff", "issue_time", "forecast_start", "forecast_end",
               "minimum_lead_hours", "model", "model_sha256", "input_sha256", "threshold", "archive_metadata"]
     forecast = {k: data.get(k) for k in fields}
     forecast.update({k: data[k] for k in forecast_store.POLICY_META_FIELDS if k in data})
-    return {"forecast": forecast, "card": public_card(card)}
+    result = {"forecast": forecast, "card": public_card(card)}
+    advice = recommendation(data, card)
+    if advice is not None:
+        result["recommendation"] = advice
+    return result
 
 
 @contextmanager
@@ -140,6 +171,8 @@ def health():
 def risks(mode: EntityMode = "channel", run_id: str | None = Query(default=None, min_length=1, max_length=160)):
     data = dataset(mode, run_id)
     data["cards"] = [public_card(card) for card in data["cards"]]
+    if mode == "object" and run_id is not None:
+        data["recommendations"] = {card["id"]: recommendation(data, card) for card in data["cards"]}
     return data
 
 

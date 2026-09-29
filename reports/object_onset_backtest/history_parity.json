@@ -1,0 +1,662 @@
+{
+  "status": "pass",
+  "purpose": "Exact compatibility check of portable fixed-population calendar builder only; no training or 2024 outcome reads.",
+  "start_date": "2025-01-01",
+  "end_date": "2025-12-31",
+  "raw_rows": 574627,
+  "mart_rows": 28470,
+  "calendar_days": 365,
+  "fixed_eligible_object_count": 78,
+  "fixed_eligible_object_ids": [
+    "108",
+    "111",
+    "165",
+    "20",
+    "28",
+    "3215",
+    "3216",
+    "3250",
+    "3356",
+    "3360",
+    "3388",
+    "3902",
+    "3903",
+    "3904",
+    "3905",
+    "4069",
+    "4095",
+    "4177",
+    "42",
+    "4369",
+    "4370",
+    "4391",
+    "4392",
+    "4541",
+    "4543",
+    "4569",
+    "4574",
+    "4577",
+    "4610",
+    "4648",
+    "4763",
+    "4765",
+    "4767",
+    "4768",
+    "4770",
+    "5003",
+    "5009",
+    "5011",
+    "5113",
+    "5114",
+    "5122",
+    "5123",
+    "5124",
+    "5129",
+    "5132",
+    "5218",
+    "5332",
+    "5333",
+    "5336",
+    "5338",
+    "5339",
+    "5340",
+    "5343",
+    "5537",
+    "5539",
+    "5540",
+    "5567",
+    "5574",
+    "5578",
+    "5579",
+    "5580",
+    "5581",
+    "5582",
+    "5583",
+    "5591",
+    "5593",
+    "5594",
+    "5657",
+    "5674",
+    "5675",
+    "5676",
+    "5677",
+    "5678",
+    "5961",
+    "5962",
+    "5963",
+    "5966",
+    "99"
+  ],
+  "eligibility_for_parity": "All 78 catalog-mapped objects, independent of outcome values; a backtest caller must supply train-cutoff eligible IDs.",
+  "feature_count": 71,
+  "features": [
+    "object_id",
+    "events_count",
+    "alarm_count",
+    "fault_count",
+    "no_power_count",
+    "undefined_count",
+    "numeric_count",
+    "text_count",
+    "off_count",
+    "on_count",
+    "movement_detected_count",
+    "open_count",
+    "observed_channels",
+    "alarm_channels",
+    "fault_channels",
+    "no_power_channels",
+    "catalog_channels",
+    "object_kind",
+    "parent_id",
+    "alarm_today",
+    "observed_today",
+    "observed_fraction",
+    "alarm_channel_fraction",
+    "alarm_today_lag1",
+    "alarm_today_lag2",
+    "alarm_today_lag7",
+    "alarm_today_lag14",
+    "alarm_today_mean3",
+    "alarm_today_mean7",
+    "alarm_today_mean28",
+    "alarm_channels_lag1",
+    "alarm_channels_lag2",
+    "alarm_channels_lag7",
+    "alarm_channels_lag14",
+    "alarm_channels_mean3",
+    "alarm_channels_mean7",
+    "alarm_channels_mean28",
+    "observed_channels_lag1",
+    "observed_channels_lag2",
+    "observed_channels_lag7",
+    "observed_channels_lag14",
+    "observed_channels_mean3",
+    "observed_channels_mean7",
+    "observed_channels_mean28",
+    "fault_channels_lag1",
+    "fault_channels_lag2",
+    "fault_channels_lag7",
+    "fault_channels_lag14",
+    "fault_channels_mean3",
+    "fault_channels_mean7",
+    "fault_channels_mean28",
+    "no_power_channels_lag1",
+    "no_power_channels_lag2",
+    "no_power_channels_lag7",
+    "no_power_channels_lag14",
+    "no_power_channels_mean3",
+    "no_power_channels_mean7",
+    "no_power_channels_mean28",
+    "events_count_lag1",
+    "events_count_lag2",
+    "events_count_lag7",
+    "events_count_lag14",
+    "events_count_mean3",
+    "events_count_mean7",
+    "events_count_mean28",
+    "historical_alarm_frequency",
+    "alarm_streak",
+    "days_since_alarm",
+    "target_dayofweek",
+    "annual_sin",
+    "annual_cos"
+  ],
+  "target": "target_any_object_alarm_d_plus_2",
+  "all_columns_values_dtypes_categories_and_missing_exact": true,
+  "label_date_exact": true,
+  "per_column": {
+    "object_id": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "category",
+      "missing_count": 0
+    },
+    "date": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "datetime64[us]",
+      "missing_count": 0
+    },
+    "events_count": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "alarm_count": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "fault_count": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "no_power_count": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "undefined_count": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "numeric_count": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "text_count": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "off_count": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "on_count": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "movement_detected_count": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "open_count": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "observed_channels": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "alarm_channels": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "fault_channels": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "no_power_channels": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "catalog_channels": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "object_kind": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "category",
+      "missing_count": 0
+    },
+    "parent_id": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "category",
+      "missing_count": 0
+    },
+    "alarm_today": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "observed_today": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "observed_fraction": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "alarm_channel_fraction": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 10136
+    },
+    "alarm_today_lag1": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 78
+    },
+    "alarm_today_lag2": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 156
+    },
+    "alarm_today_lag7": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 546
+    },
+    "alarm_today_lag14": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 1092
+    },
+    "alarm_today_mean3": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "alarm_today_mean7": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "alarm_today_mean28": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "alarm_channels_lag1": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 78
+    },
+    "alarm_channels_lag2": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 156
+    },
+    "alarm_channels_lag7": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 546
+    },
+    "alarm_channels_lag14": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 1092
+    },
+    "alarm_channels_mean3": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "alarm_channels_mean7": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "alarm_channels_mean28": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "observed_channels_lag1": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 78
+    },
+    "observed_channels_lag2": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 156
+    },
+    "observed_channels_lag7": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 546
+    },
+    "observed_channels_lag14": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 1092
+    },
+    "observed_channels_mean3": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "observed_channels_mean7": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "observed_channels_mean28": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "fault_channels_lag1": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 78
+    },
+    "fault_channels_lag2": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 156
+    },
+    "fault_channels_lag7": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 546
+    },
+    "fault_channels_lag14": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 1092
+    },
+    "fault_channels_mean3": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "fault_channels_mean7": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "fault_channels_mean28": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "no_power_channels_lag1": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 78
+    },
+    "no_power_channels_lag2": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 156
+    },
+    "no_power_channels_lag7": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 546
+    },
+    "no_power_channels_lag14": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 1092
+    },
+    "no_power_channels_mean3": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "no_power_channels_mean7": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "no_power_channels_mean28": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "events_count_lag1": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 78
+    },
+    "events_count_lag2": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 156
+    },
+    "events_count_lag7": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 546
+    },
+    "events_count_lag14": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 1092
+    },
+    "events_count_mean3": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "events_count_mean7": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "events_count_mean28": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "historical_alarm_frequency": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float64",
+      "missing_count": 0
+    },
+    "alarm_streak": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "days_since_alarm": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "target_dayofweek": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "int8",
+      "missing_count": 0
+    },
+    "annual_sin": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "annual_cos": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 0
+    },
+    "target_any_object_alarm_d_plus_2": {
+      "equal_including_dtype_and_missing": true,
+      "dtype": "float32",
+      "missing_count": 156
+    }
+  },
+  "last_two_labels_per_object_nan": true,
+  "last_two_label_dates_per_object_nat": true,
+  "real_truncation_cutoff": "2025-09-28",
+  "real_truncation_all_features_exact": true,
+  "real_truncation_available_labels_exact": true,
+  "unit_tests": {
+    "command": ".venv/bin/python -m unittest discover -s tests -p test_object_history.py -v",
+    "passed": 8
+  },
+  "source_sha256": {
+    "src/modeling/object_risk_probe.py": "2b4d32265d5b86c84e32065a79b78dbbbe211e86b4956168fd4a82798b1b5509",
+    "src/modeling/object_history.py": "395de2abfa19543a46833fe4b788a3768bfc547e80b407d82174726a65ff05b3"
+  },
+  "input_sha256": {
+    "data/interim/daily_2025.parquet": "c22cc25cd3dd503e56d964b6bcab6db2ad7f5eb39041406bb3dec8123e5d76b5",
+    "data/raw/справочник_каналов_датчиков.csv": "87b3230e93ae00e3f03d915336acde6b3990c8b58d7378175cf02c000f67a45f",
+    "data/raw/справочник_объектов_диспетчер.csv": "219b4dbe34a78581640d839837649d3ef481c62c089fef18db1b364cff007084"
+  },
+  "original_coverage": {
+    "catalog_objects_with_channels": 78,
+    "excluded_unknown_channel_days": 150,
+    "excluded_alarm_channel_days": 69,
+    "included_channel_days": 574477,
+    "objects_with_observations_by_nov30": 78
+  },
+  "portable_coverage": {
+    "catalog_objects_with_channels": 78,
+    "all_catalog_objects_with_channels": 78,
+    "excluded_unknown_channel_days": 150,
+    "excluded_alarm_channel_days": 69,
+    "excluded_noneligible_channel_days": 0,
+    "excluded_noneligible_alarm_channel_days": 0,
+    "included_channel_days": 574477,
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31",
+    "eligible_object_ids": [
+      "108",
+      "111",
+      "165",
+      "20",
+      "28",
+      "3215",
+      "3216",
+      "3250",
+      "3356",
+      "3360",
+      "3388",
+      "3902",
+      "3903",
+      "3904",
+      "3905",
+      "4069",
+      "4095",
+      "4177",
+      "42",
+      "4369",
+      "4370",
+      "4391",
+      "4392",
+      "4541",
+      "4543",
+      "4569",
+      "4574",
+      "4577",
+      "4610",
+      "4648",
+      "4763",
+      "4765",
+      "4767",
+      "4768",
+      "4770",
+      "5003",
+      "5009",
+      "5011",
+      "5113",
+      "5114",
+      "5122",
+      "5123",
+      "5124",
+      "5129",
+      "5132",
+      "5218",
+      "5332",
+      "5333",
+      "5336",
+      "5338",
+      "5339",
+      "5340",
+      "5343",
+      "5537",
+      "5539",
+      "5540",
+      "5567",
+      "5574",
+      "5578",
+      "5579",
+      "5580",
+      "5581",
+      "5582",
+      "5583",
+      "5591",
+      "5593",
+      "5594",
+      "5657",
+      "5674",
+      "5675",
+      "5676",
+      "5677",
+      "5678",
+      "5961",
+      "5962",
+      "5963",
+      "5966",
+      "99"
+    ],
+    "population_fixed_by_caller": true,
+    "objects_with_observations_in_window": 78
+  },
+  "coverage_note": "Portable coverage uses objects_with_observations_in_window rather than the frozen builder's date-specific objects_with_observations_by_nov30; feature and label schemas are unchanged.",
+  "files_read_for_data": [
+    "data/interim/daily_2025.parquet",
+    "data/raw/справочник_каналов_датчиков.csv",
+    "data/raw/справочник_объектов_диспетчер.csv"
+  ],
+  "outcomes_2024_read": false,
+  "training_performed": false,
+  "elapsed_seconds": 0.6821702090092003
+}

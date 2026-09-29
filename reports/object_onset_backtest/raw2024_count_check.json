@@ -1,0 +1,101 @@
+{
+  "year": 2024,
+  "status": "passed",
+  "completed_at": "2026-09-29T13:58:39.699510+00:00",
+  "verification": "Independent streaming recomputation of all 11 model COUNTS; original parquet never modified",
+  "source_script_path": "scripts/verify_historical_counts.py",
+  "source_script_sha256": "b2a816d3f47c339a3d948a9a4eadb90dafecdd4cd3da34bb60765c35cc40e6d7",
+  "archive_sha256": "d39ce19910e0761f7435eb4a6ebb3004b6df383e18d57c3cad8865deea1bbea9",
+  "archive_sha256_after": "d39ce19910e0761f7435eb4a6ebb3004b6df383e18d57c3cad8865deea1bbea9",
+  "archive_unchanged": true,
+  "archive_hash_matches_history_manifest": true,
+  "history_manifest_sha256": "c561e31ed665e1757a36b2db717a6b487c08de554047f2b74c573df0f9b1d279",
+  "cache_sha256_before": "df202ad4f4b612badb7a19444df222f0b60fdaa880a6abd308ddf36aa1a9337e",
+  "cache_sha256_after": "df202ad4f4b612badb7a19444df222f0b60fdaa880a6abd308ddf36aa1a9337e",
+  "cache_unchanged": true,
+  "raw_rows": 49023883,
+  "valid_rows": 49023883,
+  "invalid_date_or_channel_rows": 0,
+  "rebuilt_channel_days": 505007,
+  "cached_channel_days": 505007,
+  "duplicate_cached_channel_days": 0,
+  "keys_exactly_equal": true,
+  "rebuilt_only_keys": 0,
+  "cached_only_keys": 0,
+  "columns": {
+    "events_count": {
+      "mismatched_channel_days": 0,
+      "maximum_absolute_difference": 0,
+      "rebuilt_total": 49023883,
+      "cached_total": 49023883
+    },
+    "alarm_count": {
+      "mismatched_channel_days": 0,
+      "maximum_absolute_difference": 0,
+      "rebuilt_total": 115203,
+      "cached_total": 115203
+    },
+    "fault_count": {
+      "mismatched_channel_days": 0,
+      "maximum_absolute_difference": 0,
+      "rebuilt_total": 34968,
+      "cached_total": 34968
+    },
+    "no_power_count": {
+      "mismatched_channel_days": 0,
+      "maximum_absolute_difference": 0,
+      "rebuilt_total": 112792,
+      "cached_total": 112792
+    },
+    "undefined_count": {
+      "mismatched_channel_days": 0,
+      "maximum_absolute_difference": 0,
+      "rebuilt_total": 667662,
+      "cached_total": 667662
+    },
+    "numeric_count": {
+      "mismatched_channel_days": 0,
+      "maximum_absolute_difference": 0,
+      "rebuilt_total": 39061884,
+      "cached_total": 39061884
+    },
+    "text_count": {
+      "mismatched_channel_days": 0,
+      "maximum_absolute_difference": 0,
+      "rebuilt_total": 9961999,
+      "cached_total": 9961999
+    },
+    "off_count": {
+      "mismatched_channel_days": 0,
+      "maximum_absolute_difference": 0,
+      "rebuilt_total": 263178,
+      "cached_total": 263178
+    },
+    "on_count": {
+      "mismatched_channel_days": 0,
+      "maximum_absolute_difference": 0,
+      "rebuilt_total": 236665,
+      "cached_total": 236665
+    },
+    "movement_detected_count": {
+      "mismatched_channel_days": 0,
+      "maximum_absolute_difference": 0,
+      "rebuilt_total": 3485208,
+      "cached_total": 3485208
+    },
+    "open_count": {
+      "mismatched_channel_days": 0,
+      "maximum_absolute_difference": 0,
+      "rebuilt_total": 348789,
+      "cached_total": 348789
+    }
+  },
+  "elapsed_seconds": 39.35969291708898,
+  "historical_aggregator_sha256": "016f2162d84a4cce4f95b03cd0fbf51e1dec21097f27bc9160e788bda18cb9a4",
+  "historical_aggregator_source_identity_recovered": false,
+  "current_aggregator_sha256": "a82a2002d9852f14b87f932963146f15905088a710a139cdecd1ca0e5eae3fe5",
+  "uses_current_state_dictionary_for_relabeling": false,
+  "models_trained": false,
+  "model_metrics_computed": false,
+  "final_note": "The old aggregator source has not been recovered. Exact raw-to-cache count equality validates the 11 input counters without claiming that historical source identity was recovered."
+}

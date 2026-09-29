@@ -29,6 +29,7 @@ ASSETS = [
     'reports/object_onset_experiment/protocol.md',
     'requirements-runtime.txt', 'requirements-inference.txt',
     'docs/onset_demo.md', 'docs/object_demo.md', 'docs/local_demo.md',
+    'docs/recommendations.md',
 ]
 
 VERIFY = '''"""Verify immutable bundle inputs; new runtime files are not inputs."""
@@ -117,6 +118,12 @@ forecast_seed.sqlite3 копируется в отдельную dispatch.sqlite
 не означает исправность. Score не является вероятностью физической поломки.
 Модель исследовательская; прогнозы исторические. TLS, корпоративный вход,
 рабочий поток и внешняя отправка заявок отсутствуют.
+
+В сохранённых объектных выпусках карточки показывают контекстные шаги проверки
+по наблюдениям и версии правил. При явном сохранении решения или черновика
+сервер добавляет отдельный снимок рекомендации; прежний журнал не пересчитывается.
+Правила применяются сейчас к архиву и не устанавливают физическую причину.
+Подробности: docs/recommendations.md.
 
 Исходный код: https://github.com/AnnaRazina10/lct-collector-risk
 

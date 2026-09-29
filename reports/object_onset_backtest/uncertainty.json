@@ -1,0 +1,246 @@
+{
+  "k": 10,
+  "n": 1000,
+  "seed": 84,
+  "confidence_level": 0.95,
+  "difference_direction": "new_minus_baseline",
+  "block_unit": "issue_calendar_week_monday_sunday",
+  "date_semantics": "feature_day_D; issue_day_D_plus_1; target_day_D_plus_2",
+  "rows": 13394,
+  "days": 181,
+  "weeks": 26,
+  "partial_week_blocks": 1,
+  "min_days_per_block": 6,
+  "max_days_per_block": 7,
+  "all_input_rows_included": true,
+  "few_weeks": false,
+  "few_weeks_threshold": 8,
+  "week_blocks": [
+    {
+      "issue_week_start": "2024-01-01",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 67
+    },
+    {
+      "issue_week_start": "2024-01-08",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 79
+    },
+    {
+      "issue_week_start": "2024-01-15",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 69
+    },
+    {
+      "issue_week_start": "2024-01-22",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 63
+    },
+    {
+      "issue_week_start": "2024-01-29",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 72
+    },
+    {
+      "issue_week_start": "2024-02-05",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 54
+    },
+    {
+      "issue_week_start": "2024-02-12",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 58
+    },
+    {
+      "issue_week_start": "2024-02-19",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 71
+    },
+    {
+      "issue_week_start": "2024-02-26",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 59
+    },
+    {
+      "issue_week_start": "2024-03-04",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 66
+    },
+    {
+      "issue_week_start": "2024-03-11",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 61
+    },
+    {
+      "issue_week_start": "2024-03-18",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 66
+    },
+    {
+      "issue_week_start": "2024-03-25",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 78
+    },
+    {
+      "issue_week_start": "2024-04-01",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 37
+    },
+    {
+      "issue_week_start": "2024-04-08",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 81
+    },
+    {
+      "issue_week_start": "2024-04-15",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 71
+    },
+    {
+      "issue_week_start": "2024-04-22",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 78
+    },
+    {
+      "issue_week_start": "2024-04-29",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 74
+    },
+    {
+      "issue_week_start": "2024-05-06",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 64
+    },
+    {
+      "issue_week_start": "2024-05-13",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 78
+    },
+    {
+      "issue_week_start": "2024-05-20",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 66
+    },
+    {
+      "issue_week_start": "2024-05-27",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 67
+    },
+    {
+      "issue_week_start": "2024-06-03",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 70
+    },
+    {
+      "issue_week_start": "2024-06-10",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 67
+    },
+    {
+      "issue_week_start": "2024-06-17",
+      "days": 7,
+      "warnings": 70,
+      "onsets": 57
+    },
+    {
+      "issue_week_start": "2024-06-24",
+      "days": 6,
+      "warnings": 60,
+      "onsets": 52
+    }
+  ],
+  "new": {
+    "rows": 13394,
+    "objects": 74,
+    "days": 181,
+    "k": 10,
+    "feature_start": "2023-12-31",
+    "feature_end": "2024-06-28",
+    "issue_start": "2024-01-01",
+    "issue_end": "2024-06-29",
+    "onsets": 1725,
+    "onset_prevalence": 0.12878901000447962,
+    "average_precision": 0.2740313626726807,
+    "precision_at_k": 0.2287292817679558,
+    "recall": 0.24,
+    "tp": 414,
+    "warnings": 1810,
+    "warnings_per_day": 10.0,
+    "warning_partition": {
+      "onset": 414,
+      "repeat_alarm": 329,
+      "no_alarm": 1067
+    },
+    "undefined_recall": false,
+    "date_semantics": "feature_day_D; issue_day_D_plus_1; target_day_D_plus_2"
+  },
+  "baseline": {
+    "rows": 13394,
+    "objects": 74,
+    "days": 181,
+    "k": 10,
+    "feature_start": "2023-12-31",
+    "feature_end": "2024-06-28",
+    "issue_start": "2024-01-01",
+    "issue_end": "2024-06-29",
+    "onsets": 1725,
+    "onset_prevalence": 0.12878901000447962,
+    "average_precision": 0.1762678801146566,
+    "precision_at_k": 0.16187845303867404,
+    "recall": 0.1698550724637681,
+    "tp": 293,
+    "warnings": 1810,
+    "warnings_per_day": 10.0,
+    "warning_partition": {
+      "onset": 293,
+      "repeat_alarm": 970,
+      "no_alarm": 547
+    },
+    "undefined_recall": false,
+    "date_semantics": "feature_day_D; issue_day_D_plus_1; target_day_D_plus_2"
+  },
+  "delta_precision_at_k": {
+    "estimate": 0.06685082872928175,
+    "ci95": [
+      0.0478021978021978,
+      0.0860354593420236
+    ]
+  },
+  "delta_recall": {
+    "estimate": 0.07014492753623189,
+    "ci95": [
+      0.04971601462735083,
+      0.0895643471087741
+    ]
+  },
+  "recall_replicates_without_onsets": 0,
+  "valid_recall_replicates": 1000,
+  "limitations": [
+    "Descriptive paired calendar-week bootstrap; no independent test is created by resampling.",
+    "Weeks are treated as exchangeable blocks; dependence across weeks and dataset shift are not covered."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "verified_at": "2026-09-29T14:07:26.194275+00:00",
+  "scope": "Isolated local test DB recommendation_demo.sqlite3; real browser explicit feedback, process stop and fresh uvicorn process, HTTP readback",
+  "journal_entries": 1,
+  "feedback_id": "b556b749-1f52-446b-a675-1fc89fc8c706",
+  "recommendation_id": "4adc9169ce9e4ea621ba1a00d32922d0dc4866afe1e987c754eca20cc2f04cfc",
+  "rule_ids": [
+    "NO_RECORDS_TODAY"
+  ],
+  "journal_exact_before_after": true,
+  "six_release_metadata_exact_before_after": true,
+  "browser_journal_showed_saved_recommendation": true,
+  "browser_console_errors": 0,
+  "external_submission": false,
+  "production_database_used": false,
+  "source_sha256": {
+    "api/main.py": "28876096bebdc50eb0d3a387d9161b39b6b3ebc2510115795b0b8cf0095aa370",
+    "web/index.html": "55734db8238e81e361d24c6eb9649b51216fcb5776073a3bcc98e2378114e205",
+    "src/serving/local_recommendations.py": "8032e49ac30213284b64e3b26257c2e4774af5ed1556bb1e604e2ba680c593d9"
+  },
+  "screenshots": [
+    "ui_verified.png",
+    "ui_journal_verified.png"
+  ],
+  "browser_after_restart_showed_saved_recommendation": true
+}

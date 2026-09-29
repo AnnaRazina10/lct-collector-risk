@@ -88,7 +88,15 @@ function selectCard(card){
   const maximum=Math.max(...explanation.map(x=>Number.isFinite(x.contribution_log_odds)?x.contribution_log_odds:0),.001);
   for(const x of explanation){const factor=el('div',(x.label||labels[x.feature]||x.feature)+' · '+x.value,'factor');if(!observations){const bar=el('div',undefined,'bar');bar.style.width=Math.max(0,100*x.contribution_log_odds/maximum)+'%';factor.append(bar)}p.append(factor)}
   if(!explanation.length)p.append(el('p',observations?'Дополнительные наблюдения в этом выпуске не сохранены.':'Для этой оценки положительные вклады не выделены.','small-note'));
-  p.append(el('div',card.suggested_action,'action'));
+  const advice=forecast.recommendations?.[card.id];
+  if(advice?.status==='ok'&&Array.isArray(advice.steps)){
+    const box=el('section',undefined,'action');box.append(el('h3','Что проверить диспетчеру'));
+    for(const step of advice.steps)box.append(el('p',step.text));
+    box.append(el('p','Наблюдения учтены по '+dateText(advice.fact_cutoff,true)+' МСК; очередь определена при выпуске '+dateText(advice.issue_time,true)+' МСК. Правила версии '+advice.ruleset_version+' применены сейчас к архиву; физическая причина не установлена.','small-note'));
+    p.append(box);
+  }else if(advice){
+    p.append(el('div','Для подробных рекомендаций недостаточно согласованных данных выпуска. Проверьте полноту наблюдений и временные границы.','action'));
+  }else p.append(el('div',card.suggested_action,'action'));
   const workflow=el('section',undefined,'workflow');workflow.append(el('h3','Действия диспетчера'),el('p',(cardMode==='object'?'Цель: '+targetTitle(forecast)+(onset?' · место '+card.rank+' · '+warningText(card,forecast):'')+'. ':'')+(cardRun?'Черновик и решение будут привязаны к выпуску '+cardRun+'.':'Черновик и решение относятся к исходной архивной демонстрации.'),'small-note run-identity'));
   const note=el('textarea');note.id='decision-note';note.rows=3;note.maxLength=2000;note.placeholder='Что проверили или что необходимо уточнить';workflow.append(field('Комментарий к черновику или решению',note));
   const operator=el('input');operator.className='operator';operator.id='operator-name';operator.maxLength=100;operator.required=true;operator.value=operatorName;operator.placeholder='Укажите имя или обозначение смены';operator.oninput=()=>{operatorName=operator.value};workflow.append(field('Диспетчер · имя указывается локально',operator));
@@ -119,6 +127,11 @@ async function loadJournal(){
       if(item.entity_mode==='object'&&targetOf(forecast)===TARGET_ONSET)entry.append(el('div','Начало серии · место '+(card.rank??'не сохранено')+' · '+warningText(card,forecast),'muted'));
       if(forecast.forecast_start)entry.append(el('div','Окно прогноза: '+dateText(forecast.forecast_start)+' — '+dateText(forecast.forecast_end)+(card.score!==undefined?' · оценка '+card.score.toFixed(3):''),'muted'));
       if(item.kind==='dispatcher_decision')entry.append(el('div',item.operator+' · '+(reasons[item.reason]||item.reason),'muted'));
+      const advice=snap.recommendation;
+      if(advice?.status==='ok'&&Array.isArray(advice.steps)){
+        entry.append(el('div','Сохранённые рекомендации · версия '+advice.ruleset_version+' · сформированы '+dateText(advice.generated_at,true)+' МСК','muted'));
+        for(const step of advice.steps)entry.append(el('p',step.text));
+      }else if(advice)entry.append(el('p','На момент решения подробные рекомендации были недоступны.','muted'));
       if(item.note)entry.append(el('p',item.note));target.append(entry);
     }
     if(!entries.length)target.append(el('div','Среди загруженных записей нет решений или черновиков для выбранной цели. Выберите карточку и сохраните результат проверки.','empty'));

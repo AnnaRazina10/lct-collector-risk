@@ -1,0 +1,7 @@
+model,records_intermediate,rows,onsets,warnings,tp,retrospective_filter_only
+hurdle_15,0,4688,642,428,135,True
+hurdle_15,1,8706,1083,1382,279,True
+any_alarm_control,0,4688,642,127,42,True
+any_alarm_control,1,8706,1083,1683,251,True
+frequency,0,4688,642,515,160,True
+frequency,1,8706,1083,1295,198,True

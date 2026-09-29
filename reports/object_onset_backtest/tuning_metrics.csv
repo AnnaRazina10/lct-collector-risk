@@ -1,0 +1,4 @@
+model,rows,objects,days,k,feature_start,feature_end,issue_start,issue_end,onsets,onset_prevalence,average_precision,precision_at_k,recall,tp,warnings,warnings_per_day,undefined_recall,date_semantics,warning_onset,warning_repeat_alarm,warning_no_alarm
+hurdle_15,4366,74,59,10,2023-10-01,2023-11-28,2023-10-02,2023-11-29,571,0.13078332569857995,0.3168650299595611,0.2542372881355932,0.2626970227670753,150,590,10.0,False,feature_day_D; issue_day_D_plus_1; target_day_D_plus_2,150,94,346
+any_alarm_control,4366,74,59,10,2023-10-01,2023-11-28,2023-10-02,2023-11-29,571,0.13078332569857995,0.18632193014878018,0.15423728813559323,0.159369527145359,91,590,10.0,False,feature_day_D; issue_day_D_plus_1; target_day_D_plus_2,91,341,158
+frequency,4366,74,59,10,2023-10-01,2023-11-28,2023-10-02,2023-11-29,571,0.13078332569857995,0.18907392059488548,0.19661016949152543,0.2031523642732049,116,590,10.0,False,feature_day_D; issue_day_D_plus_1; target_day_D_plus_2,116,128,346
