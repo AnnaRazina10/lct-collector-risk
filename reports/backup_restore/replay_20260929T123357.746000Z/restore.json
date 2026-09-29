@@ -1,0 +1,183 @@
+{
+  "passed": true,
+  "operation": "restore",
+  "destination": "/Users/antany/Desktop/LCT-Ann/lct-collector-risk/data/app/forecast_replay_restored_20260929T123357.746000Z.sqlite3",
+  "elapsed_seconds": 0.02901975007262081,
+  "backup_database_sha256": "e4b2a5125b09a25cede7b7794ef53a7578d1993e2adb97770adc8d9d4824f7ee",
+  "restored_sha256": "e4b2a5125b09a25cede7b7794ef53a7578d1993e2adb97770adc8d9d4824f7ee",
+  "manifest_sha256": "f0d96bbbc6ae6367cded4867479f836fd5a9cb32f5f9ba8dd00db9381ad3e487",
+  "inventory_matches_backup": true,
+  "inventory": {
+    "integrity_check": "ok",
+    "schema": [
+      [
+        "index",
+        "forecast_runs_issue",
+        "forecast_runs",
+        "CREATE INDEX forecast_runs_issue ON forecast_runs (issue_epoch DESC, run_id)"
+      ],
+      [
+        "index",
+        "sqlite_autoindex_forecast_card_ids_1",
+        "forecast_card_ids",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_forecast_runs_1",
+        "forecast_runs",
+        null
+      ],
+      [
+        "table",
+        "forecast_card_ids",
+        "forecast_card_ids",
+        "CREATE TABLE forecast_card_ids (card_id TEXT PRIMARY KEY, run_id TEXT NOT NULL REFERENCES forecast_runs(run_id))"
+      ],
+      [
+        "table",
+        "forecast_runs",
+        "forecast_runs",
+        "CREATE TABLE forecast_runs (\n        run_id TEXT PRIMARY KEY, entity_mode TEXT NOT NULL, mode TEXT NOT NULL,\n        issue_epoch REAL NOT NULL, metadata_json TEXT NOT NULL,\n        payload_json TEXT NOT NULL, content_sha256 TEXT NOT NULL, created_at TEXT NOT NULL)"
+      ],
+      [
+        "trigger",
+        "forecast_card_ids_immutable_delete",
+        "forecast_card_ids",
+        "CREATE TRIGGER forecast_card_ids_immutable_delete BEFORE DELETE ON forecast_card_ids BEGIN SELECT RAISE(ABORT, 'Forecast releases are immutable'); END"
+      ],
+      [
+        "trigger",
+        "forecast_card_ids_immutable_update",
+        "forecast_card_ids",
+        "CREATE TRIGGER forecast_card_ids_immutable_update BEFORE UPDATE ON forecast_card_ids BEGIN SELECT RAISE(ABORT, 'Forecast releases are immutable'); END"
+      ],
+      [
+        "trigger",
+        "forecast_runs_immutable_delete",
+        "forecast_runs",
+        "CREATE TRIGGER forecast_runs_immutable_delete BEFORE DELETE ON forecast_runs BEGIN SELECT RAISE(ABORT, 'Forecast releases are immutable'); END"
+      ],
+      [
+        "trigger",
+        "forecast_runs_immutable_update",
+        "forecast_runs",
+        "CREATE TRIGGER forecast_runs_immutable_update BEFORE UPDATE ON forecast_runs BEGIN SELECT RAISE(ABORT, 'Forecast releases are immutable'); END"
+      ]
+    ],
+    "schema_sha256": "faaf89714630d1f6137a93fab3a28c7af41da7c0319241cf990516a79e3d9b92",
+    "tables": {
+      "forecast_card_ids": {
+        "row_count": 234,
+        "columns": [
+          [
+            0,
+            "card_id",
+            "TEXT",
+            0,
+            null,
+            1,
+            0
+          ],
+          [
+            1,
+            "run_id",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ]
+        ],
+        "payload_sha256": "fb234dc2a8f1df540e4ecc7db0dae8e9ceca197a2a08bed0f7fd7da4ae544f09",
+        "internal": false
+      },
+      "forecast_runs": {
+        "row_count": 3,
+        "columns": [
+          [
+            0,
+            "run_id",
+            "TEXT",
+            0,
+            null,
+            1,
+            0
+          ],
+          [
+            1,
+            "entity_mode",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ],
+          [
+            2,
+            "mode",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ],
+          [
+            3,
+            "issue_epoch",
+            "REAL",
+            1,
+            null,
+            0,
+            0
+          ],
+          [
+            4,
+            "metadata_json",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ],
+          [
+            5,
+            "payload_json",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ],
+          [
+            6,
+            "content_sha256",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ],
+          [
+            7,
+            "created_at",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ]
+        ],
+        "payload_sha256": "60650a63bc061d02f1884df7fb1ad665858edaea9736dac27bc764a1b7c430f4",
+        "internal": false
+      }
+    },
+    "user_tables": [
+      "forecast_card_ids",
+      "forecast_runs"
+    ],
+    "user_version": 0,
+    "application_id": 0,
+    "encoding": "UTF-8"
+  }
+}

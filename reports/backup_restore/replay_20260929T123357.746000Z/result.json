@@ -1,0 +1,88 @@
+{
+  "timestamp_utc": "2026-09-29T12:33:57.795820+00:00",
+  "platform": "macOS-15.3.1-arm64-arm-64bit",
+  "sqlite_version": "3.53.1",
+  "source": "data/app/forecast_replay.sqlite3",
+  "bundle": "data/app/forecast_replay_backup_20260929T123357.746000Z",
+  "restored": "data/app/forecast_replay_restored_20260929T123357.746000Z.sqlite3",
+  "source_sha256_before": "338d0168a5a026daf3d2c9ab2b108fdbc719557fc301541281929072c40e11c2",
+  "historical_replay_only": true,
+  "user_working_database_accessed": false,
+  "commands": [
+    {
+      "command": [
+        "/Users/antany/Desktop/LCT-Ann/lct-collector-risk/.venv/bin/python",
+        "scripts/database_backup.py",
+        "backup",
+        "--source",
+        "/Users/antany/Desktop/LCT-Ann/lct-collector-risk/data/app/forecast_replay.sqlite3",
+        "--destination",
+        "/Users/antany/Desktop/LCT-Ann/lct-collector-risk/data/app/forecast_replay_backup_20260929T123357.746000Z"
+      ],
+      "returncode": 0,
+      "result_file": "backup.json",
+      "elapsed_seconds": 0.041451624943874776
+    },
+    {
+      "command": [
+        "/Users/antany/Desktop/LCT-Ann/lct-collector-risk/.venv/bin/python",
+        "scripts/database_backup.py",
+        "verify",
+        "--bundle",
+        "/Users/antany/Desktop/LCT-Ann/lct-collector-risk/data/app/forecast_replay_backup_20260929T123357.746000Z"
+      ],
+      "returncode": 0,
+      "result_file": "verify.json",
+      "elapsed_seconds": null
+    },
+    {
+      "command": [
+        "/Users/antany/Desktop/LCT-Ann/lct-collector-risk/.venv/bin/python",
+        "scripts/database_backup.py",
+        "restore",
+        "--bundle",
+        "/Users/antany/Desktop/LCT-Ann/lct-collector-risk/data/app/forecast_replay_backup_20260929T123357.746000Z",
+        "--destination",
+        "/Users/antany/Desktop/LCT-Ann/lct-collector-risk/data/app/forecast_replay_restored_20260929T123357.746000Z.sqlite3"
+      ],
+      "returncode": 0,
+      "result_file": "restore.json",
+      "elapsed_seconds": 0.02901975007262081
+    }
+  ],
+  "passed": true,
+  "list_runs_exact_match": true,
+  "run_checks": [
+    {
+      "run_id": "object_2026-06-28_5e12277f07441b3e",
+      "payload_equal": true,
+      "cards_equal": true,
+      "cards": 78,
+      "canonical_payload_sha256": "aee9e36cdfc20db704234494f7756b58a7722cf5044f72afae6ed401c0b50a2e"
+    },
+    {
+      "run_id": "object_2026-06-27_26988d5443d673d3",
+      "payload_equal": true,
+      "cards_equal": true,
+      "cards": 78,
+      "canonical_payload_sha256": "c9dffba45e533f08c1d0dcfc79d6cfb409f36543db1f211c1bbbafb65ec161d7"
+    },
+    {
+      "run_id": "object_2026-06-26_8eae562510651ab2",
+      "payload_equal": true,
+      "cards_equal": true,
+      "cards": 78,
+      "canonical_payload_sha256": "756c95d8318a262745a6bbbfc052c0d50b5715772f26821d7b5954c8da8fd120"
+    }
+  ],
+  "total_runs": 3,
+  "total_cards": 234,
+  "source_sha256_after": "338d0168a5a026daf3d2c9ab2b108fdbc719557fc301541281929072c40e11c2",
+  "source_file_unchanged": true,
+  "functions_checked": [
+    "api.forecast_store.list_runs",
+    "api.forecast_store.load_run"
+  ],
+  "http_restart_checked": false,
+  "ha_claimed": false
+}

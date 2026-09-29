@@ -9,9 +9,11 @@ from pathlib import Path
 from typing import Literal
 from uuid import uuid4
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field, field_validator
+
+from api import forecast_store
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data/app/risk_demo.json"
@@ -23,7 +25,16 @@ Reason = Literal["needs_inspection", "planned_work", "sensor_or_connection", "jo
 app = FastAPI(title="Коллектор — объектные и канальные архивные прогнозы", version="0.2.0")
 
 
-def dataset(mode: EntityMode = "channel"):
+def dataset(mode: EntityMode = "channel", run_id: str | None = None):
+    if run_id is not None:
+        try:
+            data = forecast_store.load_run(DB, run_id, entity_mode=mode)
+            data["archive_metadata"] = forecast_store.get_run_metadata(DB, run_id, entity_mode=mode)
+            return data
+        except forecast_store.ForecastNotFoundError as error:
+            raise HTTPException(404, "Выпуск не найден в выбранном режиме") from error
+        except (forecast_store.ForecastIntegrityError, sqlite3.DatabaseError) as error:
+            raise HTTPException(503, "Целостность архива выпусков не подтверждена") from error
     path = OBJECT_DATA if mode == "object" else DATA
     if not path.exists():
         raise HTTPException(503, f"Архивный набор режима {mode} ещё не сформирован")
@@ -41,8 +52,8 @@ def public_card(card):
     return {key: value for key, value in card.items() if not key.startswith("actual_") and key != "outcome"}
 
 
-def find_card(risk_id: str, mode: EntityMode):
-    data = dataset(mode)
+def find_card(risk_id: str, mode: EntityMode, run_id: str | None = None):
+    data = dataset(mode, run_id)
     card = next((c for c in data["cards"] if c["id"] == risk_id), None)
     if card is None:
         raise HTTPException(404, "Карточка не найдена в выбранном режиме")
@@ -50,8 +61,8 @@ def find_card(risk_id: str, mode: EntityMode):
 
 
 def snapshot(data, card):
-    fields = ["entity_mode", "feature_date", "issue_time", "forecast_start", "forecast_end",
-              "minimum_lead_hours", "model", "threshold"]
+    fields = ["run_id", "mode", "entity_mode", "feature_date", "feature_cutoff", "issue_time", "forecast_start", "forecast_end",
+              "minimum_lead_hours", "model", "model_sha256", "input_sha256", "threshold", "archive_metadata"]
     return {"forecast": {k: data.get(k) for k in fields}, "card": public_card(card)}
 
 
@@ -81,14 +92,16 @@ def connection():
 
 
 class TicketDraft(BaseModel):
-    risk_id: str = Field(min_length=1, max_length=100)
+    risk_id: str = Field(min_length=1, max_length=256)
     note: str = Field(default="", max_length=2000)
     entity_mode: EntityMode = "channel"
+    run_id: str | None = Field(default=None, min_length=1, max_length=160)
 
 
 class Feedback(BaseModel):
-    risk_id: str = Field(min_length=1, max_length=100)
+    risk_id: str = Field(min_length=1, max_length=256)
     entity_mode: EntityMode = "channel"
+    run_id: str | None = Field(default=None, min_length=1, max_length=160)
     decision: Decision
     reason: Reason
     operator: str = Field(min_length=1, max_length=100)
@@ -122,15 +135,27 @@ def health():
 
 @app.get("/api/risks")
 @app.get("/risks", include_in_schema=False)
-def risks(mode: EntityMode = "channel"):
-    data = dataset(mode)
+def risks(mode: EntityMode = "channel", run_id: str | None = Query(default=None, min_length=1, max_length=160)):
+    data = dataset(mode, run_id)
     data["cards"] = [public_card(card) for card in data["cards"]]
     return data
 
 
+@app.get("/api/forecast-runs")
+def forecast_runs(mode: EntityMode | None = None, limit: int = Query(default=100, ge=1, le=500)):
+    try:
+        runs = forecast_store.list_runs(DB, entity_mode=mode, limit=limit)
+    except (forecast_store.ForecastIntegrityError, sqlite3.DatabaseError) as error:
+        raise HTTPException(503, "Целостность архива выпусков не подтверждена") from error
+    return {"runs": runs, "limit": limit, "mode": "historical_replay",
+            "note": "Сохранённые расчёты на исторических данных; текущий поток не подключён. created_at — время сохранения, issue_time — историческое время выпуска."}
+
+
 @app.get("/api/risks/{risk_id}/outcome")
-def outcome(risk_id: str, mode: EntityMode = "channel"):
-    data, card = find_card(risk_id, mode)
+def outcome(risk_id: str, mode: EntityMode = "channel", run_id: str | None = Query(default=None, min_length=1, max_length=160)):
+    data, card = find_card(risk_id, mode, run_id)
+    if run_id is not None:
+        raise HTTPException(404, "В сохранённых выпусках исторического расчёта исходы не хранятся")
     key = "actual_target_alarm" if mode == "object" else "actual_next_day_alarm"
     if key not in card:
         raise HTTPException(404, "Архивный факт для этого окна отсутствует")
@@ -141,8 +166,8 @@ def outcome(risk_id: str, mode: EntityMode = "channel"):
 
 @app.get("/api/risks/{risk_id}")
 @app.get("/risks/{risk_id}", include_in_schema=False)
-def risk(risk_id: str, mode: EntityMode = "channel"):
-    data, card = find_card(risk_id, mode)
+def risk(risk_id: str, mode: EntityMode = "channel", run_id: str | None = Query(default=None, min_length=1, max_length=160)):
+    data, card = find_card(risk_id, mode, run_id)
     return snapshot(data, card)
 
 
@@ -156,7 +181,7 @@ def tickets(mode: EntityMode | None = None):
 @app.post("/api/tickets", status_code=201)
 @app.post("/tickets/draft", status_code=201, include_in_schema=False)
 def create_ticket(draft: TicketDraft):
-    data, card = find_card(draft.risk_id, draft.entity_mode)
+    data, card = find_card(draft.risk_id, draft.entity_mode, draft.run_id)
     with connection() as conn:
         row = (str(uuid4()), draft.risk_id, draft.note, datetime.now(timezone.utc).isoformat(), "draft")
         result = conn.execute("""INSERT OR IGNORE INTO tickets
@@ -172,7 +197,7 @@ def create_ticket(draft: TicketDraft):
 @app.post("/api/feedback", status_code=201)
 @app.post("/feedback", status_code=201, include_in_schema=False)
 def create_feedback(feedback: Feedback):
-    data, card = find_card(feedback.risk_id, feedback.entity_mode)
+    data, card = find_card(feedback.risk_id, feedback.entity_mode, feedback.run_id)
     row = (str(uuid4()), feedback.risk_id, feedback.entity_mode, feedback.decision, feedback.reason,
            feedback.operator, feedback.note, datetime.now(timezone.utc).isoformat(),
            json.dumps(snapshot(data, card), ensure_ascii=False))

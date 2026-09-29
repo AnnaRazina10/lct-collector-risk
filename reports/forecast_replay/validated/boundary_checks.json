@@ -1,0 +1,11 @@
+{
+  "outside_archive": {
+    "rejected": true,
+    "reason": "No confirmed archive package for the requested dates; an empty query is not a complete empty day"
+  },
+  "before_model_selection": {
+    "rejected": true,
+    "reason": "Frozen model/threshold unavailable before completion of November 2025 selection"
+  },
+  "source_sha256": "502425d7e02311539ebd8c6fc196a49858d9a9fb71466abf6b45cce2986b4e7f"
+}

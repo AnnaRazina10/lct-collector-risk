@@ -46,6 +46,20 @@ def prepare(end_date="2025-11-30"):
         columns={"ид_канала_данных": "channel_id", "ид_объект": "object_id"})
     objects = pd.read_csv(ROOT / "data/raw/справочник_объектов_диспетчер.csv", dtype=str).rename(
         columns={"ид_объект": "object_id", "вид_объекта": "object_kind", "родитель": "parent_id"})
+    return prepare_frames(raw, meta, objects, end_date)
+
+
+def prepare_frames(raw, meta, objects, end_date):
+    """Same feature logic on caller-supplied, already available daily records.
+
+    File-based historical training still uses prepare(). A serving adapter can
+    supply a strictly truncated snapshot without opening future evaluation data.
+    """
+    end_date = pd.Timestamp(end_date)
+    if raw.date.isna().any() or raw.date.gt(end_date).any():
+        raise ValueError("Daily frame contains unknown or future dates")
+    if raw.duplicated(["channel_id", "date"]).any():
+        raise ValueError("Duplicate channel-day records")
     if meta.channel_id.duplicated().any() or objects.object_id.duplicated().any():
         raise ValueError("Ambiguous metadata identifiers")
     eligible_meta = meta[meta.object_id.isin(objects.object_id)]

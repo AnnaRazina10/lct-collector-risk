@@ -1,0 +1,21 @@
+{
+  "runs": [
+    {
+      "run_id": "object_2026-06-28_5e12277f07441b3e",
+      "cards": 78,
+      "sha256": "aee9e36cdfc20db704234494f7756b58a7722cf5044f72afae6ed401c0b50a2e"
+    },
+    {
+      "run_id": "object_2026-06-27_26988d5443d673d3",
+      "cards": 78,
+      "sha256": "c9dffba45e533f08c1d0dcfc79d6cfb409f36543db1f211c1bbbafb65ec161d7"
+    },
+    {
+      "run_id": "object_2026-06-26_8eae562510651ab2",
+      "cards": 78,
+      "sha256": "756c95d8318a262745a6bbbfc052c0d50b5715772f26821d7b5954c8da8fd120"
+    }
+  ],
+  "journal_entry": "03cad4e1-a75d-4a89-84c4-4e71f54dc2b0",
+  "journal_run_id": "object_2026-06-26_8eae562510651ab2"
+}

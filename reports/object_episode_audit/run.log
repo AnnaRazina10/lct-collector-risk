@@ -1,0 +1,10 @@
+ gap            model  registered_episode_starts  warned_episode_starts  episode_start_recall  repeated_alarm_days  warnings_total  warnings_on_repeated_alarm_days  warnings_on_no_alarm_days
+   1  previous_frozen                       2000                    959              0.479500                 2203            4400                             1545                       1896
+   1 lightgbm_control                       2000                    957              0.478500                 2203            4393                             1549                       1887
+   1         selected                       2000                    788              0.394000                 2203            3602                             1422                       1392
+   3  previous_frozen                        999                    353              0.353353                 3204            4400                             2151                       1896
+   3 lightgbm_control                        999                    353              0.353353                 3204            4393                             2153                       1887
+   3         selected                        999                    275              0.275275                 3204            3602                             1935                       1392
+   7  previous_frozen                        357                     51              0.142857                 3846            4400                             2453                       1896
+   7 lightgbm_control                        357                     48              0.134454                 3846            4393                             2458                       1887
+   7         selected                        357                     27              0.075630                 3846            3602                             2183                       1392

@@ -183,3 +183,7 @@ Jupyter-ноутбуки для аналитики, EDA, проверки гип
 - `requirements-runtime.txt`, `requirements-inference.txt`, `Dockerfile`, `.dockerignore` — минимальное окружение архивного API и отдельного измерения ML; контейнерная упаковка сама по себе не подтверждает Linux-запуск.
 - `scripts/`, `reports/runtime_validation/` — воспроизводимые измерения API и реального ML; успешные и неуспешные прогоны сохраняются отдельно.
 - `artifacts/presentation/` — отдельный черновик презентации, проверка сохранения обязательных слайдов и материалы визуального контроля; оригинальный шаблон остаётся в `docs/materials/`.
+- `src/serving/object_forecast.py`, `scripts/verify_forecast_replay.py`, `reports/forecast_replay/` — выпуск по доступным суточным пакетам, повторное воспроизведение, задержки, проверки будущих/поздних данных и перезапуска; реальные локальные базы исключены из Git.
+- `api/forecast_store.py`, `docs/forecast_history.md`, `docs/forecast_replay.md` — неизменяемый архив выпусков, API и выбор выпуска в интерфейсе; исторический replay, не текущая СМВУ.
+- `scripts/database_backup.py`, `docs/backup_restore.md`, `reports/backup_restore/` — проверяемый SQLite backup/restore, синтетический WAL и реальная отдельная база трёх выпусков. SQLite-файлы остаются локальными.
+- `src/modeling/object_episode_audit.py`, `docs/episode_interpretation.md`, `reports/object_episode_audit/` — отдельный аудит начала эпизодов без изменения моделей/порогов; таблицы наблюдаемости и чувствительности к периоду тишины.

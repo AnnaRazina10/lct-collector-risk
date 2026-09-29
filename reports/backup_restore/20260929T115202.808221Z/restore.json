@@ -1,0 +1,417 @@
+{
+  "passed": true,
+  "operation": "restore",
+  "destination": "/Users/antany/Desktop/LCT-Ann/lct-collector-risk/reports/backup_restore/20260929T115202.808221Z/restored.sqlite3",
+  "elapsed_seconds": 0.0028300409903749824,
+  "backup_database_sha256": "b042a9002c4b6bd22a134eb0aa5f0833f59bd22d98eab3378e3ffb39ba739282",
+  "restored_sha256": "7d98c6e4a1f86c438642dfdb787374586b76a4c6ca06e8d1b4fbb2f2e8a87bfe",
+  "manifest_sha256": "4a3fbb43145216aed38976f85b5fb89f48dd87accb937926431ba97b50fdb8d2",
+  "inventory_matches_backup": true,
+  "inventory": {
+    "integrity_check": "ok",
+    "schema": [
+      [
+        "index",
+        "forecast_object_idx",
+        "forecasts",
+        "CREATE INDEX forecast_object_idx ON forecasts(object_id)"
+      ],
+      [
+        "index",
+        "sqlite_autoindex_feedback_1",
+        "feedback",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_tickets_1",
+        "tickets",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_tickets_2",
+        "tickets",
+        null
+      ],
+      [
+        "table",
+        "feedback",
+        "feedback",
+        "CREATE TABLE feedback (id TEXT PRIMARY KEY, risk_id TEXT, entity_mode TEXT,\n            decision TEXT, reason TEXT, operator TEXT, note TEXT, created_at TEXT, risk_snapshot TEXT)"
+      ],
+      [
+        "table",
+        "forecast_audit",
+        "forecast_audit",
+        "CREATE TABLE forecast_audit (forecast_id INTEGER, action TEXT)"
+      ],
+      [
+        "table",
+        "forecasts",
+        "forecasts",
+        "CREATE TABLE forecasts (id INTEGER PRIMARY KEY AUTOINCREMENT, object_id TEXT,\n            score REAL, forecast_payload TEXT, model_bytes BLOB, unknown_value)"
+      ],
+      [
+        "table",
+        "future table with \"quotes\"",
+        "future table with \"quotes\"",
+        "CREATE TABLE \"future table with \"\"quotes\"\"\" (\"value\" TEXT)"
+      ],
+      [
+        "table",
+        "snapshots",
+        "snapshots",
+        "CREATE TABLE snapshots (id TEXT PRIMARY KEY, payload TEXT NOT NULL) WITHOUT ROWID"
+      ],
+      [
+        "table",
+        "sqlite_sequence",
+        "sqlite_sequence",
+        "CREATE TABLE sqlite_sequence(name,seq)"
+      ],
+      [
+        "table",
+        "tickets",
+        "tickets",
+        "CREATE TABLE tickets (id TEXT PRIMARY KEY, risk_id TEXT UNIQUE, note TEXT,\n            created_at TEXT, status TEXT, entity_mode TEXT, risk_snapshot TEXT)"
+      ],
+      [
+        "trigger",
+        "future_forecast_insert",
+        "forecasts",
+        "CREATE TRIGGER future_forecast_insert AFTER INSERT ON forecasts\n            BEGIN INSERT INTO forecast_audit VALUES (new.id,'created'); END"
+      ],
+      [
+        "view",
+        "forecast_summary",
+        "forecast_summary",
+        "CREATE VIEW forecast_summary AS SELECT object_id,score FROM forecasts"
+      ]
+    ],
+    "schema_sha256": "1da4328c191ae85c3d17b4320f92d7214fea18b02b82ebef9ddede500239d9b8",
+    "tables": {
+      "feedback": {
+        "row_count": 1,
+        "columns": [
+          [
+            0,
+            "id",
+            "TEXT",
+            0,
+            null,
+            1,
+            0
+          ],
+          [
+            1,
+            "risk_id",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            2,
+            "entity_mode",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            3,
+            "decision",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            4,
+            "reason",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            5,
+            "operator",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            6,
+            "note",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            7,
+            "created_at",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            8,
+            "risk_snapshot",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ]
+        ],
+        "payload_sha256": "acb2a2447cec7f61268dc55f69e72c12b6fc0c64e2527c1382ee0b95ad9bcacc",
+        "internal": false
+      },
+      "forecast_audit": {
+        "row_count": 1,
+        "columns": [
+          [
+            0,
+            "forecast_id",
+            "INTEGER",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            1,
+            "action",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ]
+        ],
+        "payload_sha256": "44bf45a5a3f5cacbfa614a3352bcc3a5120f46cc79c660dca99794b1f5148f59",
+        "internal": false
+      },
+      "forecasts": {
+        "row_count": 1,
+        "columns": [
+          [
+            0,
+            "id",
+            "INTEGER",
+            0,
+            null,
+            1,
+            0
+          ],
+          [
+            1,
+            "object_id",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            2,
+            "score",
+            "REAL",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            3,
+            "forecast_payload",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            4,
+            "model_bytes",
+            "BLOB",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            5,
+            "unknown_value",
+            "",
+            0,
+            null,
+            0,
+            0
+          ]
+        ],
+        "payload_sha256": "52fdf49f60fc603d455e81a2d7c78fb27d4d21554ef6123ae5056ff4e970f70f",
+        "internal": false
+      },
+      "future table with \"quotes\"": {
+        "row_count": 1,
+        "columns": [
+          [
+            0,
+            "value",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ]
+        ],
+        "payload_sha256": "b2dca1c3924a8eb1a60c7e8eb2f1a61ef22dc039234ca6c1f8aa963ad9b56ff3",
+        "internal": false
+      },
+      "snapshots": {
+        "row_count": 1,
+        "columns": [
+          [
+            0,
+            "id",
+            "TEXT",
+            1,
+            null,
+            1,
+            0
+          ],
+          [
+            1,
+            "payload",
+            "TEXT",
+            1,
+            null,
+            0,
+            0
+          ]
+        ],
+        "payload_sha256": "e00cc8ad70e3f8631209005deb216e5d7c89cfe90ac8196446a82a8d0282d670",
+        "internal": false
+      },
+      "sqlite_sequence": {
+        "row_count": 1,
+        "columns": [
+          [
+            0,
+            "name",
+            "",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            1,
+            "seq",
+            "",
+            0,
+            null,
+            0,
+            0
+          ]
+        ],
+        "payload_sha256": "e348b17587045ccf3c7012fc87d9644a8ebd9c0f69cd66c934dacff28d1d97a3",
+        "internal": true
+      },
+      "tickets": {
+        "row_count": 1,
+        "columns": [
+          [
+            0,
+            "id",
+            "TEXT",
+            0,
+            null,
+            1,
+            0
+          ],
+          [
+            1,
+            "risk_id",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            2,
+            "note",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            3,
+            "created_at",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            4,
+            "status",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            5,
+            "entity_mode",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ],
+          [
+            6,
+            "risk_snapshot",
+            "TEXT",
+            0,
+            null,
+            0,
+            0
+          ]
+        ],
+        "payload_sha256": "d7f4839c6f4372e5152a33def19ebb05d44ab62e46bdd8f7c2df98020976ad10",
+        "internal": false
+      }
+    },
+    "user_tables": [
+      "feedback",
+      "forecast_audit",
+      "forecasts",
+      "future table with \"quotes\"",
+      "snapshots",
+      "tickets"
+    ],
+    "user_version": 7,
+    "application_id": 1280590658,
+    "encoding": "UTF-8"
+  }
+}

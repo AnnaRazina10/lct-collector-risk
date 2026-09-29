@@ -1,0 +1,14 @@
+test_atomic_publish_does_not_overwrite_a_concurrent_destination (test_database_backup.DatabaseBackupTests.test_atomic_publish_does_not_overwrite_a_concurrent_destination) ... ok
+test_corrupt_and_non_sqlite_backups_are_rejected (test_database_backup.DatabaseBackupTests.test_corrupt_and_non_sqlite_backups_are_rejected) ... ok
+test_existing_working_database_bundle_and_dangling_symlink_are_refused (test_database_backup.DatabaseBackupTests.test_existing_working_database_bundle_and_dangling_symlink_are_refused) ... ok
+test_live_wal_roundtrip_all_payloads_schema_and_future_tables (test_database_backup.DatabaseBackupTests.test_live_wal_roundtrip_all_payloads_schema_and_future_tables) ... ok
+test_orphan_destination_wal_is_refused (test_database_backup.DatabaseBackupTests.test_orphan_destination_wal_is_refused) ... ok
+test_payload_change_with_recomputed_file_checksum_is_rejected (test_database_backup.DatabaseBackupTests.test_payload_change_with_recomputed_file_checksum_is_rejected) ... ok
+test_restore_failure_removes_only_its_own_temporary_files (test_database_backup.DatabaseBackupTests.test_restore_failure_removes_only_its_own_temporary_files) ... ok
+test_structural_page_damage_with_valid_sqlite_header_is_rejected (test_database_backup.DatabaseBackupTests.test_structural_page_damage_with_valid_sqlite_header_is_rejected) ... ok
+test_wal_writer_can_commit_after_snapshot_is_pinned (test_database_backup.DatabaseBackupTests.test_wal_writer_can_commit_after_snapshot_is_pinned) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.099s
+
+OK

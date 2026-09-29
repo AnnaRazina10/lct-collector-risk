@@ -1,0 +1,33 @@
+{
+  "mode": "historical_replay",
+  "model_sha256": "e0924c042197f5e393efb014319259929cf0a7c82890bbe4e47e3ae790f1c493",
+  "score_reference_comparisons": [
+    {
+      "feature_date": "2026-06-28",
+      "objects": 78,
+      "max_saved_score_difference": 0.0
+    },
+    {
+      "feature_date": "2026-06-27",
+      "objects": 78,
+      "max_saved_score_difference": 0.0
+    },
+    {
+      "feature_date": "2026-06-26",
+      "objects": 78,
+      "max_saved_score_difference": 0.0
+    }
+  ],
+  "recomputed_payload_identical_to_saved": true,
+  "future_and_late_packages_do_not_change_earlier_payload": true,
+  "late_correction_changes_later_input_and_run_id": true,
+  "later_scores_changed_by_hypothetical_correction": 38,
+  "stored_payloads_unchanged": true,
+  "stored_payload_sha256": {
+    "object_2026-06-28_6fcffa044c314e16": "bba38ad72ed34024d27b8bf609ea20853ce4d9b493d6b7312d88ccfdac455011",
+    "object_2026-06-27_661a446f9ca20cc2": "7eb623e9495543907e5b8634c5b34467601df1713d220b37ac1b77eea0308106",
+    "object_2026-06-26_960db067b50f766e": "f381f2551f1d11e7cc75ab2846f71b217d04905a3821eece0aa73f336b2ac896"
+  },
+  "hypothetical_correction_published": false,
+  "limitations": "Historical availability clock is simulated; no operational event stream or real arrival timestamps."
+}

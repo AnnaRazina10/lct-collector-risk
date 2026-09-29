@@ -1,0 +1,14 @@
+test_boundary_inclusion_for_each_gap (test_object_episodes.EpisodeAuditTests.test_boundary_inclusion_for_each_gap) ... ok
+test_forecast_join_uses_exact_target_day (test_object_episodes.EpisodeAuditTests.test_forecast_join_uses_exact_target_day) ... ok
+test_gap_nesting_and_future_label_mutation (test_object_episodes.EpisodeAuditTests.test_gap_nesting_and_future_label_mutation) ... ok
+test_invalid_observation_or_duplicate_is_rejected (test_object_episodes.EpisodeAuditTests.test_invalid_observation_or_duplicate_is_rejected) ... ok
+test_missing_calendar_and_initial_context_are_unknown (test_object_episodes.EpisodeAuditTests.test_missing_calendar_and_initial_context_are_unknown) ... ok
+test_objects_are_isolated_and_input_order_irrelevant (test_object_episodes.EpisodeAuditTests.test_objects_are_isolated_and_input_order_irrelevant) ... ok
+test_registered_series_sequences (test_object_episodes.EpisodeAuditTests.test_registered_series_sequences) ... ok
+test_unknown_context_warning_is_not_an_assumed_negative (test_object_episodes.EpisodeAuditTests.test_unknown_context_warning_is_not_an_assumed_negative) ... ok
+test_warning_partition_preserves_repeat_alarm_success (test_object_episodes.EpisodeAuditTests.test_warning_partition_preserves_repeat_alarm_success) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.170s
+
+OK

@@ -1,0 +1,9 @@
+{
+  "reference_commit": "6a4f775",
+  "reference_code_sha256": "8d3be6bfbe8ecc404224fa10cb200212f01076a27f7d178e96b4204b6c835950",
+  "current_code_sha256": "2b4d32265d5b86c84e32065a79b78dbbbe211e86b4956168fd4a82798b1b5509",
+  "rows": 42432,
+  "columns": 73,
+  "all_features_and_labels_equal": true,
+  "coverage_equal": true
+}

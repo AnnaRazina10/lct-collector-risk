@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "forecast_rows": 14040,
+  "objects": 78,
+  "target_days": 180,
+  "first_target_date": "2026-01-02",
+  "last_target_date": "2026-06-30",
+  "fixed_thresholds": {
+    "selected": 0.38214568548191574,
+    "lightgbm_control": 0.33436293415247464,
+    "previous_frozen": 0.3345231006565093
+  },
+  "label_checks": [
+    {
+      "gap": 1,
+      "earlier_labels_unchanged_after_mutation": true,
+      "known_context_rows": 14040,
+      "future_records_after": "2026-03-17"
+    },
+    {
+      "gap": 3,
+      "earlier_labels_unchanged_after_mutation": true,
+      "known_context_rows": 14040,
+      "future_records_after": "2026-03-17"
+    },
+    {
+      "gap": 7,
+      "earlier_labels_unchanged_after_mutation": true,
+      "known_context_rows": 14040,
+      "future_records_after": "2026-03-17"
+    }
+  ],
+  "gap_nesting_verified": true,
+  "warning_partition_verified": true,
+  "input_files_unchanged": true,
+  "source_coverage": {
+    "catalog_objects_with_channels": 78,
+    "excluded_unknown_channel_days": 163,
+    "excluded_alarm_channel_days": 74,
+    "included_channel_days": 899442,
+    "objects_with_observations_by_nov30": 78
+  },
+  "forecast_replay_max_difference": {
+    "previous_frozen": 0.0,
+    "lightgbm_control": 0.0,
+    "selected": 0.0
+  },
+  "future_records_mutated_after": "2026-03-15",
+  "mutated_daily_channel_rows": 193145,
+  "causality_checked_history_rows": 34242,
+  "causality_checked_test_rows": 5850,
+  "future_mutation_max_difference": {
+    "previous_frozen": 0.0,
+    "lightgbm_control": 0.0,
+    "selected": 0.0
+  },
+  "target_dropped_before_inference": true,
+  "mutation_is_in_memory_only": true,
+  "elapsed_seconds": 4.410979749984108
+}
