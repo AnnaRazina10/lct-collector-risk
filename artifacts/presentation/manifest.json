@@ -1,0 +1,102 @@
+{
+  "slide_count": 15,
+  "required_original_positions": [
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "source_template": "docs/materials/ЛЦТ2026 Шаблон презентации.pptx",
+  "source_template_sha256": "858da047f42bc3fe59f167b3f87dd17e9b7980fd78949ea750bb9ef668707247",
+  "artifacts": [
+    {
+      "path": "artifacts/presentation/output/collector-risk-draft-v2-preview.pdf",
+      "bytes": 1646099,
+      "sha256": "df1dc027f9240799b286f6ce3084aa419bde2ae7507b0b1c8d10a209e2accc2d"
+    },
+    {
+      "path": "artifacts/presentation/output/collector-risk-draft-v2.pptx",
+      "bytes": 12115933,
+      "sha256": "fe8108312aefe759d762747cff7f006200f249ea5c1874acabdbff69ffd33b08"
+    }
+  ],
+  "all_final_slides_rendered": true,
+  "all_final_slides_visually_reviewed": true,
+  "changes_from_reviewed_v1": [
+    7
+  ],
+  "v2_other_rendered_slides_pixel_identical": true,
+  "native_powerpoint_opened": false,
+  "native_table_slides": [
+    2,
+    4,
+    5,
+    6,
+    14
+  ],
+  "screenshot": {
+    "source": "data/app/object_demo_screen.png",
+    "sha256": "bce7e1c28db965f1d1a4152d1903ff036e6893c764b06e2ec42e70bb7d804f74",
+    "real_local_browser_capture": true,
+    "cropped_fragment": true
+  },
+  "mandatory_fidelity": [
+    {
+      "slide": 7,
+      "all_non_text_structure_exact": true,
+      "position_retained": 7
+    },
+    {
+      "slide": 8,
+      "all_non_text_structure_exact": true,
+      "position_retained": 8
+    },
+    {
+      "slide": 9,
+      "all_non_text_structure_exact": true,
+      "position_retained": 9
+    },
+    {
+      "slide": 10,
+      "all_non_text_structure_exact": true,
+      "position_retained": 10
+    },
+    {
+      "slide": 11,
+      "all_non_text_structure_exact": true,
+      "position_retained": 11
+    }
+  ],
+  "package_integrity": {
+    "chart_count": 0,
+    "claim_boundary": "Structural package checks only; no slide text, notes, formulas, chart values, or native PowerPoint execution were inspected.",
+    "finding_count": 0,
+    "findings": [],
+    "notes_parts_skipped": 15,
+    "relationship_part_count": 62,
+    "slide_count": 15,
+    "status": "pass",
+    "exitCode": 0,
+    "findingCount": 0,
+    "warnings": []
+  },
+  "layout_warnings": [
+    {
+      "kind": "object_outside_slide_boundary",
+      "object_id": "1091804844",
+      "object_kind": "sp",
+      "slide": 7
+    },
+    {
+      "connector_id": "401438399",
+      "connector_z": 12,
+      "kind": "connector_over_text",
+      "slide": 10,
+      "text_object_id": "1574440249",
+      "text_z": 9
+    }
+  ],
+  "handoff": "artifacts/presentation/HANDOFF.md",
+  "pdf_is_raster_preview": true
+}

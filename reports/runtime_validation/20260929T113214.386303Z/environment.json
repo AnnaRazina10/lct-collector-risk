@@ -1,0 +1,45 @@
+{
+  "environment": {
+    "timestamp_utc": "2026-09-29T11:32:14.496172+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "executable": "/Users/antany/Desktop/LCT-Ann/lct-collector-risk/.venv/bin/python",
+    "platform": "macOS-15.3.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "logical_cpu_count": 12,
+    "load_average_before": [
+      3.6103515625,
+      3.42529296875,
+      3.525390625
+    ],
+    "package_versions": {
+      "fastapi": "0.141.1",
+      "pydantic": "2.13.5",
+      "uvicorn": "0.54.0",
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "lightgbm": "4.7.0",
+      "pyarrow": "25.0.1",
+      "scikit-learn": "1.9.1"
+    },
+    "docker": {
+      "client_path": "/opt/homebrew/bin/docker",
+      "container_test_performed": false,
+      "returncode": 1,
+      "output": "Client: Docker Engine - Community\n Version:           29.8.1\n API version:       1.56\n Go version:        go1.27.1\n Git commit:        4a63305d74\n Built:             Tue Sep 15 11:21:13 2026\n OS/Arch:           darwin/arm64\n Context:           default\nfailed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory\n"
+    },
+    "isolation": "Shared local machine; other processes are not stopped or controlled"
+  },
+  "arguments": {
+    "users": 20,
+    "duration": 30.0,
+    "port": 0,
+    "feature_date": "2026-06-28",
+    "repeats": 100,
+    "ml_threads": 2,
+    "skip_api": false,
+    "skip_inference": false,
+    "output": "/Users/antany/Desktop/LCT-Ann/lct-collector-risk/reports/runtime_validation"
+  },
+  "script_sha256": "acbee153dfba0543705683a7f21566af2b29b546bf589a449e3a9083eeafa40e",
+  "artifact_directory": "reports/runtime_validation/20260929T113214.386303Z"
+}

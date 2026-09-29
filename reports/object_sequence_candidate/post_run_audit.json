@@ -1,0 +1,25 @@
+{
+  "artifact": "verification_only_no_retraining",
+  "executed_source_sha256": "1440dd4b6085b799432ebb80cbec3349ecf8eca74b6047619142a55adb7095ab",
+  "executed_source_snapshot": "reports/object_sequence_candidate/source_at_training.py",
+  "current_source_sha256": "9c14dae135936adf55edfa8b0d7a6a8ee586cad8fc14688a111fe693653cdb7c",
+  "materialized_verification_history_end": "2025-11-30",
+  "prediction_rows": 4602,
+  "checks": [
+    {
+      "candidate": "gru_w28",
+      "reload_max_difference": 0.0,
+      "complete_epoch_budget": 36,
+      "all_training_epochs_complete": true
+    },
+    {
+      "candidate": "gru_w56",
+      "reload_max_difference": 0.0,
+      "complete_epoch_budget": 36,
+      "all_training_epochs_complete": true
+    }
+  ],
+  "refit_executed": false,
+  "december_selected_or_scored": false,
+  "test_2026_read": false
+}

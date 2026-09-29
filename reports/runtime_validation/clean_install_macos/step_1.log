@@ -1,0 +1,19 @@
+Using Python 3.12.14 environment at: /private/tmp/lct-api-clean-atj7e5o7/venv
+Resolved 13 packages in 1.54s
+Downloading pydantic-core (1.8MiB)
+ Downloaded pydantic-core
+Prepared 13 packages in 1.51s
+Installed 13 packages in 17ms
+ + annotated-doc==0.0.5
+ + annotated-types==0.8.0
+ + anyio==4.15.1
+ + click==8.5.0
+ + fastapi==0.141.1
+ + h11==0.16.0
+ + idna==3.20
+ + pydantic==2.13.5
+ + pydantic-core==2.46.5
+ + starlette==1.7.0
+ + typing-extensions==4.16.0
+ + typing-inspection==0.4.4
+ + uvicorn==0.54.0

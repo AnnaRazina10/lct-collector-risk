@@ -1,0 +1,144 @@
+{
+  "model": "blend_seasonal_90_control0.75",
+  "parts": {
+    "lightgbm_control": 0.75,
+    "seasonal_90": 0.25
+  },
+  "criterion": "Oct-Nov 2025 AP",
+  "tune_rows": 4602,
+  "tune_positives": 1148,
+  "family_winners": [
+    "lightgbm_control",
+    "markov_180",
+    "seasonal_90",
+    "linear_1.0",
+    "spline_0.1",
+    "gru_w28"
+  ],
+  "source_sha256": {
+    "reports/object_statistical_candidate/configuration.json": "c75d19e1b8b1075d3698d9c3b1424ec6aa1fa55c271acb92c775b8eb5a33a3f2",
+    "reports/object_sequence_candidate/configuration.json": "21d6a48dad86159a9b3827df325e5aa5646944b1ac00b7d6519fb023e1e15218",
+    "reports/object_combined/protocol.md": "2ea72e18b8358d35e89a50ce0f9cb0d1b17fa6f5dda7804b26e3a85d50ecccc2"
+  },
+  "december_used": false,
+  "test_2026_used": false,
+  "components": {
+    "lightgbm_control": {
+      "kind": "lgb",
+      "features": [
+        "object_id",
+        "events_count",
+        "alarm_count",
+        "fault_count",
+        "no_power_count",
+        "undefined_count",
+        "numeric_count",
+        "text_count",
+        "off_count",
+        "on_count",
+        "movement_detected_count",
+        "open_count",
+        "observed_channels",
+        "alarm_channels",
+        "fault_channels",
+        "no_power_channels",
+        "catalog_channels",
+        "object_kind",
+        "parent_id",
+        "alarm_today",
+        "observed_today",
+        "observed_fraction",
+        "alarm_channel_fraction",
+        "alarm_today_lag1",
+        "alarm_today_lag2",
+        "alarm_today_lag7",
+        "alarm_today_lag14",
+        "alarm_today_mean3",
+        "alarm_today_mean7",
+        "alarm_today_mean28",
+        "alarm_channels_lag1",
+        "alarm_channels_lag2",
+        "alarm_channels_lag7",
+        "alarm_channels_lag14",
+        "alarm_channels_mean3",
+        "alarm_channels_mean7",
+        "alarm_channels_mean28",
+        "observed_channels_lag1",
+        "observed_channels_lag2",
+        "observed_channels_lag7",
+        "observed_channels_lag14",
+        "observed_channels_mean3",
+        "observed_channels_mean7",
+        "observed_channels_mean28",
+        "fault_channels_lag1",
+        "fault_channels_lag2",
+        "fault_channels_lag7",
+        "fault_channels_lag14",
+        "fault_channels_mean3",
+        "fault_channels_mean7",
+        "fault_channels_mean28",
+        "no_power_channels_lag1",
+        "no_power_channels_lag2",
+        "no_power_channels_lag7",
+        "no_power_channels_lag14",
+        "no_power_channels_mean3",
+        "no_power_channels_mean7",
+        "no_power_channels_mean28",
+        "events_count_lag1",
+        "events_count_lag2",
+        "events_count_lag7",
+        "events_count_lag14",
+        "events_count_mean3",
+        "events_count_mean7",
+        "events_count_mean28",
+        "historical_alarm_frequency",
+        "alarm_streak",
+        "days_since_alarm",
+        "target_dayofweek",
+        "annual_sin",
+        "annual_cos"
+      ],
+      "path": "models/object_combined/lightgbm_control.txt",
+      "sha256": "ddd11d0213c5473d0032f08109b73603e2e4a05bf1cb44f4b39b874a11fc2fbd"
+    },
+    "seasonal_90": {
+      "kind": "statistical",
+      "priors": [
+        [
+          [
+            0.7852370689655173,
+            0.09461206896551724,
+            0.12015086206896551
+          ],
+          [
+            0.0895476772616137,
+            0.6882640586797066,
+            0.2221882640586797
+          ],
+          [
+            0.1628287030158966,
+            0.32432030901797654,
+            0.5128509879661268
+          ]
+        ],
+        [
+          0.30916030534351147,
+          0.33696837513631406,
+          0.3000533902829685,
+          0.297116924719701,
+          0.26828617191671117,
+          0.16303162486368594,
+          0.1499454743729553
+        ]
+      ]
+    }
+  },
+  "refit_feature_end": "2025-11-28",
+  "refit_label_end": "2025-11-30",
+  "calibration_feature_start": "2025-12-01",
+  "calibration_feature_end": "2025-12-29",
+  "thresholds": {
+    "selected": 0.38214568548191574,
+    "lightgbm_control": 0.33436293415247464
+  }
+}

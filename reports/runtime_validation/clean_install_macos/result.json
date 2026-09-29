@@ -1,0 +1,80 @@
+{
+  "timestamp_utc": "2026-09-29T11:40:48.647834+00:00",
+  "platform": "macOS-15.3.1-arm64-arm-64bit",
+  "base_python": "/Users/antany/Desktop/LCT-Ann/lct-collector-risk/.venv/bin/python",
+  "environment_directory": "/private/tmp/lct-api-clean-atj7e5o7/venv",
+  "official_index": "https://pypi.org/simple",
+  "requirements_sha256": "15ec0c7f721034aa4f3d15f71799cd6d3523aa497c204c3de6b5489ee21ccd7d",
+  "system_site_packages": false,
+  "existing_project_venv_modified": false,
+  "linux_or_container_checked": false,
+  "steps": [
+    {
+      "command": [
+        "/opt/anaconda3/bin/uv",
+        "venv",
+        "--no-config",
+        "--no-project",
+        "--no-python-downloads",
+        "--python",
+        "/Users/antany/Desktop/LCT-Ann/lct-collector-risk/.venv/bin/python",
+        "/private/tmp/lct-api-clean-atj7e5o7/venv"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.13455454097129405,
+      "log_file": "step_0.log"
+    },
+    {
+      "command": [
+        "/opt/anaconda3/bin/uv",
+        "pip",
+        "install",
+        "--no-config",
+        "--no-cache",
+        "--no-python-downloads",
+        "--index-url",
+        "https://pypi.org/simple",
+        "--only-binary",
+        ":all:",
+        "--python",
+        "/private/tmp/lct-api-clean-atj7e5o7/venv/bin/python",
+        "-r",
+        "/Users/antany/Desktop/LCT-Ann/lct-collector-risk/requirements-runtime.txt"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 3.18383208301384,
+      "log_file": "step_1.log"
+    }
+  ],
+  "passed": true,
+  "installation_passed": true,
+  "venv_configuration": "home = /Users/antany/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin\nimplementation = CPython\nuv = 0.10.11\nversion_info = 3.12.14\ninclude-system-site-packages = false\n",
+  "imports_result": "imports.json",
+  "smoke_report": "endpoint_smoke/20260929T114112.975814Z/summary.json",
+  "installed_packages": {
+    "uvicorn": "0.54.0",
+    "click": "8.5.0",
+    "fastapi": "0.141.1",
+    "pydantic_core": "2.46.5",
+    "h11": "0.16.0",
+    "pydantic": "2.13.5",
+    "annotated-types": "0.8.0",
+    "annotated-doc": "0.0.5",
+    "typing-inspection": "0.4.4",
+    "starlette": "1.7.0",
+    "typing_extensions": "4.16.0",
+    "anyio": "4.15.1",
+    "idna": "3.20"
+  },
+  "api_smoke": {
+    "users": 2,
+    "requests": 1525,
+    "errors": 0,
+    "source_files_unchanged": true,
+    "owned_pid": 32971,
+    "base_url": "http://127.0.0.1:57194",
+    "owned_process_shutdown": "owned process terminated and reaped"
+  },
+  "requirements_unchanged": true,
+  "inference_dependencies_clean_install_checked": false
+}

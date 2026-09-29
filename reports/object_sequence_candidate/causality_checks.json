@@ -1,0 +1,18 @@
+[
+  {
+    "window_days": 28,
+    "future_changed_after": "2025-10-17",
+    "earlier_windows_max_difference": 0.0,
+    "train_scaler_unchanged": true,
+    "sequence_endpoint_checked": true,
+    "daily_contiguity_checked": true
+  },
+  {
+    "window_days": 56,
+    "future_changed_after": "2025-10-17",
+    "earlier_windows_max_difference": 0.0,
+    "train_scaler_unchanged": true,
+    "sequence_endpoint_checked": true,
+    "daily_contiguity_checked": true
+  }
+]

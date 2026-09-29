@@ -1,0 +1,8 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {finalizePresentation} from '/Users/antany/.codex/plugins/cache/openai-primary-runtime/presentations/26.904.11930/skills/presentations/container_tools/artifact_tool_utils.mjs';
+const root='/Users/antany/Desktop/LCT-Ann/lct-collector-risk';
+const skill='/Users/antany/.codex/plugins/cache/openai-primary-runtime/presentations/26.904.11930/skills/presentations';
+const finalName=process.env.FINAL_NAME||'collector-risk-draft-v1.pptx';
+const result=await finalizePresentation({workspaceDir:root,candidatePath:path.join(root,'artifacts/presentation/.build/candidate.pptx'),finalPath:path.join(root,'artifacts/presentation/output',finalName),pythonExecutable:'/Users/antany/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3',integrityValidatorPath:path.join(skill,'container_tools/inspect_presentation_package_integrity.py'),layoutValidatorPath:path.join(skill,'container_tools/inspect_presentation_layout_geometry.py'),explicitTotalSlideCount:15,requiredNativeTableOwnerSlides:[2,4,5,6,14],requiredNativeChartOwnerSlides:[],layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-bullet-geometry','--validate-heading-fit',...[2,4,5,6,14].flatMap(n=>['--require-native-table-slide',String(n)])],fontPolicy:{basis:'reference',families:['Montserrat','Montserrat Medium','Poppins Light'],referencePath:path.join(root,'docs/materials/ЛЦТ2026 Шаблон презентации.pptx'),referenceSha256:'858da047f42bc3fe59f167b3f87dd17e9b7980fd78949ea750bb9ef668707247'},verifyArtifactToolImport:true,receiptPath:path.join(root,'artifacts/presentation/.build',finalName+'.validation.json')});
+console.log(JSON.stringify(result,null,2));

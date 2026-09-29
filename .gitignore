@@ -20,3 +20,7 @@ venv/
 /reports/improved_v3/predictions/
 /reports/rolling_update/models/
 /reports/rolling_update/predictions/
+/reports/object_sequence_candidate/models/
+/reports/object_sequence_candidate/predictions/
+/artifacts/presentation/.build/
+/artifacts/presentation/.codex-finalizer/

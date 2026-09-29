@@ -1,0 +1,95 @@
+{
+  "kind": "HTTP reads of precomputed archive; no ML inference",
+  "base_url": "http://127.0.0.1:55843",
+  "owned_pid": 31393,
+  "server_workers": 1,
+  "users": 20,
+  "client": "One thread per user, no think time; latency includes body read/JSON decode/payload checks",
+  "connection_mode": "keep-alive",
+  "duration_requested_seconds": 30.0,
+  "wall_seconds": 30.106167749967426,
+  "startup_to_health_seconds": 0.27905312506482005,
+  "max_client_inflight": 20,
+  "requests": 25636,
+  "errors": 0,
+  "requests_per_second": 851.519868384037,
+  "all_requests_latency": {
+    "count": 25636,
+    "min_ms": 0.38237508852034807,
+    "mean_ms": 23.426899022825726,
+    "p50_ms": 6.394958007149398,
+    "p95_ms": 89.46283301338553,
+    "p99_ms": 457.47620798647404,
+    "max_ms": 2600.512915989384
+  },
+  "by_endpoint": {
+    "/api/health": {
+      "count": 4268,
+      "min_ms": 0.38237508852034807,
+      "mean_ms": 2.8598025621902616,
+      "p50_ms": 1.8443339504301548,
+      "p95_ms": 7.558541023172438,
+      "p99_ms": 10.622750036418438,
+      "max_ms": 23.07733299676329
+    },
+    "/api/risks?mode=object": {
+      "count": 4272,
+      "min_ms": 4.860999993979931,
+      "mean_ms": 7.9580769573143435,
+      "p50_ms": 6.9307079538702965,
+      "p95_ms": 13.398417038843036,
+      "p99_ms": 16.118375002406538,
+      "max_ms": 33.55554200243205
+    },
+    "/api/risks/object_2026-06-28_3215?mode=object": {
+      "count": 4273,
+      "min_ms": 1.2004590826109052,
+      "mean_ms": 4.293192886092901,
+      "p50_ms": 3.343750024214387,
+      "p95_ms": 9.719292051158845,
+      "p99_ms": 11.991749983280897,
+      "max_ms": 34.79854203760624
+    },
+    "/api/journal?mode=object": {
+      "count": 4276,
+      "min_ms": 0.7956669433042407,
+      "mean_ms": 44.06182807964953,
+      "p50_ms": 10.805540950968862,
+      "p95_ms": 159.5848749857396,
+      "p99_ms": 674.8140420531854,
+      "max_ms": 2294.943874934688
+    },
+    "/api/tickets?mode=object": {
+      "count": 4273,
+      "min_ms": 0.7333329413086176,
+      "mean_ms": 39.9916257082698,
+      "p50_ms": 8.831999963149428,
+      "p95_ms": 149.91029200609773,
+      "p99_ms": 667.5802080426365,
+      "max_ms": 2600.512915989384
+    },
+    "/api/feedback?mode=object": {
+      "count": 4274,
+      "min_ms": 0.5854170303791761,
+      "mean_ms": 41.3504994220384,
+      "p50_ms": 8.497333037666976,
+      "p95_ms": 156.1073330231011,
+      "p99_ms": 761.4097920013592,
+      "max_ms": 1782.2195420740172
+    }
+  },
+  "archive_cards": 78,
+  "feature_date": "2026-06-28",
+  "source_sha256": {
+    "api/main.py": "488ab4dd80e5a2cc64e1a6ae883ed06233888276b912e1f06d84d19275b0a21f",
+    "data/app/object_risk_demo.json": "6a2ed4a4f8e72ff051bc57f48a9657608f8fada8a15b496f0bf21c8024508d7e"
+  },
+  "read_only_http_methods": [
+    "GET"
+  ],
+  "database": "new temporary empty SQLite; GET startup may initialize schema; no user database used",
+  "limitations": "Loopback client and server share CPU; no browser rendering/TLS/authentication/remote network, no writes and no persistent-user load",
+  "source_files_unchanged": false,
+  "owned_process_shutdown": "owned process terminated and reaped",
+  "passed": false
+}

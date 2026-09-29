@@ -1,0 +1,24 @@
+                        model  average_precision
+blend_seasonal_90_control0.75           0.628679
+ blend_seasonal_90_control0.5           0.627274
+             lightgbm_control           0.626555
+ blend_linear_1.0_control0.75           0.626502
+ blend_spline_0.1_control0.75           0.626389
+    blend_gru_w28_control0.75           0.625626
+  blend_spline_0.1_control0.5           0.623977
+ blend_markov_180_control0.75           0.623609
+  blend_linear_1.0_control0.5           0.622980
+blend_seasonal_90_control0.25           0.621201
+         blend_three_families           0.619630
+ blend_spline_0.1_control0.25           0.618387
+     blend_gru_w28_control0.5           0.617131
+ blend_linear_1.0_control0.25           0.615486
+  blend_markov_180_control0.5           0.613676
+                   spline_0.1           0.610458
+                  seasonal_90           0.606012
+                   linear_1.0           0.603778
+    blend_gru_w28_control0.25           0.601196
+ blend_markov_180_control0.25           0.589898
+                      gru_w28           0.575268
+                   markov_180           0.544552
+Selected blend_seasonal_90_control0.75 {'lightgbm_control': 0.75, 'seasonal_90': 0.25}

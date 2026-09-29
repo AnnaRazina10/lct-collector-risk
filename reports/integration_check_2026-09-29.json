@@ -1,0 +1,35 @@
+{
+  "unit_tests": 43,
+  "unit_tests_passed": true,
+  "unit_test_log": "reports/final_verification_2026-09-29.log",
+  "python_compileall_passed": true,
+  "git_diff_check_passed": true,
+  "browser_checks": {
+    "url": "http://127.0.0.1:8772/?mode=object",
+    "separate_test_database": true,
+    "search_and_threshold_filter": true,
+    "no_record_card": true,
+    "save_decision_and_history_snapshot": true,
+    "separate_archive_outcome": true,
+    "channel_mode_retained": true
+  },
+  "presentation": {
+    "manifest_checksums_match": true,
+    "mandatory_nontext_structure_and_order_match": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "native_powerpoint_opened": false
+  },
+  "source_sha256": {
+    "api/main.py": "d1e769009f878a5793e66d8962abf807a7f8ec7d327f8ea5519e43927f984399",
+    "web/index.html": "dc5fb3109eec93227bff1097c00d79bdd29b0c235f8663b57d2f16c0e574a32c",
+    "src/modeling/export_object_demo.py": "ee31ed74b4b61cf8d54d3f5746f553f337ad5c0781e9aaf0d7b53f54f709b15e",
+    "src/modeling/object_combined.py": "aeec92a0b104d5f964554c04c16ba2f2b3a64c7f9f1c06495264df3f614bc960",
+    "src/modeling/object_statistical_candidate.py": "a6bb259f82bcadb61618c21cf2cb522370281745dc3dc92000d52ed1761f9f27",
+    "src/modeling/object_sequence_candidate.py": "9c14dae135936adf55edfa8b0d7a6a8ee586cad8fc14688a111fe693653cdb7c"
+  }
+}

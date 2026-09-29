@@ -1,0 +1,16 @@
+Completed linear_0.1
+Completed linear_1.0
+Completed spline_0.1
+Completed spline_1.0
+               model  average_precision  precision   recall       f1
+    lightgbm_control           0.626555   0.561521 0.655923 0.605062
+          spline_0.1           0.610458   0.565673 0.611498 0.587694
+          spline_1.0           0.607426   0.561208 0.614983 0.586866
+         seasonal_90           0.606012   0.539373 0.674216 0.599303
+        seasonal_365           0.605880   0.541908 0.653310 0.592417
+          linear_1.0           0.603778   0.552486 0.609756 0.579710
+          linear_0.1           0.601714   0.542920 0.644599 0.589407
+          markov_180           0.544552   0.450949 0.744774 0.561761
+historical_frequency           0.539210   0.470339 0.676829 0.555000
+           markov_45           0.538913   0.458174 0.729965 0.562983
+         persistence           0.318882   0.412111 0.426829 0.419341

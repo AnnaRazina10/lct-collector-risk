@@ -1,0 +1,5 @@
+# Local archival API/UI only. Direct dependencies pinned to the measured environment.
+# No model training or inference runs inside this API.
+fastapi==0.141.1
+pydantic==2.13.5
+uvicorn==0.54.0

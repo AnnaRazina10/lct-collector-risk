@@ -1,0 +1,15 @@
+{
+  "prefix_rows": 78,
+  "future_records_available": false,
+  "target_in_inference_frame": false,
+  "maximum_difference": 0.0,
+  "selection_sha256": "6ea3119600e0628c518e0fa6aac06640bfd40496013572dd099f5975c5bc620c",
+  "AP_difference_vs_refit_control_interval": [
+    0.004633084952596916,
+    0.008763481456539837
+  ],
+  "bootstrap_draws": 200,
+  "block_days": 7,
+  "seed": 139,
+  "uncertainty_note": "Descriptive, conditional on fixed fitted models; no model reselection"
+}

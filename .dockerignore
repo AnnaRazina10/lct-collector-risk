@@ -1,0 +1,12 @@
+# Allowlist: datasets, private material, models, reports, credentials and Git history
+# never enter the Docker build context. Data is mounted at runtime.
+**
+!Dockerfile
+!requirements-runtime.txt
+!api/
+!api/**
+!web/
+!web/**
+**/__pycache__/
+**/*.pyc
+**/.DS_Store

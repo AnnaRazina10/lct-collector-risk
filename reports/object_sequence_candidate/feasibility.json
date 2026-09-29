@@ -1,0 +1,38 @@
+{
+  "always_positive": {
+    "engineering_reference_70_50_achievable": false,
+    "threshold_status": "Engineering reference only; original task section 9 sets no mandatory 70/50 thresholds",
+    "max_recall_at_precision_gt_0_7": 0.0,
+    "engineering_reference_threshold": null
+  },
+  "persistence_alarm_today": {
+    "engineering_reference_70_50_achievable": false,
+    "threshold_status": "Engineering reference only; original task section 9 sets no mandatory 70/50 thresholds",
+    "max_recall_at_precision_gt_0_7": 0.0,
+    "engineering_reference_threshold": null
+  },
+  "frozen_object_frequency": {
+    "engineering_reference_70_50_achievable": false,
+    "threshold_status": "Engineering reference only; original task section 9 sets no mandatory 70/50 thresholds",
+    "max_recall_at_precision_gt_0_7": 0.14547038327526132,
+    "engineering_reference_threshold": null
+  },
+  "lightgbm_object": {
+    "engineering_reference_70_50_achievable": false,
+    "threshold_status": "Engineering reference only; original task section 9 sets no mandatory 70/50 thresholds",
+    "max_recall_at_precision_gt_0_7": 0.3832752613240418,
+    "engineering_reference_threshold": null
+  },
+  "gru_w28": {
+    "engineering_reference_70_50_achievable": false,
+    "threshold_status": "Engineering reference only; original task section 9 sets no mandatory 70/50 thresholds",
+    "max_recall_at_precision_gt_0_7": 0.2604529616724739,
+    "engineering_reference_threshold": null
+  },
+  "gru_w56": {
+    "engineering_reference_70_50_achievable": false,
+    "threshold_status": "Engineering reference only; original task section 9 sets no mandatory 70/50 thresholds",
+    "max_recall_at_precision_gt_0_7": 0.2935540069686411,
+    "engineering_reference_threshold": null
+  }
+}

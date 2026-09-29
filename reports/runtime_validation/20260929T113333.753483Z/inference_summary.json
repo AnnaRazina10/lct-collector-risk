@@ -1,0 +1,66 @@
+{
+  "kind": "Real CPU LightGBM predict calls, never JSON reads",
+  "feature_date": "2026-06-28",
+  "objects": 78,
+  "features": 71,
+  "trees": 167,
+  "num_threads": 2,
+  "model_sha256": "e0924c042197f5e393efb014319259929cf0a7c82890bbe4e47e3ae790f1c493",
+  "source_sha256": {
+    "reports/object_risk_probe/configuration.json": "b6ffe68da7a387044ee91f59ade04de0cc3c13460038405c7a3a7b931ce3e397",
+    "models/object_risk_probe.txt": "e0924c042197f5e393efb014319259929cf0a7c82890bbe4e47e3ae790f1c493",
+    "src/modeling/object_risk_probe.py": "8d3be6bfbe8ecc404224fa10cb200212f01076a27f7d178e96b4204b6c835950",
+    "src/modeling/export_object_demo.py": "ee31ed74b4b61cf8d54d3f5746f553f337ad5c0781e9aaf0d7b53f54f709b15e",
+    "data/raw/справочник_каналов_датчиков.csv": "87b3230e93ae00e3f03d915336acde6b3990c8b58d7378175cf02c000f67a45f",
+    "data/raw/справочник_объектов_диспетчер.csv": "219b4dbe34a78581640d839837649d3ef481c62c089fef18db1b364cff007084",
+    "data/interim/daily_2025.parquet": "c22cc25cd3dd503e56d964b6bcab6db2ad7f5eb39041406bb3dec8123e5d76b5",
+    "data/interim/daily_2026.parquet": "224a4a3e2afa143214b14956cc4db3890b0b37fbf1418975ec419fbdc21ca7f5"
+  },
+  "module_import_seconds": 1.3292050829622895,
+  "feature_rebuild_from_daily_parquet_seconds": 0.495447332970798,
+  "model_load_seconds": 0.0073035829700529575,
+  "first_batch_predict_seconds": 0.0024067090125754476,
+  "features_load_predict_seconds": 0.5051576249534264,
+  "warm_predict": {
+    "batch_scores": {
+      "count": 100,
+      "min_ms": 1.1772500583902001,
+      "mean_ms": 1.4381270890589803,
+      "p50_ms": 1.2192500289529562,
+      "p95_ms": 1.5275829937309027,
+      "p99_ms": 1.9929589470848441,
+      "max_ms": 18.87608296237886
+    },
+    "batch_shap_contributions": {
+      "count": 10,
+      "min_ms": 7.001125020906329,
+      "mean_ms": 7.206320913974196,
+      "p50_ms": 7.075375062413514,
+      "p95_ms": 7.706957985647023,
+      "p99_ms": 7.706957985647023,
+      "max_ms": 7.706957985647023
+    },
+    "one_object_scores": {
+      "count": 100,
+      "min_ms": 0.9510410018265247,
+      "mean_ms": 0.9896320651751012,
+      "p50_ms": 0.9763329289853573,
+      "p95_ms": 1.0792500106617808,
+      "p99_ms": 1.1358748888596892,
+      "max_ms": 1.1906250147148967
+    }
+  },
+  "repeat_score_max_difference": 1.6653345369377348e-15,
+  "inputs_unchanged": true,
+  "coverage": {
+    "catalog_objects_with_channels": 78,
+    "excluded_unknown_channel_days": 163,
+    "excluded_alarm_channel_days": 74,
+    "included_channel_days": 894060,
+    "objects_with_observations_by_nov30": 78
+  },
+  "future_label_access_for_scoring": false,
+  "training_performed": false,
+  "limitations": "Daily Parquet is precomputed: raw archive extraction, online ingestion, cold filesystem cache and remote serving are not measured. Feature rebuild uses all local history from 2025-01-01 through D; a one-object predict excludes this shared preparation. Warm score timings exclude SHAP, measured separately.",
+  "passed": true
+}

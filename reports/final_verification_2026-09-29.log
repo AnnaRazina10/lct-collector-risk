@@ -1,0 +1,50 @@
+/Users/antany/Desktop/LCT-Ann/lct-collector-risk/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+test_ewm_recurrence (test_advanced_features.DynamicsTests.test_ewm_recurrence) ... ok
+test_future_cannot_change_dynamics (test_advanced_features.DynamicsTests.test_future_cannot_change_dynamics) ... ok
+test_lags_preserve_channel_boundary (test_advanced_features.DynamicsTests.test_lags_preserve_channel_boundary) ... ok
+test_streak_resets_on_opposite_state (test_advanced_features.DynamicsTests.test_streak_resets_on_opposite_state) ... ok
+test_future_perturbation_of_channel_and_neighbors (test_advanced_features.FullCausalityTest.test_future_perturbation_of_channel_and_neighbors) ... ok
+test_predict_uses_supplied_feature_schema (test_advanced_features.InferenceHelpersTest.test_predict_uses_supplied_feature_schema) ... ok
+test_draft_is_local_persistent_and_idempotent (test_api.ApiTests.test_draft_is_local_persistent_and_idempotent) ... ok
+test_future_outcome_is_separate (test_api.ApiTests.test_future_outcome_is_separate) ... ok
+test_reject_invalid_drafts (test_api.ApiTests.test_reject_invalid_drafts) ... ok
+test_draft_and_decision_snapshots_survive_dataset_changes (test_api_object.ObjectApiTests.test_draft_and_decision_snapshots_survive_dataset_changes) ... ok
+test_feedback_validation (test_api_object.ObjectApiTests.test_feedback_validation) ... ok
+test_legacy_database_migrates_without_losing_drafts (test_api_object.ObjectApiTests.test_legacy_database_migrates_without_losing_drafts) ... ok
+test_mode_and_outcome_isolation (test_api_object.ObjectApiTests.test_mode_and_outcome_isolation) ... ok
+test_same_identifier_cannot_reuse_other_mode_draft (test_api_object.ObjectApiTests.test_same_identifier_cannot_reuse_other_mode_draft) ... ok
+test_history_is_explicitly_truncated_before_inference (test_api_object_export.ObjectExportTests.test_history_is_explicitly_truncated_before_inference) ... ok
+test_rejects_known_future_labels_and_wrong_calendar (test_api_object_export.ObjectExportTests.test_rejects_known_future_labels_and_wrong_calendar) ... ok
+test_rejects_target_as_feature (test_api_object_export.ObjectExportTests.test_rejects_target_as_feature) ... ok
+test_window_starts_24_hours_after_issue_and_excludes_feature_day (test_api_object_export.ObjectExportTests.test_window_starts_24_hours_after_issue_and_excludes_feature_day) ... ok
+test_rejects_out_of_range_identity (test_feature_rows.RowReaderTests.test_rejects_out_of_range_identity) ... ok
+test_sparse_order_categories_and_nan_survive_batches (test_feature_rows.RowReaderTests.test_sparse_order_categories_and_nan_survive_batches) ... ok
+test_future_changes_cannot_change_earlier_features (test_improve_baseline.TemporalFeaturesTest.test_future_changes_cannot_change_earlier_features) ... ok
+test_no_history_is_not_recent_normal (test_improve_baseline.TemporalFeaturesTest.test_no_history_is_not_recent_normal) ... ok
+test_threshold_and_confusion_counts (test_improve_baseline.TemporalFeaturesTest.test_threshold_and_confusion_counts) ... ok
+test_trailing_windows_do_not_cross_channels (test_improve_baseline.TemporalFeaturesTest.test_trailing_windows_do_not_cross_channels) ... ok
+test_equal_timestamps_use_numeric_id_then_original_row_order (test_intraday_features.IntradayFeaturesTest.test_equal_timestamps_use_numeric_id_then_original_row_order) ... ok
+test_first_and_last_use_event_time_not_file_order (test_intraday_features.IntradayFeaturesTest.test_first_and_last_use_event_time_not_file_order) ... ok
+test_future_and_other_channels_cannot_change_earlier_day (test_intraday_features.IntradayFeaturesTest.test_future_and_other_channels_cannot_change_earlier_day) ... ok
+test_last_six_hours_include_1800_and_exclude_next_midnight (test_intraday_features.IntradayFeaturesTest.test_last_six_hours_include_1800_and_exclude_next_midnight) ... ok
+test_reduction_is_independent_of_chunk_boundaries (test_intraday_features.IntradayFeaturesTest.test_reduction_is_independent_of_chunk_boundaries) ... ok
+test_calendar_gap_is_rejected (test_object_sequence.SequenceWindowTests.test_calendar_gap_is_rejected) ... ok
+test_future_cannot_change_past_window_or_scaler (test_object_sequence.SequenceWindowTests.test_future_cannot_change_past_window_or_scaler) ... ok
+test_labels_are_not_features (test_object_sequence.SequenceWindowTests.test_labels_are_not_features) ... ok
+test_refit_budget_rejects_incomplete_winning_epoch (test_object_sequence.SequenceWindowTests.test_refit_budget_rejects_incomplete_winning_epoch) ... ok
+test_window_stays_in_object_and_ends_today (test_object_sequence.SequenceWindowTests.test_window_stays_in_object_and_ends_today) ... ok
+test_future_states_cannot_change_past_markov_forecasts (test_object_statistics.ObjectStatisticsTests.test_future_states_cannot_change_past_markov_forecasts) ... ok
+test_markov_propagates_two_steps (test_object_statistics.ObjectStatisticsTests.test_markov_propagates_two_steps) ... ok
+test_seasonal_forecast_targets_d_plus_two_without_future (test_object_statistics.ObjectStatisticsTests.test_seasonal_forecast_targets_d_plus_two_without_future) ... ok
+test_full_feature_builder_causality_and_weekday_alignment (test_sequence_features.SequenceTests.test_full_feature_builder_causality_and_weekday_alignment) ... ok
+test_future_cannot_change_past_or_other_channel (test_sequence_features.SequenceTests.test_future_cannot_change_past_or_other_channel) ... ok
+test_last_known_never_backfills_unknown (test_sequence_features.SequenceTests.test_last_known_never_backfills_unknown) ... ok
+test_pattern_forecast_learns_alternation (test_sequence_features.SequenceTests.test_pattern_forecast_learns_alternation) ... ok
+test_recurrence_uses_completed_gaps (test_sequence_features.SequenceTests.test_recurrence_uses_completed_gaps) ... ok
+test_weighted_ties_and_absent_days_match_sklearn (test_weighted_ap.WeightedAPTests.test_weighted_ties_and_absent_days_match_sklearn) ... ok
+
+----------------------------------------------------------------------
+Ran 43 tests in 0.789s
+
+OK

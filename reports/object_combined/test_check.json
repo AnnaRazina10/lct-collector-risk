@@ -1,0 +1,16 @@
+{
+  "rows": 14040,
+  "days": 180,
+  "minimum_lead_hours": 24,
+  "first_target_day": "2026-01-02 00:00:00",
+  "last_target_day": "2026-06-30 00:00:00",
+  "previous_scores_max_difference": 0.0,
+  "selection_sha256": "6ea3119600e0628c518e0fa6aac06640bfd40496013572dd099f5975c5bc620c",
+  "coverage": {
+    "catalog_objects_with_channels": 78,
+    "excluded_unknown_channel_days": 163,
+    "excluded_alarm_channel_days": 74,
+    "included_channel_days": 899442,
+    "objects_with_observations_by_nov30": 78
+  }
+}

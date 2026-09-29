@@ -1,0 +1,25 @@
+{
+  "model": "blend_seasonal_90_control0.75",
+  "parts": {
+    "lightgbm_control": 0.75,
+    "seasonal_90": 0.25
+  },
+  "criterion": "Oct-Nov 2025 AP",
+  "tune_rows": 4602,
+  "tune_positives": 1148,
+  "family_winners": [
+    "lightgbm_control",
+    "markov_180",
+    "seasonal_90",
+    "linear_1.0",
+    "spline_0.1",
+    "gru_w28"
+  ],
+  "source_sha256": {
+    "reports/object_statistical_candidate/configuration.json": "c75d19e1b8b1075d3698d9c3b1424ec6aa1fa55c271acb92c775b8eb5a33a3f2",
+    "reports/object_sequence_candidate/configuration.json": "21d6a48dad86159a9b3827df325e5aa5646944b1ac00b7d6519fb023e1e15218",
+    "reports/object_combined/protocol.md": "2ea72e18b8358d35e89a50ce0f9cb0d1b17fa6f5dda7804b26e3a85d50ecccc2"
+  },
+  "december_used": false,
+  "test_2026_used": false
+}

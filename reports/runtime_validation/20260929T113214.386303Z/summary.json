@@ -1,0 +1,211 @@
+{
+  "environment": {
+    "timestamp_utc": "2026-09-29T11:32:14.496172+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "executable": "/Users/antany/Desktop/LCT-Ann/lct-collector-risk/.venv/bin/python",
+    "platform": "macOS-15.3.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "logical_cpu_count": 12,
+    "load_average_before": [
+      3.6103515625,
+      3.42529296875,
+      3.525390625
+    ],
+    "package_versions": {
+      "fastapi": "0.141.1",
+      "pydantic": "2.13.5",
+      "uvicorn": "0.54.0",
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "lightgbm": "4.7.0",
+      "pyarrow": "25.0.1",
+      "scikit-learn": "1.9.1"
+    },
+    "docker": {
+      "client_path": "/opt/homebrew/bin/docker",
+      "container_test_performed": false,
+      "returncode": 1,
+      "output": "Client: Docker Engine - Community\n Version:           29.8.1\n API version:       1.56\n Go version:        go1.27.1\n Git commit:        4a63305d74\n Built:             Tue Sep 15 11:21:13 2026\n OS/Arch:           darwin/arm64\n Context:           default\nfailed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory\n"
+    },
+    "isolation": "Shared local machine; other processes are not stopped or controlled"
+  },
+  "arguments": {
+    "users": 20,
+    "duration": 30.0,
+    "port": 0,
+    "feature_date": "2026-06-28",
+    "repeats": 100,
+    "ml_threads": 2,
+    "skip_api": false,
+    "skip_inference": false,
+    "output": "/Users/antany/Desktop/LCT-Ann/lct-collector-risk/reports/runtime_validation"
+  },
+  "script_sha256": "acbee153dfba0543705683a7f21566af2b29b546bf589a449e3a9083eeafa40e",
+  "artifact_directory": "reports/runtime_validation/20260929T113214.386303Z",
+  "api": {
+    "kind": "HTTP reads of precomputed archive; no ML inference",
+    "base_url": "http://127.0.0.1:55761",
+    "owned_pid": 31234,
+    "server_workers": 1,
+    "users": 20,
+    "client": "20 threads by default; new urllib HTTP connection per request; no think time",
+    "duration_requested_seconds": 30.0,
+    "wall_seconds": 35.3073455831036,
+    "startup_to_health_seconds": 0.2955997500102967,
+    "max_client_inflight": 20,
+    "requests": 21075,
+    "errors": 20,
+    "requests_per_second": 596.9012864588009,
+    "all_requests_latency": {
+      "count": 21075,
+      "min_ms": 0.5933750653639436,
+      "mean_ms": 33.43757556911562,
+      "p50_ms": 9.381458978168666,
+      "p95_ms": 93.88183301780373,
+      "p99_ms": 463.20837503299117,
+      "max_ms": 7781.149000045843
+    },
+    "by_endpoint": {
+      "/api/health": {
+        "count": 3512,
+        "min_ms": 0.5933750653639436,
+        "mean_ms": 16.308785272357245,
+        "p50_ms": 4.617750062607229,
+        "p95_ms": 11.796124977990985,
+        "p99_ms": 16.07083308044821,
+        "max_ms": 7781.149000045843
+      },
+      "/api/risks?mode=object": {
+        "count": 3511,
+        "min_ms": 5.1792089361697435,
+        "mean_ms": 15.067912823569939,
+        "p50_ms": 10.176167008467019,
+        "p95_ms": 17.465292010456324,
+        "p99_ms": 23.349166032858193,
+        "max_ms": 7778.856584103778
+      },
+      "/api/risks/object_2026-06-28_3215?mode=object": {
+        "count": 3512,
+        "min_ms": 1.4656659914180636,
+        "mean_ms": 13.957262575848597,
+        "p50_ms": 6.788167054764926,
+        "p95_ms": 14.319833950139582,
+        "p99_ms": 19.32541700080037,
+        "max_ms": 7777.85820805002
+      },
+      "/api/journal?mode=object": {
+        "count": 3512,
+        "min_ms": 0.9582909988239408,
+        "mean_ms": 44.56496412943649,
+        "p50_ms": 13.808417017571628,
+        "p95_ms": 159.82445899862796,
+        "p99_ms": 670.1537079643458,
+        "max_ms": 2317.4803749425337
+      },
+      "/api/tickets?mode=object": {
+        "count": 3515,
+        "min_ms": 1.1212910758331418,
+        "mean_ms": 53.2535020556436,
+        "p50_ms": 12.82833400182426,
+        "p95_ms": 154.02808296494186,
+        "p99_ms": 677.2443329682574,
+        "max_ms": 7781.100791064091
+      },
+      "/api/feedback?mode=object": {
+        "count": 3513,
+        "min_ms": 1.1172499507665634,
+        "mean_ms": 57.44403342000871,
+        "p50_ms": 12.676916900090873,
+        "p95_ms": 159.5313330180943,
+        "p99_ms": 773.7450839485973,
+        "max_ms": 7777.585290954448
+      }
+    },
+    "archive_cards": 78,
+    "feature_date": "2026-06-28",
+    "source_sha256": {
+      "api/main.py": "488ab4dd80e5a2cc64e1a6ae883ed06233888276b912e1f06d84d19275b0a21f",
+      "data/app/object_risk_demo.json": "6a2ed4a4f8e72ff051bc57f48a9657608f8fada8a15b496f0bf21c8024508d7e"
+    },
+    "read_only_http_methods": [
+      "GET"
+    ],
+    "database": "new temporary empty SQLite; GET startup may initialize schema; no user database used",
+    "limitations": "Loopback client and server share CPU; no browser rendering/TLS/authentication/remote network, no writes and no persistent-user load",
+    "source_files_unchanged": true,
+    "owned_process_shutdown": "owned process terminated and reaped",
+    "passed": false
+  },
+  "inference": {
+    "kind": "Real CPU LightGBM predict calls, never JSON reads",
+    "feature_date": "2026-06-28",
+    "objects": 78,
+    "features": 71,
+    "trees": 167,
+    "num_threads": 2,
+    "model_sha256": "e0924c042197f5e393efb014319259929cf0a7c82890bbe4e47e3ae790f1c493",
+    "source_sha256": {
+      "reports/object_risk_probe/configuration.json": "b6ffe68da7a387044ee91f59ade04de0cc3c13460038405c7a3a7b931ce3e397",
+      "models/object_risk_probe.txt": "e0924c042197f5e393efb014319259929cf0a7c82890bbe4e47e3ae790f1c493",
+      "src/modeling/object_risk_probe.py": "8d3be6bfbe8ecc404224fa10cb200212f01076a27f7d178e96b4204b6c835950",
+      "src/modeling/export_object_demo.py": "ee31ed74b4b61cf8d54d3f5746f553f337ad5c0781e9aaf0d7b53f54f709b15e",
+      "data/raw/справочник_каналов_датчиков.csv": "87b3230e93ae00e3f03d915336acde6b3990c8b58d7378175cf02c000f67a45f",
+      "data/raw/справочник_объектов_диспетчер.csv": "219b4dbe34a78581640d839837649d3ef481c62c089fef18db1b364cff007084",
+      "data/interim/daily_2025.parquet": "c22cc25cd3dd503e56d964b6bcab6db2ad7f5eb39041406bb3dec8123e5d76b5",
+      "data/interim/daily_2026.parquet": "224a4a3e2afa143214b14956cc4db3890b0b37fbf1418975ec419fbdc21ca7f5"
+    },
+    "module_import_seconds": 1.3673099590232596,
+    "feature_rebuild_from_daily_parquet_seconds": 0.5171204169746488,
+    "model_load_seconds": 0.007690707920119166,
+    "first_batch_predict_seconds": 0.0026834169402718544,
+    "features_load_predict_seconds": 0.5274945418350399,
+    "warm_predict": {
+      "batch_scores": {
+        "count": 100,
+        "min_ms": 1.1918749660253525,
+        "mean_ms": 1.3702662731520832,
+        "p50_ms": 1.2963339686393738,
+        "p95_ms": 1.764875021763146,
+        "p99_ms": 2.0244589541107416,
+        "max_ms": 2.0885829580947757
+      },
+      "batch_shap_contributions": {
+        "count": 10,
+        "min_ms": 6.812333012931049,
+        "mean_ms": 6.954154092818499,
+        "p50_ms": 6.929416907951236,
+        "p95_ms": 7.0907920598983765,
+        "p99_ms": 7.0907920598983765,
+        "max_ms": 7.0907920598983765
+      },
+      "one_object_scores": {
+        "count": 100,
+        "min_ms": 0.9762499248608947,
+        "mean_ms": 1.0663500020746142,
+        "p50_ms": 1.0222499258816242,
+        "p95_ms": 1.2583750067278743,
+        "p99_ms": 1.4456670032814145,
+        "max_ms": 1.6007500234991312
+      }
+    },
+    "repeat_score_max_difference": 1.6653345369377348e-15,
+    "inputs_unchanged": true,
+    "coverage": {
+      "catalog_objects_with_channels": 78,
+      "excluded_unknown_channel_days": 163,
+      "excluded_alarm_channel_days": 74,
+      "included_channel_days": 894060,
+      "objects_with_observations_by_nov30": 78
+    },
+    "future_label_access_for_scoring": false,
+    "training_performed": false,
+    "limitations": "Daily Parquet is precomputed: raw archive extraction, online ingestion, cold filesystem cache and remote serving are not measured. Feature rebuild uses all local history from 2025-01-01 through D; a one-object predict excludes this shared preparation. Warm score timings exclude SHAP, measured separately.",
+    "passed": true
+  },
+  "load_average_after": [
+    4.203125,
+    3.6044921875,
+    3.5849609375
+  ],
+  "passed": false
+}

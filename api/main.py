@@ -1,4 +1,4 @@
-"""Local retrospective demo. Tickets are drafts stored on this computer only."""
+"""Two explicit archive modes, local draft tickets and dispatcher decision history."""
 from __future__ import annotations
 import json
 import os
@@ -6,31 +6,74 @@ import sqlite3
 from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Literal
 from uuid import uuid4
 
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data/app/risk_demo.json"
+OBJECT_DATA = ROOT / "data/app/object_risk_demo.json"
 DB = Path(os.environ.get("LCT_TICKET_DB", str(ROOT / "data/app/tickets.sqlite3")))
-app = FastAPI(title="Collector Risk — локальная демонстрация", version="0.1.0")
+EntityMode = Literal["channel", "object"]
+Decision = Literal["monitor", "inspect", "alarm_confirmed", "alarm_not_confirmed"]
+Reason = Literal["needs_inspection", "planned_work", "sensor_or_connection", "journal_verified", "other"]
+app = FastAPI(title="Коллектор — объектные и канальные архивные прогнозы", version="0.2.0")
 
 
-def dataset():
-    if not DATA.exists():
-        raise HTTPException(503, "Сначала сформируйте data/app/risk_demo.json")
-    return json.loads(DATA.read_text())
+def dataset(mode: EntityMode = "channel"):
+    path = OBJECT_DATA if mode == "object" else DATA
+    if not path.exists():
+        raise HTTPException(503, f"Архивный набор режима {mode} ещё не сформирован")
+    data = json.loads(path.read_text())
+    data["entity_mode"] = mode
+    if mode == "channel":
+        data.setdefault("minimum_lead_hours", 0)
+        data.setdefault("window_hours", 24)
+        data.setdefault("issue_time", data.get("forecast_start"))
+    return data
+
+
+def public_card(card):
+    # Archive facts are never part of the queue, ticket snapshot or feedback history.
+    return {key: value for key, value in card.items() if not key.startswith("actual_") and key != "outcome"}
+
+
+def find_card(risk_id: str, mode: EntityMode):
+    data = dataset(mode)
+    card = next((c for c in data["cards"] if c["id"] == risk_id), None)
+    if card is None:
+        raise HTTPException(404, "Карточка не найдена в выбранном режиме")
+    return data, card
+
+
+def snapshot(data, card):
+    fields = ["entity_mode", "feature_date", "issue_time", "forecast_start", "forecast_end",
+              "minimum_lead_hours", "model", "threshold"]
+    return {"forecast": {k: data.get(k) for k in fields}, "card": public_card(card)}
 
 
 @contextmanager
 def connection():
     DB.parent.mkdir(parents=True, exist_ok=True)
-    conn = sqlite3.connect(DB)
+    conn = sqlite3.connect(DB, timeout=30)
     conn.row_factory = sqlite3.Row
-    conn.execute("CREATE TABLE IF NOT EXISTS tickets (id TEXT PRIMARY KEY, risk_id TEXT UNIQUE, note TEXT, created_at TEXT, status TEXT)")
     try:
+        # Serialize first-use migration; retain existing channel drafts without deletion.
+        conn.execute("BEGIN IMMEDIATE")
+        conn.execute("CREATE TABLE IF NOT EXISTS tickets (id TEXT PRIMARY KEY, risk_id TEXT UNIQUE, note TEXT, created_at TEXT, status TEXT)")
+        columns = {row[1] for row in conn.execute("PRAGMA table_info(tickets)")}
+        if "entity_mode" not in columns:
+            conn.execute("ALTER TABLE tickets ADD COLUMN entity_mode TEXT NOT NULL DEFAULT 'channel'")
+        if "risk_snapshot" not in columns:
+            conn.execute("ALTER TABLE tickets ADD COLUMN risk_snapshot TEXT NOT NULL DEFAULT '{}'")
+        conn.execute("""CREATE TABLE IF NOT EXISTS feedback (
+            id TEXT PRIMARY KEY, risk_id TEXT NOT NULL, entity_mode TEXT NOT NULL,
+            decision TEXT NOT NULL, reason TEXT NOT NULL, operator TEXT NOT NULL,
+            note TEXT NOT NULL, created_at TEXT NOT NULL, risk_snapshot TEXT NOT NULL)""")
+        conn.commit()
         with conn:
             yield conn
     finally:
@@ -40,6 +83,29 @@ def connection():
 class TicketDraft(BaseModel):
     risk_id: str = Field(min_length=1, max_length=100)
     note: str = Field(default="", max_length=2000)
+    entity_mode: EntityMode = "channel"
+
+
+class Feedback(BaseModel):
+    risk_id: str = Field(min_length=1, max_length=100)
+    entity_mode: EntityMode = "channel"
+    decision: Decision
+    reason: Reason
+    operator: str = Field(min_length=1, max_length=100)
+    note: str = Field(default="", max_length=2000)
+
+    @field_validator("operator")
+    @classmethod
+    def nonblank_operator(cls, value):
+        if not value.strip():
+            raise ValueError("Укажите имя диспетчера")
+        return value.strip()
+
+
+def saved_row(row):
+    result = dict(row)
+    result["risk_snapshot"] = json.loads(result.get("risk_snapshot") or "{}")
+    return result
 
 
 @app.get("/")
@@ -48,46 +114,90 @@ def index():
 
 
 @app.get("/api/health")
+@app.get("/health", include_in_schema=False)
 def health():
-    return {"status": "ok", "mode": "retrospective", "data_ready": DATA.exists()}
+    modes = {"channel": DATA.exists(), "object": OBJECT_DATA.exists()}
+    return {"status": "ok", "mode": "retrospective", "data_ready": any(modes.values()), "available_modes": modes}
 
 
 @app.get("/api/risks")
-def risks():
-    data = dataset()
-    # Future outcomes are revealed only via a separate, explicit retrospective action.
-    for card in data["cards"]:
-        card.pop("actual_next_day_alarm", None)
+@app.get("/risks", include_in_schema=False)
+def risks(mode: EntityMode = "channel"):
+    data = dataset(mode)
+    data["cards"] = [public_card(card) for card in data["cards"]]
     return data
 
 
 @app.get("/api/risks/{risk_id}/outcome")
-def outcome(risk_id: str):
-    card = next((c for c in dataset()["cards"] if c["id"] == risk_id), None)
-    if card is None:
-        raise HTTPException(404, "Карточка не найдена")
-    return {"risk_id": risk_id, "actual_next_day_alarm": card["actual_next_day_alarm"],
-            "note": "Архивный факт следующего дня; не использован в признаках этого прогноза."}
+def outcome(risk_id: str, mode: EntityMode = "channel"):
+    data, card = find_card(risk_id, mode)
+    key = "actual_target_alarm" if mode == "object" else "actual_next_day_alarm"
+    if key not in card:
+        raise HTTPException(404, "Архивный факт для этого окна отсутствует")
+    return {"risk_id": risk_id, "entity_mode": mode, key: card[key], "actual_alarm": card[key],
+            "forecast_start": data.get("forecast_start"), "forecast_end": data.get("forecast_end"),
+            "note": "Архивный факт целевого окна раскрыт отдельно; не использован в признаках прогноза. Регистрация тревоги не доказывает физическую поломку."}
+
+
+@app.get("/api/risks/{risk_id}")
+@app.get("/risks/{risk_id}", include_in_schema=False)
+def risk(risk_id: str, mode: EntityMode = "channel"):
+    data, card = find_card(risk_id, mode)
+    return snapshot(data, card)
 
 
 @app.get("/api/tickets")
-def tickets():
+def tickets(mode: EntityMode | None = None):
     with connection() as conn:
-        rows = conn.execute("SELECT * FROM tickets ORDER BY created_at DESC").fetchall()
-    return {"tickets": [dict(row) for row in rows], "external_submission": False}
+        rows = conn.execute("SELECT * FROM tickets WHERE (? IS NULL OR entity_mode=?) ORDER BY created_at DESC", (mode, mode)).fetchall()
+    return {"tickets": [saved_row(row) for row in rows], "external_submission": False}
 
 
 @app.post("/api/tickets", status_code=201)
+@app.post("/tickets/draft", status_code=201, include_in_schema=False)
 def create_ticket(draft: TicketDraft):
-    if not any(c["id"] == draft.risk_id for c in dataset()["cards"]):
-        raise HTTPException(404, "Карточка не найдена")
+    data, card = find_card(draft.risk_id, draft.entity_mode)
     with connection() as conn:
-        existing = conn.execute("SELECT * FROM tickets WHERE risk_id=?", (draft.risk_id,)).fetchone()
-        if existing:
-            return {**dict(existing), "external_submission": False, "already_exists": True}
         row = (str(uuid4()), draft.risk_id, draft.note, datetime.now(timezone.utc).isoformat(), "draft")
-        result = conn.execute("INSERT OR IGNORE INTO tickets VALUES (?,?,?,?,?)", row)
-        if result.rowcount == 0:
-            existing = conn.execute("SELECT * FROM tickets WHERE risk_id=?", (draft.risk_id,)).fetchone()
-            return {**dict(existing), "external_submission": False, "already_exists": True}
-    return dict(zip(["id", "risk_id", "note", "created_at", "status"], row)) | {"external_submission": False}
+        result = conn.execute("""INSERT OR IGNORE INTO tickets
+            (id,risk_id,note,created_at,status,entity_mode,risk_snapshot) VALUES (?,?,?,?,?,?,?)""",
+            (*row, draft.entity_mode, json.dumps(snapshot(data, card), ensure_ascii=False)))
+        existing = conn.execute("SELECT * FROM tickets WHERE risk_id=?", (draft.risk_id,)).fetchone()
+        if existing["entity_mode"] != draft.entity_mode:
+            raise HTTPException(409, "Идентификатор уже принадлежит другому режиму; сформируйте отдельную карточку")
+        already = result.rowcount == 0
+    return {**saved_row(existing), "external_submission": False, "already_exists": already}
+
+
+@app.post("/api/feedback", status_code=201)
+@app.post("/feedback", status_code=201, include_in_schema=False)
+def create_feedback(feedback: Feedback):
+    data, card = find_card(feedback.risk_id, feedback.entity_mode)
+    row = (str(uuid4()), feedback.risk_id, feedback.entity_mode, feedback.decision, feedback.reason,
+           feedback.operator, feedback.note, datetime.now(timezone.utc).isoformat(),
+           json.dumps(snapshot(data, card), ensure_ascii=False))
+    with connection() as conn:
+        conn.execute("INSERT INTO feedback VALUES (?,?,?,?,?,?,?,?,?)", row)
+        saved = conn.execute("SELECT * FROM feedback WHERE id=?", (row[0],)).fetchone()
+    return {**saved_row(saved), "external_submission": False,
+            "operator_identity_verified": False, "note_about_identity": "Имя указано локально; корпоративный вход не подключён."}
+
+
+@app.get("/api/feedback")
+def feedback_history(mode: EntityMode | None = None):
+    with connection() as conn:
+        rows = conn.execute("SELECT * FROM feedback WHERE (? IS NULL OR entity_mode=?) ORDER BY created_at DESC LIMIT 200", (mode, mode)).fetchall()
+    return {"feedback": [saved_row(row) for row in rows], "external_submission": False}
+
+
+@app.get("/api/journal")
+def journal(mode: EntityMode | None = None):
+    records = []
+    with connection() as conn:
+        for table, kind in [("tickets", "ticket_draft"), ("feedback", "dispatcher_decision")]:
+            # table comes only from the fixed internal pair above.
+            rows = conn.execute(f"SELECT * FROM {table} WHERE (? IS NULL OR entity_mode=?) ORDER BY created_at DESC LIMIT 200", (mode, mode)).fetchall()
+            records.extend({**saved_row(row), "kind": kind} for row in rows)
+    records.sort(key=lambda row: row["created_at"], reverse=True)
+    return {"entries": records[:200], "limit": 200, "external_submission": False,
+            "scope": "Локальные черновики и решения диспетчера; имя оператора не подтверждено корпоративным входом."}

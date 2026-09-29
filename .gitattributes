@@ -1,0 +1,2 @@
+# Preserve CSV values while storing platform-independent line endings in Git.
+reports/runtime_validation/**/*.csv text eol=lf
