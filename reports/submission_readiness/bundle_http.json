@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-09-29T13:36:08.108120+00:00",
+  "url": "http://127.0.0.1:8782",
+  "checks": [
+    "html_available",
+    "six_immutable_releases",
+    "no_inherited_dispatcher_records",
+    "all_releases_available_and_onset_budget_ten",
+    "explicit_local_test_decision_saved",
+    "restart_preserved_test_decision",
+    "immutable_seed_unchanged_after_dispatcher_write"
+  ],
+  "feedback_id": "1ae431f0-65f0-4bd9-bfe0-4733c97faacc",
+  "run_id": "onset_2026-06-28_0f97f74f589ee7b9",
+  "before_restart_passed": true,
+  "restart_verified": true,
+  "external_submission": false,
+  "seed_and_all_immutable_inputs_unchanged": true,
+  "after_restart_checked_at": "2026-09-29T13:37:15.745590+00:00"
+}

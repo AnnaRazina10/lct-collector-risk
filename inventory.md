@@ -191,3 +191,11 @@ Jupyter-ноутбуки для аналитики, EDA, проверки гип
 - `scripts/summarize_onset_experiment.py`, `docs/onset_methods_sources.md` — воспроизводимый агрегированный отчёт/график и первичные источники ранних предупреждений, survival и renewal с ограничениями переноса.
 - `src/serving/object_onset_forecast.py`, `docs/onset_demo.md`, `reports/onset_demo/` — отдельная архивная очередь начала серии, фиксированные top-10 и временная доступность кандидата; проверка реальных прогнозов, HTTP и UI. База `data/app/onset_demo.sqlite3` и веса остаются локальными.
 - `tests/test_onset_forecast.py`, `test_forecast_onset_policy.py`, `test_api_onset_forecasts.py`, `test_web_async.js` — защита от будущих исходов, проверка ничьих/рангов, снимков решений и задержанных ответов при переключении интерфейса.
+
+## Материалы сдачи и отдельный запуск, 29.09.2026
+
+- `artifacts/presentation/output/collector-risk-draft-v3.pptx` и preview PDF — 15 слайдов с onset-сравнением, ограничениями и фактическим новым UI; поля команды пока не заполнены.
+- `docs/technical_guide.md`, `scripts/build_technical_guide.py`, `output/pdf/collector-risk-technical-guide.pdf` — исходный текст, воспроизводимый сборщик и семистраничная документация.
+- `docs/demo_script.md`, `docs/submission_links.md` — сценарий показа, ответы жюри и четыре требуемые ссылки.
+- `scripts/build_review_bundle.py`, `docs/local_review_bundle.md` — сборка локального комплекта с фиксированными моделями/агрегатами. ZIP в `artifacts/submission/bundles/` исключён из Git; решения диспетчера не экспортируются.
+- `reports/submission_readiness/` — независимая сверка чисел и артефактов, чистая установка и повторный inference, HTTP-перезапуск и проверки форматов.

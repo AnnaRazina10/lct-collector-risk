@@ -1,0 +1,227 @@
+{
+  "checked_at_utc": "2026-09-29T13:41:42.645042+00:00",
+  "passed": true,
+  "pdf": "output/pdf/collector-risk-technical-guide.pdf",
+  "pdf_sha256": "bc4550818447801126547643343e42a7ec79fbe5cf80f5fb09e989102c580e25",
+  "pdf_bytes": 105091,
+  "source": "docs/technical_guide.md",
+  "source_sha256": "80ad4138b2fbf018a170b50630b94e630f43145012503c9afaaeac6c4b9c4514",
+  "builder": "scripts/build_technical_guide.py",
+  "builder_sha256": "d2b304768c470ab6375251c16d09a123e03ae135b7846da2be94e39f792007a9",
+  "repository_reference": "bd0fa01",
+  "pages": [
+    {
+      "page": 1,
+      "title": "Коллектор: очередь риска",
+      "text_chars": 2169,
+      "render_sha256": "abfc145a486e24d712b423769cd2efa8d235d5fcca079a4e40dcc4775ff2a236",
+      "render_dpi": 120,
+      "text_bounds_points": {
+        "x0": 48.18898,
+        "x1": 547.0866265599999,
+        "top": 25.482857999999965,
+        "bottom": 813.360848
+      },
+      "visually_reviewed": true,
+      "visual_result": "Cyrillic glyphs readable; no clipping, table overflow or overlap; code and page number visible.",
+      "review_revision": "unchanged_text_and_pagination_from_prior_visual_review"
+    },
+    {
+      "page": 2,
+      "title": "1. Данные и подготовка",
+      "text_chars": 2414,
+      "render_sha256": "e76e6efceb05f4a454bfb42538d7b45843b4770bcbc1ae55807844ced07a0b4c",
+      "render_dpi": 120,
+      "text_bounds_points": {
+        "x0": 48.18898,
+        "x1": 547.0866251199997,
+        "top": 25.482857999999965,
+        "bottom": 813.360848
+      },
+      "visually_reviewed": true,
+      "visual_result": "Cyrillic glyphs readable; no clipping, table overflow or overlap; code and page number visible.",
+      "review_revision": "unchanged_text_and_pagination_from_prior_visual_review"
+    },
+    {
+      "page": 3,
+      "title": "2. Метод и временная проверка",
+      "text_chars": 2317,
+      "render_sha256": "e6f54ac3f095084f39f0322292697600dcfcab916ee1939f0af2440ee42e81ed",
+      "render_dpi": 120,
+      "text_bounds_points": {
+        "x0": 48.18898,
+        "x1": 547.0865797499999,
+        "top": 25.482857999999965,
+        "bottom": 813.360848
+      },
+      "visually_reviewed": true,
+      "visual_result": "Cyrillic glyphs readable; no clipping, table overflow or overlap; code and page number visible.",
+      "review_revision": "unchanged_text_and_pagination_from_prior_visual_review"
+    },
+    {
+      "page": 4,
+      "title": "3. Качество: одинаковые цели и бюджеты",
+      "text_chars": 2324,
+      "render_sha256": "7189c0c83ff5f77c86dbfc57e0a616245902d6dff0780eb66a7adc68272ab653",
+      "render_dpi": 120,
+      "text_bounds_points": {
+        "x0": 48.18898,
+        "x1": 547.0865797499999,
+        "top": 25.482857999999965,
+        "bottom": 813.360848
+      },
+      "visually_reviewed": true,
+      "visual_result": "Cyrillic glyphs readable; no clipping, table overflow or overlap; code and page number visible.",
+      "review_revision": "rerendered_and_visually_rechecked"
+    },
+    {
+      "page": 5,
+      "title": "4. Архитектура и интерфейсы",
+      "text_chars": 2600,
+      "render_sha256": "d946740c8738691869f66850d6cb5bbd96ee9797e606e0c9337c5d4b6987454c",
+      "render_dpi": 120,
+      "text_bounds_points": {
+        "x0": 48.18898,
+        "x1": 547.0865797499999,
+        "top": 25.482857999999965,
+        "bottom": 813.360848
+      },
+      "visually_reviewed": true,
+      "visual_result": "Cyrillic glyphs readable; no clipping, table overflow or overlap; code and page number visible.",
+      "review_revision": "unchanged_text_and_pagination_from_prior_visual_review"
+    },
+    {
+      "page": 6,
+      "title": "5. Локальная установка и проверка",
+      "text_chars": 2864,
+      "render_sha256": "e5ccfb4a5fad30ae0d9365496467697569e9a0619e41c39bcf4bb1dc2ccbe3d7",
+      "render_dpi": 120,
+      "text_bounds_points": {
+        "x0": 48.18898,
+        "x1": 547.0866282399995,
+        "top": 25.482857999999965,
+        "bottom": 813.360848
+      },
+      "visually_reviewed": true,
+      "visual_result": "Cyrillic glyphs readable; no clipping, table overflow or overlap; code and page number visible.",
+      "review_revision": "rerendered_and_visually_rechecked"
+    },
+    {
+      "page": 7,
+      "title": "6. Ограничения и материалы проверки",
+      "text_chars": 2444,
+      "render_sha256": "b7a951b8ed48bb1b60df7553d4248396c60be6d0d634e35492045ce0c49f7ae4",
+      "render_dpi": 120,
+      "text_bounds_points": {
+        "x0": 48.18898,
+        "x1": 547.08662256,
+        "top": 25.482857999999965,
+        "bottom": 813.360848
+      },
+      "visually_reviewed": true,
+      "visual_result": "Cyrillic glyphs readable; no clipping, table overflow or overlap; code and page number visible.",
+      "review_revision": "unchanged_text_and_pagination_from_prior_visual_review"
+    }
+  ],
+  "checks": {
+    "seven_pages": true,
+    "exact_rebuild_bytes": true,
+    "no_literal_markdown_backticks": true,
+    "no_unicode_replacement_or_black_square": true,
+    "source_ascii_hyphens_only": true,
+    "no_forbidden_sentence_start": true,
+    "no_template_placeholders": true,
+    "page_1_section": true,
+    "page_1_number": true,
+    "page_1_bounds": true,
+    "page_2_section": true,
+    "page_2_number": true,
+    "page_2_bounds": true,
+    "page_3_section": true,
+    "page_3_number": true,
+    "page_3_bounds": true,
+    "page_4_section": true,
+    "page_4_number": true,
+    "page_4_bounds": true,
+    "page_5_section": true,
+    "page_5_number": true,
+    "page_5_bounds": true,
+    "page_6_section": true,
+    "page_6_number": true,
+    "page_6_bounds": true,
+    "page_7_section": true,
+    "page_7_number": true,
+    "page_7_bounds": true,
+    "three_cyrillic_fonts_embedded": true,
+    "clickable_links_present": true,
+    "all_pinned_github_source_paths_in_commit": true,
+    "annual_event_counts_match_inventory": true,
+    "12_material_files": true,
+    "onset_comparison_matches_independent_evidence": true,
+    "old_control_kept_separate": true,
+    "116_python_plus_7_async_evidence": true,
+    "no_powerpoint_verification_claim": true,
+    "unmodified_pages_1_2_3_5_7_text_identical": true,
+    "clean_venv_25_packages_python31214": true,
+    "six_releases_468_scores_exact_payloads": true,
+    "restart_test_decision_seed_unchanged": true,
+    "local_bundle_exists_and_matches_manifest": true,
+    "clean_macOS_OpenMP_not_linux_retrain_disclosed": true,
+    "net_75_of_119_explicit": true,
+    "bundle_link_is_local_relative_not_github": true,
+    "openmp_required_only_for_inference": true
+  },
+  "fonts_embedded": {
+    "/AAAAAA+DejaVuSans": true,
+    "/AAAAAA+DejaVuSans-Bold": true,
+    "/AAAAAA+DejaVuSansMono": true
+  },
+  "link_annotations": 23,
+  "pinned_source_paths": {
+    "docs/backup_restore.md": true,
+    "docs/forecast_history.md": true,
+    "docs/global_sota_decision_2026-09-29.md": true,
+    "docs/onset_demo.md": true,
+    "docs/readiness_audit.md": true,
+    "docs/requirements.md": true,
+    "docs/runtime_validation.md": true,
+    "reports/eda/tables/data_quality_checks.csv": true,
+    "reports/eda/tables/file_inventory.csv": true,
+    "reports/object_combined/report.md": true,
+    "reports/object_forward_check/report.md": true,
+    "reports/object_onset_experiment/protocol.md": true,
+    "reports/object_onset_experiment/report.md": true,
+    "reports/onset_demo/independent_inference.json": true,
+    "reports/onset_demo/integration_tests.log": true,
+    "reports/onset_demo/web_async_check.json": true,
+    "src/modeling/daily_data.py": true
+  },
+  "build": {
+    "command": "python3 scripts/build_technical_guide.py",
+    "python_used": "/Users/antany/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "reportlab_version": "4.4.9",
+    "font_family": "embedded DejaVu Sans regular/bold and DejaVu Sans Mono",
+    "pdf_invariant_mode": true,
+    "second_build_sha256": "bc4550818447801126547643343e42a7ec79fbe5cf80f5fb09e989102c580e25",
+    "operation_marker_success_count": 1,
+    "renderer": "bundled Poppler pdftoppm -r 120 -png",
+    "initial_pagination_overflow_corrected": true
+  },
+  "review_notes": [
+    "Initial seven pages visually inspected at120dpi; only changed pages4and6 rerendered and visually rechecked. Other five page texts and seven-page pagination unchanged.",
+    "Page4 states net119 gain and its75 contribution110minus35; old4400warning control remains separate from refit1800warning control.",
+    "Page6 now documents existing local unpublished4441558-byte review bundle, cleanmacOS Python3.12.14/25packages/468exact scores/six exact payloads and restart preservation.",
+    "ExistingOpenMP used; noLinux/container orfullretraining claim.",
+    "Bundle has a relative local link, not aGit orpublished download claim.",
+    "Exactlyone authoring marker was run initially; no second marker for this amendment.",
+    "Independent reviewer correction applied: OpenMP is required for LightGBM inference, not the API-only quickstart. Page6 re-rendered and inspected after this correction."
+  ],
+  "scope": "PDF authoring and validation only; no new model training, test-suite rerun, production deployment or publication.",
+  "previous_pdf_sha256": "7dff06d2f389c8e4cdd26f3cd4a299812e629e885a2a924fc442ff154c332258",
+  "new_evidence_sha256": {
+    "reports/submission_readiness/clean_inference.json": "fb4d59e396cc07e402ab92744afaace5ddb5443548d2482b70b2ba36f2440e73",
+    "reports/submission_readiness/bundle_http.json": "935033e6f6d1185ee169ab92669081d69901cf8f78e0b4e076247fc9dd128809",
+    "reports/submission_readiness/bundle_build.json": "ba017c90ecb07ead709d0b76a17cd1f6df55d46a6658eecf36a168255c13146b",
+    "docs/local_review_bundle.md": "6ee9fc68f62940a3e56d13b44aa2c857ed6f4b7849604bda959e9e564dc03aeb"
+  }
+}

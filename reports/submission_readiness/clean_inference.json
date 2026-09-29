@@ -1,0 +1,155 @@
+{
+  "checked_at": "2026-09-29T13:35:37.206328+00:00",
+  "python_executable": "/private/tmp/collector-review-runtime-20260929/bin/python",
+  "python_version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "include_system_site_packages": false,
+  "extracted_root": "/private/tmp/collector-review-extracted-zk_0bejk/collector-risk-review",
+  "verified_files": 66,
+  "packages": [
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5"
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0"
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1"
+    },
+    {
+      "name": "click",
+      "version": "8.5.0"
+    },
+    {
+      "name": "cloudpickle",
+      "version": "3.1.2"
+    },
+    {
+      "name": "fastapi",
+      "version": "0.141.1"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0"
+    },
+    {
+      "name": "idna",
+      "version": "3.20"
+    },
+    {
+      "name": "joblib",
+      "version": "1.6.0"
+    },
+    {
+      "name": "lightgbm",
+      "version": "4.7.0"
+    },
+    {
+      "name": "narwhals",
+      "version": "2.26.0"
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.3"
+    },
+    {
+      "name": "pandas",
+      "version": "3.0.6"
+    },
+    {
+      "name": "pyarrow",
+      "version": "25.0.1"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.13.5"
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.46.5"
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0"
+    },
+    {
+      "name": "scikit-learn",
+      "version": "1.9.1"
+    },
+    {
+      "name": "scipy",
+      "version": "1.18.1"
+    },
+    {
+      "name": "six",
+      "version": "1.17.0"
+    },
+    {
+      "name": "starlette",
+      "version": "1.7.0"
+    },
+    {
+      "name": "threadpoolctl",
+      "version": "3.7.0"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0"
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.54.0"
+    }
+  ],
+  "releases": [
+    {
+      "run_id": "onset_2026-06-28_0f97f74f589ee7b9",
+      "objects": 78,
+      "max_score_difference": 0.0,
+      "entire_payload_identical": true
+    },
+    {
+      "run_id": "onset_2026-06-27_89af23daa1273ad1",
+      "objects": 78,
+      "max_score_difference": 0.0,
+      "entire_payload_identical": true
+    },
+    {
+      "run_id": "onset_2026-06-26_844dac1ea731bf67",
+      "objects": 78,
+      "max_score_difference": 0.0,
+      "entire_payload_identical": true
+    },
+    {
+      "run_id": "object_2026-06-28_6fcffa044c314e16",
+      "objects": 78,
+      "max_score_difference": 0.0,
+      "entire_payload_identical": true
+    },
+    {
+      "run_id": "object_2026-06-27_661a446f9ca20cc2",
+      "objects": 78,
+      "max_score_difference": 0.0,
+      "entire_payload_identical": true
+    },
+    {
+      "run_id": "object_2026-06-26_960db067b50f766e",
+      "objects": 78,
+      "max_score_difference": 0.0,
+      "entire_payload_identical": true
+    }
+  ],
+  "all_passed": true,
+  "limitations": [
+    "macOS arm64 only",
+    "Existing system OpenMP runtime used by LightGBM",
+    "No original raw event ingestion or full retraining",
+    "Package inputs contain supplied data and remain local"
+  ]
+}

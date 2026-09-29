@@ -1,0 +1,268 @@
+{
+  "checked_at_utc": "2026-09-29T13:31:31.301618+00:00",
+  "scope": "Read-only local evidence audit and independent recount of saved predictions; no retraining, new model selection, external access or submission. Only claims_audit.json/.md written.",
+  "passed_claim_checks": true,
+  "checks": {
+    "evaluation_population": true,
+    "targets_binary": true,
+    "positive_totals": true,
+    "any_alarm_ap": true,
+    "any_alarm_precision": true,
+    "any_alarm_recall": true,
+    "onset_headline": true,
+    "no_alarm_warnings": true,
+    "selected_tp": true,
+    "selected_warnings": true,
+    "selected_no_alarm_warnings": true,
+    "selected_repeat_alarm_warnings": true,
+    "selected_any_alarm_precision": true,
+    "any_alarm_refit_tp": true,
+    "any_alarm_refit_warnings": true,
+    "any_alarm_refit_no_alarm_warnings": true,
+    "any_alarm_refit_repeat_alarm_warnings": true,
+    "any_alarm_refit_any_alarm_precision": true,
+    "missing_records_net_gain": true,
+    "saved_python_suite_116": true,
+    "async7_current_web": true,
+    "journal_event_count": true,
+    "imports_present_sizes_match": true,
+    "original_material_hashes": true
+  },
+  "claims": [
+    {
+      "id": "any_alarm_previous",
+      "claim": "AP 0.6213; Precision 56.91%; Recall 59.58%",
+      "verified_value": {
+        "ap": 0.6212676797000269,
+        "tp": 2504,
+        "warnings": 4400,
+        "precision": 0.5690909090909091,
+        "recall": 0.595764929812039
+      },
+      "source": "reports/object_forward_check/metrics.csv + independently recomputed from object_onset_test.parquet",
+      "qualification": "Previous any-alarm model at frozen threshold 0.3345231006565093; 4,400 warnings on 14,040 object-days. Not the top-10 refit control."
+    },
+    {
+      "id": "onset_daily10",
+      "claim": "435 vs 316; Precision 24.17% vs 17.56%; Recall 21.75% vs 15.80%",
+      "verified_value": {
+        "selected": {
+          "tp": 435,
+          "warnings": 1800,
+          "precision": 0.24166666666666667,
+          "recall": 0.2175,
+          "repeat_alarm_warnings": 333,
+          "no_alarm_warnings": 1032,
+          "any_alarm_precision": 0.4266666666666667,
+          "onsets": 2000
+        },
+        "any_alarm_refit": {
+          "tp": 316,
+          "warnings": 1800,
+          "precision": 0.17555555555555555,
+          "recall": 0.158,
+          "repeat_alarm_warnings": 976,
+          "no_alarm_warnings": 508,
+          "any_alarm_precision": 0.7177777777777777,
+          "onsets": 2000
+        }
+      },
+      "source": "data/interim/object_onset_test.parquet; independent_review.json",
+      "qualification": "Same 1,800 warnings, 10/day, same 2,000 registered onsets, 78 objects × 180 days. Baseline is any_alarm_refit. Target alarm(D+1)=0 and alarm(D+2)=1. Known 2026 period, not a new blind test."
+    },
+    {
+      "id": "relative_gain",
+      "claim": "+37.7% onset hits",
+      "verified_value": {
+        "net_extra_hits": 119,
+        "relative_gain": 0.37658227848101267,
+        "precision_absolute_pp": 6.6111111111111125,
+        "recall_absolute_pp": 5.949999999999999
+      },
+      "source": "independent count ratios from object_onset_test.parquet",
+      "qualification": "Relative hit gain at equal warning budget, not +37.7 percentage points and not physical failures prevented."
+    },
+    {
+      "id": "tradeoff",
+      "claim": "No-alarm warnings 1,032 vs 508; any-alarm Precision 42.67% vs 71.78%",
+      "verified_value": {
+        "selected": {
+          "repeat_alarm_warnings": 333,
+          "no_alarm_warnings": 1032,
+          "any_alarm_precision": 0.4266666666666667
+        },
+        "any_alarm_refit": {
+          "repeat_alarm_warnings": 976,
+          "no_alarm_warnings": 508,
+          "any_alarm_precision": 0.7177777777777777
+        }
+      },
+      "source": "independent counts from object_onset_test.parquet",
+      "qualification": "Repeated alarms are valid for the old any-alarm goal; the onset candidate does not dominate that goal. No registered alarm is not adjudicated false physical-alarm evidence."
+    },
+    {
+      "id": "missing_records",
+      "claim": "75 of 119 net additional onset hits follow a day without records",
+      "verified_value": {
+        "new_hits": 110,
+        "baseline_hits": 35,
+        "net_difference": 75,
+        "overall_net_difference": 119
+      },
+      "source": "reports/object_onset_experiment/observability.csv + independent_review.json",
+      "qualification": "Retrospective diagnostic stratum, not an inference filter. Net difference 110−35; not 75 uniquely won incidents. Missing records do not mean healthy equipment."
+    },
+    {
+      "id": "tests",
+      "claim": "116 Python tests and 7 asynchronous UI scenarios",
+      "verified_value": {
+        "python_tests": 116,
+        "python_elapsed_seconds": 1.431,
+        "async_cases": 7,
+        "current_web_hash_matches": true
+      },
+      "source": "reports/onset_demo/integration_tests.log; web_async_check.json",
+      "qualification": "Saved successful runs; suite was not re-executed by this claims audit. Async test uses actual UI script with a minimal DOM double; no claim of 123 browser tests or full production compliance."
+    },
+    {
+      "id": "data_volume",
+      "claim": "313.5 million records, 8 annual archives, 78 modeled objects",
+      "verified_value": {
+        "journal_records_excluding_headers": 313546017,
+        "archives": 8,
+        "imported_files": 12,
+        "modeled_objects": 78,
+        "catalog_objects": 95,
+        "years": "2019–2026",
+        "latest_raw_day": "2026-06-30"
+      },
+      "source": "reports/eda/tables/file_inventory.csv; data/raw/import_manifest.json; object_forward_check/checks.json",
+      "qualification": "313.5m is the inspected raw journal corpus, not a claim that the onset model trained on every record. 78 objects have mapped channels; object registry has 95 entries. Archive existence and sizes rechecked, not full archive SHA recomputation."
+    }
+  ],
+  "formal_submission_requirements": [
+    {
+      "section": "19",
+      "required": [
+        "Repository link",
+        "Presentation link",
+        "Prototype link for review",
+        "Accompanying documentation link in .docx or .pdf"
+      ],
+      "evidence": "docs/materials/task08_extracted.txt:487–491"
+    },
+    {
+      "section": "15",
+      "required": [
+        "Presentation in .pptx or .pdf"
+      ],
+      "evidence": "docs/materials/task08_extracted.txt:433–434"
+    },
+    {
+      "section": "14",
+      "required": [
+        "Data-processing methods",
+        "Conditions and limitations",
+        "Detailed build/install instructions",
+        "Functional and component architecture",
+        "List of used libraries/components",
+        "Open unobfuscated source code"
+      ],
+      "evidence": "docs/materials/task08_extracted.txt:405–421"
+    },
+    {
+      "source": "User-supplied organizer instructions",
+      "required": [
+        "Slides 7–11 retain template design and structure"
+      ],
+      "evidence": "Current conversation; supported by local template inventory, not stated in extracted §15"
+    },
+    {
+      "source": "Local supplied Q&A transcript, not original formal requirement",
+      "recommended": [
+        "Demo video",
+        "Additional externally accessible demo stand"
+      ],
+      "evidence": "artifacts/transcripts/gorod_8_dzhkh_qa_summary.md:54–65"
+    }
+  ],
+  "blockers_or_unverified_external_steps": [
+    {
+      "id": "team_fields",
+      "state": "missing_in_current_handoff",
+      "description": "Real team name, captain/member names and roles, photos, contact details, employer/study, city/region, history and reason for choosing the case; task-provider logo placeholder remains. Do not invent these facts.",
+      "evidence": "artifacts/presentation/HANDOFF.md:5–12"
+    },
+    {
+      "id": "final_v3",
+      "state": "pending_build_and_review",
+      "description": "Reviewed artifact manifest currently lists v2. v3 is under construction by another agent; no claim that final deck is ready or its 7–11 fidelity checked.",
+      "evidence": "artifacts/presentation/manifest.json"
+    },
+    {
+      "id": "documentation_format",
+      "state": "no_final_docx_pdf_found_at_snapshot",
+      "description": "Local Markdown documentation exists; a final accompanying .docx/.pdf and accessible link are not yet evidenced. Prototype screenshot PDF is presentation preview, not the required accompanying documentation. Root is preparing the package.",
+      "evidence": "Local .pdf/.docx/.pptx inventory under docs and artifacts; §19"
+    },
+    {
+      "id": "reviewer_links",
+      "state": "external_access_not_verified",
+      "description": "Need working reviewer-accessible prototype/presentation/documentation links. Current tested prototype is loopback 127.0.0.1:8781; no external reviewer reachability established. Original §19 requires a prototype link but does not explicitly mandate anonymous public hosting.",
+      "evidence": "docs/onset_demo.md; reports/onset_demo/ui_check.json; §19"
+    },
+    {
+      "id": "platform_submission",
+      "state": "authentication_upload_receipt_not_verified",
+      "description": "Local materials contain the task URL, but evidence does not establish current platform login, team task selection, entered final links or submission receipt. Do not claim absent account access as a proven fact, only unverified.",
+      "evidence": "README.md task URL; supplied local Q&A; no submission receipt in audited materials"
+    },
+    {
+      "id": "final_link_version",
+      "state": "final_published_version_not_checked_in_this_local_audit",
+      "description": "Verify that the final repository and artifact links point to the intended submitted versions and are accessible to experts. A Git publication is not a platform submission.",
+      "evidence": "Local-only scope; no browser/network publication checks in this audit"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "label_required",
+      "message": "Keep previous threshold any-alarm metrics separate from the refit control at daily top-10."
+    },
+    {
+      "severity": "label_required",
+      "message": "State registered journal onset, known retrospective 2026 period, equal daily budget and the increased no-alarm warnings next to the gain."
+    },
+    {
+      "severity": "documentation_stale_reference",
+      "message": "README near the independent onset audit still says “общий прогон — 101 тест”; newer overview and saved latest run correctly say116. Historical101 is defensible only explicitly tied to that prior stage."
+    }
+  ],
+  "local_materials_sha256_verified": true,
+  "artifact_inventory_at_snapshot": [
+    "artifacts/presentation/output/collector-risk-draft-v2-preview.pdf",
+    "artifacts/presentation/output/collector-risk-draft-v2.pptx",
+    "docs/materials/ЛЦТ2026 Шаблон презентации.pptx",
+    "docs/materials/8. ДЖКХ.pdf"
+  ],
+  "sources_sha256": {
+    "reports/object_forward_check/metrics.csv": "27a1409f559aeb07f797d93779feb627b23442f6cc83a5a5807b37bcff657c0a",
+    "reports/object_forward_check/checks.json": "48e40d20f0593d32a1361ca0d86c625de38b6b9e20e3ed27d01d997268848f7f",
+    "reports/object_onset_experiment/evaluation_metrics.csv": "725368a50f1c46e9982d15584487ae8522654abdae670b799e93874d05dc3db8",
+    "reports/object_onset_experiment/independent_review.json": "babcfd7f87af4f4bc54047645e2729b00a0632328785f809f3bc263e37a02527",
+    "reports/object_onset_experiment/observability.csv": "939ce337c69d3db9dae722bf0b4e739e88477ec2efd163de57ebfaea5febed5a",
+    "data/interim/object_onset_test.parquet": "0099a2cf1dc3138cb7157d81c96c1e50b98e7daf0f85fb4520880b4029a52daa",
+    "reports/onset_demo/integration_tests.log": "ae28644d975a6ef0fbff3b6fb105cc8e2b70ccd1a4826874a141dfaa460aee84",
+    "reports/onset_demo/web_async_check.json": "3bcf69badcc63ac48fae4c17521b7dbddf85511d0725a4b5c27302937659b0e2",
+    "reports/onset_demo/ui_check.json": "191c27153bbefff3510c1f1757cd4bec2a735d79481698afd1dadb5167b14b99",
+    "reports/eda/tables/file_inventory.csv": "8617c3cbda865f8300e5d7f9c1eb8be1ca172dcf4cea5acb60669117b7a7786a",
+    "data/raw/import_manifest.json": "f31c89a56e39d556252fbc04f2b175b052b1f05b6ddff419a093e5f3586b3ab6",
+    "docs/materials/manifest.json": "af3d6129f7999b122406a9604c85054fb9f1b9b8c6bb23dc6ccb3556d4d64ff0",
+    "docs/materials/task08_extracted.txt": "40186d79454ead0133d2703ddbb919b9bd69486af03b8af7b50ee2a2454cba26",
+    "artifacts/presentation/HANDOFF.md": "691b1d6a8d925b4d6ef415c4c34bb70eb3674140d02ec713522fd77bec6ffb4b",
+    "artifacts/presentation/manifest.json": "f4c9cb0e4f92dcac8b1f525c03e84f9d43f5a4553d802d243126cf0dfe3dd9dd",
+    "artifacts/transcripts/gorod_8_dzhkh_qa_summary.md": "781727f2eed3690e2c23b450f2b124a1c565efa9eb04c8a7b148a3e8eff65ade"
+  },
+  "submission_complete": false,
+  "victory_established": false
+}

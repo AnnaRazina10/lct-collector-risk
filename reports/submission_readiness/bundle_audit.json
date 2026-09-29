@@ -1,0 +1,102 @@
+{
+  "checked_at_utc": "2026-09-29T13:36:13.664298+00:00",
+  "scope": "Read-only code and ZIP inspection. SQLite seed deserialized in memory. No extraction writes, installation, inference or server launch. Only audit report files written.",
+  "passed": true,
+  "checks": {
+    "unique_zip_names": true,
+    "safe_zip_paths": true,
+    "no_symlink_members": true,
+    "manifest_exact_contents": true,
+    "all_member_sizes_and_hashes": true,
+    "exact_allowlist_and_tracked_source_scope": true,
+    "generated_launcher_matches_current_builder": true,
+    "generated_verifier_matches_current_builder": true,
+    "generated_instructions_match_current_builder": true,
+    "exact_raw_allowlist": true,
+    "two_daily_two_models": true,
+    "no_obvious_forbidden_paths": true,
+    "credential_pattern_scan_no_hits": true,
+    "all_onset_frozen_source_dependencies": true,
+    "selection_manifest_matches_refit": true,
+    "refit_matches_producer_pin": true,
+    "selected_frozen_model_present": true,
+    "any_alarm_model_and_dicts_present": true,
+    "inference_import_sources_present": true,
+    "runtime_dependencies_chain_present": true,
+    "seed_sqlite_integrity": true,
+    "seed_only_forecast_tables": true,
+    "six_manifest_release_ids": true,
+    "six_valid_immutable_forecasts": true,
+    "three_releases_per_target": true,
+    "card_index_exact": true,
+    "forecast_immutability_triggers": true,
+    "launcher_seed_copy_only_when_runtime_absent": true,
+    "launcher_atomic_no_replace_publish": true,
+    "runtime_not_manifest_input": true,
+    "launcher_separate_runtime_db": true,
+    "no_unverified_linux_windows_success_claim": true,
+    "outer_zip_report_matches": true
+  },
+  "details": {
+    "zip_path": "artifacts/submission/bundles/collector-risk-review.zip",
+    "zip_sha256": "5790cd08e3c24e3d8dda8520d56b59756e99077b7df120b1f24190e3a61e24c4",
+    "zip_bytes": 4441558,
+    "zip_members": 67,
+    "manifest_files": 66,
+    "source_commit": "bd0fa0168f5e1de69234e0f81daa0fbdbfd1b2ac",
+    "working_tree_changes": true,
+    "model_files": [
+      "models/object_onset_experiment/refit/hurdle_15.joblib",
+      "models/object_risk_probe.txt"
+    ],
+    "frozen_dependencies": {
+      "reports/object_onset_experiment/protocol.md": true,
+      "src/modeling/object_onset_experiment.py": true,
+      "src/modeling/object_risk_probe.py": true,
+      "src/modeling/object_onset_statistics.py": true,
+      "src/modeling/onset_evaluation.py": true,
+      "reports/object_risk_probe/configuration.json": true,
+      "data/interim/daily_2025.parquet": true,
+      "data/raw/справочник_каналов_датчиков.csv": true,
+      "data/raw/справочник_объектов_диспетчер.csv": true
+    },
+    "seed_tables": [
+      "forecast_card_ids",
+      "forecast_runs"
+    ],
+    "seed_forecasts": 6,
+    "seed_cards": 468,
+    "release_ids": [
+      "onset_2026-06-28_0f97f74f589ee7b9",
+      "object_2026-06-28_6fcffa044c314e16",
+      "onset_2026-06-27_89af23daa1273ad1",
+      "object_2026-06-27_661a446f9ca20cc2",
+      "onset_2026-06-26_844dac1ea731bf67",
+      "object_2026-06-26_960db067b50f766e"
+    ],
+    "seed_sha256": "d571f4b214f12208955f4bdacdd2c24a97583eee3e8ea4b5afff90e3208bdf7e",
+    "credential_pattern_hits": [],
+    "raw_files": [
+      "data/raw/справочник_каналов_датчиков.csv",
+      "data/raw/справочник_объектов_диспетчер.csv"
+    ],
+    "generated_launcher_sha256": "0e473552b0d9cc956f0f88a41d8ee5fa916a8ab6d920e7bcc3d493429a5d754e",
+    "generated_verifier_sha256": "fce0cbf5ecb3124387b39a436db15bb572859aded88a67725abaf200003eab8c"
+  },
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "id": "runtime_openmp_wording",
+      "message": "START_HERE says macOS runtime/inference needs OpenMP; archival API runtime has no LightGBM import and requirements-runtime only installs FastAPI/Pydantic/Uvicorn. OpenMP belongs to the optional inference path. This overstates the API prerequisite, not a data-loss defect."
+    }
+  ],
+  "limits": [
+    "Launcher preservation assessed statically here; parent performs real clean-environment and restart tests separately. Hard-link publication fails safely if filesystem does not support links; universal filesystem portability is not claimed.",
+    "Existing runtime DB is neither overwritten nor included in immutable input verification. Runtime recovery/backup is separate; no power-loss durability or disk-failure guarantee assessed.",
+    "Manifest detects changed bundle members when trusted; it is not a signature. The ZIP includes supplied data and weights and remains local.",
+    "Pattern scan and allowlist found no credentials or copied dispatcher history; this is not a universal secret-detection guarantee.",
+    "Legacy original demo JSON contains separately revealable historical outcomes by design; the six immutable replay payloads pass the no-future-outcome store validator.",
+    "Excluded combined/selection manifest and nonselected candidates are only needed for training/evaluation paths, which START_HERE explicitly excludes. Frozen inference sources/models/inputs are present and hash-consistent."
+  ],
+  "bundle_was_modified": false
+}

@@ -1,0 +1,408 @@
+{
+  "checked_at_utc": "2026-09-29T13:44:10.884762+00:00",
+  "scope": "Independent read-only ZIP/XML/text audit of final PPTX and all seven PDF pages. Models were not rerun. Visual QA performed by artifact owners/root; no independent rendering or native PowerPoint claim in this audit.",
+  "passed": true,
+  "checks": {
+    "final_presentation_sha": true,
+    "final_guide_sha": true,
+    "15_slides_in_requested_order": true,
+    "mandatory_7_template_and_v2": true,
+    "mandatory_8_template_and_v2": true,
+    "mandatory_9_template_and_v2": true,
+    "mandatory_10_template_and_v2": true,
+    "mandatory_11_template_and_v2": true,
+    "required_tables_editable": true,
+    "slide4_any_alarm_table_exact": true,
+    "slide4_different_control_and_budget_explicit": true,
+    "slide5_onset_refit_table_exact": true,
+    "slide5_equal_budget_known_period_proxy": true,
+    "slide5_notes_ci_exact_after_correction": true,
+    "slide13_tradeoff_table_exact": true,
+    "slide13_missing_records_is_net_diagnostic_gain": true,
+    "slide6_statistical_AP_exact": true,
+    "slide6_GRU_and_mixture_tradeoff": true,
+    "slide14_temporal_protocol": true,
+    "slide15_weather_actually_evaluated_and_numbers_match": true,
+    "unknown_team_fields_explicit": true,
+    "physical_failure_live_stream_and_economic_claims_bounded": true,
+    "all_15_have_source_notes": true,
+    "deck_source_paths_present": true,
+    "slide12_embeds_declared_real_screenshot": true,
+    "guide_seven_text_pages": true,
+    "guide_numeric_claims_consistent": true,
+    "guide_controls_explicitly_separated": true,
+    "guide_raw_volume_and_model_scope": true,
+    "guide_timing_contract_and_known_period": true,
+    "guide_openmp_scope_corrected": true,
+    "guide_test_counts_and_platform_limitations": true,
+    "guide_clean_inference_counts_evidenced": true,
+    "guide_formal_documentation_sections_present": true,
+    "guide_pinned_and_local_references_resolve": true,
+    "guide_no_false_submission_claim": true,
+    "deck_manifest_matches_final_artifacts": true,
+    "guide_qa_matches_final_pdf": true,
+    "artifacts_unchanged_during_audit": true
+  },
+  "artifacts": {
+    "presentation": {
+      "path": "artifacts/presentation/output/collector-risk-draft-v3.pptx",
+      "sha256": "c29fef94b3e0a4ac98dd729c8d08f8d1b61d5d1c0d079bd2482f6e3c23e8812a",
+      "bytes": 12100587
+    },
+    "previous": {
+      "path": "artifacts/presentation/output/collector-risk-draft-v2.pptx",
+      "sha256": "fe8108312aefe759d762747cff7f006200f249ea5c1874acabdbff69ffd33b08",
+      "bytes": 12115933
+    },
+    "template": {
+      "path": "docs/materials/ЛЦТ2026 Шаблон презентации.pptx",
+      "sha256": "858da047f42bc3fe59f167b3f87dd17e9b7980fd78949ea750bb9ef668707247",
+      "bytes": 33766501
+    },
+    "guide": {
+      "path": "output/pdf/collector-risk-technical-guide.pdf",
+      "sha256": "bc4550818447801126547643343e42a7ec79fbe5cf80f5fb09e989102c580e25",
+      "bytes": 105091
+    }
+  },
+  "presentation": {
+    "slide_count": 15,
+    "mandatory_slides": [
+      {
+        "slide": 7,
+        "position": 7,
+        "original_nontext_xml_equal": true,
+        "v2_full_xml_byte_equal": true,
+        "original_relationships_byte_equal": true,
+        "v2_relationships_byte_equal": true
+      },
+      {
+        "slide": 8,
+        "position": 8,
+        "original_nontext_xml_equal": true,
+        "v2_full_xml_byte_equal": true,
+        "original_relationships_byte_equal": true,
+        "v2_relationships_byte_equal": true
+      },
+      {
+        "slide": 9,
+        "position": 9,
+        "original_nontext_xml_equal": true,
+        "v2_full_xml_byte_equal": true,
+        "original_relationships_byte_equal": true,
+        "v2_relationships_byte_equal": true
+      },
+      {
+        "slide": 10,
+        "position": 10,
+        "original_nontext_xml_equal": true,
+        "v2_full_xml_byte_equal": true,
+        "original_relationships_byte_equal": true,
+        "v2_relationships_byte_equal": true
+      },
+      {
+        "slide": 11,
+        "position": 11,
+        "original_nontext_xml_equal": true,
+        "v2_full_xml_byte_equal": true,
+        "original_relationships_byte_equal": true,
+        "v2_relationships_byte_equal": true
+      }
+    ],
+    "checked_tables": {
+      "4": [
+        [
+          [
+            "Модель",
+            "AP",
+            "Precision",
+            "Recall"
+          ],
+          [
+            "Повтор текущей тревоги",
+            "0,3888",
+            "48,51%",
+            "48,16%"
+          ],
+          [
+            "Историческая частота",
+            "0,5666",
+            "50,75%",
+            "60,86%"
+          ],
+          [
+            "LightGBM по порогу",
+            "0,6213",
+            "56,91%",
+            "59,58%"
+          ]
+        ]
+      ],
+      "5": [
+        [
+          [
+            "Цель: начало серии",
+            "Начал",
+            "Precision@10",
+            "Полнота"
+          ],
+          [
+            "Контроль «Любая тревога» после дообучения",
+            "316",
+            "17,56%",
+            "15,80%"
+          ],
+          [
+            "Двухэтапная onset-модель",
+            "435",
+            "24,17%",
+            "21,75%"
+          ]
+        ]
+      ],
+      "6": [
+        [
+          [
+            "Любая тревога, выбор на октябре–ноябре 2025",
+            "AP"
+          ],
+          [
+            "LightGBM",
+            "0,6266"
+          ],
+          [
+            "Сплайн по прошлым событиям",
+            "0,6105"
+          ],
+          [
+            "Сезонная статистика",
+            "0,6060"
+          ],
+          [
+            "GRU, окно 28 дней",
+            "0,5753"
+          ]
+        ]
+      ],
+      "13": [
+        [
+          [
+            "При 10 объектах в день",
+            "Контроль «Любая тревога»",
+            "Начало серии"
+          ],
+          [
+            "Precision по любой тревоге",
+            "71,78%",
+            "42,67%"
+          ],
+          [
+            "Объект-дней без тревоги среди предупреждений",
+            "508",
+            "1 032"
+          ]
+        ]
+      ],
+      "14": [
+        [
+          [
+            "Этап onset-модели",
+            "Режим проверки"
+          ],
+          [
+            "Обучение до 28.09.2025",
+            "Исходы до 30.09.2025"
+          ],
+          [
+            "Выбор на 01.10–28.11.2025",
+            "8 кандидатов и 3 смеси"
+          ],
+          [
+            "Дообучение до 28.11.2025",
+            "Число деревьев уже фиксировано"
+          ],
+          [
+            "Декабрьская проверка",
+            "67 начал против 49 при 290 предупреждениях"
+          ]
+        ]
+      ]
+    },
+    "notes5_corrected_interval": [
+      0.05222043010752688,
+      0.08136072437449555
+    ],
+    "team_facts_complete": false,
+    "notes_source_paths": [
+      "docs/materials/8. ДЖКХ.pdf",
+      "reports/eda/eda_report.md",
+      "reports/eda/tables/year_summary.csv",
+      "reports/object_forward_check/report.md",
+      "reports/object_forward_check/metrics.csv",
+      "reports/object_onset_experiment/report.md",
+      "reports/object_onset_experiment/evaluation_metrics.csv",
+      "reports/object_onset_experiment/uncertainty.json",
+      "reports/object_onset_experiment/observability.csv",
+      "reports/object_onset_experiment/independent_review.json",
+      "reports/object_onset_experiment/protocol.md",
+      "reports/object_onset_experiment/selection.json",
+      "reports/object_onset_experiment/refit.json",
+      "reports/object_onset_experiment/december_metrics.csv",
+      "reports/object_onset_experiment/inference_check.json",
+      "reports/object_statistical_candidate/tuning.csv",
+      "reports/object_sequence_candidate/report.md",
+      "reports/object_combined/report.md",
+      "reports/object_combined/test_metrics.csv",
+      "reports/object_combined/daily_budget.csv",
+      "reports/weather_probe/report.md",
+      "reports/weather_probe/metrics.csv",
+      "reports/weather_probe/checks.json",
+      "reports/onset_demo/ui_check.json",
+      "docs/onset_demo.md",
+      "data/app/onset_demo_screen.png"
+    ]
+  },
+  "guide": {
+    "pages": 7,
+    "links": [
+      {
+        "page": 1,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk"
+      },
+      {
+        "page": 1,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/bd0fa01/docs/onset_demo.md",
+        "local_pinned_git_path_present": true
+      },
+      {
+        "page": 2,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/bd0fa01/reports/eda/tables/data_quality_checks.csv",
+        "local_pinned_git_path_present": true
+      },
+      {
+        "page": 2,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/bd0fa01/src/modeling/daily_data.py",
+        "local_pinned_git_path_present": true
+      },
+      {
+        "page": 3,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/bd0fa01/reports/object_onset_experiment/protocol.md",
+        "local_pinned_git_path_present": true
+      },
+      {
+        "page": 3,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/bd0fa01/reports/object_combined/report.md",
+        "local_pinned_git_path_present": true
+      },
+      {
+        "page": 4,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/bd0fa01/reports/object_onset_experiment/report.md",
+        "local_pinned_git_path_present": true
+      },
+      {
+        "page": 4,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/bd0fa01/reports/object_forward_check/report.md",
+        "local_pinned_git_path_present": true
+      },
+      {
+        "page": 5,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/bd0fa01/docs/forecast_history.md",
+        "local_pinned_git_path_present": true
+      },
+      {
+        "page": 5,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/bd0fa01/docs/backup_restore.md",
+        "local_pinned_git_path_present": true
+      },
+      {
+        "page": 6,
+        "url": "../../artifacts/submission/bundles/collector-risk-review.zip",
+        "local_relative_path_present": true,
+        "public_download_not_verified": true
+      },
+      {
+        "page": 6,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/bd0fa01/docs/onset_demo.md",
+        "local_pinned_git_path_present": true
+      },
+      {
+        "page": 6,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/bd0fa01/docs/runtime_validation.md",
+        "local_pinned_git_path_present": true
+      },
+      {
+        "page": 7,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/bd0fa01/docs/requirements.md",
+        "local_pinned_git_path_present": true
+      },
+      {
+        "page": 7,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/bd0fa01/reports/eda/tables/file_inventory.csv",
+        "local_pinned_git_path_present": true
+      },
+      {
+        "page": 7,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/bd0fa01/reports/eda/tables/data_quality_checks.csv",
+        "local_pinned_git_path_present": true
+      },
+      {
+        "page": 7,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/bd0fa01/reports/object_onset_experiment/report.md",
+        "local_pinned_git_path_present": true
+      },
+      {
+        "page": 7,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/bd0fa01/reports/onset_demo/independent_inference.json",
+        "local_pinned_git_path_present": true
+      },
+      {
+        "page": 7,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/bd0fa01/reports/onset_demo/integration_tests.log",
+        "local_pinned_git_path_present": true
+      },
+      {
+        "page": 7,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/bd0fa01/reports/onset_demo/web_async_check.json",
+        "local_pinned_git_path_present": true
+      },
+      {
+        "page": 7,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/bd0fa01/docs/onset_demo.md",
+        "local_pinned_git_path_present": true
+      },
+      {
+        "page": 7,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/bd0fa01/docs/readiness_audit.md",
+        "local_pinned_git_path_present": true
+      },
+      {
+        "page": 7,
+        "url": "https://github.com/AnnaRazina10/lct-collector-risk/blob/bd0fa01/docs/global_sota_decision_2026-09-29.md",
+        "local_pinned_git_path_present": true
+      }
+    ],
+    "pinned_git_link_count": 21,
+    "relative_local_bundle_link_count": 1,
+    "all_pages_text_reviewed": true
+  },
+  "findings_resolved": [
+    {
+      "location": "PPTX slide5 speaker notes",
+      "problem": "CI trailing digits differed slightly from uncertainty.json while visible rounded interval was correct.",
+      "resolution": "Owner rebuilt final PPTX with exact interval values; final hash checked."
+    },
+    {
+      "location": "Guide page6",
+      "problem": "OpenMP prerequisite originally read as applying to the API runtime.",
+      "resolution": "Owner clarified that OpenMP is only required for LightGBM inference; final PDF text/hash checked."
+    }
+  ],
+  "remaining_boundaries": [
+    "Real team identity/photos/contacts and task-provider logo placeholders on slides7–10 remain incomplete; deck is explicitly a draft.",
+    "Relative ZIP link in PDF resolves only in the existing local project layout to collector-risk-review.zip. This is the earlier measured local kit, not a public download or the planned newly named final bundle.",
+    "Pinned GitHub paths exist in local commit bd0fa01. Network accessibility/authentication and reviewer access were not checked here.",
+    "Template check removes text paragraphs for original non-text comparison; full slide XML and relationships were additionally byte-compared with v2. Native PowerPoint behavior remains unverified.",
+    "Known 2026 retrospective diagnostics do not establish physical-failure prediction, operational integration, economic savings or submission success."
+  ],
+  "submission_confirmed": false
+}

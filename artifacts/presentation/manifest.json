@@ -1,4 +1,5 @@
 {
+  "version": "v3",
   "slide_count": 15,
   "required_original_positions": [
     7,
@@ -11,6 +12,18 @@
   "source_template_sha256": "858da047f42bc3fe59f167b3f87dd17e9b7980fd78949ea750bb9ef668707247",
   "artifacts": [
     {
+      "path": "artifacts/presentation/output/collector-risk-draft-v3.pptx",
+      "bytes": 12100587,
+      "sha256": "c29fef94b3e0a4ac98dd729c8d08f8d1b61d5d1c0d079bd2482f6e3c23e8812a"
+    },
+    {
+      "path": "artifacts/presentation/output/collector-risk-draft-v3-preview.pdf",
+      "bytes": 1123408,
+      "sha256": "9fdaf843e43cdbd5e8e5aa48cbbc5ff8d36b2d4e6a6a114146ea2fda95feb17c"
+    }
+  ],
+  "previous_version_artifacts_preserved": [
+    {
       "path": "artifacts/presentation/output/collector-risk-draft-v2-preview.pdf",
       "bytes": 1646099,
       "sha256": "df1dc027f9240799b286f6ce3084aa419bde2ae7507b0b1c8d10a209e2accc2d"
@@ -21,25 +34,73 @@
       "sha256": "fe8108312aefe759d762747cff7f006200f249ea5c1874acabdbff69ffd33b08"
     }
   ],
+  "sources": [
+    {
+      "path": "artifacts/presentation/source/build.mjs",
+      "bytes": 14796,
+      "sha256": "3124e3b436244c429590c892dac4c8f73d056126a4951440d2ef44ea8657a0c4"
+    },
+    {
+      "path": "artifacts/presentation/source/finalize.mjs",
+      "bytes": 1994,
+      "sha256": "d5c373e980170f7d89dddbe51a4368eb7009f4b04f38e6564c1c023ece054e96"
+    },
+    {
+      "path": "artifacts/presentation/source/merge_template.py",
+      "bytes": 10391,
+      "sha256": "b7d866bf816ee6172ffaf9f097210c09a955218c267690a0ce337dfb7a56f39b"
+    }
+  ],
+  "source_build_scripts_match_executed_copy": true,
   "all_final_slides_rendered": true,
   "all_final_slides_visually_reviewed": true,
-  "changes_from_reviewed_v1": [
-    7
-  ],
-  "v2_other_rendered_slides_pixel_identical": true,
+  "visual_qa": {
+    "render_changed_slides": [
+      5,
+      13
+    ],
+    "unchanged_slides_pixel_equal": true,
+    "all_15_final_slides_reviewed": true,
+    "changed_final_slides_individually_reviewed": [
+      5,
+      13
+    ],
+    "mandatory_xml_equal_v2": {
+      "7": true,
+      "8": true,
+      "9": true,
+      "10": true,
+      "11": true
+    },
+    "pdf_pages": 15,
+    "pdf_page_points": [
+      960,
+      540
+    ]
+  },
   "native_powerpoint_opened": false,
+  "libreoffice_used": false,
   "native_table_slides": [
     2,
     4,
     5,
     6,
+    13,
     14
   ],
   "screenshot": {
-    "source": "data/app/object_demo_screen.png",
-    "sha256": "bce7e1c28db965f1d1a4152d1903ff036e6893c764b06e2ec42e70bb7d804f74",
+    "path": "data/app/onset_demo_screen.png",
+    "bytes": 87682,
+    "sha256": "30b404d7fb685033b5a67dd77e092cefea225be51b4b2f0b0f58fd07bc47a966",
     "real_local_browser_capture": true,
-    "cropped_fragment": true
+    "fit": "contain",
+    "cropped_fragment": false,
+    "pixel_size": [
+      1265,
+      713
+    ],
+    "server": "http://127.0.0.1:8781/",
+    "run_id": "onset_2026-06-28_0f97f74f589ee7b9"
   },
   "mandatory_fidelity": [
     {
@@ -81,6 +142,36 @@
     "findingCount": 0,
     "warnings": []
   },
+  "first_party_import": {
+    "performed": true,
+    "passed": true,
+    "slideCount": 15,
+    "sha256": "c29fef94b3e0a4ac98dd729c8d08f8d1b61d5d1c0d079bd2482f6e3c23e8812a",
+    "runtimeNodeModules": "/Users/antany/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules",
+    "nodeExecutable": "/Users/antany/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node"
+  },
+  "font_policy": {
+    "basis": "reference",
+    "approvedFamilies": [
+      "Montserrat",
+      "Montserrat Medium",
+      "Poppins Light"
+    ],
+    "scriptFonts": {},
+    "referenceSha256": "858da047f42bc3fe59f167b3f87dd17e9b7980fd78949ea750bb9ef668707247",
+    "referenceFontsVerifiedInEncodedText": true,
+    "checked_text_script_count": 223,
+    "native_font_rendering_verified": false,
+    "observed_font_families": [
+      "Montserrat"
+    ],
+    "observed_font_use_counts": {
+      "Montserrat": 223
+    },
+    "passed": true,
+    "performed": true
+  },
+  "layout_findings": [],
   "layout_warnings": [
     {
       "kind": "object_outside_slide_boundary",
@@ -97,6 +188,76 @@
       "text_z": 9
     }
   ],
+  "layout_warnings_review": "Both warnings are unchanged original template geometry on slides 7 and 10. Rendered text remains visible; no mandatory geometry was modified.",
+  "pdf_is_raster_preview": true,
+  "pdf_pages": 15,
+  "pdf_page_size_points": [
+    960,
+    540
+  ],
+  "content_boundaries": {
+    "onset_daily_budget": 10,
+    "onset_warnings": 1800,
+    "onset_starts_selected": 435,
+    "onset_starts_refit_any_alarm_control": 316,
+    "onset_relative_start_gain_pct": 37.66,
+    "selected_onset_precision_pct": 24.17,
+    "control_onset_precision_pct": 17.56,
+    "selected_any_alarm_precision_pct": 42.67,
+    "control_any_alarm_precision_pct": 71.78,
+    "old_threshold_control_warning_count": 4400,
+    "old_threshold_control_ap": 0.6213,
+    "net_gain_after_record_free_day": 75,
+    "total_net_gain": 119,
+    "physical_failure_validated": false,
+    "year_2026_blind_test": false,
+    "weather_probe_performed": true,
+    "live_customer_integration": false
+  },
+  "remaining_placeholders": {
+    "7": [
+      "team name",
+      "task owner logo"
+    ],
+    "8": [
+      "team name",
+      "team photo",
+      "captain and speciality",
+      "member count",
+      "team history",
+      "work/study place",
+      "city and region"
+    ],
+    "9": [
+      "names",
+      "photos",
+      "roles",
+      "contacts",
+      "phone numbers",
+      "work/study places for template member slots"
+    ],
+    "10": [
+      "team history",
+      "actual reason for choosing task"
+    ]
+  },
   "handoff": "artifacts/presentation/HANDOFF.md",
-  "pdf_is_raster_preview": true
+  "render_runtime": {
+    "node": "/Users/antany/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "python": "/Users/antany/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "engine": "@oai/artifact-tool",
+    "render_directory": "artifacts/presentation/.build/v3_notes_corrected_render"
+  },
+  "notes_correction": {
+    "slide": 5,
+    "exact_ci": [
+      0.05222043010752688,
+      0.08136072437449555
+    ],
+    "all_15_final_slides_pixel_identical_to_reviewed_v3": true,
+    "visible_text_unchanged": true,
+    "mandatory_slide_xml_unchanged": true,
+    "pdf_unchanged": true,
+    "independent_content_review": "All 15 slides and mandatory-slide structure independently checked by target_audit; notes5 was the only numerical discrepancy and is now exact."
+  }
 }
