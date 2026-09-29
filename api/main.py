@@ -63,7 +63,9 @@ def find_card(risk_id: str, mode: EntityMode, run_id: str | None = None):
 def snapshot(data, card):
     fields = ["run_id", "mode", "entity_mode", "feature_date", "feature_cutoff", "issue_time", "forecast_start", "forecast_end",
               "minimum_lead_hours", "model", "model_sha256", "input_sha256", "threshold", "archive_metadata"]
-    return {"forecast": {k: data.get(k) for k in fields}, "card": public_card(card)}
+    forecast = {k: data.get(k) for k in fields}
+    forecast.update({k: data[k] for k in forecast_store.POLICY_META_FIELDS if k in data})
+    return {"forecast": forecast, "card": public_card(card)}
 
 
 @contextmanager

@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-09-29T13:24:20.770Z",
+  "command": "node tests/test_web_async.js",
+  "node_version": "v26.0.0",
+  "web_file": "web/index.html",
+  "web_sha256": "a3a10a50b3e6bcee41e392d8432d924a461d090dc21dac7e44ff141239f1bd6e",
+  "harness_file": "tests/test_web_async.js",
+  "harness_sha256": "6f573266421a66d5e69467ea0c6378299ee8826212357753fd67f218b5317b53",
+  "web_unchanged_during_check": true,
+  "scope": "Actual inline UI script; minimal DOM double; controlled asynchronous fetch responses; no real network or database writes; not a visual/browser check.",
+  "cases": [
+    {
+      "id": "late_metadata",
+      "description": "Late metadata cannot replace a newer selection",
+      "passed": true
+    },
+    {
+      "id": "late_cards",
+      "description": "Late card payload cannot replace a newer selection",
+      "passed": true
+    },
+    {
+      "id": "latest_onset",
+      "description": "Latest onset comes from metadata and preserves saved ranks and ties",
+      "passed": true
+    },
+    {
+      "id": "invalid_run",
+      "description": "An unknown explicit run stays an error without legacy fallback",
+      "passed": true
+    },
+    {
+      "id": "metadata_failure",
+      "description": "Implicit onset never loads legacy when metadata fails",
+      "passed": true
+    },
+    {
+      "id": "explicit_target",
+      "description": "An explicit onset run synchronizes the target using the actual response",
+      "passed": true
+    },
+    {
+      "id": "feedback_switch",
+      "description": "In-flight feedback retains the original card/run after switching releases",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

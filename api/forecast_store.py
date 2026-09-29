@@ -20,6 +20,11 @@ SHA256 = re.compile(r"[0-9a-fA-F]{64}\Z")
 META_FIELDS = ("run_id", "entity_mode", "mode", "feature_date", "feature_cutoff",
                "issue_time", "forecast_start", "forecast_end", "minimum_lead_hours",
                "model_sha256", "input_sha256", "threshold")
+POLICY_META_FIELDS = ("target_kind", "target_definition", "warning_policy", "score_kind")
+ONSET_TARGET_KIND = "registered_episode_start_g1"
+FUTURE_OUTCOME_FIELDS = {"outcome", "outcomes", "actual", "target_any_object_alarm_d_plus_2",
+                         "onset_target", "alarm_target", "joint_target", "quiet_intermediate",
+                         "records_intermediate", "records_target"}
 
 
 class ForecastValidationError(ValueError):
@@ -68,7 +73,7 @@ def _check_json(value, path="payload"):
         for key, item in value.items():
             if not isinstance(key, str):
                 raise ForecastValidationError(f"Non-string key at {path}")
-            if key.lower().startswith("actual_") or key.lower() in {"outcome", "outcomes", "actual", "target_any_object_alarm_d_plus_2"}:
+            if key.lower().startswith("actual_") or key.lower() in FUTURE_OUTCOME_FIELDS:
                 raise ForecastValidationError(f"Future outcome field forbidden: {path}.{key}")
             _check_json(item, f"{path}.{key}")
     elif isinstance(value, list):
@@ -78,6 +83,28 @@ def _check_json(value, path="payload"):
         raise ForecastValidationError(f"Nonfinite number at {path}")
     elif value is not None and not isinstance(value, (str, bool, int, float)):
         raise ForecastValidationError(f"Non-JSON value at {path}")
+
+
+def _warning_policy(payload):
+    """Recognize only the frozen onset policy; absence preserves legacy behavior."""
+    if "warning_policy" not in payload:
+        if payload.get("target_kind") == ONSET_TARGET_KIND:
+            raise ForecastValidationError("Registered onset releases require an explicit warning_policy")
+        return None
+    policy = payload["warning_policy"]
+    if not isinstance(policy, dict) or set(policy) != {"kind", "k", "tie_break"}:
+        raise ForecastValidationError("warning_policy must contain exactly kind, k and tie_break")
+    if policy["kind"] != "daily_top_k" or policy["tie_break"] != "score_desc_object_id_asc":
+        raise ForecastValidationError("Unsupported warning policy or tie break")
+    if isinstance(policy["k"], bool) or not isinstance(policy["k"], int) or policy["k"] != 10:
+        raise ForecastValidationError("The frozen onset warning policy requires integer k=10")
+    if payload.get("target_kind") != ONSET_TARGET_KIND:
+        raise ForecastValidationError("daily_top_k requires target_kind registered_episode_start_g1")
+    if not isinstance(payload.get("target_definition"), str) or not payload["target_definition"].strip():
+        raise ForecastValidationError("Onset target_definition must be a nonempty string")
+    if "score_kind" in payload and (not isinstance(payload["score_kind"], str) or not payload["score_kind"].strip()):
+        raise ForecastValidationError("score_kind must be a nonempty string when provided")
+    return policy
 
 
 def validate_payload(payload):
@@ -120,6 +147,7 @@ def validate_payload(payload):
     threshold = _number(payload["threshold"], "threshold")
     if not 0 <= threshold <= 1:
         raise ForecastValidationError("threshold must be within [0,1]")
+    policy = _warning_policy(payload)
     cards = payload.get("cards")
     if not isinstance(cards, list) or not cards:
         raise ForecastValidationError("cards must be a nonempty list")
@@ -133,6 +161,13 @@ def validate_payload(payload):
         ids.add(cid)
         if card.get("entity_mode", "object") != "object":
             raise ForecastValidationError("Card entity_mode mismatch")
+        if policy is not None:
+            oid = card.get("object_id")
+            if isinstance(oid, bool) or not isinstance(oid, (str, int)) or not str(oid).strip():
+                raise ForecastValidationError("Every onset card requires a nonempty string or integer object_id")
+            rank = card.get("rank")
+            if isinstance(rank, bool) or not isinstance(rank, int) or not 1 <= rank <= len(cards):
+                raise ForecastValidationError("Every onset card requires an integer rank in 1..N")
         if "object_id" in card:
             oid = str(card["object_id"])
             if oid in object_ids:
@@ -141,8 +176,22 @@ def validate_payload(payload):
         score = _number(card.get("score"), "card.score")
         if not 0 <= score <= 1:
             raise ForecastValidationError("Card score must be within [0,1]")
-        if not isinstance(card.get("warning"), bool) or card["warning"] != (score >= threshold):
-            raise ForecastValidationError("Card warning must equal score >= threshold")
+        if not isinstance(card.get("warning"), bool):
+            raise ForecastValidationError("Card warning must be boolean")
+        if policy is None and card["warning"] != (score >= threshold):
+            raise ForecastValidationError("Legacy card warning must equal score >= threshold")
+    if policy is not None:
+        k = policy["k"]
+        if len(cards) < k:
+            raise ForecastValidationError("Onset daily top-k requires at least k objects")
+        ordered = sorted(cards, key=lambda card: (-card["score"], str(card["object_id"])))
+        for expected_rank, card in enumerate(ordered, start=1):
+            if card["rank"] != expected_rank or card["warning"] != (expected_rank <= k):
+                raise ForecastValidationError("Onset rank and warning must follow score descending then string object_id ascending")
+        if threshold != ordered[k-1]["score"]:
+            raise ForecastValidationError("Onset threshold must equal the boundary kth card score; ranks resolve ties")
+        if sum(card["warning"] for card in cards) != k:
+            raise ForecastValidationError("Onset warning count must equal k")
     for field, expected in (("total_objects", len(cards)), ("shown_cards", len(cards)),
                             ("warnings_count", sum(card["warning"] for card in cards))):
         if field in payload and (isinstance(payload[field], bool) or not isinstance(payload[field], int) or payload[field] != expected):
@@ -168,8 +217,13 @@ def _initialize(conn):
 
 
 def _metadata(payload, digest, created_at):
-    return {**{field: payload[field] for field in META_FIELDS}, "cards_count": len(payload["cards"]),
-            "content_sha256": digest, "created_at": created_at}
+    metadata = {**{field: payload[field] for field in META_FIELDS}, "cards_count": len(payload["cards"]),
+                "content_sha256": digest, "created_at": created_at}
+    # Existing releases already carry score_kind in their payload but not in
+    # metadata_json. Preserve their exact metadata schema, digest and retry value.
+    if "warning_policy" in payload:
+        metadata.update({field: payload[field] for field in POLICY_META_FIELDS if field in payload})
+    return metadata
 
 
 def _verified_row(row):

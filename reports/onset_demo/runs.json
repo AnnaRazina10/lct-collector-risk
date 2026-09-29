@@ -1,0 +1,66 @@
+{
+  "mode": "historical_replay",
+  "candidate_status": "research_candidate",
+  "target_kind": "registered_episode_start_g1",
+  "warning_policy": {
+    "kind": "daily_top_k",
+    "k": 10,
+    "tie_break": "score_desc_object_id_asc"
+  },
+  "configuration_sha256": "1cc105c2c2cca9cd216e42a5e4385d8b06515e1992bdf0ada0e97ff2ede3e3ee",
+  "model_load_and_bootstrap_read_excluded_from_daily_latency": true,
+  "no_2026_outcome_metric_or_promotion_decision_read": true,
+  "runs": [
+    {
+      "feature_date": "2026-06-26",
+      "run_id": "onset_2026-06-26_844dac1ea731bf67",
+      "objects": 78,
+      "warnings_count": 10,
+      "daily_input_to_prediction_seconds": 1.9230986249167472,
+      "publish_seconds": 0.00374850002117455,
+      "daily_input_to_archive_seconds": 1.9268471249379218,
+      "duplicate_publish_idempotent": true,
+      "coverage": {
+        "catalog_objects_with_channels": 78,
+        "excluded_unknown_channel_days": 163,
+        "excluded_alarm_channel_days": 74,
+        "included_channel_days": 892637,
+        "objects_with_observations_by_nov30": 78
+      }
+    },
+    {
+      "feature_date": "2026-06-27",
+      "run_id": "onset_2026-06-27_89af23daa1273ad1",
+      "objects": 78,
+      "warnings_count": 10,
+      "daily_input_to_prediction_seconds": 1.9019374590134248,
+      "publish_seconds": 0.004617040976881981,
+      "daily_input_to_archive_seconds": 1.9065544999903068,
+      "duplicate_publish_idempotent": true,
+      "coverage": {
+        "catalog_objects_with_channels": 78,
+        "excluded_unknown_channel_days": 163,
+        "excluded_alarm_channel_days": 74,
+        "included_channel_days": 893348,
+        "objects_with_observations_by_nov30": 78
+      }
+    },
+    {
+      "feature_date": "2026-06-28",
+      "run_id": "onset_2026-06-28_0f97f74f589ee7b9",
+      "objects": 78,
+      "warnings_count": 10,
+      "daily_input_to_prediction_seconds": 1.9418414999963716,
+      "publish_seconds": 0.005983792012557387,
+      "daily_input_to_archive_seconds": 1.947825292008929,
+      "duplicate_publish_idempotent": true,
+      "coverage": {
+        "catalog_objects_with_channels": 78,
+        "excluded_unknown_channel_days": 163,
+        "excluded_alarm_channel_days": 74,
+        "included_channel_days": 894060,
+        "objects_with_observations_by_nov30": 78
+      }
+    }
+  ]
+}

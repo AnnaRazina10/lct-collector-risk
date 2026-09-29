@@ -1,0 +1,368 @@
+{
+  "audit_started_at_utc": "2026-09-29T13:20:57.041385+00:00",
+  "audit_completed_at_utc": "2026-09-29T13:21:04.356199+00:00",
+  "passed": true,
+  "method": "Independent latest-day producer inference, primitive component product, saved score keyed comparison only after inference, longer-history prefix comparison, and in-memory archive validation. No publication or database changes.",
+  "source_sha256_before": {
+    "src/serving/object_onset_forecast.py": "db915efc2a8b91950db84a642e4e2acf6b4eb26627136c0441c66be282bce3a5",
+    "src/serving/object_forecast.py": "502425d7e02311539ebd8c6fc196a49858d9a9fb71466abf6b45cce2986b4e7f",
+    "src/modeling/object_risk_probe.py": "2b4d32265d5b86c84e32065a79b78dbbbe211e86b4956168fd4a82798b1b5509",
+    "src/modeling/object_onset_experiment.py": "e327c8eee7de4812653ac5de6d767769b8ee7d14b488f52e564289de5372f41f",
+    "reports/object_onset_experiment/refit.json": "1cc105c2c2cca9cd216e42a5e4385d8b06515e1992bdf0ada0e97ff2ede3e3ee",
+    "reports/object_onset_experiment/selection.json": "94d3c9118f2e296feb6cd33660ae8e057ebbe10b2fdff5048df1dd4d02e1b986",
+    "models/object_onset_experiment/refit/hurdle_15.joblib": "0ebb8fd57533f9e7fc1d6716505d9bb8166dfc0af6899e0a83d6e0b6d7a6e40f"
+  },
+  "checks": {
+    "frozen_sources_model_selection_verified": true,
+    "component_binary_classes": true,
+    "2026-03-15_78_unique": true,
+    "2026-03-15_rank10": true,
+    "2026-03-15_unknown_future_columns_removed": true,
+    "2026-03-15_identity_target": true,
+    "2026-03-15_historical_candidate": true,
+    "2026-03-15_lead24": true,
+    "2026-03-15_observational_explanation": true,
+    "2026-03-15_primitive_hurdle_match": true,
+    "2026-06-28_78_unique": true,
+    "2026-06-28_rank10": true,
+    "2026-06-28_unknown_future_columns_removed": true,
+    "2026-06-28_identity_target": true,
+    "2026-06-28_historical_candidate": true,
+    "2026-06-28_lead24": true,
+    "2026-06-28_observational_explanation": true,
+    "2026-06-28_primitive_hurdle_match": true,
+    "input_row_order_identical_payload": true,
+    "late_and_future_batches_leave_history_and_lineage_identical": true,
+    "future_history_rejected": true,
+    "input_provenance_mismatch_rejected": true,
+    "late_provenance_rejected": true,
+    "before_december_gate_rejected": true,
+    "january1_issue_available": true,
+    "ties_exactly10_string_id_order": true,
+    "duplicate_identity_rejected": true,
+    "nonfinite_score_rejected": true,
+    "2026-03-15_keyed_saved_score_match": true,
+    "2026-06-28_keyed_saved_score_match": true,
+    "2026-03-15_longer_history_prefix_invariant": true,
+    "2026-06-28_longer_history_prefix_invariant": true,
+    "2026-03-15_inmemory_archive_contract_valid": true,
+    "2026-06-28_inmemory_archive_contract_valid": true,
+    "producer_source_unchanged": true,
+    "all_inference_parquet_reads_have_cutoff": true,
+    "producer_did_not_access_saved_score_or_outcome_parquet": true
+  },
+  "details": {
+    "2026-03-15": {
+      "seconds_including_read_assembly_predict": 1.6623399169184268,
+      "run_id": "onset_2026-03-15_f689959fc8343c08",
+      "objects": 78,
+      "warning_count": 10,
+      "current_alarm_objects": 12,
+      "current_alarm_warnings": 1,
+      "no_records_objects": 35,
+      "future_target_fields_present": false,
+      "minimum_lead_hours": 24,
+      "primitive_product_max_error": 0.0,
+      "coverage": {
+        "catalog_objects_with_channels": 78,
+        "excluded_unknown_channel_days": 162,
+        "excluded_alarm_channel_days": 74,
+        "included_channel_days": 706298,
+        "objects_with_observations_by_nov30": 78
+      },
+      "saved_score_max_error": 0.0,
+      "longer_history_prefix_max_error": 0.0
+    },
+    "2026-06-28": {
+      "seconds_including_read_assembly_predict": 1.954541166080162,
+      "run_id": "onset_2026-06-28_684569db9ea8c2ea",
+      "objects": 78,
+      "warning_count": 10,
+      "current_alarm_objects": 15,
+      "current_alarm_warnings": 3,
+      "no_records_objects": 34,
+      "future_target_fields_present": false,
+      "minimum_lead_hours": 24,
+      "primitive_product_max_error": 0.0,
+      "coverage": {
+        "catalog_objects_with_channels": 78,
+        "excluded_unknown_channel_days": 163,
+        "excluded_alarm_channel_days": 74,
+        "included_channel_days": 894060,
+        "objects_with_observations_by_nov30": 78
+      },
+      "saved_score_max_error": 0.0,
+      "longer_history_prefix_max_error": 0.0
+    },
+    "future_history_rejected": "History contains future or pre-bootstrap rows",
+    "input_provenance_mismatch_rejected": "Input history differs from its provenance",
+    "late_provenance_rejected": "Batch unavailable at the historical issue time",
+    "before_december_gate_rejected": "Post-December-gate candidate unavailable before 2026-01-01 issue",
+    "duplicate_identity_rejected": "Duplicate object id in ranking",
+    "nonfinite_score_rejected": "Invalid onset score"
+  },
+  "predict_calls": [
+    {
+      "rows": 78,
+      "features": 80,
+      "future_columns_absent": true,
+      "max_date": "2026-03-15 00:00:00"
+    },
+    {
+      "rows": 78,
+      "features": 80,
+      "future_columns_absent": true,
+      "max_date": "2026-06-28 00:00:00"
+    },
+    {
+      "rows": 78,
+      "features": 80,
+      "future_columns_absent": true,
+      "max_date": "2026-06-28 00:00:00"
+    }
+  ],
+  "parquet_reads": [
+    {
+      "phase": "producer_inference",
+      "path": "data/interim/daily_2025.parquet",
+      "columns": [
+        "channel_id",
+        "date",
+        "events_count",
+        "alarm_count",
+        "fault_count",
+        "no_power_count",
+        "undefined_count",
+        "numeric_count",
+        "text_count",
+        "off_count",
+        "on_count",
+        "movement_detected_count",
+        "open_count"
+      ],
+      "filters": [
+        [
+          "date",
+          ">=",
+          "2025-01-01 00:00:00"
+        ],
+        [
+          "date",
+          "<=",
+          "2026-03-15 00:00:00"
+        ]
+      ],
+      "rows": 574627,
+      "max_date": "2025-12-31 00:00:00"
+    },
+    {
+      "phase": "producer_inference",
+      "path": "data/interim/daily_2026.parquet",
+      "columns": [
+        "channel_id",
+        "date",
+        "events_count",
+        "alarm_count",
+        "fault_count",
+        "no_power_count",
+        "undefined_count",
+        "numeric_count",
+        "text_count",
+        "off_count",
+        "on_count",
+        "movement_detected_count",
+        "open_count"
+      ],
+      "filters": [
+        [
+          "date",
+          ">=",
+          "2025-01-01 00:00:00"
+        ],
+        [
+          "date",
+          "<=",
+          "2026-03-15 00:00:00"
+        ]
+      ],
+      "rows": 131833,
+      "max_date": "2026-03-15 00:00:00"
+    },
+    {
+      "phase": "producer_inference",
+      "path": "data/interim/daily_2025.parquet",
+      "columns": [
+        "channel_id",
+        "date",
+        "events_count",
+        "alarm_count",
+        "fault_count",
+        "no_power_count",
+        "undefined_count",
+        "numeric_count",
+        "text_count",
+        "off_count",
+        "on_count",
+        "movement_detected_count",
+        "open_count"
+      ],
+      "filters": [
+        [
+          "date",
+          ">=",
+          "2025-01-01 00:00:00"
+        ],
+        [
+          "date",
+          "<=",
+          "2026-06-28 00:00:00"
+        ]
+      ],
+      "rows": 574627,
+      "max_date": "2025-12-31 00:00:00"
+    },
+    {
+      "phase": "producer_inference",
+      "path": "data/interim/daily_2026.parquet",
+      "columns": [
+        "channel_id",
+        "date",
+        "events_count",
+        "alarm_count",
+        "fault_count",
+        "no_power_count",
+        "undefined_count",
+        "numeric_count",
+        "text_count",
+        "off_count",
+        "on_count",
+        "movement_detected_count",
+        "open_count"
+      ],
+      "filters": [
+        [
+          "date",
+          ">=",
+          "2025-01-01 00:00:00"
+        ],
+        [
+          "date",
+          "<=",
+          "2026-06-28 00:00:00"
+        ]
+      ],
+      "rows": 319596,
+      "max_date": "2026-06-28 00:00:00"
+    },
+    {
+      "phase": "independent_reference_after_inference",
+      "path": "data/interim/object_onset_test.parquet",
+      "columns": [
+        "object_id",
+        "date",
+        "selected"
+      ],
+      "filters": [
+        [
+          "date",
+          "==",
+          "2026-03-15 00:00:00"
+        ]
+      ],
+      "rows": 78,
+      "max_date": "2026-03-15 00:00:00"
+    },
+    {
+      "phase": "independent_reference_after_inference",
+      "path": "data/interim/object_onset_test.parquet",
+      "columns": [
+        "object_id",
+        "date",
+        "selected"
+      ],
+      "filters": [
+        [
+          "date",
+          "==",
+          "2026-06-28 00:00:00"
+        ]
+      ],
+      "rows": 78,
+      "max_date": "2026-06-28 00:00:00"
+    },
+    {
+      "phase": "independent_reference_after_inference",
+      "path": "data/interim/daily_2025.parquet",
+      "columns": [
+        "channel_id",
+        "date",
+        "events_count",
+        "alarm_count",
+        "fault_count",
+        "no_power_count",
+        "undefined_count",
+        "numeric_count",
+        "text_count",
+        "off_count",
+        "on_count",
+        "movement_detected_count",
+        "open_count"
+      ],
+      "filters": [
+        [
+          "date",
+          ">=",
+          "2025-01-01 00:00:00"
+        ],
+        [
+          "date",
+          "<=",
+          "2026-06-30 00:00:00"
+        ]
+      ],
+      "rows": 574627,
+      "max_date": "2025-12-31 00:00:00"
+    },
+    {
+      "phase": "independent_reference_after_inference",
+      "path": "data/interim/daily_2026.parquet",
+      "columns": [
+        "channel_id",
+        "date",
+        "events_count",
+        "alarm_count",
+        "fault_count",
+        "no_power_count",
+        "undefined_count",
+        "numeric_count",
+        "text_count",
+        "off_count",
+        "on_count",
+        "movement_detected_count",
+        "open_count"
+      ],
+      "filters": [
+        [
+          "date",
+          ">=",
+          "2025-01-01 00:00:00"
+        ],
+        [
+          "date",
+          "<=",
+          "2026-06-30 00:00:00"
+        ]
+      ],
+      "rows": 324978,
+      "max_date": "2026-06-30 00:00:00"
+    }
+  ],
+  "database_published": false,
+  "limitations": [
+    "Historical candidate replay; not production promotion. Actual model creation occurred in September2026, not at simulated availability.",
+    "December gate uses outcomes through December31; candidate issue boundary is January1. Final2026 promotion decision is not loaded.",
+    "Non-point-in-time registry and retrospective complete-day availability remain assumptions.",
+    "No records is not healthy operation; onset means transition in registered records.",
+    "Future-reference files were read only by this audit after producer inference; they are not producer inputs."
+  ]
+}

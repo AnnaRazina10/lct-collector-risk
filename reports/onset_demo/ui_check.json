@@ -1,0 +1,99 @@
+{
+  "checked_at": "2026-09-29T13:26:46.798649+00:00",
+  "method": "Codex in-app browser UI actions and screenshots; SQLite read-only verification of saved snapshots",
+  "url": "http://127.0.0.1:8781/?mode=object&run_id=onset_2026-06-28_0f97f74f589ee7b9",
+  "database": "data/app/onset_demo.sqlite3",
+  "web_sha256": "a3a10a50b3e6bcee41e392d8432d924a461d090dc21dac7e44ff141239f1bd6e",
+  "checks": [
+    {
+      "name": "default_any_alarm_and_three_legacy_releases",
+      "passed": true
+    },
+    {
+      "name": "select_onset_loads_latest_and_only_three_onset_releases",
+      "passed": true
+    },
+    {
+      "name": "78_objects_10_warnings_and_24_hour_lead_shown",
+      "passed": true
+    },
+    {
+      "name": "unknown_D_plus_1_and_observability_limitations_visible",
+      "passed": true
+    },
+    {
+      "name": "rank_1_selected_rank_11_not_selected",
+      "passed": true
+    },
+    {
+      "name": "selected_filter_returns_exactly_10_cards",
+      "passed": true
+    },
+    {
+      "name": "observational_explanations_no_combined_SHAP",
+      "passed": true
+    },
+    {
+      "name": "no_future_outcome_button_for_onset_release",
+      "passed": true
+    },
+    {
+      "name": "test_ticket_and_feedback_persist_target_rank_run",
+      "passed": true
+    },
+    {
+      "name": "journal_displays_matching_target_rank_version",
+      "passed": true
+    },
+    {
+      "name": "previous_onset_release_updates_card_and_window",
+      "passed": true
+    },
+    {
+      "name": "group_scheme_labeled_without_coordinates",
+      "passed": true
+    },
+    {
+      "name": "switch_back_to_any_alarm_and_channel_succeeds",
+      "passed": true
+    },
+    {
+      "name": "legacy_channel_outcome_explicit_button_still_works",
+      "passed": true
+    },
+    {
+      "name": "direct_run_link_auto_selects_onset_target",
+      "passed": true
+    },
+    {
+      "name": "desktop_top_and_card_layout_visually_checked",
+      "passed": true
+    }
+  ],
+  "test_local_entries": [
+    {
+      "table": "tickets",
+      "id": "c0cc6405-af70-45bc-846c-1cf1c07500c3",
+      "risk_id": "onset_2026-06-28_0f97f74f589ee7b9_4767",
+      "run_id": "onset_2026-06-28_0f97f74f589ee7b9",
+      "rank": 1,
+      "target_kind": "registered_episode_start_g1"
+    },
+    {
+      "table": "feedback",
+      "id": "38819175-923d-450b-9266-7fdb1546d2d5",
+      "risk_id": "onset_2026-06-28_0f97f74f589ee7b9_4767",
+      "run_id": "onset_2026-06-28_0f97f74f589ee7b9",
+      "rank": 1,
+      "target_kind": "registered_episode_start_g1"
+    }
+  ],
+  "external_submission": false,
+  "async_races_separately_checked": "reports/onset_demo/web_async_check.json",
+  "limitations": [
+    "Desktop viewport only",
+    "Local retrospective demonstration, not production stream",
+    "Identity locally entered, not corporate authentication"
+  ],
+  "passed": true
+}

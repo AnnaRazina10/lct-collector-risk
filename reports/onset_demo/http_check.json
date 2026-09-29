@@ -1,0 +1,333 @@
+{
+  "checked_at": "2026-09-29T13:22:04.373718+00:00",
+  "base_url": "http://127.0.0.1:8781",
+  "database": "data/app/onset_demo.sqlite3",
+  "no_writes_performed": true,
+  "run_ids": [
+    "onset_2026-06-28_0f97f74f589ee7b9",
+    "object_2026-06-28_6fcffa044c314e16",
+    "onset_2026-06-27_89af23daa1273ad1",
+    "object_2026-06-27_661a446f9ca20cc2",
+    "onset_2026-06-26_844dac1ea731bf67",
+    "object_2026-06-26_960db067b50f766e"
+  ],
+  "checks": [
+    {
+      "name": "three_releases_each_target",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9:status",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9:78_objects",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9:no_onset_target",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9:no_alarm_target",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9:no_joint_target",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9:no_quiet_intermediate",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9:no_records_intermediate",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9:no_records_target",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9:no_actual_target_alarm",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9:snapshot_identity",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9:no_archived_outcome",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9:ten_by_rank",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9:metadata_policy",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-28_0f97f74f589ee7b9:wrong_run_rejected",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-28_6fcffa044c314e16:status",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-28_6fcffa044c314e16:78_objects",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-28_6fcffa044c314e16:no_onset_target",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-28_6fcffa044c314e16:no_alarm_target",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-28_6fcffa044c314e16:no_joint_target",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-28_6fcffa044c314e16:no_quiet_intermediate",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-28_6fcffa044c314e16:no_records_intermediate",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-28_6fcffa044c314e16:no_records_target",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-28_6fcffa044c314e16:no_actual_target_alarm",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-28_6fcffa044c314e16:snapshot_identity",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-28_6fcffa044c314e16:no_archived_outcome",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1:status",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1:78_objects",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1:no_onset_target",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1:no_alarm_target",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1:no_joint_target",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1:no_quiet_intermediate",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1:no_records_intermediate",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1:no_records_target",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1:no_actual_target_alarm",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1:snapshot_identity",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1:no_archived_outcome",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1:ten_by_rank",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1:metadata_policy",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-27_89af23daa1273ad1:wrong_run_rejected",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-27_661a446f9ca20cc2:status",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-27_661a446f9ca20cc2:78_objects",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-27_661a446f9ca20cc2:no_onset_target",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-27_661a446f9ca20cc2:no_alarm_target",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-27_661a446f9ca20cc2:no_joint_target",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-27_661a446f9ca20cc2:no_quiet_intermediate",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-27_661a446f9ca20cc2:no_records_intermediate",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-27_661a446f9ca20cc2:no_records_target",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-27_661a446f9ca20cc2:no_actual_target_alarm",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-27_661a446f9ca20cc2:snapshot_identity",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-27_661a446f9ca20cc2:no_archived_outcome",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67:status",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67:78_objects",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67:no_onset_target",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67:no_alarm_target",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67:no_joint_target",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67:no_quiet_intermediate",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67:no_records_intermediate",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67:no_records_target",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67:no_actual_target_alarm",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67:snapshot_identity",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67:no_archived_outcome",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67:ten_by_rank",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67:metadata_policy",
+      "passed": true
+    },
+    {
+      "name": "onset_2026-06-26_844dac1ea731bf67:wrong_run_rejected",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-26_960db067b50f766e:status",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-26_960db067b50f766e:78_objects",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-26_960db067b50f766e:no_onset_target",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-26_960db067b50f766e:no_alarm_target",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-26_960db067b50f766e:no_joint_target",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-26_960db067b50f766e:no_quiet_intermediate",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-26_960db067b50f766e:no_records_intermediate",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-26_960db067b50f766e:no_records_target",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-26_960db067b50f766e:no_actual_target_alarm",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-26_960db067b50f766e:snapshot_identity",
+      "passed": true
+    },
+    {
+      "name": "object_2026-06-26_960db067b50f766e:no_archived_outcome",
+      "passed": true
+    },
+    {
+      "name": "unknown_run_no_fallback",
+      "passed": true
+    },
+    {
+      "name": "legacy_object_available",
+      "passed": true
+    },
+    {
+      "name": "legacy_channel_available",
+      "passed": true
+    }
+  ],
+  "passed": true
+}
