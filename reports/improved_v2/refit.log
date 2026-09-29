@@ -1,0 +1,3 @@
+Refit catboost_recent: rows=1000000, trees=378, through=2025-11-29
+Refit lgb_interactions: rows=1000000, trees=96, through=2025-11-29
+23:29:02 Refit and threshold FROZEN: blend_cat_lgb_0.5 0.111294. Test not evaluated.

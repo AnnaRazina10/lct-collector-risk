@@ -1,0 +1,10 @@
+[23:13:51] TabM device=cpu; torch=2.14.0; threads=3
+[23:14:07] Prepared train=300,000, tune=689,820, dimensions=149, categories=[8, 21, 80, 4, 513]
+[23:14:15] {"epoch": 1, "early_ap": 0.1976863018544061, "weighted_logloss": 0.0582393470565478, "completed_rows": 300000, "full_epoch": true, "seconds": 8.438276292057708}
+[23:14:23] {"epoch": 2, "early_ap": 0.19419551493635526, "weighted_logloss": 0.030475783867438634, "completed_rows": 300000, "full_epoch": true, "seconds": 8.189663041965105}
+[23:14:31] {"epoch": 3, "early_ap": 0.20332767803203947, "weighted_logloss": 0.029689431756734847, "completed_rows": 300000, "full_epoch": true, "seconds": 8.128189167007804}
+[23:14:40] {"epoch": 4, "early_ap": 0.1960273809824623, "weighted_logloss": 0.02917993523379167, "completed_rows": 300000, "full_epoch": true, "seconds": 8.99133124994114}
+[23:14:50] {"epoch": 5, "early_ap": 0.20329570913687206, "weighted_logloss": 0.02882537755091985, "completed_rows": 300000, "full_epoch": true, "seconds": 9.700342208961956}
+[23:15:01] {"epoch": 6, "early_ap": 0.1990369088136037, "weighted_logloss": 0.028460212307175, "completed_rows": 300000, "full_epoch": true, "seconds": 10.804986749892123}
+[23:15:01] Early stopping
+[23:15:07] COMPLETE {"ap": 0.19028766309456555, "max_f1": 0.24345720406072463, "precision_at_max_f1": 0.29337822671156005, "recall_at_max_f1": 0.20805475963069087, "tune_f1_threshold": 0.15241138637065887, "recall_at_precision_0_7": 0.05205348615090735, "precision_at_recall_0_5": 0.10491868968511037, "rows": 689820, "positives": 6282, "best_epoch": 3, "best_early_ap": 0.20332767803203947, "training_seconds": 54.25704112497624, "full_tune_inference_seconds": 5.926466709002852, "total_seconds": 75.43890520802233, "device": "cpu", "note": "Tuning-set metrics only; no December calibration or 2026 test was accessed."}

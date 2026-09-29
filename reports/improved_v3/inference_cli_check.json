@@ -1,0 +1,8 @@
+{
+  "rows": 256,
+  "maximum_difference": 9.974659986866641e-17,
+  "labels_in_input": false,
+  "warning_match": true,
+  "passed": true,
+  "selection_sha256": "61380ba74986495b336d5bb3a8e03f7190b0d2957953a6e8e23449b4e724f02d"
+}

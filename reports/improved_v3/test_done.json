@@ -1,0 +1,35 @@
+{
+  "selection_sha256": "61380ba74986495b336d5bb3a8e03f7190b0d2957953a6e8e23449b4e724f02d",
+  "metrics": [
+    {
+      "model": "v2",
+      "rows": 1200000,
+      "positives": 18660,
+      "positive_rate": 0.01555,
+      "average_precision": 0.12809741492920496,
+      "roc_auc": 0.7659687216467952,
+      "threshold": 0.11129372946387953,
+      "precision": 0.19432253763679797,
+      "recall": 0.187459807073955,
+      "f1": 0.19082949183055564,
+      "true_positive": 3498,
+      "false_positive": 14503,
+      "false_negative": 15162
+    },
+    {
+      "model": "v3",
+      "rows": 1200000,
+      "positives": 18660,
+      "positive_rate": 0.01555,
+      "average_precision": 0.13660373605290166,
+      "roc_auc": 0.8073112891983383,
+      "threshold": 0.07850494689247672,
+      "precision": 0.1626464268385666,
+      "recall": 0.2515005359056806,
+      "f1": 0.19754177716041585,
+      "true_positive": 4693,
+      "false_positive": 24161,
+      "false_negative": 13967
+    }
+  ]
+}

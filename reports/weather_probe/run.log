@@ -1,0 +1,21 @@
+/Users/antany/Desktop/LCT-Ann/lct-collector-risk/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+Training until validation scores don't improve for 40 rounds
+[100]	valid_0's average_precision: 0.623075
+[200]	valid_0's average_precision: 0.625654
+[300]	valid_0's average_precision: 0.626608
+Early stopping, best iteration is:
+[292]	valid_0's average_precision: 0.627064
+Evaluated only: average_precision
+                            model                  cohort  rows  positives  prevalence  average_precision  roc_auc  precision   recall       f1  threshold  true_positive  false_positive  false_negative  calendar_days  false_alerts_per_calendar_day  all_alerts_per_calendar_day
+                  object_baseline         all_object_days  4602       1148    0.249457           0.626555 0.817881   0.561521 0.655923 0.605062   0.334523            753             588             395             59                       9.966102                    22.728814
+                  object_baseline no_alarm_on_feature_day  3413        658    0.192792           0.514333 0.795005   0.522659 0.525836 0.524242   0.334523            346             316             312             59                       5.355932                    11.220339
+object_weather_lag7_retrospective         all_object_days  4602       1148    0.249457           0.627064 0.817285   0.561521 0.655923 0.605062   0.312894            753             588             395             59                       9.966102                    22.728814
+object_weather_lag7_retrospective no_alarm_on_feature_day  3413        658    0.192792           0.518541 0.795366   0.527273 0.528875 0.528073   0.312894            348             312             310             59                       5.288136                    11.186441
+{
+  "average_precision": 0.000509165229870101,
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "false_alerts_per_calendar_day": 0.0
+}

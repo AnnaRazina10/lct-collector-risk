@@ -1,0 +1,16 @@
+{
+  "rows": 62,
+  "unique_keys": 58,
+  "conflicts": [
+    {
+      "sensor_type": "Газовый датчик",
+      "state_set": "13",
+      "state": "Температура ниже 3ºC1",
+      "alarm_labels": [
+        "false",
+        "true"
+      ]
+    }
+  ],
+  "policy": "Preserve original event alarm label for comparable baseline experiment. Dictionary not used to overwrite labels."
+}

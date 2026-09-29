@@ -1,0 +1,146 @@
+[
+  {
+    "repo": "buds-lab/LEAD-1st-solution",
+    "ref": "df770c13d67b8022cb1c2d63ccfcddf5a289ea1b",
+    "path": "README.md",
+    "url": "https://raw.githubusercontent.com/buds-lab/LEAD-1st-solution/df770c13d67b8022cb1c2d63ccfcddf5a289ea1b/README.md",
+    "sha256": "4cfad47052e9171a734000f1fc78376846b7f43d18c69401ccfbd7e2e6eae969",
+    "bytes": 1825
+  },
+  {
+    "repo": "buds-lab/LEAD-1st-solution",
+    "ref": "df770c13d67b8022cb1c2d63ccfcddf5a289ea1b",
+    "path": "notebooks/Modeling and submission.ipynb",
+    "url": "https://raw.githubusercontent.com/buds-lab/LEAD-1st-solution/df770c13d67b8022cb1c2d63ccfcddf5a289ea1b/notebooks/Modeling%20and%20submission.ipynb",
+    "sha256": "0f298305796c520c37d54f73685a86f0114bcc3afe84fdca4ae3c586f6c885ab",
+    "bytes": 20113
+  },
+  {
+    "repo": "buds-lab/LEAD-1st-solution",
+    "ref": "df770c13d67b8022cb1c2d63ccfcddf5a289ea1b",
+    "path": "notebooks/Feature generator (training data).ipynb",
+    "url": "https://raw.githubusercontent.com/buds-lab/LEAD-1st-solution/df770c13d67b8022cb1c2d63ccfcddf5a289ea1b/notebooks/Feature%20generator%20%28training%20data%29.ipynb",
+    "sha256": "e8a9828cf2c87bf8965bc18b0adcf8a639a8077b88e1409ec85f1f1ee0e0de86",
+    "bytes": 991514
+  },
+  {
+    "repo": "drivendataorg/power-laws-anomalies",
+    "ref": "50bd9308b1dff0ab636a07a5b9c94669e6a3da14",
+    "path": "README.md",
+    "url": "https://raw.githubusercontent.com/drivendataorg/power-laws-anomalies/50bd9308b1dff0ab636a07a5b9c94669e6a3da14/README.md",
+    "sha256": "ed269045c83d1363f7fb2e4cd4b72e18d5443375d5d34df7d372c4019afd261a",
+    "bytes": 4021
+  },
+  {
+    "repo": "drivendataorg/power-laws-anomalies",
+    "ref": "50bd9308b1dff0ab636a07a5b9c94669e6a3da14",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/drivendataorg/power-laws-anomalies/50bd9308b1dff0ab636a07a5b9c94669e6a3da14/LICENSE",
+    "sha256": "641bf54e21fd8567956abfa0814de4953b06f38a32b428a0afa017262650fe6a",
+    "bytes": 1084
+  },
+  {
+    "repo": "drivendataorg/power-laws-anomalies",
+    "ref": "50bd9308b1dff0ab636a07a5b9c94669e6a3da14",
+    "path": "1st Place/README.md",
+    "url": "https://raw.githubusercontent.com/drivendataorg/power-laws-anomalies/50bd9308b1dff0ab636a07a5b9c94669e6a3da14/1st%20Place/README.md",
+    "sha256": "a2666e7a3a8275c33bdd43f40d062a655ea97e48269ac2c950f9d44c95fca24b",
+    "bytes": 1756
+  },
+  {
+    "repo": "drivendataorg/power-laws-anomalies",
+    "ref": "50bd9308b1dff0ab636a07a5b9c94669e6a3da14",
+    "path": "1st Place/src/models/model_weekday.py",
+    "url": "https://raw.githubusercontent.com/drivendataorg/power-laws-anomalies/50bd9308b1dff0ab636a07a5b9c94669e6a3da14/1st%20Place/src/models/model_weekday.py",
+    "sha256": "00c5d8c5057634ea1530dfa9b3c5788a7d9ad10ed46199c7f0cc5cca1de51c29",
+    "bytes": 6418
+  },
+  {
+    "repo": "drivendataorg/power-laws-anomalies",
+    "ref": "50bd9308b1dff0ab636a07a5b9c94669e6a3da14",
+    "path": "1st Place/src/models/model_weekend.py",
+    "url": "https://raw.githubusercontent.com/drivendataorg/power-laws-anomalies/50bd9308b1dff0ab636a07a5b9c94669e6a3da14/1st%20Place/src/models/model_weekend.py",
+    "sha256": "288bb56c28f7cb9ee93903c761f86ceda9f6d84d6ec559e7686651e415dc81b6",
+    "bytes": 9660
+  },
+  {
+    "repo": "drivendataorg/power-laws-cold-start",
+    "ref": "a22192b86b31c9f9f9f55cf108f1c3aa9c9ce9b1",
+    "path": "README.md",
+    "url": "https://raw.githubusercontent.com/drivendataorg/power-laws-cold-start/a22192b86b31c9f9f9f55cf108f1c3aa9c9ce9b1/README.md",
+    "sha256": "117f0f5dbec05ab78e4a7c005cf619e6dc6a9697cadae447140e9f9308fd4633",
+    "bytes": 4110
+  },
+  {
+    "repo": "drivendataorg/power-laws-cold-start",
+    "ref": "a22192b86b31c9f9f9f55cf108f1c3aa9c9ce9b1",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/drivendataorg/power-laws-cold-start/a22192b86b31c9f9f9f55cf108f1c3aa9c9ce9b1/LICENSE",
+    "sha256": "641bf54e21fd8567956abfa0814de4953b06f38a32b428a0afa017262650fe6a",
+    "bytes": 1084
+  },
+  {
+    "repo": "drivendataorg/power-laws-cold-start",
+    "ref": "a22192b86b31c9f9f9f55cf108f1c3aa9c9ce9b1",
+    "path": "1st Place/team-member-a-execute-first/reports/05_Solution_Summary.md",
+    "url": "https://raw.githubusercontent.com/drivendataorg/power-laws-cold-start/a22192b86b31c9f9f9f55cf108f1c3aa9c9ce9b1/1st%20Place/team-member-a-execute-first/reports/05_Solution_Summary.md",
+    "sha256": "38c4366592fb1712c72eb8fc6aa30848c3fbeb90e539f04c70d68194411dc689",
+    "bytes": 9294
+  },
+  {
+    "repo": "drivendataorg/power-laws-cold-start",
+    "ref": "a22192b86b31c9f9f9f55cf108f1c3aa9c9ce9b1",
+    "path": "1st Place/team-member-a-execute-first/coldstart/predict/simple_repeat.py",
+    "url": "https://raw.githubusercontent.com/drivendataorg/power-laws-cold-start/a22192b86b31c9f9f9f55cf108f1c3aa9c9ce9b1/1st%20Place/team-member-a-execute-first/coldstart/predict/simple_repeat.py",
+    "sha256": "04d0af8dd9232e67eb5532e8e090e8212b5585eaa49e7009c346b7005fe8534d",
+    "bytes": 2475
+  },
+  {
+    "repo": "drivendataorg/power-laws-cold-start",
+    "ref": "a22192b86b31c9f9f9f55cf108f1c3aa9c9ce9b1",
+    "path": "1st Place/team-member-a-execute-first/scripts/final_solution/combine_submissions.py",
+    "url": "https://raw.githubusercontent.com/drivendataorg/power-laws-cold-start/a22192b86b31c9f9f9f55cf108f1c3aa9c9ce9b1/1st%20Place/team-member-a-execute-first/scripts/final_solution/combine_submissions.py",
+    "sha256": "7bbaad44180e50c6e5a9531b92dfa715d411fd9efd0155f9ecc8c1e8301b5d16",
+    "bytes": 1797
+  },
+  {
+    "repo": "drivendataorg/power-laws-cold-start",
+    "ref": "a22192b86b31c9f9f9f55cf108f1c3aa9c9ce9b1",
+    "path": "2nd Place/src/build_features.py",
+    "url": "https://raw.githubusercontent.com/drivendataorg/power-laws-cold-start/a22192b86b31c9f9f9f55cf108f1c3aa9c9ce9b1/2nd%20Place/src/build_features.py",
+    "sha256": "fd9faf24a9023a56203776380730d25f9f0f377f87f40d99f98e4e8dca7f37e4",
+    "bytes": 14228
+  },
+  {
+    "repo": "ant-research/EasyTemporalPointProcess",
+    "ref": "a3466985e76357b3dd235da845ec69e7a9fee0f8",
+    "path": "README.md",
+    "url": "https://raw.githubusercontent.com/ant-research/EasyTemporalPointProcess/a3466985e76357b3dd235da845ec69e7a9fee0f8/README.md",
+    "sha256": "4e709c0a705813feab4296fc45e66080ec18af9afcdd5f8668f4a316c1d2906e",
+    "bytes": 18766
+  },
+  {
+    "repo": "ant-research/EasyTemporalPointProcess",
+    "ref": "a3466985e76357b3dd235da845ec69e7a9fee0f8",
+    "path": "LICENCE",
+    "url": "https://raw.githubusercontent.com/ant-research/EasyTemporalPointProcess/a3466985e76357b3dd235da845ec69e7a9fee0f8/LICENCE",
+    "sha256": "4bf3627d7557be3a023228df316f5c6a9951eb5f6007643240c3aa316688c8be",
+    "bytes": 11415
+  },
+  {
+    "repo": "ant-research/EasyTemporalPointProcess",
+    "ref": "a3466985e76357b3dd235da845ec69e7a9fee0f8",
+    "path": "easy_tpp/model/nhp.py",
+    "url": "https://raw.githubusercontent.com/ant-research/EasyTemporalPointProcess/a3466985e76357b3dd235da845ec69e7a9fee0f8/easy_tpp/model/nhp.py",
+    "sha256": "1c8ed1ce6821094721ef45030a5be699b14a076f5555066c9edc84d39b41d021",
+    "bytes": 10904
+  },
+  {
+    "repo": "ant-research/EasyTemporalPointProcess",
+    "ref": "a3466985e76357b3dd235da845ec69e7a9fee0f8",
+    "path": "easy_tpp/model/s2p2.py",
+    "url": "https://raw.githubusercontent.com/ant-research/EasyTemporalPointProcess/a3466985e76357b3dd235da845ec69e7a9fee0f8/easy_tpp/model/s2p2.py",
+    "sha256": "fb9267f9393ee5066ddb5ba392e1c4c57cd916e0f1468a97e7840c6d37eed88d",
+    "bytes": 13997
+  }
+]

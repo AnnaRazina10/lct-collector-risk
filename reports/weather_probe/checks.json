@@ -1,0 +1,32 @@
+{
+  "baseline_rows_and_targets_identical": true,
+  "baseline_input_sha256_verified": true,
+  "baseline_max_score_difference": 0.0,
+  "saved_weather_model_max_score_difference": 0.0,
+  "weather_join": "date, many_to_one",
+  "weather_source_date_equals_feature_date_minus_7": true,
+  "weather_feature_dates_used": [
+    "2025-01-01 00:00:00",
+    "2025-11-30 00:00:00"
+  ],
+  "weather_source_dates_used": [
+    "2024-12-25 00:00:00",
+    "2025-11-23 00:00:00"
+  ],
+  "training_feature_end": "2025-09-28",
+  "training_label_last_day": "2025-09-30",
+  "tuning_feature_start": "2025-10-01",
+  "tuning_feature_end": "2025-11-28",
+  "tuning_label_last_day": "2025-11-30",
+  "december_labels_used": false,
+  "test_2026_labels_used": false,
+  "coverage": {
+    "catalog_objects_with_channels": 78,
+    "excluded_unknown_channel_days": 141,
+    "excluded_alarm_channel_days": 66,
+    "included_channel_days": 495887,
+    "objects_with_observations_by_nov30": 78
+  },
+  "historical_era5_version_availability_proven": false,
+  "elapsed_seconds": 2.0099952920572832
+}

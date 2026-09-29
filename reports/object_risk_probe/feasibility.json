@@ -1,0 +1,26 @@
+{
+  "always_positive": {
+    "max_recall_at_precision_gt_0_7": 0.0,
+    "engineering_reference_70_50_achievable": false,
+    "engineering_reference_threshold": null,
+    "threshold_status": "Engineering reference only; original task section 9 sets no mandatory 70/50 thresholds"
+  },
+  "persistence_alarm_today": {
+    "max_recall_at_precision_gt_0_7": 0.0,
+    "engineering_reference_70_50_achievable": false,
+    "engineering_reference_threshold": null,
+    "threshold_status": "Engineering reference only; original task section 9 sets no mandatory 70/50 thresholds"
+  },
+  "frozen_object_frequency": {
+    "max_recall_at_precision_gt_0_7": 0.14547038327526132,
+    "engineering_reference_70_50_achievable": false,
+    "engineering_reference_threshold": null,
+    "threshold_status": "Engineering reference only; original task section 9 sets no mandatory 70/50 thresholds"
+  },
+  "lightgbm_object": {
+    "max_recall_at_precision_gt_0_7": 0.3832752613240418,
+    "engineering_reference_70_50_achievable": false,
+    "engineering_reference_threshold": null,
+    "threshold_status": "Engineering reference only; original task section 9 sets no mandatory 70/50 thresholds"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "generated_at_utc": "2026-09-28T20:10:03.691172+00:00",
+  "schema_version": 1,
+  "requested_years": [
+    2024,
+    2023,
+    2022,
+    2021,
+    2020,
+    2019
+  ],
+  "completed_years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "prior_cutoff_exclusive": "2025-01-01",
+  "prior_channels": 11514,
+  "prior_path": "data/interim/channel_prior_pre2025.parquet",
+  "record_count_definition": "Sum of events_count after dropping invalid date/channel rows; not raw CSV line count",
+  "coverage_note": "Sparse observed channel/day rows only; no complete multi-year grid. Prior contains only completed_years.",
+  "target_note": "Alarm and fault-message history is not a label of confirmed equipment failure.",
+  "years": [
+    {
+      "year": 2019,
+      "status": "cached",
+      "daily_rows": 533049,
+      "channels": 5622,
+      "valid_records": 20993328,
+      "alarm_records": 134199,
+      "fault_records": 23859,
+      "first_date": "2019-01-01",
+      "last_date": "2019-12-31",
+      "archive_bytes": 141465610,
+      "archive_sha256": "262d5fb712feee3d4b92ae4cf09ce8e02c52eef25d9539f3a5769bae3d05a39c",
+      "seconds": 0.21
+    },
+    {
+      "year": 2020,
+      "status": "cached",
+      "daily_rows": 686322,
+      "channels": 7250,
+      "valid_records": 28172398,
+      "alarm_records": 325662,
+      "fault_records": 55142,
+      "first_date": "2020-01-01",
+      "last_date": "2020-12-31",
+      "archive_bytes": 176467481,
+      "archive_sha256": "632deca3a179b6e4114c0e619324738b508ea68aaf85b350462bff9b27db0edc",
+      "seconds": 0.28
+    },
+    {
+      "year": 2021,
+      "status": "cached",
+      "daily_rows": 564594,
+      "channels": 8625,
+      "valid_records": 53698948,
+      "alarm_records": 1199639,
+      "fault_records": 1085999,
+      "first_date": "2021-01-01",
+      "last_date": "2021-12-31",
+      "archive_bytes": 284299144,
+      "archive_sha256": "2970bdce42bcbb7a93358a19145d5cd45f0596e4c2633c1e9507d244b28e10f5",
+      "seconds": 0.37
+    },
+    {
+      "year": 2022,
+      "status": "cached",
+      "daily_rows": 538850,
+      "channels": 10722,
+      "valid_records": 43483149,
+      "alarm_records": 133504,
+      "fault_records": 52480,
+      "first_date": "2022-01-01",
+      "last_date": "2022-12-31",
+      "archive_bytes": 238723816,
+      "archive_sha256": "ca58b2a4931d738b38a596e279d2effa490700bb2ebe8d3db971283a6eef446d",
+      "seconds": 0.29
+    },
+    {
+      "year": 2023,
+      "status": "cached",
+      "daily_rows": 545656,
+      "channels": 10400,
+      "valid_records": 31937125,
+      "alarm_records": 107712,
+      "fault_records": 31179,
+      "first_date": "2023-01-01",
+      "last_date": "2023-12-31",
+      "archive_bytes": 185893242,
+      "archive_sha256": "6737008e77a0ce1610bb1205652a842311ab319cf7eac8edc951670a28a3ab40",
+      "seconds": 0.27
+    },
+    {
+      "year": 2024,
+      "status": "cached",
+      "daily_rows": 505007,
+      "channels": 10348,
+      "valid_records": 49023883,
+      "alarm_records": 115203,
+      "fault_records": 34968,
+      "first_date": "2024-01-01",
+      "last_date": "2024-12-31",
+      "archive_bytes": 264372460,
+      "archive_sha256": "d39ce19910e0761f7435eb4a6ebb3004b6df383e18d57c3cad8865deea1bbea9",
+      "seconds": 0.31
+    }
+  ]
+}

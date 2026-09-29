@@ -1,0 +1,38 @@
+22:45:36 Cached daily aggregates 2025: 574,627 rows
+22:45:36 Cached daily aggregates 2026: 324,978 rows
+22:46:05 Cached baseline matrix: 6,265,865 rows
+22:46:06 Train=700,000, valid=1,046,227; baseline trees=1
+22:46:09 Baseline validation reproduced, maximum score difference 0
+22:46:12 Training lgb_corrected: 75 features
+/Users/antany/Desktop/LCT-Ann/lct-collector-risk/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+Training until validation scores don't improve for 75 rounds
+[100]	valid_0's average_precision: 0.148768
+Early stopping, best iteration is:
+[66]	valid_0's average_precision: 0.149894
+Evaluated only: average_precision
+22:46:20 {"model": "lgb_corrected", "seconds": 7.984688997268677, "iterations": 66, "rows": 1046227, "positives": 15146, "positive_rate": 0.014476781807389792, "average_precision": 0.14989375604219302, "roc_auc": 0.7163186691330425, "threshold": 0.09111742495544099, "precision": 0.19499517736577002, "recall": 0.24026145516968175, "f1": 0.21527449124467582, "true_positive": 3639, "false_positive": 15023, "false_negative": 11507, "max_f1": 0.21527449124467582, "precision_at_max_f1": 0.19499517736577002, "recall_at_max_f1": 0.24026145516968175, "requirement_achievable": false, "max_recall_at_precision_gt_0_7": 0.041595140631189756, "threshold_precision_gt_0_7": 0.39780440246467785}
+22:46:20 Training lgb_history: 99 features
+/Users/antany/Desktop/LCT-Ann/lct-collector-risk/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+Training until validation scores don't improve for 75 rounds
+[100]	valid_0's average_precision: 0.148981
+Early stopping, best iteration is:
+[71]	valid_0's average_precision: 0.150293
+Evaluated only: average_precision
+22:46:33 {"model": "lgb_history", "seconds": 12.498827934265137, "iterations": 71, "rows": 1046227, "positives": 15146, "positive_rate": 0.014476781807389792, "average_precision": 0.15029333877433157, "roc_auc": 0.7319173245778821, "threshold": 0.12086571522141804, "precision": 0.24521422060164083, "recall": 0.195365112901096, "f1": 0.2174695917392423, "true_positive": 2959, "false_positive": 9108, "false_negative": 12187, "max_f1": 0.2174695917392423, "precision_at_max_f1": 0.24521422060164083, "recall_at_max_f1": 0.195365112901096, "requirement_achievable": false, "max_recall_at_precision_gt_0_7": 0.03802984286280206, "threshold_precision_gt_0_7": 0.4871064998740522}
+22:46:33 Training catboost_history: 99 features
+0:	learn: 0.1834781	test: 0.1174576	best: 0.1174576 (0)	total: 453ms	remaining: 6m 1s
+100:	learn: 0.2609840	test: 0.1548069	best: 0.1564973 (87)	total: 41.5s	remaining: 4m 47s
+200:	learn: 0.2986386	test: 0.1561229	best: 0.1566770 (154)	total: 1m 27s	remaining: 4m 20s
+Stopped by overfitting detector  (75 iterations wait)
+
+bestTest = 0.1566770014
+bestIteration = 154
+
+Shrink model to first 155 iterations.
+22:48:21 {"model": "catboost_history", "seconds": 108.20758509635925, "iterations": 155, "rows": 1046227, "positives": 15146, "positive_rate": 0.014476781807389792, "average_precision": 0.1567544622878607, "roc_auc": 0.7341937226803616, "threshold": 0.13720376893111916, "precision": 0.2542473666326877, "recall": 0.1976099300145253, "f1": 0.22237907719741437, "true_positive": 2993, "false_positive": 8779, "false_negative": 12153, "max_f1": 0.22237907719741437, "precision_at_max_f1": 0.2542473666326877, "recall_at_max_f1": 0.1976099300145253, "requirement_achievable": false, "max_recall_at_precision_gt_0_7": 0.05083850521589859, "threshold_precision_gt_0_7": 0.4886093117328187}
+22:48:21 Selected catboost_history; selection saved. Evaluating held-out test.
+22:48:26 {"model": "catboost_history", "split": "valid_legacy", "rows": 1057724, "positives": 15228, "positive_rate": 0.014396950433194293, "average_precision": 0.15667349696672528, "roc_auc": 0.7347255859680981, "threshold": 0.13720376893111916, "precision": 0.2525388166177088, "recall": 0.1975965327029157, "f1": 0.22171462255461813, "true_positive": 3009, "false_positive": 8906, "false_negative": 12219}
+22:48:32 {"model": "catboost_history", "split": "test", "rows": 1200000, "positives": 18660, "positive_rate": 0.01555, "average_precision": 0.11816268408296463, "roc_auc": 0.706602142278127, "threshold": 0.13720376893111916, "precision": 0.22269459689263355, "recall": 0.15439442658092176, "f1": 0.1823590847232332, "true_positive": 2881, "false_positive": 10056, "false_negative": 15779}
+22:48:33 Finished. No test-based model reselection.

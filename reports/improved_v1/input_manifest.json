@@ -1,0 +1,62 @@
+[
+  {
+    "name": "ext-journal-2019.7z",
+    "bytes": 141465610,
+    "sha256": "262d5fb712feee3d4b92ae4cf09ce8e02c52eef25d9539f3a5769bae3d05a39c"
+  },
+  {
+    "name": "ext-journal-2020.7z",
+    "bytes": 176467481,
+    "sha256": "632deca3a179b6e4114c0e619324738b508ea68aaf85b350462bff9b27db0edc"
+  },
+  {
+    "name": "ext-journal-2021.7z",
+    "bytes": 284299144,
+    "sha256": "2970bdce42bcbb7a93358a19145d5cd45f0596e4c2633c1e9507d244b28e10f5"
+  },
+  {
+    "name": "ext-journal-2022.7z",
+    "bytes": 238723816,
+    "sha256": "ca58b2a4931d738b38a596e279d2effa490700bb2ebe8d3db971283a6eef446d"
+  },
+  {
+    "name": "ext-journal-2023.7z",
+    "bytes": 185893242,
+    "sha256": "6737008e77a0ce1610bb1205652a842311ab319cf7eac8edc951670a28a3ab40"
+  },
+  {
+    "name": "ext-journal-2024.7z",
+    "bytes": 264372460,
+    "sha256": "d39ce19910e0761f7435eb4a6ebb3004b6df383e18d57c3cad8865deea1bbea9"
+  },
+  {
+    "name": "ext-journal-2025.7z",
+    "bytes": 290680118,
+    "sha256": "605232bc0bcffd585e7a11cd87f239896b9dab1c58efebd256c4ec8478c6cd56"
+  },
+  {
+    "name": "ext-journal-2026.7z",
+    "bytes": 165304211,
+    "sha256": "bdc0a6ebcdedf145d390abe8e2c9c3272f6a17d39d47e488acea7142ca7dec29"
+  },
+  {
+    "name": "журнал_событий_пример.csv",
+    "bytes": 9707502,
+    "sha256": "3a06fe5d4fc3d8350c2e8fb6d74887ecf9545b4f72638953dc16d78ff3130f5c"
+  },
+  {
+    "name": "справочник_каналов_датчиков.csv",
+    "bytes": 1321317,
+    "sha256": "87b3230e93ae00e3f03d915336acde6b3990c8b58d7378175cf02c000f67a45f"
+  },
+  {
+    "name": "справочник_объектов_диспетчер.csv",
+    "bytes": 5266,
+    "sha256": "219b4dbe34a78581640d839837649d3ef481c62c089fef18db1b364cff007084"
+  },
+  {
+    "name": "справочник_состояний.csv",
+    "bytes": 3925,
+    "sha256": "b968f3652ed33fd6e0d2dccee334275436dada67f4549763cfb4b2072108b5cc"
+  }
+]

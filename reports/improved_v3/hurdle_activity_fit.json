@@ -1,0 +1,11 @@
+{
+  "rows": 1000000,
+  "positives": 333333,
+  "first_date": "2025-01-01 00:00:00",
+  "last_date": "2025-09-29 00:00:00",
+  "label": "label_observed_tomorrow",
+  "conditional": false,
+  "seconds": 16.844043016433716,
+  "iterations": 45,
+  "artifact_sha256": "b1a31246fe7782e2b2a1cf5d87e845e50a1ea7fa9b09b1fc9cc5b289005aa93e"
+}

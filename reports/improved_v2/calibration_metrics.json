@@ -1,0 +1,21 @@
+{
+  "model": "blend_cat_lgb_0.5",
+  "rows": 344910,
+  "positives": 8636,
+  "positive_rate": 0.02503841581861935,
+  "average_precision": 0.14468842263032808,
+  "roc_auc": 0.6361598719496326,
+  "threshold": 0.11129372946387953,
+  "precision": 0.250130366765166,
+  "recall": 0.16662806855025475,
+  "f1": 0.2000138995065675,
+  "true_positive": 1439,
+  "false_positive": 4314,
+  "false_negative": 7197,
+  "max_f1": 0.2000138995065675,
+  "precision_at_max_f1": 0.250130366765166,
+  "recall_at_max_f1": 0.16662806855025475,
+  "requirement_achievable": false,
+  "max_recall_at_precision_gt_0_7": 0.04539138490041686,
+  "threshold_precision_gt_0_7": 0.4607509707387193
+}

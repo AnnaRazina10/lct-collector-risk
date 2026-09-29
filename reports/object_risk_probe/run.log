@@ -1,0 +1,50 @@
+/Users/antany/Desktop/LCT-Ann/lct-collector-risk/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+Training until validation scores don't improve for 40 rounds
+[100]	valid_0's average_precision: 0.622539
+[200]	valid_0's average_precision: 0.625475
+Early stopping, best iteration is:
+[167]	valid_0's average_precision: 0.626555
+Evaluated only: average_precision
+                  model                  cohort  rows  positives  prevalence  average_precision  roc_auc  precision   recall       f1  threshold  true_positive  false_positive  false_negative  calendar_days  false_alerts_per_calendar_day  all_alerts_per_calendar_day
+        always_positive         all_object_days  4602       1148    0.249457           0.249457 0.500000   0.249457 1.000000 0.399304   0.500000           1148            3454               0             59                      58.542373                    78.000000
+        always_positive no_alarm_on_feature_day  3413        658    0.192792           0.192792 0.500000   0.192792 1.000000 0.323262   0.500000            658            2755               0             59                      46.694915                    57.847458
+persistence_alarm_today         all_object_days  4602       1148    0.249457           0.318882 0.612228   0.412111 0.426829 0.419341   0.500000            490             699             658             59                      11.847458                    20.152542
+persistence_alarm_today no_alarm_on_feature_day  3413        658    0.192792           0.192792 0.500000   0.000000 0.000000 0.000000   0.500000              0               0             658             59                       0.000000                     0.000000
+frozen_object_frequency         all_object_days  4602       1148    0.249457           0.539210 0.778566   0.470339 0.676829 0.555000   0.302583            777             875             371             59                      14.830508                    28.000000
+frozen_object_frequency no_alarm_on_feature_day  3413        658    0.192792           0.460031 0.774123   0.436471 0.563830 0.492042   0.302583            371             479             287             59                       8.118644                    14.406780
+        lightgbm_object         all_object_days  4602       1148    0.249457           0.626555 0.817881   0.561521 0.655923 0.605062   0.334523            753             588             395             59                       9.966102                    22.728814
+        lightgbm_object no_alarm_on_feature_day  3413        658    0.192792           0.514333 0.795005   0.522659 0.525836 0.524242   0.334523            346             316             312             59                       5.355932                    11.220339
+{
+  "unit": "object-day, not channel-day",
+  "target": "target_any_object_alarm_d_plus_2",
+  "meaning": "Any alarm-flagged registered record in at least one channel; not physical failure",
+  "issue_time": "D+1 00:00",
+  "label_interval": "[D+2 00:00,D+3 00:00)",
+  "minimum_lead_hours": 24,
+  "training_feature_end": "2025-09-28 00:00:00",
+  "training_label_last_day": "2025-09-30 00:00:00",
+  "tuning_feature_start": "2025-10-01 00:00:00",
+  "tuning_feature_end": "2025-11-28 00:00:00",
+  "tuning_label_last_day": "2025-11-30 00:00:00",
+  "december_used": false,
+  "test_2026_used": false,
+  "exact_object_calendar_shift_verified": true,
+  "training_rows": 21138,
+  "tuning_rows": 4602,
+  "training_prevalence": 0.26208723625697794,
+  "tuning_prevalence": 0.2494567579313342,
+  "quiet_today_tuning_rows": 3413,
+  "quiet_today_tuning_prevalence": 0.19279226486961618,
+  "quiet_subset_note": "No alarm on feature day only; an alarm may start in the unscored intermediate day D+1",
+  "threshold_policy": "Fixed .5 for always-positive/persistence; max-F1 on the same tuning for model and historical-frequency baseline",
+  "selection_limitation": "Early stopping and threshold tuning share Oct-Nov; preliminary validation only",
+  "coverage": {
+    "catalog_objects_with_channels": 78,
+    "excluded_unknown_channel_days": 141,
+    "excluded_alarm_channel_days": 66,
+    "included_channel_days": 495887,
+    "objects_with_observations_by_nov30": 78
+  },
+  "elapsed_seconds": 2.275779082905501
+}

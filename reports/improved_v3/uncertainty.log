@@ -1,0 +1,21 @@
+{
+  "method": "200 paired circular moving-block bootstrap draws; 7 calendar days per block",
+  "seed": 139,
+  "rows": 1200000,
+  "days": 180,
+  "interpretation": "Descriptive uncertainty conditional on frozen scores; no retraining, no model selection; rolling models use earlier 2026 labels",
+  "AP_difference_vs_v2": {
+    "score_v3": {
+      "lower_2_5": 0.005605917770409163,
+      "upper_97_5": 0.01111756825833693
+    },
+    "rolling_lgb": {
+      "lower_2_5": 0.0032321567987154765,
+      "upper_97_5": 0.061812639129382924
+    },
+    "rolling_blend": {
+      "lower_2_5": 0.0062829696515657295,
+      "upper_97_5": 0.03833186494615286
+    }
+  }
+}

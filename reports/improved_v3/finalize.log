@@ -1,0 +1,2 @@
+05:25:20 Training cat_memory8: 1000000 rows, 218 features, refit=True
+05:28:07 Model and threshold frozen: blend_top2_0.5, 0.078505

@@ -1,0 +1,10 @@
+13:57:20 Monthly update 2026-01: rows=1000000, training through=2025-12-30
+13:57:35 Monthly update 2026-02: rows=1000000, training through=2026-01-30
+13:57:50 Monthly update 2026-03: rows=1000000, training through=2026-02-27
+13:58:05 Monthly update 2026-04: rows=1000000, training through=2026-03-30
+13:58:21 Monthly update 2026-05: rows=1000000, training through=2026-04-29
+13:58:36 Monthly update 2026-06: rows=1000000, training through=2026-05-30
+        model    rows  positives  positive_rate  average_precision  roc_auc  threshold  precision   recall       f1  true_positive  false_positive  false_negative
+    frozen_v2 1200000      18660        0.01555           0.128097 0.765969   0.111294   0.194323 0.187460 0.190829           3498           14503           15162
+  rolling_lgb 1200000      18660        0.01555           0.153419 0.798598   0.078737   0.168530 0.290836 0.213401           5427           26775           13233
+rolling_blend 1200000      18660        0.01555           0.147109 0.800002   0.111294   0.211889 0.215273 0.213568           4017           14941           14643

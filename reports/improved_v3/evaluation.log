@@ -1,0 +1,3 @@
+model    rows  positives  positive_rate  average_precision  roc_auc  threshold  precision   recall       f1  true_positive  false_positive  false_negative
+   v2 1200000      18660        0.01555           0.128097 0.765969   0.111294   0.194323 0.187460 0.190829           3498           14503           15162
+   v3 1200000      18660        0.01555           0.136604 0.807311   0.078505   0.162646 0.251501 0.197542           4693           24161           13967

@@ -1,4 +1,10 @@
 /data/raw/
+/data/interim/
+/reports/improved_v1/models/
+/reports/improved_v1/predictions/
+.mplconfig/
+/references/
+/data/app/
 /models/
 /artifacts/audio/
 .DS_Store
@@ -8,3 +14,9 @@ __pycache__/
 *.pyc
 venv/
 .venv/
+/reports/improved_v2/models/
+/reports/improved_v2/predictions/
+/reports/improved_v3/models/
+/reports/improved_v3/predictions/
+/reports/rolling_update/models/
+/reports/rolling_update/predictions/

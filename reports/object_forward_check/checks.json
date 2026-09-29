@@ -1,0 +1,18 @@
+{
+  "historical_rows_reproduced": 4602,
+  "maximum_difference": 0.0,
+  "test_rows": 14040,
+  "days": 180,
+  "objects": 78,
+  "coverage": {
+    "catalog_objects_with_channels": 78,
+    "excluded_unknown_channel_days": 163,
+    "excluded_alarm_channel_days": 74,
+    "included_channel_days": 899442,
+    "objects_with_observations_by_nov30": 78
+  },
+  "model_sha256": "e0924c042197f5e393efb014319259929cf0a7c82890bbe4e47e3ae790f1c493",
+  "code_sha256": "14620f8cb4918a05392cec79310495c05921256a6b8a1d6a1513dfb087f0f597",
+  "feature_code_sha256": "8d3be6bfbe8ecc404224fa10cb200212f01076a27f7d178e96b4204b6c835950",
+  "passed": true
+}

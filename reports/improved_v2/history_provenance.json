@@ -1,0 +1,28 @@
+{
+  "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "cutoff_exclusive": "2025-01-01",
+  "channels": 11514,
+  "columns": [
+    "channel_id",
+    "old_observed_days",
+    "old_alarm_days",
+    "old_fault_days",
+    "old_no_power_days",
+    "old_events",
+    "old_alarm_events",
+    "old_years_observed",
+    "old_last_observed_days_before_2025",
+    "old_last_alarm_days_before_2025",
+    "old_alarm_days_per_observed_day"
+  ],
+  "smoothing": "Beta(1,1): (alarm_days + 1) / (observed_days + 2)",
+  "missing_last_alarm": -1,
+  "scope": "Observed historical messages before 2025 only; no target2025/2026"
+}

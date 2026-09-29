@@ -1,0 +1,30 @@
+{
+  "status": "preliminary_tuning_only",
+  "model": "LightGBM31",
+  "target": "target_alarm_lead24_window24",
+  "metrics": {
+    "rows": 678323,
+    "positives": 6024,
+    "positive_rate": 0.008880724964360636,
+    "average_precision": 0.18399840509418847,
+    "roc_auc": 0.8515336671655416,
+    "threshold": 0.10148905092290854,
+    "precision": 0.26713366149185913,
+    "recall": 0.2342297476759628,
+    "f1": 0.24960198124889438,
+    "true_positive": 1411,
+    "false_positive": 3871,
+    "false_negative": 4613
+  },
+  "feasibility": {
+    "max_recall_at_precision_gt_0_7": 0.04780876494023904,
+    "max_precision_at_recall_gt_0_5": 0.10546396443697714,
+    "engineering_reference_70_50_achievable_on_tuning": false,
+    "threshold_status": "Engineering reference only; original task section 9 sets no mandatory 70/50 thresholds"
+  },
+  "best_iteration": 30,
+  "training_population_rows": 3115687,
+  "training_population_positives": 24221,
+  "training_sample_rows": 600000,
+  "elapsed_seconds": 30.976970374933444
+}

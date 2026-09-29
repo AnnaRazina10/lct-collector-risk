@@ -1,0 +1,11 @@
+{
+  "rows": 1000000,
+  "positives": 24257,
+  "first_date": "2025-01-01 00:00:00",
+  "last_date": "2025-09-29 00:00:00",
+  "label": "target_alarm_next_24h",
+  "conditional": false,
+  "seconds": 71.72866201400757,
+  "iterations": 140,
+  "artifact_sha256": "e9e80eff8bce565d8e27fb1e856cdab9d6016549792f41b57fa49938e1f9318f"
+}

@@ -1,0 +1,33 @@
+{
+  "unit": "object-day, not channel-day",
+  "target": "target_any_object_alarm_d_plus_2",
+  "meaning": "Any alarm-flagged registered record in at least one channel; not physical failure",
+  "issue_time": "D+1 00:00",
+  "label_interval": "[D+2 00:00,D+3 00:00)",
+  "minimum_lead_hours": 24,
+  "training_feature_end": "2025-09-28 00:00:00",
+  "training_label_last_day": "2025-09-30 00:00:00",
+  "tuning_feature_start": "2025-10-01 00:00:00",
+  "tuning_feature_end": "2025-11-28 00:00:00",
+  "tuning_label_last_day": "2025-11-30 00:00:00",
+  "december_used": false,
+  "test_2026_used": false,
+  "exact_object_calendar_shift_verified": true,
+  "training_rows": 21138,
+  "tuning_rows": 4602,
+  "training_prevalence": 0.26208723625697794,
+  "tuning_prevalence": 0.2494567579313342,
+  "quiet_today_tuning_rows": 3413,
+  "quiet_today_tuning_prevalence": 0.19279226486961618,
+  "quiet_subset_note": "No alarm on feature day only; an alarm may start in the unscored intermediate day D+1",
+  "threshold_policy": "Fixed .5 for always-positive/persistence; max-F1 on the same tuning for model and historical-frequency baseline",
+  "selection_limitation": "Early stopping and threshold tuning share Oct-Nov; preliminary validation only",
+  "coverage": {
+    "catalog_objects_with_channels": 78,
+    "excluded_unknown_channel_days": 141,
+    "excluded_alarm_channel_days": 66,
+    "included_channel_days": 495887,
+    "objects_with_observations_by_nov30": 78
+  },
+  "elapsed_seconds": 2.275779082905501
+}

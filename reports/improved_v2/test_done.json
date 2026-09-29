@@ -1,0 +1,36 @@
+{
+  "selection_sha256": "007dc3f3739cc9e29d8a1ea36a34c7dc075bb5acf833e94cd258609c18e370de",
+  "metrics": [
+    {
+      "model": "v1",
+      "rows": 1200000,
+      "positives": 18660,
+      "positive_rate": 0.01555,
+      "average_precision": 0.11816268408296463,
+      "roc_auc": 0.706602142278127,
+      "threshold": 0.13720376893111916,
+      "precision": 0.22269459689263355,
+      "recall": 0.15439442658092176,
+      "f1": 0.1823590847232332,
+      "true_positive": 2881,
+      "false_positive": 10056,
+      "false_negative": 15779
+    },
+    {
+      "model": "blend_cat_lgb_0.5",
+      "rows": 1200000,
+      "positives": 18660,
+      "positive_rate": 0.01555,
+      "average_precision": 0.12809741492920496,
+      "roc_auc": 0.7659687216467952,
+      "threshold": 0.11129372946387953,
+      "precision": 0.19432253763679797,
+      "recall": 0.187459807073955,
+      "f1": 0.19082949183055564,
+      "true_positive": 3498,
+      "false_positive": 14503,
+      "false_negative": 15162
+    }
+  ],
+  "note": "Previously inspected2026 diagnostic, not a fresh blind holdout."
+}

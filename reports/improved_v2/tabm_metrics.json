@@ -1,0 +1,18 @@
+{
+  "ap": 0.19028766309456555,
+  "max_f1": 0.24345720406072463,
+  "precision_at_max_f1": 0.29337822671156005,
+  "recall_at_max_f1": 0.20805475963069087,
+  "tune_f1_threshold": 0.15241138637065887,
+  "recall_at_precision_0_7": 0.05205348615090735,
+  "precision_at_recall_0_5": 0.10491868968511037,
+  "rows": 689820,
+  "positives": 6282,
+  "best_epoch": 3,
+  "best_early_ap": 0.20332767803203947,
+  "training_seconds": 54.25704112497624,
+  "full_tune_inference_seconds": 5.926466709002852,
+  "total_seconds": 75.43890520802233,
+  "device": "cpu",
+  "note": "Tuning-set metrics only; no December calibration or 2026 test was accessed."
+}

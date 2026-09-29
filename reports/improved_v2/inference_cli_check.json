@@ -1,0 +1,33 @@
+{
+  "selection_sha256": "007dc3f3739cc9e29d8a1ea36a34c7dc075bb5acf833e94cd258609c18e370de",
+  "rows": 256,
+  "unique_channels": 254,
+  "date_min": "2025-12-01",
+  "date_max": "2025-12-30",
+  "selected_model": "blend_cat_lgb_0.5",
+  "threshold": 0.11129372946387953,
+  "input_columns": 171,
+  "input_includes_target": false,
+  "sampling_seed": 20260928,
+  "data_sources": [
+    "advanced_mart.parquet: December 1–30 2025",
+    "channel_prior_frozen_v2.parquet",
+    "intraday_2025.parquet: December 1–30 2025"
+  ],
+  "join_validation": [
+    "many_to_one(channel_id) prior",
+    "one_to_one(channel_id,date) intraday",
+    "one_to_one(channel_id,date) reference"
+  ],
+  "maximum_score_difference": 9.952975943416931e-17,
+  "tolerance": 1e-12,
+  "warning_decisions_identical": true,
+  "warnings": 5,
+  "score_min": 0.0004839121290507,
+  "score_max": 0.2941699331950368,
+  "cli_code_sha256": "e0ded784b4d13f20c155d0d1de0fa2fa55d02674fccdb6ec3afaceac57f1f440",
+  "cli_command": ".venv/bin/python src/modeling/predict_risk_v2.py --features reports/improved_v2/predictions/inference_cli_features.parquet --run-dir reports/improved_v2 --output reports/improved_v2/predictions/inference_cli_scores.csv",
+  "passed": true,
+  "test_rows_used": 0,
+  "implementation_changed": false
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "month": "2026-01",
+    "training_feature_end": "2025-12-30",
+    "training_label_end": "2025-12-31",
+    "first_test_feature_date": "2026-01-01",
+    "rows": 206988,
+    "training_rows": 1000000,
+    "trees": 96,
+    "seconds": 10.99341607093811
+  },
+  {
+    "month": "2026-02",
+    "training_feature_end": "2026-01-30",
+    "training_label_end": "2026-01-31",
+    "first_test_feature_date": "2026-02-01",
+    "rows": 186823,
+    "training_rows": 1000000,
+    "trees": 96,
+    "seconds": 10.550626993179321
+  },
+  {
+    "month": "2026-03",
+    "training_feature_end": "2026-02-27",
+    "training_label_end": "2026-02-28",
+    "first_test_feature_date": "2026-03-01",
+    "rows": 206117,
+    "training_rows": 1000000,
+    "trees": 96,
+    "seconds": 10.609288930892944
+  },
+  {
+    "month": "2026-04",
+    "training_feature_end": "2026-03-30",
+    "training_label_end": "2026-03-31",
+    "first_test_feature_date": "2026-04-01",
+    "rows": 200687,
+    "training_rows": 1000000,
+    "trees": 96,
+    "seconds": 10.71080207824707
+  },
+  {
+    "month": "2026-05",
+    "training_feature_end": "2026-04-29",
+    "training_label_end": "2026-04-30",
+    "first_test_feature_date": "2026-05-01",
+    "rows": 206435,
+    "training_rows": 1000000,
+    "trees": 96,
+    "seconds": 11.082884073257446
+  },
+  {
+    "month": "2026-06",
+    "training_feature_end": "2026-05-30",
+    "training_label_end": "2026-05-31",
+    "first_test_feature_date": "2026-06-01",
+    "rows": 192950,
+    "training_rows": 1000000,
+    "trees": 96,
+    "seconds": 10.7848801612854
+  }
+]

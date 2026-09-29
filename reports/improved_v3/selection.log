@@ -1,0 +1,20 @@
+05:25:00 Selected blend_top2_0.5 before calibration and test
+             model  average_precision
+    blend_top2_0.5           0.224187
+   blend_top2_0.75           0.223855
+ blend_hurdle_0.75           0.222826
+        blend_top3           0.222677
+   blend_top2_0.25           0.222027
+        v2_control           0.221431
+  blend_hurdle_0.5           0.221199
+blend_cat_lgb_0.75           0.220081
+ blend_cat_lgb_0.5           0.219089
+       cat_memory8           0.217759
+       cat_memory6           0.215584
+   cat_no_identity           0.214921
+blend_cat_lgb_0.25           0.214529
+ blend_hurdle_0.25           0.213743
+      lgb_memory63           0.206092
+      lgb_recent60           0.203264
+      lgb_memory31           0.199729
+            hurdle           0.197132

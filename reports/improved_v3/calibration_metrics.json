@@ -1,0 +1,14 @@
+{
+  "rows": 344910,
+  "positives": 8636,
+  "positive_rate": 0.02503841581861935,
+  "average_precision": 0.1504176185889012,
+  "roc_auc": 0.6379917603584824,
+  "threshold": 0.07850494689247672,
+  "precision": 0.2008888888888889,
+  "recall": 0.2093561834182492,
+  "f1": 0.20503515536402814,
+  "true_positive": 1808,
+  "false_positive": 7192,
+  "false_negative": 6828
+}

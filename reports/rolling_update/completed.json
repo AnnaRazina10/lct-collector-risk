@@ -1,0 +1,7 @@
+{
+  "rows": 1200000,
+  "months": 6,
+  "frozen_config_sha256": "1a782c21027d2e49313a2201d6469ebcc38d577690fb8672bbe4dcfc678eac0d",
+  "code_sha256": "aa6be638adfc50bad6761af5faab99e41deed3117386565edb336d269cb4bc56",
+  "interpretation": "Prequential monthly update, not independent static holdout"
+}

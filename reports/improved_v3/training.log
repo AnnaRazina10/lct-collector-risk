@@ -1,0 +1,69 @@
+04:58:26 Training lgb_memory31: 1000000 rows, 218 features, refit=False
+/Users/antany/Desktop/LCT-Ann/lct-collector-risk/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+Training until validation scores don't improve for 85 rounds
+[150]	valid_0's average_precision: 0.199015
+Early stopping, best iteration is:
+[140]	valid_0's average_precision: 0.199729
+Evaluated only: average_precision
+05:00:30 Training lgb_memory63: 1000000 rows, 218 features, refit=False
+/Users/antany/Desktop/LCT-Ann/lct-collector-risk/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+Training until validation scores don't improve for 85 rounds
+[150]	valid_0's average_precision: 0.203947
+Early stopping, best iteration is:
+[95]	valid_0's average_precision: 0.206092
+Evaluated only: average_precision
+05:03:33 Training lgb_recent60: 1000000 rows, 218 features, refit=False
+/Users/antany/Desktop/LCT-Ann/lct-collector-risk/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+Training until validation scores don't improve for 85 rounds
+Early stopping, best iteration is:
+[36]	valid_0's average_precision: 0.203264
+Evaluated only: average_precision
+05:04:13 Training cat_memory6: 1000000 rows, 218 features, refit=False
+0:	learn: 0.1119825	test: 0.0828376	best: 0.0828376 (0)	total: 976ms	remaining: 17m 53s
+150:	learn: 0.3085756	test: 0.2103718	best: 0.2103718 (150)	total: 3m 50s	remaining: 24m 7s
+300:	learn: 0.3666988	test: 0.2141775	best: 0.2155130 (261)	total: 6m 19s	remaining: 16m 46s
+Stopped by overfitting detector  (85 iterations wait)
+
+bestTest = 0.2155129609
+bestIteration = 261
+
+Shrink model to first 262 iterations.
+05:11:30 Training cat_memory8: 1000000 rows, 218 features, refit=False
+0:	learn: 0.1236749	test: 0.0993138	best: 0.0993138 (0)	total: 1.19s	remaining: 21m 44s
+150:	learn: 0.3652425	test: 0.2161173	best: 0.2161173 (150)	total: 2m 53s	remaining: 18m 8s
+Stopped by overfitting detector  (85 iterations wait)
+
+bestTest = 0.2176864416
+bestIteration = 208
+
+Shrink model to first 209 iterations.
+05:17:34 Training cat_no_identity: 1000000 rows, 216 features, refit=False
+0:	learn: 0.1293928	test: 0.1134186	best: 0.1134186 (0)	total: 1.34s	remaining: 24m 36s
+150:	learn: 0.3107437	test: 0.2072742	best: 0.2072742 (150)	total: 1m 32s	remaining: 9m 42s
+300:	learn: 0.3653386	test: 0.2105236	best: 0.2107167 (297)	total: 3m 2s	remaining: 8m 4s
+450:	learn: 0.3976262	test: 0.2139743	best: 0.2139743 (450)	total: 4m 49s	remaining: 6m 56s
+Stopped by overfitting detector  (85 iterations wait)
+
+bestTest = 0.2148511443
+bestIteration = 505
+
+Shrink model to first 506 iterations.
+05:24:14 Training hurdle_activity: 1000000 rows, 218 features, refit=False
+/Users/antany/Desktop/LCT-Ann/lct-collector-risk/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+Training until validation scores don't improve for 85 rounds
+Early stopping, best iteration is:
+[45]	valid_0's average_precision: 0.698461
+Evaluated only: average_precision
+05:24:39 Training hurdle_alarm: 394137 rows, 218 features, refit=False
+/Users/antany/Desktop/LCT-Ann/lct-collector-risk/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+Training until validation scores don't improve for 85 rounds
+[150]	valid_0's average_precision: 0.633601
+Early stopping, best iteration is:
+[67]	valid_0's average_precision: 0.64002
+Evaluated only: average_precision
+05:24:51 Training complete; no new calibration or test evaluation.

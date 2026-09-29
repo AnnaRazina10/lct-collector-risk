@@ -1,0 +1,18 @@
+{
+  "method": "500 circular moving-block bootstrap draws; blocks of 7 calendar days; fixed model and threshold; descriptive uncertainty on evaluated period",
+  "metrics": {
+    "precision": {
+      "lower_2_5": 0.5460156704348602,
+      "upper_97_5": 0.5938272388406791
+    },
+    "recall": {
+      "lower_2_5": 0.5750743633219547,
+      "upper_97_5": 0.6176034307043835
+    },
+    "AP_difference_vs_historical_frequency": {
+      "lower_2_5": 0.044039670112394555,
+      "upper_97_5": 0.06386991118263871
+    }
+  },
+  "seed": 139
+}

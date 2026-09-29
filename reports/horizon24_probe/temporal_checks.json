@@ -1,0 +1,21 @@
+{
+  "target": "target_alarm_lead24_window24",
+  "description": "Any alarm-flagged record on calendar day D+2; not confirmed equipment failure",
+  "issue_time": "D+1 00:00 in source calendar",
+  "label_interval": "[D+2 00:00, D+3 00:00)",
+  "minimum_lead_hours": 24,
+  "window_hours": 24,
+  "read_feature_start": "2025-01-01 00:00:00",
+  "read_feature_end": "2025-11-30 00:00:00",
+  "training_features_end": "2025-09-28 00:00:00",
+  "training_label_last_day": "2025-09-30 00:00:00",
+  "tuning_features_start": "2025-10-01 00:00:00",
+  "tuning_features_end": "2025-11-28 00:00:00",
+  "tuning_label_last_day": "2025-11-30 00:00:00",
+  "exact_channel_calendar_shift_verified": true,
+  "duplicate_channel_days": 0,
+  "legacy_target_read": false,
+  "december_calibration_used": false,
+  "test_2026_used": false,
+  "selection_limitation": "Early stopping and threshold selection share Oct-Nov tuning; preliminary validation only"
+}
