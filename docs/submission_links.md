@@ -5,7 +5,7 @@
 | Поле платформы | Материал | Готовность |
 |---|---|---|
 | Репозиторий с кодом | [AnnaRazina10/lct-collector-risk](https://github.com/AnnaRazina10/lct-collector-risk) | Код отправлен в приватный репозиторий; доступ экспертов нужно обеспечить отдельно. Данные и веса не входят в Git |
-| Презентация | [PPTX v3](https://github.com/AnnaRazina10/lct-collector-risk/blob/main/artifacts/presentation/output/collector-risk-draft-v3.pptx), [PDF для просмотра](https://github.com/AnnaRazina10/lct-collector-risk/blob/main/artifacts/presentation/output/collector-risk-draft-v3-preview.pdf) | Проверенный черновик; до сдачи заполнить сведения команды и логотип постановщика из HANDOFF |
+| Презентация | [PPTX v4](https://github.com/AnnaRazina10/lct-collector-risk/blob/main/artifacts/presentation/output/collector-risk-draft-v4.pptx), [PDF для просмотра](https://github.com/AnnaRazina10/lct-collector-risk/blob/main/artifacts/presentation/output/collector-risk-draft-v4-preview.pdf) | Проверенный черновик; до сдачи заполнить сведения команды и логотип постановщика из HANDOFF |
 | Прототип | Локальный интерфейс и комплект, описанный в [local_review_bundle.md](local_review_bundle.md) | Работа локально проверена. Доступная жюри ссылка пока не подтверждена; localhost нельзя подавать как внешнюю ссылку |
 | Сопроводительная документация .docx/.pdf | [Техническое руководство PDF](https://github.com/AnnaRazina10/lct-collector-risk/blob/main/output/pdf/collector-risk-technical-guide.pdf) | Описаны обработка, методы, архитектура, запуск и ограничения |
 
@@ -18,3 +18,5 @@
 Сценарий трёхминутного показа и ответы на вопросы: [demo_script.md](demo_script.md). Поля команды: [HANDOFF](../artifacts/presentation/HANDOFF.md). Фактические требования и производственные разрывы: [readiness_audit.md](readiness_audit.md).
 
 Подтверждение отправки на платформе не получено. До него решение не считается сданным. Ссылка на страницу сдачи запрошена у Антона Михайловича; отсутствие доступа или наличие авторизации заранее не предполагаются.
+
+Презентация v4 обновлена отдельно от локального ZIP приложения v3. На слайдах добавлены перенос на 2024 год, рекомендации и проверенное восстановление/нагрузка. Все 15 страниц отрисованы, обязательные 7–11 совпали с v3. Сведения команды остаются незаполненными; независимая проверка и SHA указаны в [manifest](../artifacts/presentation/manifest.json).

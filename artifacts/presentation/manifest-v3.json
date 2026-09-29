@@ -1,6 +1,5 @@
 {
-  "version": "v4",
-  "source_code_base_commit": "6314ba971577967e29cde8dfd9bf5c8b6fc5c226",
+  "version": "v3",
   "slide_count": 15,
   "required_original_positions": [
     7,
@@ -13,14 +12,14 @@
   "source_template_sha256": "858da047f42bc3fe59f167b3f87dd17e9b7980fd78949ea750bb9ef668707247",
   "artifacts": [
     {
-      "path": "artifacts/presentation/output/collector-risk-draft-v4.pptx",
-      "bytes": 12110801,
-      "sha256": "b66cf74d4107a5a458fd0d94a20eaa662e0d2be363cad9d9ce12f70fc28c294a"
+      "path": "artifacts/presentation/output/collector-risk-draft-v3.pptx",
+      "bytes": 12100587,
+      "sha256": "c29fef94b3e0a4ac98dd729c8d08f8d1b61d5d1c0d079bd2482f6e3c23e8812a"
     },
     {
-      "path": "artifacts/presentation/output/collector-risk-draft-v4-preview.pdf",
-      "bytes": 1124359,
-      "sha256": "ca40773ae8faa8dd121855d4e1583ae3134d80230488c1bf18d787795addd401"
+      "path": "artifacts/presentation/output/collector-risk-draft-v3-preview.pdf",
+      "bytes": 1123408,
+      "sha256": "9fdaf843e43cdbd5e8e5aa48cbbc5ff8d36b2d4e6a6a114146ea2fda95feb17c"
     }
   ],
   "previous_version_artifacts_preserved": [
@@ -33,73 +32,51 @@
       "path": "artifacts/presentation/output/collector-risk-draft-v2.pptx",
       "bytes": 12115933,
       "sha256": "fe8108312aefe759d762747cff7f006200f249ea5c1874acabdbff69ffd33b08"
-    },
-    {
-      "path": "artifacts/presentation/output/collector-risk-draft-v3.pptx",
-      "bytes": 12100587,
-      "sha256": "c29fef94b3e0a4ac98dd729c8d08f8d1b61d5d1c0d079bd2482f6e3c23e8812a"
-    },
-    {
-      "path": "artifacts/presentation/output/collector-risk-draft-v3-preview.pdf",
-      "bytes": 1123408,
-      "sha256": "9fdaf843e43cdbd5e8e5aa48cbbc5ff8d36b2d4e6a6a114146ea2fda95feb17c"
     }
   ],
-  "previous_manifest": "artifacts/presentation/manifest-v3.json",
   "sources": [
     {
       "path": "artifacts/presentation/source/build.mjs",
-      "bytes": 17473,
-      "sha256": "5500daf2e76c03f208ff2c960fa5331ba6ddb1291ee0ebf854261f5d2a8a0af3"
+      "bytes": 14796,
+      "sha256": "3124e3b436244c429590c892dac4c8f73d056126a4951440d2ef44ea8657a0c4"
     },
     {
       "path": "artifacts/presentation/source/finalize.mjs",
       "bytes": 1994,
-      "sha256": "b4f4bfa78e04e2e74ce12707132e29f3abcf5de46247a5752be395c34d946693"
+      "sha256": "d5c373e980170f7d89dddbe51a4368eb7009f4b04f38e6564c1c023ece054e96"
     },
     {
       "path": "artifacts/presentation/source/merge_template.py",
-      "bytes": 12048,
-      "sha256": "c351c076c3cbf332f6032f796f0ddbb13fce3e41837ed548d75890d91b5ba6c9"
+      "bytes": 10391,
+      "sha256": "b7d866bf816ee6172ffaf9f097210c09a955218c267690a0ce337dfb7a56f39b"
     }
   ],
   "source_build_scripts_match_executed_copy": true,
   "all_final_slides_rendered": true,
   "all_final_slides_visually_reviewed": true,
   "visual_qa": {
-    "render_directory": "artifacts/presentation/.build/v4_delivery_render",
-    "all15reviewed": true,
-    "slides1to11_pixel_equal_v3": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": true,
-      "6": true,
+    "render_changed_slides": [
+      5,
+      13
+    ],
+    "unchanged_slides_pixel_equal": true,
+    "all_15_final_slides_reviewed": true,
+    "changed_final_slides_individually_reviewed": [
+      5,
+      13
+    ],
+    "mandatory_xml_equal_v2": {
       "7": true,
       "8": true,
       "9": true,
       "10": true,
       "11": true
     },
-    "remaining14slides_pixel_equal_to_reviewed_v4": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": true,
-      "6": true,
-      "7": true,
-      "8": true,
-      "9": true,
-      "10": true,
-      "11": true,
-      "12": false,
-      "13": true,
-      "14": true,
-      "15": true
-    },
-    "final12_individually_reviewed": true
+    "pdf_pages": 15,
+    "pdf_page_points": [
+      960,
+      540
+    ]
   },
   "native_powerpoint_opened": false,
   "libreoffice_used": false,
@@ -112,39 +89,18 @@
     14
   ],
   "screenshot": {
-    "path": "data/app/recommendations_deck_viewport.jpg",
-    "bytes": 96266,
-    "sha256": "ac112f6b77854f25cbf20c7fcd2ef3ce89552cb216d2bbfa948fe34e02a35e5c",
-    "format": "JPEG",
+    "path": "data/app/onset_demo_screen.png",
+    "bytes": 87682,
+    "sha256": "30b404d7fb685033b5a67dd77e092cefea225be51b4b2f0b0f58fd07bc47a966",
+    "real_local_browser_capture": true,
+    "fit": "contain",
+    "cropped_fragment": false,
     "pixel_size": [
       1265,
-      712
+      713
     ],
-    "real_local_browser_capture": true,
-    "server": "http://127.0.0.1:8783/",
-    "run_id": "onset_2026-06-28_0f97f74f589ee7b9",
-    "object_id": 4767,
-    "embedded_original_bytes": true,
-    "embedded_part": "ppt/media/recommendations_viewport.jpeg",
-    "native_srcRect": {
-      "l": 50909,
-      "t": 34831,
-      "r": 7984,
-      "b": 18680
-    },
-    "crop_pixel_rectangle": [
-      644,
-      248,
-      520,
-      331
-    ],
-    "frame_pixels": [
-      517,
-      214,
-      691,
-      440
-    ],
-    "caption_boundaries": "Complete recommendation block includes provenance and physical-cause caveat. Full viewport embedded unchanged. No generated visual."
+    "server": "http://127.0.0.1:8781/",
+    "run_id": "onset_2026-06-28_0f97f74f589ee7b9"
   },
   "mandatory_fidelity": [
     {
@@ -173,8 +129,6 @@
       "position_retained": 11
     }
   ],
-  "mandatory_text_style_boundary": "Legacy template fill recreates paragraphs from first run style. Nontext comparison removes a:p. Original paragraph/run byte identity is not claimed. Final mandatory slide/relationship byte identity to v3 is audited separately.",
-  "independent_review": "reports/presentation_v4/independent_review.json",
   "package_integrity": {
     "chart_count": 0,
     "claim_boundary": "Structural package checks only; no slide text, notes, formulas, chart values, or native PowerPoint execution were inspected.",
@@ -192,7 +146,7 @@
     "performed": true,
     "passed": true,
     "slideCount": 15,
-    "sha256": "b66cf74d4107a5a458fd0d94a20eaa662e0d2be363cad9d9ce12f70fc28c294a",
+    "sha256": "c29fef94b3e0a4ac98dd729c8d08f8d1b61d5d1c0d079bd2482f6e3c23e8812a",
     "runtimeNodeModules": "/Users/antany/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules",
     "nodeExecutable": "/Users/antany/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node"
   },
@@ -206,13 +160,13 @@
     "scriptFonts": {},
     "referenceSha256": "858da047f42bc3fe59f167b3f87dd17e9b7980fd78949ea750bb9ef668707247",
     "referenceFontsVerifiedInEncodedText": true,
-    "checked_text_script_count": 240,
+    "checked_text_script_count": 223,
     "native_font_rendering_verified": false,
     "observed_font_families": [
       "Montserrat"
     ],
     "observed_font_use_counts": {
-      "Montserrat": 240
+      "Montserrat": 223
     },
     "passed": true,
     "performed": true
@@ -234,7 +188,7 @@
       "text_z": 9
     }
   ],
-  "layout_warnings_review": "Unchanged template geometry on7/10; rendered text visible. Final12image moved above page marker.",
+  "layout_warnings_review": "Both warnings are unchanged original template geometry on slides 7 and 10. Rendered text remains visible; no mandatory geometry was modified.",
   "pdf_is_raster_preview": true,
   "pdf_pages": 15,
   "pdf_page_size_points": [
@@ -258,48 +212,7 @@
     "physical_failure_validated": false,
     "year_2026_blind_test": false,
     "weather_probe_performed": true,
-    "live_customer_integration": false,
-    "backtest2024": {
-      "starts": {
-        "any_alarm_control": 293,
-        "frequency": 358,
-        "hurdle": 414
-      },
-      "warnings_per_model": 1810,
-      "days": 181,
-      "objects": 74,
-      "no_alarm": {
-        "any_alarm_control": 547,
-        "frequency": 1027,
-        "hurdle": 1067
-      },
-      "blind_test": false,
-      "catalog_point_in_time": false,
-      "tuned_on2024": false
-    },
-    "runtime": {
-      "requests": 19200,
-      "errors": 0,
-      "p95_mean_of_two_repetitions": true,
-      "clients20_read_ms": [
-        311.051,
-        116.602
-      ],
-      "clients20_mixed_ms": [
-        756.556,
-        376.116
-      ],
-      "median_worsened": true,
-      "no_degradation_proven": false,
-      "inference_in_this_benchmark": false
-    },
-    "restore": {
-      "automatic_copies": 3,
-      "cards": 468,
-      "releases": 6,
-      "test_feedback_and_ticket_exact": true,
-      "production_failover_proven": false
-    }
+    "live_customer_integration": false
   },
   "remaining_placeholders": {
     "7": [
@@ -333,6 +246,18 @@
     "node": "/Users/antany/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
     "python": "/Users/antany/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
     "engine": "@oai/artifact-tool",
-    "render_directory": "artifacts/presentation/.build/v4_delivery_render"
+    "render_directory": "artifacts/presentation/.build/v3_notes_corrected_render"
+  },
+  "notes_correction": {
+    "slide": 5,
+    "exact_ci": [
+      0.05222043010752688,
+      0.08136072437449555
+    ],
+    "all_15_final_slides_pixel_identical_to_reviewed_v3": true,
+    "visible_text_unchanged": true,
+    "mandatory_slide_xml_unchanged": true,
+    "pdf_unchanged": true,
+    "independent_content_review": "All 15 slides and mandatory-slide structure independently checked by target_audit; notes5 was the only numerical discrepancy and is now exact."
   }
 }

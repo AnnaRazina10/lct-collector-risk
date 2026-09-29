@@ -1,0 +1,1086 @@
+{
+  "status": "passed",
+  "completed_at": "2026-09-29T14:53:58.910011+00:00",
+  "scope": "Independent final-v4 ZIP/XML, image provenance and slides12–15 claims",
+  "checks_count": 66,
+  "checks": [
+    {
+      "name": "15_slides",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "final_expected_sha",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "original_expected_sha",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "v3_expected_sha",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide7_position",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide7_xml_exact_v3",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide7_rels_exact_v3",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide7_nonparagraph_xml_exact_original",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide8_position",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide8_xml_exact_v3",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide8_rels_exact_v3",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide8_nonparagraph_xml_exact_original",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide9_position",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide9_xml_exact_v3",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide9_rels_exact_v3",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide9_nonparagraph_xml_exact_original",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide10_position",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide10_xml_exact_v3",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide10_rels_exact_v3",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide10_nonparagraph_xml_exact_original",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide11_position",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide11_xml_exact_v3",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide11_rels_exact_v3",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide11_nonparagraph_xml_exact_original",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "all78_dependencies_present",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "all78_dependencies_exact_v3",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "original_changes_only_filled_slides_notes",
+      "passed": true,
+      "evidence": [
+        "ppt/notesSlides/notesSlide10.xml",
+        "ppt/notesSlides/notesSlide11.xml",
+        "ppt/notesSlides/notesSlide7.xml",
+        "ppt/notesSlides/notesSlide8.xml",
+        "ppt/notesSlides/notesSlide9.xml",
+        "ppt/slides/slide10.xml",
+        "ppt/slides/slide11.xml",
+        "ppt/slides/slide7.xml",
+        "ppt/slides/slide8.xml",
+        "ppt/slides/slide9.xml"
+      ]
+    },
+    {
+      "name": "slide12_notes_match_source",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide12_visible_text_match_source",
+      "passed": true,
+      "evidence": 10
+    },
+    {
+      "name": "slide13_notes_match_source",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide13_visible_text_match_source",
+      "passed": true,
+      "evidence": 5
+    },
+    {
+      "name": "slide14_notes_match_source",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide14_visible_text_match_source",
+      "passed": true,
+      "evidence": 4
+    },
+    {
+      "name": "slide15_notes_match_source",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide15_visible_text_match_source",
+      "passed": true,
+      "evidence": 10
+    },
+    {
+      "name": "slide12_one_picture",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "source_jpeg_byte_exact",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "source_jpeg_MIME_correct",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "full_viewport_dimensions",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact_native_crop",
+      "passed": true,
+      "evidence": {
+        "l": 50909,
+        "t": 34831,
+        "r": 7984,
+        "b": 18680
+      }
+    },
+    {
+      "name": "picture_frame_517_214_691_440",
+      "passed": true,
+      "evidence": {
+        "x": 4924425,
+        "y": 2038350,
+        "cx": 6581775,
+        "cy": 4191000
+      }
+    },
+    {
+      "name": "recommendation_coverage1981_468_6",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "recommendations_survived_HTTP_restart",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide12_image_context_visible",
+      "passed": true,
+      "evidence": "Source screenshot visually inspected; archived facts, 3/13, 4 days and rules1.0.0 appear."
+    },
+    {
+      "name": "slide13_table_recomputed",
+      "passed": true,
+      "evidence": [
+        [
+          "При 10 объектах в день",
+          "Контроль\n«Любая тревога»",
+          "Начало серии"
+        ],
+        [
+          "Precision по любой тревоге",
+          "71,78%",
+          "42,67%"
+        ],
+        [
+          "Объект-дней без тревоги среди предупреждений",
+          "508",
+          "1 032"
+        ]
+      ]
+    },
+    {
+      "name": "slide13_net_gain75_of119",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide13_visible_limits",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide14_table_recomputed",
+      "passed": true,
+      "evidence": [
+        [
+          "Метод",
+          "Начал",
+          "Precision@10",
+          "Без тревоги"
+        ],
+        [
+          "Контроль «Любая тревога»",
+          "293",
+          "16,19%",
+          "547"
+        ],
+        [
+          "Историческая частота начал",
+          "358",
+          "19,78%",
+          "1 027"
+        ],
+        [
+          "Двухэтапная модель",
+          "414",
+          "22,87%",
+          "1 067"
+        ]
+      ]
+    },
+    {
+      "name": "slide14_population_budget",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide14_gains",
+      "passed": true,
+      "evidence": {
+        "vs_frequency": 56,
+        "vs_control": 121,
+        "pct_vs_frequency": 15.64245810055866,
+        "pct_vs_control": 41.29692832764505
+      }
+    },
+    {
+      "name": "slide14_strata93_minus25_81",
+      "passed": true,
+      "evidence": [
+        93,
+        -25,
+        81
+      ]
+    },
+    {
+      "name": "slide14_any_alarm_totals",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide14_recall_values",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide14_december68_49_at290",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide14_hindcast_protocol",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide14_visible_limits",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide14_raw80961008_11counts",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide15_three_copies_exact_journal_6_468",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide15_distinct170_acceptance_170_tests",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide15_19200requests_0errors",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide15_p95_rounding",
+      "passed": true,
+      "evidence": {
+        "read_only": {
+          "baseline": {
+            "p50_ms": 31.972353986930102,
+            "p95_ms": 311.0507919918746
+          },
+          "optimized": {
+            "p50_ms": 73.80245852982625,
+            "p95_ms": 116.60183354979381
+          }
+        },
+        "mixed": {
+          "baseline": {
+            "p50_ms": 56.81133351754397,
+            "p95_ms": 756.5561045194045
+          },
+          "optimized": {
+            "p50_ms": 104.3491669697687,
+            "p95_ms": 376.1164789320901
+          }
+        }
+      }
+    },
+    {
+      "name": "slide15_precise_notes_latency",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide15_medians_grew",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide15_limits_visible",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "slide15_weather_notes",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "inputs_stable_during_audit",
+      "passed": true,
+      "evidence": null
+    }
+  ],
+  "failed_checks": [],
+  "inputs": {
+    "v4": {
+      "path": "artifacts/presentation/output/collector-risk-draft-v4.pptx",
+      "sha256": "b66cf74d4107a5a458fd0d94a20eaa662e0d2be363cad9d9ce12f70fc28c294a",
+      "bytes": 12110801
+    },
+    "v3": {
+      "path": "artifacts/presentation/output/collector-risk-draft-v3.pptx",
+      "sha256": "c29fef94b3e0a4ac98dd729c8d08f8d1b61d5d1c0d079bd2482f6e3c23e8812a",
+      "bytes": 12100587
+    },
+    "original": {
+      "path": "docs/materials/ЛЦТ2026 Шаблон презентации.pptx",
+      "sha256": "858da047f42bc3fe59f167b3f87dd17e9b7980fd78949ea750bb9ef668707247",
+      "bytes": 33766501
+    },
+    "source": {
+      "path": "artifacts/presentation/source/build.mjs",
+      "sha256": "5500daf2e76c03f208ff2c960fa5331ba6ddb1291ee0ebf854261f5d2a8a0af3",
+      "bytes": 17473
+    },
+    "merge": {
+      "path": "artifacts/presentation/source/merge_template.py",
+      "sha256": "c351c076c3cbf332f6032f796f0ddbb13fce3e41837ed548d75890d91b5ba6c9",
+      "bytes": 12048
+    },
+    "image": {
+      "path": "data/app/recommendations_deck_viewport.jpg",
+      "sha256": "ac112f6b77854f25cbf20c7fcd2ef3ce89552cb216d2bbfa948fe34e02a35e5c",
+      "bytes": 96266
+    }
+  },
+  "slide_order": [
+    "ppt/slides/slide1.xml",
+    "ppt/slides/slide2.xml",
+    "ppt/slides/slide3.xml",
+    "ppt/slides/slide4.xml",
+    "ppt/slides/slide5.xml",
+    "ppt/slides/slide6.xml",
+    "ppt/slides/slide7.xml",
+    "ppt/slides/slide8.xml",
+    "ppt/slides/slide9.xml",
+    "ppt/slides/slide10.xml",
+    "ppt/slides/slide11.xml",
+    "ppt/slides/slide12.xml",
+    "ppt/slides/slide13.xml",
+    "ppt/slides/slide14.xml",
+    "ppt/slides/slide15.xml"
+  ],
+  "mandatory_dependencies": [
+    {
+      "part": "ppt/media/image1.png",
+      "v4_sha256": "b0d6ac33f435bd16cc48516514d3c715050502507a10928195117405613035d7",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/media/image2.png",
+      "v4_sha256": "225e1095fddb0e223a3669074bfeb736dc66cc9024f00b721abe01e8feeed0c0",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/media/image30.png",
+      "v4_sha256": "c4eb224c8e913de6aa109f06997d137019b3360372d4e19ac07a14ebad105fa3",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/media/image4.png",
+      "v4_sha256": "12a1adfb3bc24a03c7aeb6c4272cdc6d7d35b052dac6a458d460a9877ec978e0",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/notesMasters/_rels/notesMaster1.xml.rels",
+      "v4_sha256": "c5a9297fa75f8127858d65613f3c538aa2314b4b4a559131f859ffb032e736cc",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/notesMasters/notesMaster1.xml",
+      "v4_sha256": "fa07ff42a2960124ddb6b005557703b04d7eb1c52aff3d02ed4aee5c222945b5",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/notesSlides/_rels/notesSlide10.xml.rels",
+      "v4_sha256": "bc86b6d303a5081c6582ca94d3af52e9938ec85694f09069cf360051791bba2c",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/notesSlides/_rels/notesSlide11.xml.rels",
+      "v4_sha256": "925b1f0f688ff4a8f2e08ecdfa0228929934d75535731ba1c9ca56e995bcb204",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/notesSlides/_rels/notesSlide7.xml.rels",
+      "v4_sha256": "eec9eb7342742b4892c4cb5b486f63eac8abd950ad986eee72d719a0c90258ab",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/notesSlides/_rels/notesSlide8.xml.rels",
+      "v4_sha256": "4cc1064efa4a51e19d70b5fed3328ffc68956e372169bf1082c06a4bccbc7482",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/notesSlides/_rels/notesSlide9.xml.rels",
+      "v4_sha256": "f001c8aeb140ad8901fbeb224371f166c59f306b96cbfff310455ed9b21566eb",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/notesSlides/notesSlide10.xml",
+      "v4_sha256": "9916e549222c0cbabcfb54e0d0d772e18672f59f611c7360b941cb4f31d5e265",
+      "exact_v3": true,
+      "exact_original": false
+    },
+    {
+      "part": "ppt/notesSlides/notesSlide11.xml",
+      "v4_sha256": "709e4545ee855c675766d12b558347c34f54cbc8843a4c4060371825e864d0a2",
+      "exact_v3": true,
+      "exact_original": false
+    },
+    {
+      "part": "ppt/notesSlides/notesSlide7.xml",
+      "v4_sha256": "2ff43d77a11ce0c008994f2c8fec6a0c21155d1c2c2e646e3943dff78272b5eb",
+      "exact_v3": true,
+      "exact_original": false
+    },
+    {
+      "part": "ppt/notesSlides/notesSlide8.xml",
+      "v4_sha256": "479bfaca5f7caf9afecf6e047b35d0aaa60511b4ed27346828e847d08b023c29",
+      "exact_v3": true,
+      "exact_original": false
+    },
+    {
+      "part": "ppt/notesSlides/notesSlide9.xml",
+      "v4_sha256": "5a2d82c9b449b03da145ea4ab32d1e578239071693d45475dd8c92f9a41ab5ab",
+      "exact_v3": true,
+      "exact_original": false
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout1.xml.rels",
+      "v4_sha256": "b1cf476bf94c155ac7ca0fafa93f8b221c53a5897d9e996043f823557ebdcf0e",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout10.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout11.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout12.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout13.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout14.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout15.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout16.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout17.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout18.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout19.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout2.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout20.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout21.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout22.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout23.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout3.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout4.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout5.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout6.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout7.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout8.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout9.xml.rels",
+      "v4_sha256": "d870e5b1929e28c09916452072c7cbe08ef6ec528c3cf95727dae087693a730a",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout1.xml",
+      "v4_sha256": "71cbc80d9ce50eab061c0881e31868addd2bcb097e6a621c27062c4cd186a827",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout10.xml",
+      "v4_sha256": "713856d368451870f4be52c2bbcce791f29a476c64cd86bcf371323dd727c3c7",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout11.xml",
+      "v4_sha256": "90cf9c558fb3d5c44f1464352467a77edf7d971687029f46cc7f3ba85ac78d00",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout12.xml",
+      "v4_sha256": "3f2594a6d75df94887aa4a8cae483b1324752c6c03341e8313fc7f311efc0720",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout13.xml",
+      "v4_sha256": "cc521a5ea7d8bf60ca4549d6d54ee33d13f885d40423d2475fbe907dcf93dbbb",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout14.xml",
+      "v4_sha256": "a5fa044ca2115176a04305b586c9a2c21e7a44e15f05282bdac6c5606eabc905",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout15.xml",
+      "v4_sha256": "a9c0b827e9f2167de671ae8f0ca6eab7bcf3cf51c9b782de491107739f4a61eb",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout16.xml",
+      "v4_sha256": "d5147a3c44e3ec64f523a20b7ff226043f87cca0539a94474045e332a50d4f26",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout17.xml",
+      "v4_sha256": "8227f53676efc94e9c32ec4659ea15e78d4085b380e2d6e65738ec44ea767a0c",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout18.xml",
+      "v4_sha256": "bba85ba148032a0fa961845c0845d3b37f74c2e42d585ff318226772d2f5f23e",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout19.xml",
+      "v4_sha256": "5eebab48fba1a647053dd6da4f1822366fef07a5530c7f4e532eeda8666d21f7",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout2.xml",
+      "v4_sha256": "338d8ec9b30ba71726d693a89f2388695959817b66b6ebdfcc2ed8aa1231b8aa",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout20.xml",
+      "v4_sha256": "2673a29de26b89148da5899dca1a9d79c48293307559bec71ee7223e260df8cf",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout21.xml",
+      "v4_sha256": "16b0b569c622647bbeed0cfb0242f7ef68eba4f40b8d224a5390b811f2eb25de",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout22.xml",
+      "v4_sha256": "8772846245947b2d0570592451590fc1d74b5f93f40f3c165303b92fbe9e02aa",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout23.xml",
+      "v4_sha256": "603da044b16143385126c4699156db0bb58e2dc6d73ccc600e8c159377680f70",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout3.xml",
+      "v4_sha256": "5efe47a363095e1da1c813c5ec4147715d5720852dae19a89fa0be802ca0bf53",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout4.xml",
+      "v4_sha256": "9ecf1cc4d5bfc500b9ffc335ddd3c9aa1c6368b62f507b26b8b1321b103fcc32",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout5.xml",
+      "v4_sha256": "b57b584f6402de7e6028fc0a063b89bb3f3c2ef50c6cd19377e6b1a773778d18",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout6.xml",
+      "v4_sha256": "029e1a9e21dfb816851dd4b08329662db91cb74672e981bc249fa0bb2e523d65",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout7.xml",
+      "v4_sha256": "bbf85cb35035ab037fbdd5028ce9fa785c1af4cda14ae82448e21274e94de4db",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout8.xml",
+      "v4_sha256": "b7d7ecb97be08cc462a6392feb1a0a6e425146fb8408ec7ec9ef662e81859b87",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout9.xml",
+      "v4_sha256": "c0f1628932c788551534921d4b2942069ab3dc23607f51df903f07a7c2777eca",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideMasters/_rels/slideMaster1.xml.rels",
+      "v4_sha256": "445806f33fe8d30adcd62178abb2b6ad71e86504f030b5ebf16230bd77c99d2b",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slideMasters/slideMaster1.xml",
+      "v4_sha256": "5ca087998d4f92c2aeabb8e260b9d99c16048bcbbe8955a81ef6ab304bce6346",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slides/_rels/slide10.xml.rels",
+      "v4_sha256": "bb4d2e4eda0f66f5c5089b1a73d7c6e425cc53ecc08d0835528036e8a5c1c495",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slides/_rels/slide11.xml.rels",
+      "v4_sha256": "92279e85a58f098c1310d043949ba5c81110e5d1252c6d93d4247d5e30be0fe7",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slides/_rels/slide7.xml.rels",
+      "v4_sha256": "7a5e33503cf83b3bbd32f808f2ffda7e15bdb47c85c3b8d580d6f080cb26d850",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slides/_rels/slide8.xml.rels",
+      "v4_sha256": "97fe819e0bb469274ced1472173e6655ec0baf19a74575bce103bbaaebfb5acf",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slides/_rels/slide9.xml.rels",
+      "v4_sha256": "bfe2248739e225814b17c0f6fd0fd47e626f1967946cd3c33ddd82897c295d5e",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/slides/slide10.xml",
+      "v4_sha256": "17310ca6e674a9c5d30403ad72267339399532d4fa62d15fc13f6afb7501ab6d",
+      "exact_v3": true,
+      "exact_original": false
+    },
+    {
+      "part": "ppt/slides/slide11.xml",
+      "v4_sha256": "783086e4ba7b1941aec97854f1257a6c95ad664038cbd97419c0dd0d59209784",
+      "exact_v3": true,
+      "exact_original": false
+    },
+    {
+      "part": "ppt/slides/slide7.xml",
+      "v4_sha256": "68c79415db90b153158c38549328d6af5b72c152884311672f5ef5a9e2e5c2e0",
+      "exact_v3": true,
+      "exact_original": false
+    },
+    {
+      "part": "ppt/slides/slide8.xml",
+      "v4_sha256": "333eec6fcc9ac626332b1a4ff9df7e90ef82c8519f61e24fed71f3ed8c3ea75d",
+      "exact_v3": true,
+      "exact_original": false
+    },
+    {
+      "part": "ppt/slides/slide9.xml",
+      "v4_sha256": "905e501b95d6d8ddb188145d65522e02a3eb16b94dafb0504c4f14a25ec4ea2e",
+      "exact_v3": true,
+      "exact_original": false
+    },
+    {
+      "part": "ppt/theme/_rels/theme1.xml.rels",
+      "v4_sha256": "5a2d586f932fb1d244771719792d87d11d1070a07b38fe433ecb746b376285cb",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/theme/_rels/theme2.xml.rels",
+      "v4_sha256": "5a2d586f932fb1d244771719792d87d11d1070a07b38fe433ecb746b376285cb",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/theme/theme1.xml",
+      "v4_sha256": "752c7d006cae0e8a0fd1e2ea53225074473128e87f32e799341af31b96ff5488",
+      "exact_v3": true,
+      "exact_original": true
+    },
+    {
+      "part": "ppt/theme/theme2.xml",
+      "v4_sha256": "d724b4b6181d740cc18f66157f575d5ffcdc476b1668eca69ff2ffbf50810479",
+      "exact_v3": true,
+      "exact_original": true
+    }
+  ],
+  "picture12": {
+    "part": "ppt/media/recommendations_viewport.jpeg",
+    "sha256": "ac112f6b77854f25cbf20c7fcd2ef3ce89552cb216d2bbfa948fe34e02a35e5c",
+    "source_sha256": "ac112f6b77854f25cbf20c7fcd2ef3ce89552cb216d2bbfa948fe34e02a35e5c",
+    "mime": "image/jpeg",
+    "crop": {
+      "l": 50909,
+      "t": 34831,
+      "r": 7984,
+      "b": 18680
+    },
+    "expected_crop": {
+      "l": 50909,
+      "t": 34831,
+      "r": 7984,
+      "b": 18680
+    },
+    "embedded_dimensions": [
+      1265,
+      712
+    ],
+    "source_pixel_crop": {
+      "x": 644,
+      "y": 248,
+      "width": 520,
+      "height": 331
+    },
+    "frame_emu": {
+      "x": 4924425,
+      "y": 2038350,
+      "cx": 6581775,
+      "cy": 4191000
+    }
+  },
+  "slides12_15": {
+    "12": {
+      "visible": "ЛЦТ 2026. Кейс 08\nРекомендации к выбранному объекту\n12\nОбъект № 4767\nЗаписи по 3 из 13 каналов.\nТревоги в 4 днях за неделю.\nДиспетчер видит,\nчто проверить\nЖурнал сохраняет\nрекомендации, версию\nправил и выпуск прогноза.\nРешение принимает\nдиспетчер.",
+      "notes": "Источник: data/app/recommendations_deck_viewport.jpg, полный снимок реального браузера http://127.0.0.1:8783/, снят 29.09.2026. Кадрирование внутри PPTX: x644,y248,width520,height331 из1265×712, весь блок рекомендаций. Объект4767,run_id=onset_2026-06-28_0f97f74f589ee7b9. 3из13каналов,4днятревогзанеделю. Правила1.0.0 применены сейчас к архиву. reports/recommendations/independent_review.md:1981проверка,6выпусков/468карточек. reports/recommendations/http_restart.json: сохранённые рекомендации пережили HTTP-перезапуск. Рекомендации информационные, ремонт не назначают.",
+      "table": []
+    },
+    "13": {
+      "visible": "ЛЦТ 2026. Кейс 08\nЦена новой цели и границы вывода\n13\nПри 10 объектах в день\nКонтроль\n«Любая тревога»\nНачало серии\nPrecision по любой тревоге\n71,78%\n42,67%\nОбъект-дней без тревоги среди предупреждений\n508\n1 032\n75 из 119 дополнительных охваченных начал —\nчистый прирост после дней без любых записей.\nМожет отражаться возобновление регистрации. Тишина не доказывает исправность.\nБудущая наблюдаемость используется только для анализа результатов.\nПериод 2026 уже исследовали. Новый проспективный период ещё требуется.",
+      "notes": "Источники:reports/object_onset_experiment/report.md,observability.csv,evaluation_metrics.csv,independent_review.json. При1800warnings any_alarm_refit TPany1292/1800=.717778 и selected768/1800=.426667. Нет тревоги508/1032. После отсутствия записей наD+1 охвачено110vs35,чистый прирост75из119. НаблюдаемостьD+1 только диагностическая,недоступнапривыдаче.",
+      "table": [
+        [
+          "При 10 объектах в день",
+          "Контроль\n«Любая тревога»",
+          "Начало серии"
+        ],
+        [
+          "Precision по любой тревоге",
+          "71,78%",
+          "42,67%"
+        ],
+        [
+          "Объект-дней без тревоги среди предупреждений",
+          "508",
+          "1 032"
+        ]
+      ]
+    },
+    "14": {
+      "visible": "ЛЦТ 2026. Кейс 08\nПеренос метода на 2024 год\n14\n74 объекта, 181 день, по 1 810 предупреждений.\nМетод\nНачал\nPrecision@10\nБез тревоги\nКонтроль «Любая тревога»\n293\n16,19%\n547\nИсторическая частота начал\n358\n19,78%\n1 027\nДвухэтапная модель\n414\n22,87%\n1 067\nНа 56 начал больше исторической частоты\nРетроспективная проверка. Семейство выбрали по более поздним данным,\nсправочник текущий. Настройки по 2024 не подбирались.",
+      "notes": "Источники: reports/object_onset_backtest/report.md,evaluation_metrics.csv,observability.csv,independent_review.md,raw2023_count_check.json,raw2024_count_check.json. 74объекта,13394объект-дня,1725начал,181день,1810предупрежденийкаждого. Контроль293/1810=.161878,частота358/1810=.197790,hurdle414/1810=.228729. Recall=.169855,.207536,.24. Любая тревога:1263,783,743 соответственно. Безлюбойтревоги547,1027,1067. +56кчастоте(15.64%),+121кконтролю(41.3%). Противконтроля93из121чистогоприроста послеD+1беззаписей(135vs42). Противчастотывэтойстрате-25(135vs160),приналичиизаписей+81(279vs198),такчтовесьвыигрышневозобновлениерегистрации. Будущаянаблюдаемостьтолькопоследующийанализ. Популяцияпоисториидо28.09.2023. Trainдо28.09.2023,выборчисладеревьевOct-Nov2023,refitдо28.11.2023,gateDec2023:68vs49при290предупреждениях. Метод/гиперпараметрызамороженыдооценки2024,носемействовыбраноизпозднихисследований. 2024неblind,справочниктекущий,arrivalunknown. Независимо80,961,008rawстрок2023/24,ключии11используемыхсчётчиковсовпали,непроверканеиспользуемыхагрегатов.",
+      "table": [
+        [
+          "Метод",
+          "Начал",
+          "Precision@10",
+          "Без тревоги"
+        ],
+        [
+          "Контроль «Любая тревога»",
+          "293",
+          "16,19%",
+          "547"
+        ],
+        [
+          "Историческая частота начал",
+          "358",
+          "19,78%",
+          "1 027"
+        ],
+        [
+          "Двухэтапная модель",
+          "414",
+          "22,87%",
+          "1 067"
+        ]
+      ]
+    },
+    "15": {
+      "visible": "ЛЦТ 2026. Кейс 08\nРабота приложения и следующий пилот\n15\nЖурнал пережил восстановление\nТри автоматические копии. После восстановления приложение прочитало\nтот же журнал с рекомендациями и все 468 карточек шести выпусков.\n19 200 запросов без ошибок\n20 клиентов, среднее p95 двух повторов до и после исправления:\nчтение 311 и 117 мс, чтение с записью 757 и 376 мс. Медиана выросла.\nДля пилота нужны новые подтверждённые исходы\nНужны осмотры, ремонты и сроки поступления данных для нового периода.\nЗамер не подтвердил «без деградации» при 20 клиентах.\nЭкономический эффект пока не измерен.",
+      "notes": "Источники: reports/submission_readiness/final_bundle_v3.md/.json; reports/runtime_comparison/report.md; reports/runtime_comparison/full_tests.log; docs/automatic_backup.md; docs/readiness_audit.md. Вv3ZIPиз764d31a3копии,restoreновыйфайл,отдельныйHTTPчитаетточныйжурналсTESTfeedback/ticket+2recommendationsnapshots,6payloads/468cards,170отдельныхacceptanceassertions. Отдельные170Pythonunit-tests. Нагрузка:19200запросов0ошибок,одинUvicorn/SQLiteDELETE,read/mixed,1/20clients,2повтораAB/BA,4–12сек/серию. Числаp95среднее2метрик,неpooledp95.20клиентовчтение311.051до116.602мс,смешанный756.556до376.116мс,p50вырос31.972до73.802и56.811до104.349. 20конкурентныхопераций,несценариевпользователей. No-degradationнеподтверждено,inferenceнеизмерялсявэтомтесте. ЛокальнаяmacOS,неLinux/HA,автозапуска/удалённогохранилищанет. Пилотбудущий,денежныйэффектнеизмерен. Дополнительно погода проверена:reports/weather_probe/report.md,общийфонМосквыERA5лаг7дней,AP.6266до.6271наOct-Nov2025,F1безизменений,историческиедатыдоступностиревизийнеподтверждены.",
+      "table": []
+    }
+  },
+  "latency_means_ms": {
+    "read_only": {
+      "baseline": {
+        "p50_ms": 31.972353986930102,
+        "p95_ms": 311.0507919918746
+      },
+      "optimized": {
+        "p50_ms": 73.80245852982625,
+        "p95_ms": 116.60183354979381
+      }
+    },
+    "mixed": {
+      "baseline": {
+        "p50_ms": 56.81133351754397,
+        "p95_ms": 756.5561045194045
+      },
+      "optimized": {
+        "p50_ms": 104.3491669697687,
+        "p95_ms": 376.1164789320901
+      }
+    }
+  },
+  "historical_export_issue": {
+    "initial_v4_sha256": "85d240ae659f36cbc788027fc67fe48190084cb5193879e46e6e3986b9b1694e",
+    "initial_crop": {
+      "l": 5827,
+      "t": 0,
+      "r": 5827,
+      "b": 0
+    },
+    "finding": "First export had incorrect native crop. Source JPEG was mislabeled .png; original and final image SHA are identical. Initial reviewer inference of transcoding was incorrect and corrected. Root repaired MIME/path/crop in OOXML, then reduced display frame to avoid page-number overlap.",
+    "closed": true
+  },
+  "limitations": [
+    "Original nontext comparison removes full a:p elements; previous merge rebuilt text paragraphs from first pPr/rPr. Original text-style exactness is not claimed. Complete v3 mandatory byte identity is verified.",
+    "Source screenshot inspected; final rendered-slide visual QA is separate. No LibreOffice used.",
+    "Saved metrics/receipts reconciled; models, load, restore and unit tests were not rerun for this presentation audit.",
+    "Team facts/photos/contacts and task-owner logo remain incomplete. Expert access/platform submission not established."
+  ]
+}

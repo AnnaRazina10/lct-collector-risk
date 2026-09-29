@@ -2,7 +2,9 @@ from zipfile import ZipFile, ZIP_DEFLATED
 from pathlib import Path, PurePosixPath
 from lxml import etree as E
 from copy import deepcopy
-import posixpath,json,hashlib
+from PIL import Image
+from io import BytesIO
+import posixpath,json,hashlib,os
 B=Path('artifacts/presentation/.build')
 SOURCE=Path('docs/materials/ЛЦТ2026 Шаблон презентации.pptx')
 P='http://schemas.openxmlformats.org/presentationml/2006/main'; A='http://schemas.openxmlformats.org/drawingml/2006/main';R='http://schemas.openxmlformats.org/officeDocument/2006/relationships';PR='http://schemas.openxmlformats.org/package/2006/relationships'; CT='http://schemas.openxmlformats.org/package/2006/content-types'
@@ -13,7 +15,9 @@ def relpath(part):p=PurePosixPath(part);return str(p.parent/'_rels'/(p.name+'.re
 def resolve(part,target):return target.lstrip('/') if target.startswith('/') else posixpath.normpath(posixpath.join(posixpath.dirname(part),target))
 with ZipFile(SOURCE) as z: data={n:z.read(n) for n in z.namelist()}
 with ZipFile(B/'authored.pptx') as z: authored={n:z.read(n) for n in z.namelist()}
-# Targeted filling. No shape, geometry, theme, image, layout, or run style is recreated.
+# Legacy template filling preserves shapes/geometry/theme/media/layout.
+# Text paragraphs are recreated using the first paragraph style; do not claim
+# byte-identical original paragraph/run properties.
 filled={7:{'740199916':'[НАЗВАНИЕ\nКОМАНДЫ]','757351073':'Кейс 08. Сервис прогнозирования инцидентов\nи управления ремонтными работами инженерных коллекторов Москвы'},
 8:{'328740113':'[НАЗВАНИЕ\nКОМАНДЫ]','1075761414':'Риск тревожной записи по объекту за 24–48 часов. Приоритет проверки для диспетчера.','441518184':'Причинные признаки, сравнение с простыми правилами и воспроизводимые эксперименты.'},
 9:{'415042907':'КОМАНДА'},
@@ -117,6 +121,34 @@ for e in act:
  e=deepcopy(e)
  if E.QName(e).localname=='Override':e.set('PartName','/'+authored_part(e.get('PartName').lstrip('/')));ct.append(e)
  elif e.get('Extension') not in known:ct.append(e);known.add(e.get('Extension'))
+# Artifact Tool may re-encode/crop images on export. Preserve the exact UI evidence
+# and explicit native OOXML crop, instead of accepting an altered/incorrect crop.
+ui_part='ppt/slides/slide12.xml'
+ui_slide=xml(data[ui_part])
+pictures=ui_slide.findall('.//p:pic',NS)
+assert len(pictures)==1, 'Slide12 must have one captured UI image'
+fill=pictures[0].find('p:blipFill',NS)
+embed=fill.find('a:blip',NS).get('{'+R+'}embed')
+ui_rels=xml(data[relpath(ui_part)])
+image_rels=[r for r in ui_rels if r.get('Id')==embed]
+assert len(image_rels)==1 and image_rels[0].get('Type').endswith('/image')
+viewport=Path(os.environ.get('UI_SCREENSHOT','data/app/recommendations_deck_viewport.jpg'))
+image_bytes=viewport.read_bytes()
+assert image_bytes[:3]==b'\xff\xd8\xff', 'UI source must be captured JPEG'
+with Image.open(BytesIO(image_bytes)) as source_image:
+ assert source_image.size==(1265,712), 'Crop requires1265x712 source'
+image_part='ppt/media/recommendations_viewport.jpeg'
+data[image_part]=image_bytes
+image_rels[0].set('Target',posixpath.relpath(image_part,posixpath.dirname(ui_part)))
+rect=fill.find('a:srcRect',NS)
+if rect is None:
+ rect=E.Element('{'+A+'}srcRect');fill.insert(1,rect)
+for side,fraction in {'l':644/1265,'t':248/712,'r':101/1265,'b':133/712}.items():
+ rect.set(side,str(round(fraction*100000)))
+data[ui_part]=dump(ui_slide)
+data[relpath(ui_part)]=dump(ui_rels)
+assert any(e.get('Extension')=='jpeg' and e.get('ContentType')=='image/jpeg' for e in ct), 'JPEG content type required'
+
 # Prune unreachable old instructional slides and resources by package relationships.
 reachable=set()
 def visit(part):
