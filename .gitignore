@@ -28,3 +28,6 @@ venv/
 /artifacts/submission/bundles/
 /tmp/pdfs/
 reports/recommendations/server*.log
+.codex-build/
+.codex-finalizer/
+.chart-data-*/
